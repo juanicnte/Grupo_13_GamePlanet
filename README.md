@@ -1,2 +1,2 @@
 # Grupo_13_GamePlanet
-[mc](https://www.mercadolibre.com.ar)
+**En GamePlanet ofrecemos una gran variedad de video juegos**
