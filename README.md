@@ -2,11 +2,12 @@
 **GamePlanet es una pagina web enfocada a la venta de videojuegos digitales. En la cual podes disfrutar de una amplio catalogo, a los mejores precios, con entrega inmediata y con garantia. Busca llamar la atencion de apasionados por los videojuegos o simples compradores. Para eso adaptamos nuestro sitio web lo mas sencillo posible para que la experiencia del usuario, sea del ambiente o no, pueda entender perfectamente lo que se esta ofreciendo en la pagina.**
 
 ## Referentes
-- [ref1](https://www.example.com)
-- [ref2](https://www.example.com)
-- [ref3](https://www.example.com)
-- [ref4](https://www.example.com)
-- [ref5](https://www.example.com)
+- [DigitalesPioneros](https://pency.app/digitalespionerosps)
+- [Venex](https://www.venex.com.ar/?gclid=Cj0KCQjwn4qWBhCvARIsAFNAMijaaXY5ZqvGeS8svdtiWrge0-Udyov8sxZhwGVvjmd5IhFBCLCowx4aAoM8EALw_wcB)
+- [compragamer](https://compragamer.com/?gclid=Cj0KCQjwn4qWBhCvARIsAFNAMii7YBGV3H9dxJx5pLi3Io2anRQpUgDnqLiUtRUtHDK_kZnwP4xo6QAaAm9WEALw_wcB)
+- [juegosdigitales](https://juegosdigitales.org/)
+- [instant-gaming](https://www.instant-gaming.com/es/)
+- [G2A](https://www.g2a.com/es/)
 
 ## Integrantes
 - int 1
