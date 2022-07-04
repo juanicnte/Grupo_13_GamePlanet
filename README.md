@@ -10,6 +10,8 @@ Los siguientes sitios fueron elegidos como referencia por su relación con la te
 - [Juegosdigitales](https://juegosdigitales.org/)
 - [G2A](https://www.g2a.com/es/)
 
+## WireFrame
+- [Figma](https://www.figma.com/file/FMHkvOXJWJp3ZeylCmCV42/Untitled?node-id=0%3A1)
 ## Integrantes
 - int 1
 - int 2
