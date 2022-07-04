@@ -3,7 +3,7 @@
 
 ## Referentes
 Los siguientes sitios fueron elegidos como referencia por su relación con la temática del proyecto, su similitud con la idea, algunos por sus diseños llamativos y otros por sus diseños minimalistas para poder lograr en complementación un sitio web plenamente funcional. 
-- [DigitalesPioneros](https://pency.app/digitalespionerosps)
+- [MercadoLibre](https://www.mercadolibre.com.ar/)
 - [Venex](https://www.venex.com.ar/?gclid=Cj0KCQjwn4qWBhCvARIsAFNAMijaaXY5ZqvGeS8svdtiWrge0-Udyov8sxZhwGVvjmd5IhFBCLCowx4aAoM8EALw_wcB)
 - [Compragamer](https://compragamer.com/?gclid=Cj0KCQjwn4qWBhCvARIsAFNAMii7YBGV3H9dxJx5pLi3Io2anRQpUgDnqLiUtRUtHDK_kZnwP4xo6QAaAm9WEALw_wcB)
 - [Juegosdigitales](https://juegosdigitales.org/)
