@@ -14,6 +14,6 @@ Los siguientes sitios fueron elegidos como referencia por su relación con la te
 - [Figma](https://www.figma.com/file/FMHkvOXJWJp3ZeylCmCV42/Untitled?node-id=0%3A1)
 ## Integrantes
 - int 1
-- int 2
+- Lucas Damian Ezequiel Ojeda: Soy de Buenos Aires - Argentina. Empecé el curso de desarrollo web por una recomendacion y la verdad que me gusta y espero en un futuro dedicarme a esto.
 - int 3
-- Juan Ignacio Centeno: Nacido en Posadas, misiones - Argentina. El el 2021 termine el secundario, en 2022 empecé la carrera de analisis de sitemas y la deje porque casi no programaba y yo queria programar, asi que deje la carrera y empecé el curso de desarrollo web. (Aguante el front-end).
+- Juan Ignacio Centeno: Nacido en Posadas, misiones - Argentina. En el 2021 termine el secundario, en 2022 empecé la carrera de analisis de sitemas y la deje porque casi no programaba y yo queria programar, asi que deje la carrera y empecé el curso de desarrollo web. (Aguante el front-end).
