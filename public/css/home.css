@@ -1,0 +1,120 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    border: none;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style-type: none;
+}
+
+body{
+    background-color: #7e097e;    
+}
+/*header*/
+.main-header{
+background-color: #7e097e;    
+}
+.img-logo{
+    width: 5rem;
+}
+.header-top-bar{
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.header-top-bar ul{
+    display: flex;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.nav-bar li{
+    margin: 2rem;
+    background-color: #9e339e;
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+.menu{
+    margin-left: auto;
+}
+.menu li{
+    margin: 2rem 1rem;
+}
+.header-search-bar{
+    text-align: center;
+    background-color: aliceblue;
+}
+.header-bottom-bar{
+    display: flex;
+    justify-content: center;
+}
+.header-bottom-bar ul{
+    display: flex;
+}
+.header-bottom-bar ul li {
+    margin: 2rem;
+}
+
+/*main*/
+
+.h2-container{
+    background-color: #7e097e;
+    border-radius: 15px;
+    width: 50%;
+    margin-left: 25%;
+}
+.eslogan-oferta{
+    text-align: center;
+    font-weight: 300;
+    color: #ffdfff;
+}
+.offers-container{
+    background-color: #3e093e;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+.offers-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+.offers-list li img{
+    width: 17rem;
+    border-radius: 5%;
+}
+.precios-container{
+    display: flex;
+    justify-content: center;
+}
+.precio-ahora{
+    color: #ffdfff;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.precio-anterior{
+    text-decoration:line-through;
+    color: #dcb0dc;
+    margin-top: 1rem;
+}
+.juegos{
+    text-align: center;
+    background-color: #7e097e;
+    border: solid #7e097e 0.5rem;
+    border-radius: 5%;
+}
+.juegos h2{
+    color: #ffdfff;
+    font-weight: 100;
+    margin-bottom: 0.3rem;
+}
+
+
