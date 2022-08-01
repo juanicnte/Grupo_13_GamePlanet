@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #100E0F;
+    color: #7e097e;
+}
+h2{
+    padding: 0.8rem 0 0.8rem 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label{
+    padding: 0 0 0.8rem 0;
+}
+input{
+    margin: 0 0 0.8rem 0;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 92%;
+    max-width: 382px;
+    padding: 0.5rem;
+    min-width: max-content;
+}
+.enviar{
+    width: 92%;
+    max-width: 382px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+    background-color: #7e097e;
+}
+
+@media screen and (min-width: 420px){
+    section div{
+        display: flex;
+        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0.4rem;
+    }
+    section div input{
+        width: 80%;
+        padding: 0.5rem;
+    }
+    form section{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    input{
+        width: 92%;
+        max-width: 382px;
+        padding: 0.5rem;
+    }
+}

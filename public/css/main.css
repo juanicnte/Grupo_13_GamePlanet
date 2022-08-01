@@ -39,6 +39,7 @@ body{
     justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
+    flex-direction: column;
 }
 .offers-list li img{
     width: 17rem;
@@ -63,11 +64,15 @@ body{
     background-color: #7e097e;
     border: solid #7e097e 0.5rem;
     border-radius: 5%;
+    margin-top: 3rem;
 }
 .juegos h2{
     color: #ffdfff;
     font-weight: 100;
     margin-bottom: 0.3rem;
 }
-
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
 

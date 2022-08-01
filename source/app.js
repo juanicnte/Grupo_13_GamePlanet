@@ -6,6 +6,19 @@ app.use(express.static(publicPath))
 app.listen(process.env.PORT || 3030, () => {
     console.log('servidor corriendo...');
 });
+
 app.get ('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/home.html'));
+});
+
+app.get("/register", function (req, res) {
+    res.sendFile(path.resolve(__dirname, './views/register.html'));
+});
+
+app.get("/login", function (req, res) {
+    res.sendFile(path.resolve(__dirname, './views/login.html'));
+});
+
+app.post("/", function (req, res) {
     res.sendFile(path.resolve(__dirname, './views/home.html'));
 });
