@@ -75,8 +75,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-<<<<<<< HEAD
-=======
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -119,7 +117,6 @@ body{
     }
 }
 
-
 @media (min-width: 1024px){
     .lista-footer{
         flex-direction: row;
@@ -141,6 +138,3 @@ body{
     background-color: #dcb0dc;
     }
 }
-
->>>>>>> c365d0bc94635a1cfbdc0d6b69f66754b911b4c8
-
