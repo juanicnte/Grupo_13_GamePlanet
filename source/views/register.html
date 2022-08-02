@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Planet</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo"><picture><img src="/images/logo.png" alt="logo-game-planet"></picture></a>
+    </header>
+    <main>
+
+        <form action="/" method="POST">
+            <h2>
+                Registrate
+            </h2>
+            <section>
+                <div>
+                    <label for="nombreCompleto">Nombre y apellido</label>
+                    <input type="text" name="nombreYApellido" id="nombreCompleto" placeholder="Nombre y apellido" required>
+                </div>
+                <div>
+                    <label for="nombreUsuari@">Nombre de usuari@</label>
+                    <input type="text" name="usuario" placeholder="Nombre de usuari@" id="nombreUsuari@" required>
+                </div>
+            </section>
+            <label for="correo">Correo electronico</label>
+            <input type="email" name="correo" placeholder="Correo electronico" id="correo" required>
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" placeholder="contraseña" id="contraseña" required>
+            <label for="nacio">Fecha de nacimiento</label>
+            <input type="date" name="Fecha-de-nacimiento" id="nacio" required>
+            <button class="enviar" type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer class="main-footer">
+        <div class="content">
+            <div class="links">
+
+        <ul class="lista-footer">
+            <li>
+                <a href="#">Términos y condiciones</a>
+            </li>
+            <li>
+                <a href="#">Contacto</a>
+            </li>
+            <li>
+                <a href="#">Política de privacidad</a>
+            </li>
+        </ul>
+
+        <div class="icons-footer">
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-youtube"></a>
+            <a href="#" class="fa-brands fa-discord"></a>
+            <a href="#" class="fa-brands fa-twitch"></a>
+        </div>
+    </div>
+    </div>
+    </footer>
+</body>
+</html>

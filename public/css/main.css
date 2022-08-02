@@ -173,7 +173,6 @@ body{
     
 }
 
-
 @media (min-width: 1024px){
     .lista-footer{
         flex-direction: row;
@@ -195,5 +194,3 @@ body{
     background-color: #dcb0dc;
     }
 }
-
-
