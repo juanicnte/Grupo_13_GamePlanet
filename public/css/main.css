@@ -77,7 +77,7 @@ body{
 }
 
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px)  {
     .lista-footer li {
         margin-right: 3rem;
     }
