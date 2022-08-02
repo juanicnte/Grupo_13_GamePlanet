@@ -76,7 +76,11 @@ body{
 }
 
 
+<<<<<<< HEAD
 @media (min-width: 768px) and (max-width: 1023px) {
+=======
+@media (min-width: 768px)  {
+>>>>>>> 6472aa535cf79f6004073783eca784f1454c3ef7
     .lista-footer li {
         margin-right: 3rem;
     }
@@ -96,16 +100,80 @@ body{
     .hamburger-button{
         display:none;
     }
+<<<<<<< HEAD
     .header-bottom-bar {
         display: flex;
         position: relative;
     }
     .header-top-bar {
         flex-wrap: wrap;
+=======
+
+    .img-logo {
+        width: 10%;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .menu li{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        
+    }
+
+    .main-header{
+        flex-wrap: wrap;
+    }
+    .header-search-bar {
+        width: 70%;
+        border-radius: 5px;
+        margin: 10px 0px 0px 0px;
+    }
+    .barraDeBusqueda{
+        width: 100%;
+    }
+    .barraDeBusqueda input{
+        width: 90%;
+        border-radius: 10px;
+    }
+    .header-bottom-bar {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 0px;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #9e339e;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    
+    .header-bottom-bar li {
+        display: flex;
+        position: relative;
+
+       
+    }
+
+    .header-top-bar {
+        flex-wrap: wrap;
+        width: 90%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+>>>>>>> 6472aa535cf79f6004073783eca784f1454c3ef7
     }
     .nav-bar  {
         display: flex;
         position: relative;
+<<<<<<< HEAD
         width: 50%;
         
     }
@@ -150,6 +218,19 @@ body{
     }
  
 
+=======
+        flex-wrap: wrap;
+        
+    }
+    
+    .nav-bar li {
+        display: flex;
+        position: relative;
+       
+    }
+    
+}
+>>>>>>> 6472aa535cf79f6004073783eca784f1454c3ef7
 
 @media (min-width: 1024px){
     .lista-footer{
@@ -171,6 +252,10 @@ body{
     border-radius: 8px;
     background-color: #dcb0dc;
     }
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> 6472aa535cf79f6004073783eca784f1454c3ef7
