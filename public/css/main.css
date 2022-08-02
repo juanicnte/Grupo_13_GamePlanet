@@ -97,24 +97,80 @@ body{
     .hamburger-button{
         display:none;
     }
+
+    .img-logo {
+        width: 10%;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .menu li{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        
+    }
+
+    .main-header{
+        flex-wrap: wrap;
+    }
+    .header-search-bar {
+        width: 70%;
+        border-radius: 5px;
+        margin: 10px 0px 0px 0px;
+    }
+    .barraDeBusqueda{
+        width: 100%;
+    }
+    .barraDeBusqueda input{
+        width: 90%;
+        border-radius: 10px;
+    }
     .header-bottom-bar {
         display: flex;
         position: relative;
+        width: 100%;
+        margin: 0px;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #9e339e;
+        border-radius: 5px;
+        margin-top: 10px;
     }
+    
+    .header-bottom-bar li {
+        display: flex;
+        position: relative;
+
+       
+    }
+
     .header-top-bar {
         flex-wrap: wrap;
+        width: 90%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        align-items: center;
     }
     .nav-bar  {
         display: flex;
         position: relative;
-        width: 50%;
+        flex-wrap: wrap;
         
     }
+    
     .nav-bar li {
         display: flex;
         position: relative;
-        margin: 2rem auto;
+       
     }
+    
 }
 
 
