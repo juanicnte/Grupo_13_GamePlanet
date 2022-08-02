@@ -15,7 +15,6 @@ body{
 }
 
 
-
 /*main*/
 
 .h2-container{
@@ -30,7 +29,7 @@ body{
     color: #ffdfff;
 }
 .offers-container{
-    background-color: #3e093e;
+    background-color: #200920;
     padding-top: 1rem;
     padding-bottom: 3rem;
 }
@@ -74,6 +73,104 @@ body{
 .main-content{
     display: flex;
     flex-direction: column;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .lista-footer li {
+        margin-right: 3rem;
+    }
+    .icons-footer a{
+        margin: 0.3rem;
+    }
+    .icons-footer{
+        margin: 1rem;
+    }
+    .icons-footer a{
+        margin: 15px;
+    border: solid 1px;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: #dcb0dc;
+    }
+    .hamburger-button{
+        display:none;
+    }
+    .header-bottom-bar {
+        display: flex;
+        position: relative;
+    }
+    .header-top-bar {
+        flex-wrap: wrap;
+    }
+    .nav-bar  {
+        display: flex;
+        position: relative;
+        width: 50%;
+        
+    }
+    .nav-bar li {
+        display: flex;
+        position: relative;
+        margin: 2rem auto;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: row;
+        max-width: 50%;
+      }
+      .offers-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2rem;
+        position: relative;
+        right: 3%;
+      }
+      .offers-container{
+        max-width: 100vw;
+        justify-content: center;
+        background: linear-gradient(176deg, black, #0000006b)
+      }
+      .juegos{
+        max-width: 36%;
+        margin-left: 2rem;
+      }
+      .offers-list li img {
+        width: 12rem;
+        border-radius: 5%;
+    }
+       main ul li h2{
+        font-size: 1rem;
+    }
+       .h2-container{
+        margin-top: 3%;
+        border: 1px solid aliceblue;
+       }
+    }
+ 
+
+
+@media (min-width: 1024px){
+    .lista-footer{
+        flex-direction: row;
+    }
+    .lista-footer li {
+        margin-right: 3rem;
+    }
+    .icons-footer a{
+        margin: 0.3rem;
+    }
+    .icons-footer{
+        margin: 1rem;
+    }
+    .icons-footer a{
+        margin: 15px;
+    border: solid 1px;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: #dcb0dc;
+    }
 }
 
 
