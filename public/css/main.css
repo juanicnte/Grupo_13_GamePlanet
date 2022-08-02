@@ -13,6 +13,7 @@ li {
 
 body {
     background-color: #7e097e;
+
 }
 
 
@@ -193,7 +194,9 @@ body {
     .main-content {
         display: flex;
         flex-direction: row;
-        max-width: 50%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
     }
 
     .offers-list {
@@ -230,15 +233,9 @@ body {
         border: 1px solid aliceblue;
     }
 
-
-
-    .nav-bar li {
-        display: flex;
-        position: relative;
-
-    }
-
 }
+
+
 
 @media (min-width: 1024px) {
     .lista-footer {
@@ -264,4 +261,5 @@ body {
         border-radius: 8px;
         background-color: #dcb0dc;
     }
+
 }
