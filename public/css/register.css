@@ -45,6 +45,13 @@ input{
     color: white;
     background-color: #7e097e;
 }
+.header-search-bar{
+    display: none;
+}
+header a{
+    text-decoration: none;
+    color: #100E0F;
+}
 /*
 @media screen and (min-width: 420px){
     section div{

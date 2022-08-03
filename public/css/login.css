@@ -9,10 +9,13 @@ header{
     flex-direction: column;
     align-items: center;
 }
-main form{
+main{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+}
+main form{
+    margin: 0.8rem 0 0.8rem 0;
 }
 main label{
     display: none;
@@ -22,26 +25,34 @@ main a{
     align-items: center;
     flex-direction: column;
     text-decoration: none;
+    margin: 0 0 0.8rem 0;
 }
 input{
     margin: 0 0 0.8rem 0;
     border-radius: 0.5rem;
     text-align: center;
-    width: 92%;
-    max-width: 382px;
+    width: 100%;
     padding: 0.5rem;
-    min-width: max-content;
 }
 button{
-    margin: 0 0 0.8rem 0;
     border-radius: 0.5rem;
     text-align: center;
-    width: 92%;
-    max-width: 382px;
+    width: 100%;
     padding: 0.5rem;
-    min-width: max-content;
     color: white;
     background-color: #7e097e;
+    cursor: pointer;
+}
+.header-search-bar{
+    display: none;
+}
+header a{
+    text-decoration: none;
+    color: #100E0F;
+}
+.button-register{
+    max-width: 474.94px;
+    width: 100vw;
 }
 
 @media (min-width: 768px)  {
