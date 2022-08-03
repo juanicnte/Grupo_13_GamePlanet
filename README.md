@@ -18,4 +18,5 @@ Los siguientes sitios fueron elegidos como referencia por su relación con la te
 - Tomas Elías Fernández: Buenos Aires, Argentina - Por recomendación de un alumno que cursó, me decidí por probar y empezar el curso el cual hasta ahora estoy satisfecho con el contenido y todo lo que voy aprendiendo, ya que es mi primer contancto con la programación.
 - Juan Ignacio Centeno: Nacido en Posadas, misiones - Argentina. En el 2021 termine el secundario, en 2022 empecé la carrera de analisis de sitemas y la deje porque casi no programaba y yo queria programar, asi que deje la carrera y empecé el curso de desarrollo web. (Aguante el front-end).
 
-TRELLO
+## Tablero de Trabajo
+- [Trello](https://trello.com/b/5kvoSNjQ/game-planet-dh-project)
