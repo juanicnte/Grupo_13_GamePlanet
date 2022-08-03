@@ -46,13 +46,16 @@ button{
 .header-search-bar{
     display: none;
 }
-header a{
-    text-decoration: none;
-    color: #100E0F;
-}
 .button-register{
     max-width: 474.94px;
     width: 100vw;
+}
+a{
+    text-decoration: none;
+    color: #100E0F;
+}
+footer{
+    background-color: #7e097e;
 }
 
 @media (min-width: 768px)  {

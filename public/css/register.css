@@ -44,13 +44,17 @@ input{
     cursor: pointer;
     color: white;
     background-color: #7e097e;
+    margin: 0 0 1rem 0;
 }
 .header-search-bar{
     display: none;
 }
-header a{
+a{
     text-decoration: none;
     color: #100E0F;
+}
+footer{
+    background-color: #7e097e;
 }
 /*
 @media screen and (min-width: 420px){
