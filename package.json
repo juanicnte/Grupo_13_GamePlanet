@@ -2,9 +2,10 @@
   "name": "digital-house",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "source/app.js",
   "scripts": {
-    "start": "nodemon source/app.js -e js,mjs,json,ejs,css"
+    "start": "nodemon source/app.js -e js,mjs,json,ejs,css",
+    "test": "nodemon source/app.js -e js,mjs,json,ejs,css"
   },
   "keywords": [],
   "author": "",
