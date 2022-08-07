@@ -2,6 +2,7 @@ const express = require('express');
 const path = require ('path');
 const config = require('./modules/server')
 const { join } = require('path');
+const method = require('method-override');
 const app = express();
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath)) 
@@ -11,6 +12,7 @@ app.listen(process.env.PORT || 3030, () => {
 });
 
 app.use(express.urlencoded({extended:true}));
+app.use(method('m'))
 app.use(require('./routes/products.routes'));
 
 /*Código viejo
