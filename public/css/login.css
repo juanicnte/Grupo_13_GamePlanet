@@ -9,18 +9,18 @@ header{
     flex-direction: column;
     align-items: center;
 }
-main{
+.mainLogin{
     display: flex;
     flex-direction: column;
     align-items: center; 
 }
-main form{
-    margin: 0.8rem 0 0.8rem 0;
+.mainLogin form{
+    margin-top: 50px;
 }
-main label{
+.mainLogin label{
     display: none;
 }
-main a{
+.mainLogin a{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -28,14 +28,14 @@ main a{
     margin: 0 0 0.8rem 0;
     color: #7e097e;
 }
-input{
+.mainLogin input{
     margin: 0 0 0.8rem 0;
     border-radius: 0.5rem;
     text-align: center;
     width: 100%;
     padding: 0.5rem;
 }
-button{
+.mainLogin button{
     border-radius: 0.5rem;
     text-align: center;
     width: 100%;
@@ -50,7 +50,9 @@ button{
 .button-register{
     max-width: 474.94px;
     width: 100vw;
+    margin-bottom: 30px;
 }
+
 a{
     text-decoration: none;
     color: #100E0F;

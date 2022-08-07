@@ -17,6 +17,14 @@ app.use(express.urlencoded({extended:true}));
 app.use(method('m'))
 app.use(require('./routes/products.routes'));
 
+
+app.get("/register", function (req, res) {
+    res.sendFile(path.resolve(__dirname, './views/register.html'));
+});
+
+app.get("/login", function (req, res) {
+    res.sendFile(path.resolve(__dirname, './views/login.html'));
+});
 /*Código viejo
 app.get ('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/home.html'));

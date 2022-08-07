@@ -49,6 +49,10 @@ input{
 .header-search-bar{
     display: none;
 }
+.formRegistro{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 a{
     text-decoration: none;
     color: #100E0F;
