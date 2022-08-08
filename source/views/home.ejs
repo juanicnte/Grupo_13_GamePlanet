@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1." />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css" />
-    <title>Game Planet</title>
+    <%- include('./partials/head.ejs') %>
   </head>
   <body>
-    <%- include('./partials/header.ejs') %> 
-    
+    <%- include('./partials/header.ejs') %>
+
     <main class="main-content">
-        <nav class="offers-container">
+      <nav class="offers-container">
         <div class="h2-container">
           <h2 class="eslogan-oferta">Las mejores ofertas</h2>
         </div>
@@ -52,40 +43,11 @@
             </div>
           </li>
         </ul>
-    </nav>
-    
+      </nav>
     </main>
 
     <footer class="main-footer">
-      <div class="content">
-        <div class="links">
-          <div class="logo-footer-container">
-            <img src="images/logo.png" alt="Juegos" class="logo-footer" />
-          </div>
-
-          <ul class="lista-footer">
-            <li>
-              <a href="#">Términos y condiciones</a>
-            </li>
-            <li>
-              <a href="#">Contacto</a>
-            </li>
-            <li>
-              <a href="#">Política de privacidad</a>
-            </li>
-          </ul>
-
-          <div class="icons-footer">
-            <a href="#" class="fa-brands fa-instagram"></a>
-            <a href="#" class="fa-brands fa-youtube"></a>
-            <a href="#" class="fa-brands fa-discord"></a>
-            <a href="#" class="fa-brands fa-twitch"></a>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>Copyright © 2022 Game Planet - All rights reserved</p>
-      </div>
+      <%- include('./partials/footer.ejs') %>
     </footer>
   </body>
 </html>
