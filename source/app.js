@@ -7,7 +7,7 @@ const app = express();
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath)) 
 app.set('views', join(__dirname, './views'));
-app.set('view', 'ejs');
+app.set('view engine', 'ejs');
 app.listen(process.env.PORT || 3030, () => {
     console.log('servidor corriendo...');
 });

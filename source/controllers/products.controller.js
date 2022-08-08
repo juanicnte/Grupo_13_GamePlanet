@@ -6,7 +6,8 @@ const controlador = {
     index: (req, res) => {
         //let products = all();
         //res.render('Listado', {products})
-        res.sendFile(path.resolve(__dirname, '../views/home.html'));
+        //res.render(path.resolve(__dirname, '../views/home.ejs'));
+        return res.render('home');
     },
     //Muesta el detalle del producto
     show: function(req, res){
