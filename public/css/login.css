@@ -60,6 +60,9 @@ a{
 footer{
     background-color: #7e097e;
 }
+main .olvide-contraseña{
+    margin: 0.8rem 0 0.8rem 0;
+}
 
 @media (min-width: 768px)  {
     .lista-footer li {
