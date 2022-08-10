@@ -2,7 +2,7 @@
 @import url('footer.css');
 
 body{
-    background-color: #100E0F;
+    background-color: #7e097e;
     color: #7e097e;
 }
 h2{
@@ -49,10 +49,6 @@ input{
 .header-search-bar{
     display: none;
 }
-.formRegistro{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 a{
     text-decoration: none;
     color: #100E0F;
@@ -69,6 +65,9 @@ section .fa-cart-shopping{
 
 footer{
     background-color: #7e097e;
+}
+.mainRegister{
+    background-color: #100E0F;
 }
 /*
 @media screen and (min-width: 420px){

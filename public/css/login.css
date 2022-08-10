@@ -1,7 +1,7 @@
 @import url('header.css');
 @import url('footer.css');
 body{
-    background-color: #100E0F;
+    background-color: #7e097e;
     color: #7e097e;
 }
 header{
@@ -13,8 +13,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px; 
+    background-color: #100E0F;
 }
 .mainLogin form{
     margin-top: 50px;
