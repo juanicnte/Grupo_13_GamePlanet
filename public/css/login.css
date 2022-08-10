@@ -12,7 +12,9 @@ header{
 .mainLogin{
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px; 
 }
 .mainLogin form{
     margin-top: 50px;
@@ -27,6 +29,15 @@ header{
     text-decoration: none;
     margin: 0 0 0.8rem 0;
     color: #7e097e;
+}
+section .nav-bar{
+    display: none;
+}
+section .header-bottom-bar{
+    display: none;
+}
+section .fa-cart-shopping{
+    display: none;
 }
 .mainLogin input{
     margin: 0 0 0.8rem 0;

@@ -57,6 +57,16 @@ a{
     text-decoration: none;
     color: #100E0F;
 }
+section .nav-bar{
+    display: none;
+}
+section .header-bottom-bar{
+    display: none;
+}
+section .fa-cart-shopping{
+    display: none;
+}
+
 footer{
     background-color: #7e097e;
 }

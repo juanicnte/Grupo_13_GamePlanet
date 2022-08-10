@@ -18,8 +18,11 @@
     align-items: center;
 }
 
-.img-logo {
-    width: 20%;
+.picture-logo{
+    width: 10%;
+}
+.picture-logo .img-logo{
+    width: 100%;
 }
 
 .header-top-bar {
