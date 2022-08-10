@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300,500,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
     <header class="main-header">
@@ -61,83 +61,35 @@
         </ul>
       </section>
     </header>
-    <main class="mainRegister">
-     
-      <form action="/" method="POST" class="formRegistro">
-        <h2>Regístrate</h2>
-        <section>
-          <div>
-            <label for="nombreCompleto">Nombre y apellido</label>
-            <input
-              type="text"
-              name="nombreYApellido"
-              id="nombreCompleto"
-              placeholder="Nombre y apellido"
-              required
-            />
-          </div>
-          <div>
-            <label for="nombreUsuari@">Nombre de usuari@</label>
-            <input
-              type="text"
-              name="usuario"
-              placeholder="Nombre de usuari@"
-              id="nombreUsuari@"
-              required
-            />
-          </div>
-        </section>
-        <label for="correo">Correo electrónico</label>
+    <main class="mainLogin">
+
+      <form action="/" method="POST">
+        <label class="none" for="usuari@">Correo Electrónico</label>
         <input
-          type="email"
-          name="correo"
-          placeholder="Correo electronico"
-          id="correo"
+          type="text"
+          name="user"
+          placeholder="Correo Electronico"
+          id="usuari@"
           required
         />
-        <label for="contraseña">Contraseña</label>
+        <label class="none" for="password">Contraseña</label>
         <input
           type="password"
-          name="contraseña"
-          placeholder="contraseña"
-          id="contraseña"
-          required
+          name="password"
+          placeholder="Contraseña"
+          id="password"
         />
-        <label for="nacio">Fecha de nacimiento</label>
-        <input type="date" name="Fecha-de-nacimiento" id="nacio" required />
-        <button class="enviar" type="submit">Enviar</button>
+        <button class="iniciar-sesion" type="submit">Iniciar Sesion</button>
       </form>
+      <a class="olvide-contraseña" href="#">Olvide mi contraseña</a>
+      <div class="button-register">
+        <a href="/register"
+          ><button class="registrate" type="submit">Regístrate</button></a
+        >
+      </div>
     </main>
     <footer class="main-footer">
-      <div class="content">
-        <div class="links">
-          <div class="logo-footer-container">
-            <img src="images/logo.png" alt="Juegos" class="logo-footer" />
-          </div>
-
-          <ul class="lista-footer">
-            <li>
-              <a href="#">Términos y condiciones</a>
-            </li>
-            <li>
-              <a href="#">Contacto</a>
-            </li>
-            <li>
-              <a href="#">Política de privacidad</a>
-            </li>
-          </ul>
-
-          <div class="icons-footer">
-            <a href="#" class="fa-brands fa-instagram"></a>
-            <a href="#" class="fa-brands fa-youtube"></a>
-            <a href="#" class="fa-brands fa-discord"></a>
-            <a href="#" class="fa-brands fa-twitch"></a>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>Copyright © 2022 Game Planet - All rights reserved</p>
-      </div>
+      <%- include('./partials/footer.ejs') %>
     </footer>
   </body>
 </html>

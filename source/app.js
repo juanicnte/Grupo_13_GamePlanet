@@ -19,17 +19,17 @@ app.use(require('./routes/products.routes'));
 
 
 app.get("/register", function (req, res) {
-    res.sendFile(path.resolve(__dirname, './views/register.html'));
+    return res.render("register");
 });
 
-app.get("/login", function (req, res) {
-    res.sendFile(path.resolve(__dirname, './views/login.html'));
+app.get("/login", function(req,res){
+    return res.render("login");
 });
 
 app.get('/carrito', function(req,res){
-    return res.render("carrito")//RENDERIZADO
+    return res.render("carrito");//RENDERIZADO
 
-})
+});
 /*Código viejo
 app.get ('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/home.html'));
