@@ -221,6 +221,8 @@ body {
     display: inline-flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 2%;
+    margin-top: 3%;
     }
 
     .offers-list li img {
@@ -270,5 +272,10 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;    }
+    .juegos{
+        justify-content: space-around;
+        margin: 1%;
+    }
+    }
 
-}
+
