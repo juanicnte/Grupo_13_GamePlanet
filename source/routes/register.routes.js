@@ -13,5 +13,8 @@ route.get("/register", function (req, res) {
 route.get("/login", function (req, res) {
     res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
+route.get("/carrito", function (req, res) {
+    res.sendFile(path.resolve(__dirname, './views/carrito.ejs'));
+});
 */
 module.exports = route;

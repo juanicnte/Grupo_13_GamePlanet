@@ -25,6 +25,11 @@ app.get("/register", function (req, res) {
 app.get("/login", function (req, res) {
     res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
+
+app.get('/carrito', function(req,res){
+    return res.render("carrito")//RENDERIZADO
+
+})
 /*Código viejo
 app.get ('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/home.html'));
