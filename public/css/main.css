@@ -203,9 +203,10 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 2rem;
+        margin: 3rem;
         position: relative;
-        right: 3%;
+        right: -1%;
+        flex-wrap: wrap;
     }
 
     .offers-container {
@@ -215,8 +216,11 @@ body {
     }
 
     .juegos {
-        max-width: 36%;
-        margin-left: 2rem;
+        max-width: 40%;
+    margin-left: -1rem;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     }
 
     .offers-list li img {
@@ -261,5 +265,10 @@ body {
         border-radius: 8px;
         background-color: #dcb0dc;
     }
+    .main-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;    }
 
 }
