@@ -7,9 +7,15 @@ main{
 .contenedor-uno{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
+}
+
+.contenedor-uno p{
+    font-weight: bolder;
+    font-size: 1.2rem;
 }
 
 .contiene-dos{
