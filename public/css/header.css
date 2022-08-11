@@ -98,10 +98,14 @@
     height: 50px;
     padding: 20px;
     margin: 0;
-    /*text-align: center;*/
+    /* text-align: center; */
+    display: flex;
     align-content: center;
     align-self: center;
     border-radius: 5px;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
     
 }
 
