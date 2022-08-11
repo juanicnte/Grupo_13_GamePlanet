@@ -1,7 +1,7 @@
 # Grupo_13_GamePlanet_RETROSPECTIVA
 
 ## SPRINT 1
-Creamos un grupo de whatsapp para mejorar la comunicación y por ese medio
+Creamos un grupo de whatsapp para mejorar la comunicación por ese medio
 Se creó la cuenta de GitHub
 Se definió el proyecto Game_Planet que es un proyecto existente de Juan
 Se realizó el entregable README.md
