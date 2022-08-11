@@ -19,7 +19,7 @@
 }
 
 .picture-logo{
-    width: 10%;
+    width: 25%;
 }
 .picture-logo .img-logo{
     width: 100%;
@@ -27,9 +27,17 @@
 
 .header-top-bar {
     display: flex;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
     margin-right: 2rem;
     width: 80%;
+    justify-content: space-around;
+
+/*CAMBIO EL HEADER PAQRA QUE EN TODAS LAS PAGINAS QUEDE CENTRADO Y BIEN DISTRIBUIDO*/
+
+   /* display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 80%;*/
 }
 /*
 

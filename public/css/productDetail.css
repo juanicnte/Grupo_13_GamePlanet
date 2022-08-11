@@ -1,0 +1,90 @@
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contenedorImg{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorImg img{
+    width: 40%;
+    padding-bottom: .4rem;
+}
+
+#descripcionJuego{
+    display: flex;
+    font-weight: bolder;
+    font-size: .9rem;
+    flex-direction: row;
+    /* text-align: center;*/
+}
+
+@media screen and (min-width:768px) {
+
+    .main-header{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .picture-logo .img-logo {
+        width: 80%;
+    }
+
+    ul.nav-bar{
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+    }
+
+    .hamburger-button{
+        display: none;
+    }
+
+    h3{
+        display: flex;
+        justify-content: flex-start;
+        padding-top: .4rem;
+        margin: auto;
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 2px black;
+        text-shadow: 2px 2px 2px white;
+    }
+
+    .contenedorImg{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .contenedorImg img{
+        width: 18%;
+        padding: .4rem;
+    }
+    
+}
+
+@media screen and (min-width:1024px) {
+
+    .contenedorImg img{
+        width: 10%;
+    }
+
+    #descripcionJuego{
+        display: flex;
+        gap:1rem;
+    }
+    
+}

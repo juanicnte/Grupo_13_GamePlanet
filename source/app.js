@@ -30,6 +30,12 @@ app.get('/carrito', function(req,res){
     return res.render("carrito");//RENDERIZADO
 
 });
+
+app.get('/productDetail', function(req,res){
+    return res.render("productDetail");//RENDERIZADO
+
+});
+
 /*Código viejo
 app.get ('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/home.html'));
