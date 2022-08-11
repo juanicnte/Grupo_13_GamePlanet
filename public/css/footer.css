@@ -31,4 +31,6 @@
     color: #ffdfff;
     border-top: solid 1px #ffdfff;
     padding-top: 0.325rem;
+    display: flex;
+    justify-content: center;
 }

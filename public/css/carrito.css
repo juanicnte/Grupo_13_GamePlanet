@@ -52,7 +52,7 @@ button{
     font-size: 1rem;
 }
 
-#detalle{
+.detalle{
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -62,11 +62,7 @@ button{
     padding-bottom: 1rem;
 }
 
-#detalle p{
-    padding-bottom: 1rem;
-}
-
-#detalle #comprar{
+.detalle #comprar{
     background-color: white;
     border: 1px solid black;
     border-radius: 7%;
@@ -78,8 +74,19 @@ button{
     width: 50%;
 }
 
-.medioPago{
+
+#mediosdepago{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background: white;
+    justify-content: space-around;
+}
+
+
+/*.medioPago{
     display: flex;
     width: 100%;
-    
-}
+ 
+}*/
