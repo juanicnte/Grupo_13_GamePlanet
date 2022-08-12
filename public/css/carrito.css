@@ -54,12 +54,18 @@ button{
 
 .detalle{
     display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 1rem;
+    /* width: 100%; */
+    /* align-items: stretch; */
+    margin: auto;
+    /* padding-bottom: 1rem; */
+    /* align-content: flex-start; */
+    gap: .4rem;
+    /* justify-content: center; */
+    /* margin-left: 2%; */
+    /* align-items: center; */
+    /* align-self: center; */
+    /* text-align: center; */
+    flex-direction: column;
 }
 
 .detalle #comprar{
@@ -90,3 +96,44 @@ button{
     width: 100%;
  
 }*/
+
+@media screen and (min-width:768px) {
+
+    .main-header{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .picture-logo .img-logo {
+        width: 80%;
+    }
+
+    ul.nav-bar {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .hamburger-button{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        /* align-items: center; */
+        margin-top: 10px;
+        flex-direction: row;
+        /* text-align: center; */
+        width: 75%;
+        gap: 3rem;
+    }
+
+    h3{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 2px white;
+    }
+}
