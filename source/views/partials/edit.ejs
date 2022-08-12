@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <form action="/producto/actualizar?m=PUT" method="post">
+
+        <input type="hidden" name="sku" value="<%= product.sku  %>">
+
+        <fieldset>
+            <legend>Nombre de producto</legend>
+            <input type="text" name="name" id="name" value="<%= product.name  %> ">    
+        </fieldset>
+        <fieldset>
+            <legend>Precio de producto</legend>
+            <input type="text" name="price" id="price" value=" <%= product.price  %> ">
+        </fieldset>
+        <fieldset>
+            <legend>Categoria de producto</legend>
+            <label for="category-action"></label>
+            <input type="radio" name="category" id="category-action" <%= product.category == "action" ? "checked" : "" %> >
+            <label for="category-adventure"></label>
+            <input type="radio" name="category" id="category-adventure" value="adventure" <%= product.category == "adventure" ? "checked" : "" %> >
+            <label for="category-survival"></label>
+            <input type="radio" name="category" id="category-survival" value="survival"  <%= product.category == "survival" ? "checked" : "" %> >
+        </fieldset>
+        
+
+        <button type="submit">Guardar</button>
+
+    </form>
+</body>
+</html>
