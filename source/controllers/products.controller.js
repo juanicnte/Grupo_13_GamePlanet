@@ -1,4 +1,5 @@
-const { write } = require('fs');
+const { write, unlinkSync } = require('fs');
+const { resolve } = require('path');
 const path = require('path');
 const {all, one, generate, save} = require('../models/products.model')
 const controlador = {
@@ -19,15 +20,17 @@ const controlador = {
         return res.send('')
     },
     save: (req, res) => {
+        req.body.image = req.files && req.file.length > 0 ? req.files[0].filename : 'default.png'
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);
         write(todos);
-        return res.redirect('/productos/')
+        return res.redirect('/products/')
     },
     edit: (req, res) => {
-        let product = one();
-        res.send('')
+        let product = one(req.params.idProducto);
+        return res.render('edit', {
+            product})
     },
     update: (req, res) => {
         let todos = all();
@@ -36,11 +39,23 @@ const controlador = {
                 elemento.name = req.body.name;
                 elemento.price = paseInt(req.body.price);
                 elemento.category = req.body.category;
+                elemento.image = req.files && req.files.length > 0 ? req.files[0].filename : elemento.image;
             }
             return elemento;
         })
         write(actualidos)
-        return res.redirect('/productos/')
+        return res.redirect('/products/')
+    },
+    remove: (req, res) => {
+        let product = one(req.body.sku);
+        if(product.image != 'default.png'){
+            let file = resolve(__dirname, '..', '..', 'public', product.image)
+            unlinkSync(file);
+        }
+        let todos = all();
+        let noEliminar = todos.filter(elemento => elemento.sku != req.body.sku);
+        write(noEliminar);
+        return res.redirect('/products/')
     }
 };
 
