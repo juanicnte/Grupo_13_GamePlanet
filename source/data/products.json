@@ -1,10 +1,42 @@
 [
     {
-        "name": "Eso mismo",
-        "price": "2000",
-        "category": "one",
         "sku": 1,
-        "image": "a"
-        
+        "name": "The Last of us II",
+        "description": "The Last of us Part II",
+        "price": "1500",
+        "category": "PlayStation",
+        "classification": "Juegos del momento",
+        "inOffer": 1,
+        "image": "default.png"
+    },
+    {
+        "sku": 2,
+        "name": "FIFIA 22",
+        "description": "Description FIFIA 22",
+        "price": "1100",
+        "category": "Nintendo",
+        "classification": "Más vendidos",
+        "inOffer": 0,
+        "image": "default.png"
+    },
+    {
+        "sku": 3,
+        "name": "FIFIA 22",
+        "description": "Description FIFIA 22",
+        "price": "700",
+        "category": "PC",
+        "classification": "Ofertas",
+        "inOffer": 0,
+        "image": "default.png"
+    },
+    {
+        "sku": 4,
+        "name": "Red dead II",
+        "description": "Red Dead Redemption",
+        "price": "1700",
+        "category": "Xbox",
+        "classification": "Soporte 24/7",
+        "inOffer": 0,
+        "image": "default.png"
     }
 ]
