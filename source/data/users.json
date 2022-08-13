@@ -1,9 +1,20 @@
 [
     {
-      "id":1,
-      "Name":"Juan",
-      "email":"pedroperez@hotmail.com",
-      "password":"asdasd",
-      "category":"admin"
+      "id": 1,
+      "fullName": "Juan",
+      "user": "juan",
+      "email": "pedroperez@hotmail.com",
+      "password": "asdasd",
+      "perfil": "admin",
+      "birthDay": "2010-07-07"
+    },
+    {
+      "id": 2,
+      "fullName": "Franco",
+      "user": "franco",
+      "email": "franco@gmail.com",
+      "password": "123456",
+      "perfil": "user",
+      "birthDay": "2010-10-17"
     }
 ]
