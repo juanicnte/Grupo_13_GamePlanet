@@ -17,6 +17,7 @@ Los siguientes sitios fueron elegidos como referencia por su relación con la te
 - Lucas Damian Ezequiel Ojeda: Soy de Buenos Aires - Argentina. Empecé el curso de desarrollo web por una recomendacion y la verdad que me gusta y espero en un futuro dedicarme a esto.
 - Tomas Elías Fernández: Buenos Aires, Argentina - Por recomendación de un alumno que cursó, me decidí por probar y empezar el curso el cual hasta ahora estoy satisfecho con el contenido y todo lo que voy aprendiendo, ya que es mi primer contancto con la programación.
 - Juan Ignacio Centeno: Nacido en Posadas, misiones - Argentina. En el 2021 termine el secundario, en 2022 empecé la carrera de analisis de sitemas y la deje porque casi no programaba y yo queria programar, asi que deje la carrera y empecé el curso de desarrollo web. (Aguante el front-end).
+-Franco Seccaspina, me apodan fran tengo 20 años . Trabaje en Puerto Madero como camarero y de forma autodidacta hice varios cursos de Php, MySQL, HTML,CSS,Java; Por eso es que me interesa el mundo de la programación y me interesa comseguir trabajo de esto para poder diseñar paginas y podes demostrar mi potencial a las empresas. Me gusta trabajar en equipo siempre y cuando seamos ordenados y sepamos distribuir nuestras partes; me considero una persona muy ordenado, proliojo y perseverante en aquello que hago.
 
 ## Tablero de Trabajo
 - [Trello](https://trello.com/b/5kvoSNjQ/game-planet-dh-project)
