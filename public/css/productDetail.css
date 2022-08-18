@@ -45,8 +45,35 @@ h3{
 
     ul.nav-bar{
         display: flex;
-        width: 60%;
+        width: 100%;
+        margin: auto;
         justify-content: space-around;
+    }
+
+    .header-top-bar {
+        flex-wrap: wrap;
+        width: 90%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        /* align-items: center; */
+        /* margin-top: 10px; */
+        flex-direction: row;
+        /* text-align: center; */
+        width: 69%;
+        margin: auto;
+        /* gap: 12rem; */
+        padding: 1rem;
+        justify-content: space-around;
+    }
+
+    .header-search-bar{
+        display: none;
     }
 
     .hamburger-button{

@@ -103,6 +103,7 @@ button{
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
+        /*background: #9264af;*/
     }
 
     .picture-logo .img-logo {
