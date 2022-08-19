@@ -35,7 +35,7 @@ h3{
 
     .main-header{
         width: 100%;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: center;
     }
 
@@ -46,8 +46,8 @@ h3{
     ul.nav-bar{
         display: flex;
         width: 100%;
-        margin: auto;
-        justify-content: space-around;
+        /* margin: auto; */
+        justify-content: space-evenly;
     }
 
     .header-top-bar {
@@ -65,11 +65,11 @@ h3{
         /* margin-top: 10px; */
         flex-direction: row;
         /* text-align: center; */
-        width: 69%;
+        width: 100%;
         margin: auto;
         /* gap: 12rem; */
         padding: 1rem;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .header-search-bar{

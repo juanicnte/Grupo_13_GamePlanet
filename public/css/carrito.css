@@ -101,7 +101,7 @@ button{
 
     .main-header{
         width: 100%;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
         justify-content: center;
         /*background: #9264af;*/
     }
@@ -126,8 +126,9 @@ button{
         margin-top: 10px;
         flex-direction: row;
         /* text-align: center; */
-        width: 75%;
-        gap: 3rem;
+        width: 100%;
+        /* gap: 3rem; */
+        justify-content: space-evenly;
     }
 
     h3{

@@ -100,8 +100,10 @@ main .olvide-contraseña{
 
     .menu{
         display: flex;
+        width: 100%;
         align-items: center;
         margin-top: 10px;
+        justify-content: flex-end;
     }
 
     .menu li{
@@ -112,9 +114,10 @@ main .olvide-contraseña{
         
     }
 
-    .main-header{
+    /*.main-header{
         flex-wrap: wrap;
-    }
+    }*/
+
     .header-search-bar {
         width: 70%;
         border-radius: 5px;
