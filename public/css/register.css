@@ -2,7 +2,6 @@
 @import url('footer.css');
 
 body{
-    background-color: #7e097e;
     color: #7e097e;
 }
 h2{
@@ -151,7 +150,9 @@ input{
     .menu{
         display: flex;
         align-items: center;
-        margin-top: 10px;
+        /* width: 100%; */
+        /* margin-top: 10px; */
+        justify-content: flex-end;
     }
 
     .menu li{
@@ -162,9 +163,9 @@ input{
         
     }
 
-    .main-header{
+    /*.main-header{
         flex-wrap: wrap;
-    }
+    }*/
     .header-search-bar {
         width: 70%;
         border-radius: 5px;

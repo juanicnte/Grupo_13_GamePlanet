@@ -120,7 +120,9 @@ body {
     .menu {
         display: flex;
         align-items: center;
+        width: 100%;
         margin-top: 10px;
+        justify-content: space-evenly;
     }
 
     .menu li {
@@ -131,9 +133,9 @@ body {
 
     }
 
-    .main-header {
+    /*.main-header {
         flex-wrap: wrap;
-    }
+    }*/
 
     .header-search-bar {
         width: 70%;
@@ -153,7 +155,7 @@ body {
     .header-bottom-bar {
         display: flex;
         position: relative;
-        width: 100%;
+        width: 90%;
         margin: 0px;
         justify-content: space-around;
         align-items: center;
@@ -180,9 +182,9 @@ body {
 
     .nav-bar {
         display: flex;
-        position: relative;
-        /*width: 50%;*/
-
+        /* position: relative; */
+        width: 100%;
+        justify-content: space-evenly;
     }
 
     .nav-bar li {
