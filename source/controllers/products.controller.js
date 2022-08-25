@@ -2,6 +2,7 @@ const { write, unlinkSync } = require('fs');
 const { resolve } = require('path');
 const path = require('path');
 const {all, one, generate, save} = require('../models/products.model')
+const model = require('../models/products.model')
 const controlador = {
     //Muestra la lista de productos
     index: (req, res) => {
