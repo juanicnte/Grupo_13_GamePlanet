@@ -16,8 +16,11 @@ let model = {
         let last = all.pop();
         let product = {}
         product.name = data.name;
+        product.description = data.description;
         product.price = parseInt(data.price);
         product.category = data.category;
+        product.classification = data.classification;
+        product.inOffer = data.inOffer;
         product.sku = !last ? last.sku + 1 : 1;
         product.image = data.image;
         return product;

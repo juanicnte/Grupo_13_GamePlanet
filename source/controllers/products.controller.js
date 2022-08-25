@@ -12,15 +12,20 @@ const controlador = {
     },
     //Muesta el detalle del producto
     show: function(req, res){
-        res.send('El detalle ' + req.params.idProducto);
+        let product = one(req.params.producto)
+        if(product){
+            return res.render('El detalle ' + {product});
+        }
+        res.render('El detalle ' + {product:null});
     },
     //Crea el producto
     create: (req, res) => {
         let nuevo = generate(req.body);
-        return res.send('')
+        return res.render('create')
     },
     save: (req, res) => {
         req.body.image = req.files && req.file.length > 0 ? req.files[0].filename : 'default.png'
+        let datosDelForm = req.body;
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);
@@ -28,17 +33,21 @@ const controlador = {
         return res.redirect('/products/')
     },
     edit: (req, res) => {
-        let product = one(req.params.idProducto);
+        let product = one(req.params.producto);
         return res.render('edit', {
             product})
     },
     update: (req, res) => {
+        
         let todos = all();
         let actualidos = todos.map(elemento => {
             if(elemento.sku == req.body.sku){
                 elemento.name = req.body.name;
+                elemento.description = req.body.description;
                 elemento.price = paseInt(req.body.price);
                 elemento.category = req.body.category;
+                elemento.classification = req.body.classification;
+                elemento.inOffer = req.body.inOffer;
                 elemento.image = req.files && req.files.length > 0 ? req.files[0].filename : elemento.image;
             }
             return elemento;
