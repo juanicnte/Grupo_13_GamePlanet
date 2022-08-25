@@ -21,17 +21,19 @@ const controlador = {
     },
     //Crea el producto
     create: (req, res) => {
+
         let nuevo = generate(req.body);
         return res.render('create')
     },
     save: (req, res) => {
-        req.body.image = req.files && req.file.length > 0 ? req.files[0].filename : 'default.png'
+        return res.render('Intenta guardar')
+            /*req.body.image = req.files && req.file.length > 0 ? req.files[0].filename : 'default.png'
         let datosDelForm = req.body;
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);
         write(todos);
-        return res.redirect('/products/')
+        return res.redirect('/products/')*/
     },
     edit: (req, res) => {
         let product = one(req.params.producto);

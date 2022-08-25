@@ -1,7 +1,70 @@
 <head>
-
-    <%- include('./partials/head.ejs')  %> 
-
-    <link rel="stylesheet" href="/css/create.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <%- include('./partials/head.ejs') %>
 </head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main class="main-content">
+        <a href="/products/">Volver</a>
+        <div class="container-p4">
+            <form action="/products/create?m=PUT" method="post" multipar class="card card-body">
+        <fieldset>
+            <legend>Nombre del producto</legend>
+            <input type="text" name="name" id="name" placeholder="Name" required class="form-control">    
+        </fieldset>
+        <fieldset>
+            <legend>Descripción del producto</legend>
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Description" required class="form-control"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Precio de producto</legend>
+            <input type="text" name="price" id="price" required class="form-control">
+        </fieldset>
+        <div class="form-group">
+        <fieldset >
+            <legend>Categoría del producto</legend>
+            <label for="category-Playstation">
+            <input type="radio" name="category" id="category-Playstation" value="Playstation" >Playstation</label>
+            <label for="category-Xbox">
+            <input type="radio" name="category" id="category-Xbox" value="Xbox" >Xbox</label>
+            <label for="category-Nintendo">
+            <input type="radio" name="category" id="category-Nintendo" value="Nintendo" >Nintendo</label>
+            <label for="category-PC">
+            <input type="radio" name="category" id="category-PC" value="PC" >PC</label>
+        </fieldset>
+    </div>
+        <fieldset>
+            <legend>Clasificación del producto</legend>
+            <label for="classification-Actuales">
+            <input type="radio" name="classification" id="classification-Actuales" value="Actuales" >Juegos del momento</label>
+            <label for="classification-MasVendidos">
+            <input type="radio" name="classification" id="classification-MasVendidos" value="MasVendidos" >Más vendidos</label>
+            <label for="classification-Soporte">
+            <input type="radio" name="classification" id="classification-Soporte" value="Soporte" >Soporte 24/7</label>
+            
+        </fieldset>
+        <fieldset>
+            <legend>¿En oferta?</legend>
+            <label for="offer-si">
+            <input type="radio" name="inOffer" id="offer-si" value="1" >Si</label>
+            <label for="offer-no">
+            <input type="radio" name="inOffer" id="offer-no" value="0" >No</label>
+        </fieldset>
+        <fieldset>
+            <legend>Archivos</legend>
+            <input type="file" name="image" id="image">
+            <label for="image">Subir imagen</label>
+            
+        </fieldset>
+        <button type="submit">Guardar</button>
+
+        
+
+    </form>
+</div>
+</main>
+    <footer class="main-footer">
+        <%- include('./partials/footer.ejs') %>
+      </footer>
+</body>
+</html>
