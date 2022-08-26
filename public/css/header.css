@@ -50,17 +50,24 @@
 */
 .nav-bar li {
     display: none;
-    background-color: #9e339e;
     border-radius: 5px;
-    /*margin: 2rem;*/
-    padding: 0.3rem;
+    /*padding: 0.3rem;
+    background-color: #9e339e;
+    margin: 2rem;
+    border: solid 1px;*/
+    margin: 15px;
+    
+    padding: 4px;
+    border-radius: 8px;
+    background-color: #dcb0dc;
+    color: #200920;
 }
 
-
+/*
 .header-search-bar {
     text-align: center;
     background-color: aliceblue;
-    width: 45%;
+    width: 80%;
 
     display: flex;
     position: relative;
@@ -70,7 +77,70 @@
     border: 1px solid #fff;
     height: 30px;
     border-radius: 5px;
+}*/
+
+
+
+
+.header-search-bar {
+	position: absolute;
+	left: 48%;
+	top: 45%;
+	transform: translate(-50%,-50%);
+	padding: 10px;
 }
+
+.header-search-bar input {
+	outline: none;
+	box-sizing: border-box;
+	height: 40px;
+	width: 0px;
+	padding: 0 20px;
+	color: #000;
+	border-radius: 50px;
+	font-size: 20px;
+	border: 1px solid #200920;
+	transition: all .7s ease;
+}
+
+::placeholder {
+	color: grey;
+}
+
+.btn {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 60px;
+	height: 60px;
+	background: #200920;
+	line-height: 60px;
+	border-radius: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.btn i {
+	font-size: 25px;
+	color: white;
+	line-height: 60px;
+	transition: all .7s ease;
+}
+
+.header-search-bar:hover input {
+	width: 250px;
+}
+
+.header-search-bar:hover i{
+	transform: rotate(-360deg);
+}
+
+.btn:hover{
+	background: #200920;
+}
+
+
 
 .header-bottom-bar {
     display: none;
@@ -87,6 +157,14 @@
 .menu{
     margin-left: auto;
     display: none;
+}
+
+.menu a i{
+    margin: 15px;
+    border: solid 1px;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: #dcb0dc;
 }
 /*
 .menu li {

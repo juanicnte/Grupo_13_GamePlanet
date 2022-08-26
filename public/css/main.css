@@ -33,7 +33,8 @@ body {
 }
 
 .offers-container {
-    background-color: #200920;
+    /*background-color: #200920;*/
+    background-color: #dcb0dc;
     padding-top: 1rem;
     padding-bottom: 3rem;
 }
@@ -89,6 +90,69 @@ body {
 
 
 @media (min-width: 768px) {
+    .main-header{
+        align-items: stretch;
+    }
+    .header-search-bar {
+        position: absolute;
+        left: 67%;
+        top: 45%;
+        transform: translate(-70%,-50%);
+        padding: 10px;
+    }
+    
+    .header-search-bar input {
+        outline: none;
+        box-sizing: border-box;
+        height: 60px;
+        width: 0px;
+        padding: 0 20px;
+        color: #000;
+        border-radius: 50px;
+        font-size: 20px;
+        border: 1px solid #200920;
+        transition: all .7s ease;
+    }
+    
+    ::placeholder {
+        color: grey;
+    }
+    
+    .btn {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 80px;
+        height: 80px;
+        background: #200920;
+        line-height: 80px;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s;
+    }
+    
+    .btn i {
+        font-size: 25px;
+        color: white;
+        line-height: 80px;
+        transition: all .7s ease;
+    }
+    
+    .header-search-bar:hover input {
+        width: 350px;
+    }
+    
+    .header-search-bar:hover i{
+        transform: rotate(-360deg);
+    }
+    
+    .btn:hover{
+        background: #200920;
+    }
+
+
+
     .lista-footer li {
         margin-right: 3rem;
     }
@@ -118,7 +182,7 @@ body {
     }
 
     .menu {
-        display: flex;
+        display: none;
         align-items: center;
         width: 100%;
         margin-top: 10px;
@@ -136,13 +200,13 @@ body {
     /*.main-header {
         flex-wrap: wrap;
     }*/
-
+/*
     .header-search-bar {
         width: 70%;
         border-radius: 5px;
         margin: 10px 0px 0px 0px;
     }
-
+*/
     .barraDeBusqueda {
         width: 100%;
     }
@@ -192,6 +256,9 @@ body {
         position: relative;
         margin: 10px 0px 0px 0px;
     }
+    .nav-bar a {
+        color: #200920;
+    }
 
     .main-content {
         display: flex;
@@ -214,7 +281,8 @@ body {
     .offers-container {
         max-width: 100vw;
         justify-content: center;
-        background: linear-gradient(176deg, black, #0000006b)
+        background-color: #dcb0dc;
+        /*background: linear-gradient(176deg, black, #0000006b)*/
     }
 
     .juegos {
@@ -246,6 +314,9 @@ body {
 
 
 @media (min-width: 1024px) {
+    .menu {
+        display: flex;
+    }
     .lista-footer {
         flex-direction: row;
     }

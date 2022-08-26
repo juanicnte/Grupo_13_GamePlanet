@@ -1,30 +1,49 @@
+.main-footer{
+    width: 100%;
+}
+.logo-footer-container{
+    width: 20%;
+}
 .links{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom:1rem ;
+    width: 100%;
 }
 
 .logo-footer{
-    width: 5rem;
+    width: 80%;
 }
 
 .lista-footer{
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    font-size: 12px;
+    width: 50%;
 }
+/*
 .lista-footer li{
     margin: 0.2rem;
-}
+}*/
 
 .icons-footer{
     display: flex;
     flex-direction: row;
-    margin: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+    width: 40%;
+    /*margin: 1rem;
+    width: auto;*/
 }
 .icons-footer a{
     margin: 5px;
+    border: solid 1px;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: #dcb0dc;
+    box-sizing: border-box;
 }
 
 .copyright p{
@@ -33,4 +52,6 @@
     padding-top: 0.325rem;
     display: flex;
     justify-content: center;
+    font-size: 10px;
+    width: 80%;
 }

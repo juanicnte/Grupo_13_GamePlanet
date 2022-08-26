@@ -10,7 +10,7 @@ const { existsSync, mkdirSync } = require('fs');
 
 const destination = function(req, file, cb){
     let folder = resolve(__dirname, '..', '..', 'public', 'products');
-    if(existsSync(folder))
+    if(!existsSync(folder))
     {
         mkdirSync(folder)
     }
