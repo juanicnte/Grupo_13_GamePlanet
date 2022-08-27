@@ -13,17 +13,27 @@
     background-color: #7e097e;
     display: flex;
     position: relative;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
 }
 
+.elnave{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
 .picture-logo{
     text-align: center;
-    width: 25%;
+    width: 20%;
+    padding: 0;
+  margin: 0;
+  border: 0;
+  /* left: auto; */
 }
 .picture-logo .img-logo{
-    width: 100%;
+    width: 100px;
 }
 
 .header-top-bar {
@@ -31,7 +41,6 @@
     /* margin-left: 2rem; */
     margin-right: 2rem;
     width: 80%;
-    justify-content: space-around;
 
 /*CAMBIO EL HEADER PAQRA QUE EN TODAS LAS PAGINAS QUEDE CENTRADO Y BIEN DISTRIBUIDO*/
 
@@ -48,6 +57,7 @@
     text-decoration: none;
 }
 */
+
 .nav-bar li {
     display: none;
     border-radius: 5px;
@@ -84,9 +94,13 @@
 
 .header-search-bar {
 	position: absolute;
-	left: 48%;
+	/*left: 48%;
 	top: 45%;
 	transform: translate(-50%,-50%);
+    */
+
+    left: 40%;
+    top: 30%;
 	padding: 10px;
 }
 
@@ -94,7 +108,7 @@
 	outline: none;
 	box-sizing: border-box;
 	height: 40px;
-	width: 0px;
+	width: 200px;
 	padding: 0 20px;
 	color: #000;
 	border-radius: 50px;
@@ -185,6 +199,9 @@
     /* text-align: center; */
     align-items: center;
     justify-content: center;
+    position: absolute;
+    left: 90%;
+    top: 30%;
     
 }
 
@@ -199,4 +216,23 @@
 .barraDeBusqueda input{
     width: 80%;
     border-radius: 10px;
+}
+
+.icons-header{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    box-sizing: border-box;
+    width: 50%;
+    align-items: center;
+    /*margin: 1rem;
+    width: auto;*/
+}
+.icons-header a{
+    margin: 5px;
+    border: solid 1px;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: #dcb0dc;
+    box-sizing: border-box;
 }
