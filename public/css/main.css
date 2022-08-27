@@ -21,7 +21,7 @@ body {
 
 .h2-container {
     background-color: #7e097e;
-    border-radius: 15px;
+    border-radius: 1px;
     width: 50%;
     margin-left: 25%;
 }
@@ -95,8 +95,8 @@ body {
     }
     .header-search-bar {
         position: absolute;
-        left: 95%;
-        top: 55%;
+        left: 91%;
+        top: 21%;
         transform: translate(-95%,-50%);
         padding: 10px;
     }
@@ -370,7 +370,7 @@ body {
         margin: 1%;
     }
     .nav-bar {
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 }
 
