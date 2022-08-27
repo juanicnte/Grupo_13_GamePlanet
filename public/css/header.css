@@ -57,7 +57,9 @@
     text-decoration: none;
 }
 */
-
+.nav-bar{
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
 .nav-bar li {
     display: none;
     border-radius: 5px;
