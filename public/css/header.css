@@ -10,7 +10,7 @@
 
 /*header*/
 .main-header {
-    background-color: #7e097e;
+    background-color: #200920;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -22,6 +22,7 @@
     width: 100%;
     display: flex;
     position: relative;
+    background: #8f048f;
 }
 
 .picture-logo{
@@ -57,9 +58,7 @@
     text-decoration: none;
 }
 */
-.nav-bar{
-    font-family: 'Montserrat Subrayada', sans-serif;
-}
+
 .nav-bar li {
     display: none;
     border-radius: 5px;
@@ -129,7 +128,7 @@
 	top: 0px;
 	width: 60px;
 	height: 60px;
-	background: #200920;
+	background: #7e097e;
 	line-height: 60px;
 	border-radius: 50%;
 	text-align: center;
