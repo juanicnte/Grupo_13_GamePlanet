@@ -19,10 +19,10 @@
           <% products.forEach(element => {%>
             <li class="juegos">
             <article class="game-list">
-              <h2>FIFA 22</h2>
+              <h2><%= element.name %></h2>
               <a href="/products/detalle/<%= element.sku %>">
 
-                <img src="images/<%= element.image %>" alt="fifa, juegos, videojuesgos, ps4" />
+                <img src="images/<%= element.image %>" alt="<%= element.description %>" />
                 <div class="precios-container">
                   <p class="precio-ahora"><%= element.precio %></p>
                   <p class="precio-anterior"><%= element.precio %></p>
