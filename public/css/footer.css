@@ -25,6 +25,12 @@ footer{
     flex-direction: column;
     font-size: 18px;
     width: 50%;
+    
+}
+.lista-footer a{
+    color: #ffdfff;
+    font-size: 11px;
+
 }
 /*
 .lista-footer li{
@@ -57,4 +63,7 @@ footer{
     justify-content: center;
     font-size: 10px;
     width: 100%;
+}
+.content{
+    background: #200920;
 }

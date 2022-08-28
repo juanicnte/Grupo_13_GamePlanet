@@ -341,15 +341,17 @@ body {
        /* border: 1px solid aliceblue;*/
     }
 
+    .lista-footer {
+        flex-direction: row;
+    }
+
 }
 
 
 
 @media (min-width: 1024px) {
     
-    .lista-footer {
-        flex-direction: row;
-    }
+    
 
     .lista-footer li {
         margin-right: 3rem;
