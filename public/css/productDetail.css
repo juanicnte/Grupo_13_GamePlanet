@@ -32,9 +32,10 @@ main{
     justify-content: center;
     width: 20%;
     flex-direction: row;
-    top: 20%;
-    left: 10%;
-    position: fixed;
+    top: -47%;
+    left: 13%;
+    position: relative;
+    font-size: 19px;
 }
 
 .contenedorImg img{
