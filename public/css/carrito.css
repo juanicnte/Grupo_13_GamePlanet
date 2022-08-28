@@ -4,6 +4,10 @@ main{
     flex-direction: column;
 }
 
+.header-search-bar{
+    display: none;
+}
+
 .contenedor-uno{
     width: 100%;
     display: flex;
@@ -90,6 +94,14 @@ button{
     justify-content: space-around;
 }
 
+button i{
+    margin: 15px;
+    border: solid 1px;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: #dcb0dc;
+}
+
 
 /*.medioPago{
     display: flex;
@@ -109,12 +121,12 @@ button{
     .picture-logo .img-logo {
         width: 80%;
     }
-
+/*
     ul.nav-bar {
         display: flex;
         width: 100%;
         justify-content: space-around;
-    }
+    }*/
 
     .hamburger-button{
         display: none;
@@ -128,7 +140,7 @@ button{
         /* text-align: center; */
         width: 100%;
         /* gap: 3rem; */
-        justify-content: space-evenly;
+        justify-content: flex-end;
     }
 
     h3{
@@ -164,16 +176,15 @@ button{
         margin: auto;
         /* gap: 3rem; */
         padding: 1rem;
-        justify-content: space-around;
     }
-
+/*
     ul.nav-bar {
         display: flex;
         width: 100%;
         margin: auto;
         justify-content: space-around;
     }
-
+*/
     .detalle #comprar {
         background-color: white;
         border: 1px solid black;
