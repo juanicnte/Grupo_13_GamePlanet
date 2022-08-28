@@ -16,90 +16,23 @@
           <h2 class="eslogan-oferta">Las mejores ofertas</h2>
         </div>
         <ul class="offers-list">
-          
-      
-        <li class="juegos">
-      <article class="game-list">
-          <h2>FIFA 22</h2>
-      <a href="/productDetail">
+          <% products.forEach(element => {%>
+            <li class="juegos">
+            <article class="game-list">
+              <h2>FIFA 22</h2>
+              <a href="/products/detalle/<%= element.sku %>">
 
-          <img src="images/fifa-dh.png" alt="fifa, juegos, videojuesgos, ps4" />
-      <div class="precios-container">
-        <p class="precio-ahora">$1.500</p>
-        <p class="precio-anterior">$2.200</p>
-      </div></a>
-      </article>
-      </li>
-      
-
-           
-     
-          <li class="juegos">
-      <article class="game-list">
-            <h2>Red dead Redemption ||</h2>
-          <a href="/productDetail">
-
-            <img src="images/red2-dh.png" alt="watch dogs, juegos, videojuesgos, ps4" />
-            <div class="precios-container">
-              <p class="precio-ahora">$1.500</p>
-              <p class="precio-anterior">$2.200</p>
-            </div></a>
+                <img src="images/<%= element.image %>" alt="fifa, juegos, videojuesgos, ps4" />
+                <div class="precios-container">
+                  <p class="precio-ahora"><%= element.precio %></p>
+                  <p class="precio-anterior"><%= element.precio %></p>
+                </div>
+              </a>
             </article>
           </li>
-          
-          <li class="juegos">
-      <article class="game-list"></article>
-            <h2>The Last Of Us ||</h2>
-          <a href="/productDetail">
-
-            <img src="images/tlou2-dh.png" alt="tlou2, juegos, videojuegos" />
-            <div class="precios-container">
-              <p class="precio-ahora">$1.500</p>
-              <p class="precio-anterior">$2.200</p>
-            </div></a>
-          </li>
-          
-          <li class="juegos">
-        <article class="game-list">   
-            <h2>Grand Theft Auto V</h2>
-          <a href="/productDetail">
-
-            <img src="images/gtav-dh.png" alt="tlou2, juegos, videojuegos" />
-            <div class="precios-container">
-              <p class="precio-ahora">$1.500</p>
-              <p class="precio-anterior">$2.200</p>
-            </div></a>
-          </article>  
-          </li>
+          <% }); %>
         
-         <li class="juegos">
-        <article class="game-list"> 
-          <h2>Microsoft: Flight Simulator</h2>
-          <a href="/productDetail">
-
-            <img src="images/gtav-dh.png" alt="tlou2, juegos, videojuegos" />
-            <div class="precios-container">
-              <p class="precio-ahora">$1.500</p>
-              <p class="precio-anterior">$2.200</p>
-            </div></a>
-            </li>
-          
-          </li>
-          <li class="juegos">
-         <article class="game-list"> 
-            <h2>Microsoft: Flight Simulator</h2>
-          <a href="/productDetail">
-
-            <img src="images/gtav-dh.png" alt="tlou2, juegos, videojuegos" />
-            <div class="precios-container">
-              <p class="precio-ahora">$1.500</p>
-              <p class="precio-anterior">$2.200</p>
-            </div></a>
-           </article> 
-            </li>
-          
-          </li>
-        </ul>  
+        </ul>
       </nav>
     </main>
 

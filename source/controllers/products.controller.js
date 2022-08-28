@@ -1,15 +1,32 @@
-const { write, unlinkSync } = require('fs');
+const fs = require('fs');
+const { write, unlinkSync} = require('fs');
 const { resolve } = require('path');
 const path = require('path');
 const {all, one, generate, save} = require('../models/products.model')
 const model = require('../models/products.model')
+
+//obtengo la ruta del archivo json 
+const productsFilePath = path.join(__dirname, '../data/products.json')
+//Luego lo parseo para poder usarlo
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const controlador = {
     //Muestra la lista de productos
     index: (req, res) => {
         //let products = all();
         //res.render('Listado', {products})
         //res.render(path.resolve(__dirname, '../views/home.ejs'));
-        return res.render('home');
+        //filtraré por productos
+        const inOffer = products.filter(product => product.inOffer == 1);
+        const juegos = products.filter(product => product.classification == 'Juegos del momento');
+        const masVendidos = products.filter(product => product.classification == 'Más vendidos');
+        const soporte = products.filter(product => product.classification == 'Soporte 24/7');
+        const xbox = products.filter(product => product.category == 'Xbox');
+        const nintendo = products.filter(product => product.category == 'Nintendo');
+        const playStation = products.filter(product => product.category == 'PlayStation');
+        const pc = products.filter(product => product.category == 'PC');
+        
+        return res.render('home', { products, inOffer, juegos, masVendidos, soporte, xbox, nintendo, playStation, pc });
     },
     //Muesta el detalle del producto
     show: function(req, res){

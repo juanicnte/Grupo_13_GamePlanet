@@ -301,7 +301,6 @@ body {
     .offers-list {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         margin-left: 3rem;
         margin-right: 3rem;
         margin-top: 1rem;
