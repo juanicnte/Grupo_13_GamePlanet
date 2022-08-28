@@ -31,6 +31,10 @@ main{
     display: flex;
     justify-content: center;
     width: 20%;
+    flex-direction: row;
+    top: 20%;
+    left: 10%;
+    position: fixed;
 }
 
 .contenedorImg img{
@@ -127,7 +131,7 @@ h3{
 
     
     .contenedorImg img{
-        width: 10%;
+        width: 24%;
         padding: 0.9% 0.9%;
         margin: 3% 3% 3% 1%;
         background-color: #7e097e;
@@ -146,4 +150,7 @@ h3{
     top: 21%;
     transform: translate(-95%,-50%);
     padding: 10px;
+}
+.buyProduct{
+    background-color: #dcb0dc;
 }
