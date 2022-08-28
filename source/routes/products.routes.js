@@ -33,9 +33,15 @@ route.get('/products/create', productsController.create)
 //route.post('/products',  productsController.save)
 route.post('/products/guardar', upload.any(), productsController.save)
 
+route.get('/products/:categoria?', productsController.index)
+
+route.get('/products/detalle/:producto', productsController.show)
+
 route.put('/products/:id', productsController.show)
 
-route.get('/products/edit/:id', productsController.edit)
+route.get('/products/edit/:id', productsController.edit);
+
+route.put('/products/actualizar', productsController.update);
 
 route.get('/products/:id', upload.any(), productsController.update)
 //route.put('/products/:id',  productsController.update)
