@@ -4,8 +4,7 @@
     <%- include('./partials/head.ejs') %>
 </head>
 <body>
-    <form action="/producto/actualizar?m=PUT" method="post">
-
+    <form action="/products/edit/:id?m=PUT" method="post">
         <input type="hidden" name="sku" >
 
         <fieldset>

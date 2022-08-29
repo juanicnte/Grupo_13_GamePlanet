@@ -44,6 +44,10 @@ main{
     margin: 20px;
 }
 
+.picture-logo{
+    height: 80px;;
+}
+
 #descripcionJuego{
     display: flex;
     font-weight: bolder;

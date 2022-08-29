@@ -5,15 +5,15 @@ const path = require('path');
 const {all, one, generate, save} = require('../models/products.model')
 const model = require('../models/products.model')
 
-//obtengo la ruta del archivo json 
+/*//obtengo la ruta del archivo json 
 const productsFilePath = path.join(__dirname, '../data/products.json')
 //Luego lo parseo para poder usarlo
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+*/
 const controlador = {
     //Muestra la lista de productos
     index: (req, res) => {
-        //let products = all();
+        let products = all();
         //res.render('Listado', {products})
         //res.render(path.resolve(__dirname, '../views/home.ejs'));
         //filtraré por productos
@@ -30,12 +30,15 @@ const controlador = {
     },
     //Muesta el detalle del producto
     show: function(req, res){
-        let product = one(req.params.producto)
+        let product = one(req.params.id)
+        /*let product = products.filter(product => product.sku == req.params.id);*/
         if(product){
-            return res.render('El detalle ' + {product});
+        console.log(product)
+        return res.render('productDetail',{ product });
         }
-        res.render('El detalle ' + {product:null});
-    },
+        //res.render('detail' + { product:null });
+return res.send('Hola')
+},
     //Crea el producto
     create: (req, res) => {
 

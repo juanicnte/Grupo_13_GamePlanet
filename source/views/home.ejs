@@ -20,12 +20,12 @@
             <li class="juegos">
             <article class="game-list">
               <h2><%= element.name %></h2>
-              <a href="/products/detalle/<%= element.sku %>">
+              <a href="/products/detail/<%= element.sku %>">
 
                 <img src="images/<%= element.image %>" alt="<%= element.description %>" />
                 <div class="precios-container">
-                  <p class="precio-ahora"><%= (element.price - (element.price * 0.1)) %></p>
-                  <p class="precio-anterior"><%= element.price %></p>
+                  <p class="precio-ahora">$<%= (element.price - (element.price * 0.1)) %></p>
+                  <p class="precio-anterior">$<%= element.price %></p>
                 </div>
               </a>
             </article>

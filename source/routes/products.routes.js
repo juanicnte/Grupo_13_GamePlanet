@@ -35,7 +35,7 @@ route.post('/products/guardar', upload.any(), productsController.save)
 
 route.get('/products/:categoria?', productsController.index)
 
-route.get('/products/detalle/:producto', productsController.show)
+route.get('/products/detail/:id', productsController.show)
 
 route.put('/products/:id', productsController.show)
 
