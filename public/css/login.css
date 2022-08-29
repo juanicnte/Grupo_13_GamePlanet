@@ -16,7 +16,12 @@ header{
 }
 .mainLogin form{
     margin-top: 50px;
-}
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    }
+
 .mainLogin label{
     display: none;
 }
@@ -41,13 +46,13 @@ section .fa-cart-shopping{
     margin: 0 0 0.8rem 0;
     border-radius: 0.5rem;
     text-align: center;
-    width: 100%;
+    width: 96%;
     padding: 0.5rem;
 }
 .mainLogin button{
     border-radius: 0.5rem;
     text-align: center;
-    width: 100%;
+    width: 96%;
     padding: 0.5rem;
     color: white;
     background-color: #7e097e;
@@ -85,10 +90,10 @@ main .olvide-contraseña{
     }
     .icons-footer a{
         margin: 15px;
-    border: solid 1px;
-    padding: 4px;
-    border-radius: 8px;
-    background-color: #dcb0dc;
+        border: solid 1px;
+        padding: 4px;
+        border-radius: 8px;
+        background-color: #dcb0dc;
     }
     .hamburger-button{
         display:none;
@@ -149,9 +154,22 @@ main .olvide-contraseña{
        
     }
 
+    .mainLogin label{
+        width: 100%;
+        display: flex;
+    }
+
+    .mainLogin input {
+        width: 100%;
+    }
+
+    .mainLogin button {
+        width: 100%;
+    }
+
     .header-top-bar {
         flex-wrap: wrap;
-        width: 90%;
+        width: 1000%;
         box-sizing: border-box;
         padding: 0;
         margin: 0;
@@ -191,5 +209,21 @@ main .olvide-contraseña{
     padding: 4px;
     border-radius: 8px;
     background-color: #dcb0dc;
+    }
+    .mainLogin button {
+        width: 100%;
+    }
+
+    .mainLogin label{
+        width: 100%;
+        display: flex;
+    }
+
+    .mainLogin input {
+        width: 100%;
+    }
+
+    .mainLogin button {
+        width: 100%;
     }
 }

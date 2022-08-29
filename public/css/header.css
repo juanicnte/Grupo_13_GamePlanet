@@ -100,7 +100,7 @@
 	transform: translate(-50%,-50%);
     */
 
-    left: 40%;
+    left: 30%;
     top: 30%;
 	padding: 10px;
 }
@@ -201,8 +201,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 90%;
-    top: 30%;
+    left: 86%;
+    top: 35%;
     
 }
 
