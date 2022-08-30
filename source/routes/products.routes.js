@@ -43,10 +43,10 @@ route.get('/products/edit/:id', productsController.edit);
 
 route.put('/products/actualizar', productsController.update);
 
-route.get('/products/:id', upload.any(), productsController.update)
+route.get('/products/update', upload.any(), productsController.update)
 //route.put('/products/:id',  productsController.update)
 
-route.delete('/products/:id',  productsController.remove)
+route.delete('/products/delete/:id',  productsController.remove)
 
 
 route.get('/', productsController.index)

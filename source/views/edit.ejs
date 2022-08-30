@@ -8,14 +8,14 @@
 <body>
     <%- include('./partials/header.ejs') %>
 
-        </form>
         <main class="main-content">
             <div class="container-p4">
-                <form action="/products/edit/:id?m=PUT" method="post" class="card card-body">
+                <form action="/products/update?m=PUT" method="POST" class="card card-body">
                     <input type="hidden" name="sku">
                     <fieldset>
                         <legend>Nombre del producto</legend>
-                        <input type="text" name="name" id="name" placeholder="Name" required class="form-control">
+                        <input type="text" name="name" id="name" placeholder="Name" required
+                            class="form-control">
                     </fieldset>
                     <fieldset>
                         <legend>Descripción del producto</legend>
@@ -40,21 +40,20 @@
                             <label for="category-PC">
                                 <input type="radio" name="category" id="category-PC" value="PC">PC</label>
                         </fieldset>
-
-                        <fieldset>
-                            <legend>Clasificación del producto</legend>
+                    </div>
+                    <fieldset>
+                        <legend>Clasificación del producto</legend>
                         <label for="classification-Actuales">
                             <input type="radio" name="classification" id="classification-Actuales"
-                                value="Actuales">Juegos del momento</label>
+                                value="Juegos del momento">Juegos del momento</label>
                         <label for="classification-MasVendidos">
                             <input type="radio" name="classification" id="classification-MasVendidos"
-                                value="MasVendidos">Más vendidos</label>
+                                value="Más vendidos">Más vendidos</label>
                         <label for="classification-Soporte">
                             <input type="radio" name="classification" id="classification-Soporte"
-                                value="Soporte">Soporte 24/7</label>
-                        </fieldset>
-                
-                    </div>
+                                value="Soporte 24/7">Soporte 24/7</label>
+
+                    </fieldset>
                     <fieldset>
                         <legend>¿En oferta?</legend>
                         <label for="offer-si">

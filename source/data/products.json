@@ -1,72 +1,82 @@
 [
-    {
-        "sku": 1,
-        "name": "The Last of us II",
-        "description": "The Last of us Part II",
-        "price": "1500",
-        "category": "PlayStation",
-        "classification": "Juegos del momento",
-        "inOffer": 1,
-        "image": "tlou2-dh.png"
-    },
-    {
-        "sku": 2,
-        "name": "FIFIA 22",
-        "description": "Description FIFIA 22",
-        "price": "1100",
-        "category": "Nintendo",
-        "classification": "Más vendidos",
-        "inOffer": 0,
-        "image": "fifa-dh.png"
-    },
-    {
-        "sku": 3,
-        "name": "Red dead II",
-        "description": "Red Dead Redemption",
-        "price": "1700",
-        "category": "Xbox",
-        "classification": "Soporte 24/7",
-        "inOffer": 1,
-        "image": "red2-dh.png"
-    },
-    {
-        "sku": 4,
-        "name": "Grand Theft Auto",
-        "description": "Grand Theft Auto",
-        "price": "1500",
-        "category": "PC",
-        "classification": "Juegos del momento",
-        "inOffer": 1,
-        "image": "gtav-dh.png"
-    },
-    {
-        "sku": 5,
-        "name": "Flight Simulator",
-        "description": "Microsoft: Flight Simulator",
-        "price": "1600",
-        "category": "PC",
-        "classification": "Juegos del momento",
-        "inOffer": 1,
-        "image": "flightSimulator.jpg"
-    },
-    {
-        "sku": 6,
-        "name": "The Last of us II",
-        "description": "The Last of us Part II",
-        "price": "1500",
-        "category": "PlayStation",
-        "classification": "Juegos del momento",
-        "inOffer": 1,
-        "image": "tlou2-dh.png"
-    },
-    {
-        "sku": 7,
-        "name": "FIFIA 22",
-        "description": "Description FIFIA 22",
-        "price": "1100",
-        "category": "Nintendo",
-        "classification": "Más vendidos",
-        "inOffer": 0,
-        "image": "fifa-dh.png"
-    }
+  {
+    "sku": 1,
+    "name": "The Last of us II",
+    "description": "The Last of us Part II",
+    "price": "1500",
+    "category": "PlayStation",
+    "classification": "Juegos del momento",
+    "inOffer": 1,
+    "image": "tlou2-dh.png"
+  },
+  {
+    "sku": 2,
+    "name": "FIFIA 22",
+    "description": "Description FIFIA 22",
+    "price": "1100",
+    "category": "Nintendo",
+    "classification": "Más vendidos",
+    "inOffer": 0,
+    "image": "fifa-dh.png"
+  },
+  {
+    "sku": 3,
+    "name": "Red dead II",
+    "description": "Red Dead Redemption",
+    "price": "1700",
+    "category": "Xbox",
+    "classification": "Soporte 24/7",
+    "inOffer": 1,
+    "image": "red2-dh.png"
+  },
+  {
+    "sku": 4,
+    "name": "Grand Theft Auto",
+    "description": "Grand Theft Auto",
+    "price": "1500",
+    "category": "PC",
+    "classification": "Juegos del momento",
+    "inOffer": 1,
+    "image": "gtav-dh.png"
+  },
+  {
+    "sku": 5,
+    "name": "Flight Simulator",
+    "description": "Microsoft: Flight Simulator",
+    "price": "1600",
+    "category": "PC",
+    "classification": "Juegos del momento",
+    "inOffer": 1,
+    "image": "flightSimulator.jpg"
+  },
+  {
+    "sku": 6,
+    "name": "The Last of us II",
+    "description": "The Last of us Part II",
+    "price": "1500",
+    "category": "PlayStation",
+    "classification": "Juegos del momento",
+    "inOffer": 1,
+    "image": "tlou2-dh.png"
+  },
+  {
+    "sku": 7,
+    "name": "FIFIA 22",
+    "description": "Description FIFIA 22",
+    "price": "1100",
+    "category": "Nintendo",
+    "classification": "Más vendidos",
+    "inOffer": 0,
+    "image": "fifa-dh.png"
+  },
+  {
+    "sku": 8,
+    "name": "FIFIA 22",
+    "description": "Description FIFIA 22",
+    "price": "1100",
+    "category": "Nintendo",
+    "classification": "Más vendidos",
+    "inOffer": 0,
+    "image": "default.png"
+  }
 ]

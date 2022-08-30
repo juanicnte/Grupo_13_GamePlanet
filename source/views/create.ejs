@@ -8,7 +8,7 @@
     <%- include('./partials/header.ejs') %>
         <main class="main-content">
             <div class="container-p4">
-                <form action="/products/create?m=PUT" method="post" multipar class="card card-body">
+                <form action="/products/guardar" method="post"  enctype="multipart/form-data" class="card card-body">
                     <fieldset>
                         <legend>Nombre del producto</legend>
                         <input type="text" name="name" id="name" placeholder="Name" required class="form-control">
@@ -41,13 +41,13 @@
                         <legend>Clasificación del producto</legend>
                         <label for="classification-Actuales">
                             <input type="radio" name="classification" id="classification-Actuales"
-                                value="Actuales">Juegos del momento</label>
+                                value="Juegos del momento">Juegos del momento</label>
                         <label for="classification-MasVendidos">
                             <input type="radio" name="classification" id="classification-MasVendidos"
-                                value="MasVendidos">Más vendidos</label>
+                                value="Más vendidos">Más vendidos</label>
                         <label for="classification-Soporte">
                             <input type="radio" name="classification" id="classification-Soporte"
-                                value="Soporte">Soporte 24/7</label>
+                                value="Soporte 24/7">Soporte 24/7</label>
 
                     </fieldset>
                     <fieldset>
@@ -65,7 +65,12 @@
                     </fieldset>
                     <button type="submit">Guardar</button>
                     <a href="/">Volver</a>
-
+                    <button type="submit">
+                        <i class="fa-solid fa-plane"></i>
+                    </button>
+                    <button type="reset">
+                        <i class="fa-solid fa-sync"></i>
+                    </button>
 
 
                 </form>

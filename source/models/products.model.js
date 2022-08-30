@@ -21,11 +21,12 @@ let model = {
         product.category = data.category;
         product.classification = data.classification;
         product.inOffer = data.inOffer;
-        product.sku = !last ? last.sku + 1 : 1;
+        product.sku = !(last == undefined) ? last.sku + 1 : 1;
         product.image = data.image;
         return product;
     },
     write: function(data){
+        console.log('Escribiendojson')
         let file = resolve(__dirname, '../data', 'products.json');
         let json = JSON.stringify(data, null, 2);
         return fs.writeFileSync(file, json);

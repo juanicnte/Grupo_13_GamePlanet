@@ -1,8 +1,8 @@
 const fs = require('fs');
-const { write, unlinkSync} = require('fs');
+const { unlinkSync} = require('fs');
 const { resolve } = require('path');
 const path = require('path');
-const {all, one, generate, save} = require('../models/products.model')
+const {all, one, generate, write} = require('../models/products.model')
 const model = require('../models/products.model')
 
 /*//obtengo la ruta del archivo json 
@@ -30,38 +30,42 @@ const controlador = {
     },
     //Muesta el detalle del producto
     show: function(req, res){
+        console.log('show')
+
         let product = one(req.params.id)
         /*let product = products.filter(product => product.sku == req.params.id);*/
         if(product){
-        console.log(product)
-        return res.render('productDetail',{ product });
+            return res.render('productDetail',{ product });
         }
-        //res.render('detail' + { product:null });
-return res.send('Hola')
+        res.render('productDetail' + { product:null });
+
 },
     //Crea el producto
     create: (req, res) => {
-
         let nuevo = generate(req.body);
         return res.render('create')
     },
     save: (req, res) => {
-        return res.render('Intenta guardar')
-            /*req.body.image = req.files && req.file.length > 0 ? req.files[0].filename : 'default.png'
+        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
+        
         let datosDelForm = req.body;
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);
+        console.log('voy a escribir')
         write(todos);
-        return res.redirect('/products/')*/
+        return res.redirect('/')
     },
     edit: (req, res) => {
+        console.log('edit')
+
         let product = one(req.params.producto);
+        
         return res.render('edit', {
             product})
     },
     update: (req, res) => {
-        
+        console.log('update')
         let todos = all();
         let actualidos = todos.map(elemento => {
             if(elemento.sku == req.body.sku){
@@ -80,14 +84,15 @@ return res.send('Hola')
     },
     remove: (req, res) => {
         let product = one(req.body.sku);
-        if(product.image != 'default.png'){
+        console.log(product.image)
+        if(product.image =! undefined && product.image != 'default.png'){
             let file = resolve(__dirname, '..', '..', 'public', product.image)
             unlinkSync(file);
         }
         let todos = all();
         let noEliminar = todos.filter(elemento => elemento.sku != req.body.sku);
         write(noEliminar);
-        return res.redirect('/products/')
+        return res.redirect('/')
     }
 };
 
