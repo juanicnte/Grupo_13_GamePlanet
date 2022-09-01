@@ -1,8 +1,35 @@
 .container-p4{
     background-color: #dcb0dc;
+    width: 80vw;
+    height: 80vh;
+
 }
 .form-control{
-    font-size: 18px;
+    font-size: 24px;
     color: black;
     padding: 1%;
+}
+.edit-image{
+    max-height: 62%;
+    position: relative;
+    left: -35%;
+    top: 11%;
+    border: 1px solid black;
+    padding: 1%;
+    background-color: black;
+}
+.title-name{
+    font-size: 160%;
+    position: relative;
+    right: 35%;
+    top: 7%;
+}
+.form-edit{
+    position: relative;
+    bottom: 49%;
+    left: 35%;
+}
+main form fieldset{
+    background-color: #dcb0dc;
+    width: 50%;
 }
