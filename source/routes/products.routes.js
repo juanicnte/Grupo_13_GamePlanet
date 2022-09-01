@@ -9,7 +9,8 @@ const {resolve, extname} = require('path');
 const { existsSync, mkdirSync } = require('fs');
 
 const destination = function(req, file, cb){
-    let folder = resolve(__dirname, '..', '..', 'public', 'products');
+    let folder = resolve(__dirname, '..', '..', 'public', 'images');
+   
     if(!existsSync(folder))
     {
         mkdirSync(folder)
@@ -19,12 +20,14 @@ const destination = function(req, file, cb){
 //nombre único a cada archivo que se suba
 const filename = function(req, file, cb){
     let unique =  Date.now();
-    let name = file.filename + '-' + unique + extname(file.originalName);
+    let name = file.fieldname + '-' + unique + extname(file.originalname);
+    console.log('folder')
+    console.log(name)
     return cb(null, name);
 }
 
 const multer = require('multer');
-const upload = multer({Storage:multer.diskStorage({destination, filename})});
+const upload = multer({storage:multer.diskStorage({destination, filename})});
 
 //Un sólo archivo (single('image)) o req.file 
 //Cualquer cantidad de archivos any() req.files
@@ -35,18 +38,18 @@ route.post('/products/guardar', upload.any(), productsController.save)
 
 route.get('/products/:categoria?', productsController.index)
 
-route.get('/products/detail/:id', productsController.show)
+route.get('/products/detail/:sku', productsController.show)
 
-route.put('/products/:id', productsController.show)
+route.put('/products/:sku', productsController.show)
 
-route.get('/products/edit/:id', productsController.edit);
+route.get('/products/edit/:sku', productsController.edit);
 
-route.put('/products/actualizar', productsController.update);
+route.put('/products/actualizar', upload.any(), productsController.update);
 
-route.get('/products/update', upload.any(), productsController.update)
+route.get('/products/update', productsController.update)
 //route.put('/products/:id',  productsController.update)
 
-route.delete('/products/delete/:id',  productsController.remove)
+route.delete('/products/delete/:sku',  productsController.remove)
 
 
 route.get('/', productsController.index)

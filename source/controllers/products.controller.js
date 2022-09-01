@@ -32,7 +32,7 @@ const controlador = {
     show: function(req, res){
         console.log('show')
 
-        let product = one(req.params.id)
+        let product = one(req.params.sku)
         /*let product = products.filter(product => product.sku == req.params.id);*/
         if(product){
             return res.render('productDetail',{ product });
@@ -59,7 +59,7 @@ const controlador = {
     edit: (req, res) => {
         console.log('edit')
 
-        let product = one(req.params.producto);
+        let product = one(req.params.sku);
         
         return res.render('edit', {
             product})

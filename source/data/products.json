@@ -78,5 +78,35 @@
     "classification": "Más vendidos",
     "inOffer": 0,
     "image": "default.png"
+  },
+  {
+    "name": "Prueba de multer",
+    "description": "la descripción",
+    "price": 1111,
+    "category": "Playstation",
+    "classification": "Juegos del momento",
+    "inOffer": "1",
+    "sku": 9,
+    "image": "every-character-in-god-of-war-ragnarok_bzf9.jpg"
+  },
+  {
+    "name": "Marcia",
+    "description": "zdfgfzd",
+    "price": 1111,
+    "category": "Xbox",
+    "classification": "Juegos del momento",
+    "inOffer": "1",
+    "sku": 10,
+    "image": "horizon-2-forbidden-west-20201124144437_1.jpg"
+  },
+  {
+    "name": "Archivos MD o Reuniones",
+    "description": "ñlmñl",
+    "price": 1000,
+    "category": "Playstation",
+    "classification": "Juegos del momento",
+    "inOffer": "1",
+    "sku": 11,
+    "image": "every-character-in-god-of-war-ragnarok_bzf9.jpg"
   }
 ]
