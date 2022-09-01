@@ -3,7 +3,7 @@ const { unlinkSync} = require('fs');
 const { resolve } = require('path');
 const path = require('path');
 const {all, one, generate, write} = require('../models/products.model')
-const model = require('../models/products.model')
+//const model = require('../models/products.model')
 
 /*//obtengo la ruta del archivo json 
 const productsFilePath = path.join(__dirname, '../data/products.json')
@@ -26,6 +26,7 @@ const controlador = {
         const playStation = products.filter(product => product.category == 'PlayStation');
         const pc = products.filter(product => product.category == 'PC');
         
+        //PREGUNTAR COMO SE FILTRA EN EL VIEW
         return res.render('home', { products, inOffer, juegos, masVendidos, soporte, xbox, nintendo, playStation, pc });
     },
     //Muesta el detalle del producto
@@ -38,10 +39,10 @@ const controlador = {
         }
         res.render('productDetail' + { product:null });
 
-},
+    },
     //Crea el producto
     create: (req, res) => {
-        let nuevo = generate(req.body);
+        //let nuevo = generate(req.body);
         return res.render('create')
     },
     save: (req, res) => {
