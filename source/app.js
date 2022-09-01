@@ -10,8 +10,11 @@ const app = express();
 //const cookieParser = require('cookie-parser');
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath)) 
+
+//Configuración para que funcione los ejs
 app.set('views', join(__dirname, './views'));
 app.set('view engine', 'ejs');
+
 app.listen(process.env.PORT || 3030, () => {
     console.log('servidor corriendo...');
 });
@@ -24,7 +27,6 @@ app.use(express.json());
 //app.use(cookieParser());
 
 //Debe estar antes del routes y será la forma de poder usar los métodos put path y delete
-
 app.use(method('m'))
 app.use(require('./routes/products.routes'));
 

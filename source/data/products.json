@@ -78,5 +78,15 @@
     "inOffer": "0",
     "sku": 8,
     "image": "every-character-in-god-of-war-ragnarok_bzf9.jpg"
+  },
+  {
+    "name": "Design",
+    "description": "KJBU",
+    "price": 1000,
+    "category": "Xbox",
+    "classification": "Más vendidos",
+    "inOffer": "1",
+    "sku": 9,
+    "image": "maincontroller.PNG"
   }
 ]
