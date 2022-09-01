@@ -2,31 +2,39 @@
 <html lang="en">
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <%- include('./partials/head.ejs') %>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="/css/edit.css" />
+    <%- include('./partials/head.ejs') %> 
+=======
+      <%- include('./partials/head.ejs') %>
+>>>>>>> 31af1d0c86832ba026d20173513b1489b9db00bd
 </head>
 
 <body>
     <%- include('./partials/header.ejs') %>
 
         <main class="main-content">
+            <div>
+                <picture>
+                    <img src="images/" alt="<%= p%> ">
+                </picture>
+            </div>
+            
             <div class="container-p4">
-                <form action="/products/actualizar/<%=product.sku%>?m=PUT" method="POST" class="card card-body">
+                <form action="/products/actualizar/<%=product.sku%>?m=PUT" method="POST">
                     <input type="hidden" name="sku" value="<%=product.sku%>">
                     <fieldset>
                         <legend>Nombre del producto</legend>
-                        <input type="text" name="name" id="name" placeholder="Name" required value="<%=product.name%>"
-                            class="form-control">
+                        <input type="text" name="name" id="name" placeholder="Name" required value="<%=product.name%>" >
                     </fieldset>
                     <fieldset>
                         <legend>Descripción del producto</legend>
                         <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"
-                            required class="form-control"><%=product.description%></textarea>
+                            required ><%=product.description%></textarea>
                     </fieldset>
                     <fieldset>
                         <legend>Precio de producto</legend>
-                        <input type="text" name="price" id="price" required class="form-control" value="<%=product.price%>">
+                        <input type="text" name="price" id="price" required value="<%=product.price%>">
                     </fieldset>
                     <div class="form-group">
                         <fieldset>
