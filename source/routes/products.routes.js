@@ -20,11 +20,14 @@ const destination = function(req, file, cb){
 //nombre único a cada archivo que se suba
 const filename = function(req, file, cb){
     let unique =  Date.now();
-    let name = file.fieldname + '-' + unique + extname(file.originalname);
-    console.log('folder')
-    console.log(name)
+    //console.log(file.fieldname)
+    //let name = file.fieldname + '-' + unique + extname(file.originalname);
+    let name = file.originalname;
+   
     return cb(null, name);
 }
+//SI QUISIERA VALIDAR SI UNA IMAGEN TIENE EL MISMO NOMBRE CÓMO HAGO ESA VALIDACIÓN CON EL MULTER
+
 
 const multer = require('multer');
 const upload = multer({storage:multer.diskStorage({destination, filename})});
@@ -44,7 +47,7 @@ route.put('/products/:sku', productsController.show)
 
 route.get('/products/edit/:sku', productsController.edit);
 
-route.put('/products/actualizar', upload.any(), productsController.update);
+route.put('/products/actualizar/:sku', upload.any(), productsController.update);
 
 route.get('/products/update', productsController.update)
 //route.put('/products/:id',  productsController.update)

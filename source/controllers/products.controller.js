@@ -30,7 +30,6 @@ const controlador = {
     },
     //Muesta el detalle del producto
     show: function(req, res){
-        console.log('show')
 
         let product = one(req.params.sku)
         /*let product = products.filter(product => product.sku == req.params.id);*/
@@ -52,12 +51,10 @@ const controlador = {
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);
-        console.log('voy a escribir')
         write(todos);
         return res.redirect('/')
     },
     edit: (req, res) => {
-        console.log('edit')
 
         let product = one(req.params.sku);
         
@@ -65,13 +62,13 @@ const controlador = {
             product})
     },
     update: (req, res) => {
-        console.log('update')
         let todos = all();
         let actualidos = todos.map(elemento => {
             if(elemento.sku == req.body.sku){
                 elemento.name = req.body.name;
                 elemento.description = req.body.description;
-                elemento.price = paseInt(req.body.price);
+                //elemento.price = paseInt(req.body.price);
+                elemento.price = req.body.price;
                 elemento.category = req.body.category;
                 elemento.classification = req.body.classification;
                 elemento.inOffer = req.body.inOffer;
@@ -80,15 +77,14 @@ const controlador = {
             return elemento;
         })
         write(actualidos)
-        return res.redirect('/products/')
+        return res.redirect('/')
     },
     remove: (req, res) => {
         let product = one(req.body.sku);
-        console.log(product.image)
-        if(product.image =! undefined && product.image != 'default.png'){
+        /*if(product.image =! undefined && product.image != 'default.png'){
             let file = resolve(__dirname, '..', '..', 'public', product.image)
             unlinkSync(file);
-        }
+        }*/
         let todos = all();
         let noEliminar = todos.filter(elemento => elemento.sku != req.body.sku);
         write(noEliminar);

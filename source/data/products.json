@@ -12,7 +12,7 @@
   {
     "sku": 2,
     "name": "FIFIA 22",
-    "description": "Description FIFIA 22",
+    "description": "FIFA 22 es un videojuego desarrollado por EA Vancouver y EA Romania, siendo publicado por EA Sports. Está disponible para PlayStation 4, PlayStation 5, Xbox Series X/S, Xbox One, Microsoft Windows, Google Stadia y Nintendo Switch. Es la vigésimo novena entrega en la serie FIFA y fue lanzado el 1 de octubre de manera global. El primer tráiler del juego fue presentado el 11 de julio de 2021 y muestra la nueva tecnología Hypermotion, que según palabras de EA brindará nueva experiencia más realista. Estas innovaciones están disponibles únicamente para PlayStation 5, Xbox Series y Stadia. Kylian Mbappé será el rostro de la portada por segunda vez consecutiva . A diferencia de juegos anteriores que poseían diferentes ediciones con más contenido, FIFA 22 sólo contará con dos ediciones: Ultimate y estándar. La edición Ultimate otorga al usuario de acceso anticipado al juego, junto con beneficios extras que no están disponibles en la edición estándar, con un respectivo valor de 60 o 70 dólares (edición estándar) y 100 dólares (edición Ultimate).",
     "price": "1100",
     "category": "Nintendo",
     "classification": "Más vendidos",
@@ -70,43 +70,13 @@
     "image": "fifa-dh.png"
   },
   {
-    "sku": 8,
-    "name": "FIFIA 22",
-    "description": "Description FIFIA 22",
-    "price": "1100",
+    "name": "AY AY AY",
+    "description": "DESCRIPCIÓN",
+    "price": 1002,
     "category": "Nintendo",
-    "classification": "Más vendidos",
-    "inOffer": 0,
-    "image": "default.png"
-  },
-  {
-    "name": "Prueba de multer",
-    "description": "la descripción",
-    "price": 1111,
-    "category": "Playstation",
-    "classification": "Juegos del momento",
+    "classification": "Soporte 24/7",
     "inOffer": "1",
     "sku": 9,
-    "image": "every-character-in-god-of-war-ragnarok_bzf9.jpg"
-  },
-  {
-    "name": "Marcia",
-    "description": "zdfgfzd",
-    "price": 1111,
-    "category": "Xbox",
-    "classification": "Juegos del momento",
-    "inOffer": "1",
-    "sku": 10,
-    "image": "horizon-2-forbidden-west-20201124144437_1.jpg"
-  },
-  {
-    "name": "Archivos MD o Reuniones",
-    "description": "ñlmñl",
-    "price": 1000,
-    "category": "Playstation",
-    "classification": "Juegos del momento",
-    "inOffer": "1",
-    "sku": 11,
     "image": "every-character-in-god-of-war-ragnarok_bzf9.jpg"
   }
 ]

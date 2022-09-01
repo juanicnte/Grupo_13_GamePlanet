@@ -26,7 +26,6 @@ let model = {
         return product;
     },
     write: function(data){
-        console.log('Escribiendojson')
         let file = resolve(__dirname, '../data', 'products.json');
         let json = JSON.stringify(data, null, 2);
         return fs.writeFileSync(file, json);

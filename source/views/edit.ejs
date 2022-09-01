@@ -12,8 +12,8 @@
 
         <main class="main-content">
             <div class="container-p4">
-                <form action="/products/update?m=PUT" method="POST" class="card card-body">
-                    <input type="hidden" name="sku">
+                <form action="/products/actualizar/<%=product.sku%>?m=PUT" method="POST" class="card card-body">
+                    <input type="hidden" name="sku" value="<%=product.sku%>">
                     <fieldset>
                         <legend>Nombre del producto</legend>
                         <input type="text" name="name" id="name" placeholder="Name" required value="<%=product.name%>"
@@ -22,46 +22,50 @@
                     <fieldset>
                         <legend>Descripción del producto</legend>
                         <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"
-                            required class="form-control"></textarea>
+                            required class="form-control"><%=product.description%></textarea>
                     </fieldset>
                     <fieldset>
                         <legend>Precio de producto</legend>
-                        <input type="text" name="price" id="price" required class="form-control">
+                        <input type="text" name="price" id="price" required class="form-control" value="<%=product.price%>">
                     </fieldset>
                     <div class="form-group">
                         <fieldset>
                             <legend>Categoría del producto</legend>
                             <label for="category-Playstation">
                                 <input type="radio" name="category" id="category-Playstation"
-                                    value="Playstation">Playstation</label>
+                                    value="Playstation" <% if(product.category == "PlayStation") { %> checked <% } %>>Playstation</label>
                             <label for="category-Xbox">
-                                <input type="radio" name="category" id="category-Xbox" value="Xbox">Xbox</label>
+                                <input type="radio" name="category" id="category-Xbox" value="Xbox"
+                                <% if(product.category == "Xbox") { %> checked <% } %>>Xbox</label>
                             <label for="category-Nintendo">
                                 <input type="radio" name="category" id="category-Nintendo"
-                                    value="Nintendo">Nintendo</label>
+                                    value="Nintendo" <% if(product.category == "Nintendo") { %> checked <% } %>>Nintendo</label>
                             <label for="category-PC">
-                                <input type="radio" name="category" id="category-PC" value="PC">PC</label>
+                                <input type="radio" name="category" id="category-PC" value="PC"
+                                <% if(product.category == "PC") { %> checked <% } %>>PC</label>
                         </fieldset>
                     </div>
                     <fieldset>
                         <legend>Clasificación del producto</legend>
                         <label for="classification-Actuales">
                             <input type="radio" name="classification" id="classification-Actuales"
-                                value="Juegos del momento">Juegos del momento</label>
+                                value="Juegos del momento" <% if(product.classification == "Juegos del momento") { %> checked <% } %>>Juegos del momento</label>
                         <label for="classification-MasVendidos">
                             <input type="radio" name="classification" id="classification-MasVendidos"
-                                value="Más vendidos">Más vendidos</label>
+                                value="Más vendidos" <% if(product.classification == "Más vendidos") { %> checked <% } %> >Más vendidos</label>
                         <label for="classification-Soporte">
                             <input type="radio" name="classification" id="classification-Soporte"
-                                value="Soporte 24/7">Soporte 24/7</label>
+                                value="Soporte 24/7" <% if(product.classification == "Soporte 24/7") { %> checked <% } %> >Soporte 24/7</label>
 
                     </fieldset>
                     <fieldset>
                         <legend>¿En oferta?</legend>
                         <label for="offer-si">
-                            <input type="radio" name="inOffer" id="offer-si" value="1">Si</label>
+                            <input type="radio" name="inOffer" id="offer-si" value="1"
+                            <% if(product.inOffer == "1") { %> checked <% } %>>Si</label>
                         <label for="offer-no">
-                            <input type="radio" name="inOffer" id="offer-no" value="0">No</label>
+                            <input type="radio" name="inOffer" id="offer-no" value="0"
+                            <% if(product.inOffer == "0") { %> checked <% } %>>No</label>
                     </fieldset>
                     <fieldset>
                         <legend>Archivos</legend>
