@@ -2,13 +2,24 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="/css/edit.css" />
+    <%- include('./partials/head.ejs') %> 
+=======
       <%- include('./partials/head.ejs') %>
+>>>>>>> 31af1d0c86832ba026d20173513b1489b9db00bd
 </head>
 
 <body>
     <%- include('./partials/header.ejs') %>
 
         <main class="main-content">
+            <div>
+                <picture>
+                    <img src="images/" alt="<%= p%> ">
+                </picture>
+            </div>
+            
             <div class="container-p4">
                 <form action="/products/actualizar/<%=product.sku%>?m=PUT" method="POST">
                     <input type="hidden" name="sku" value="<%=product.sku%>">
