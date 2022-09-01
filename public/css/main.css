@@ -35,7 +35,7 @@ body {
 
 .offers-container {
     /*background-color: #200920;*/
-    background-color: #dcb0dc;
+    background-color: #ffffff;
     padding-top: 1rem;
     padding-bottom: 3rem;
 }
@@ -60,27 +60,27 @@ body {
 }
 
 .precio-ahora {
-    color: #ffdfff;
+    color: rgb(233, 233, 201);
     font-size: 1.3rem;
     font-weight: 600;
 }
 
 .precio-anterior {
     text-decoration: line-through;
-    color: #dcb0dc;
+    color: rgb(233, 233, 201);
     margin-top: 1rem;
 }
 
 .juegos {
     text-align: center;
-    background-color: #7e097e;
-    border: solid #7e097e 0.5rem;
+    background-color: rgb(33, 33, 33);
+    border: solid rgb(33, 33, 33) 0.5rem;
     border-radius: 5%;
     margin-top: 3rem;
 }
 
 .juegos h2 {
-    color: #ffdfff;
+    color: rgb(233, 233, 201);
     font-weight: 100;
     margin-bottom: 0.3rem;
 }

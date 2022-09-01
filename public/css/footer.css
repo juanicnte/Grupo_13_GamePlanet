@@ -1,5 +1,7 @@
+
 footer{
-    margin-top: 2%;
+    margin-top: 0%;
+    background-color: black;
 }
 .main-footer{
     width: 100%;
@@ -28,7 +30,7 @@ footer{
     
 }
 .lista-footer a{
-    color: #ffdfff;
+    color: rgb(233, 233, 201);
     font-size: 11px;
 
 }
@@ -65,5 +67,5 @@ footer{
     width: 100%;
 }
 .content{
-    background: #200920;
+    background: #000000;
 }
