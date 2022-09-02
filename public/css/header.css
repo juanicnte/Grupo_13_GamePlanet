@@ -10,7 +10,7 @@
 
 /*header*/
 .main-header {
-    background-color: #200920;
+    background-color: #000000;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@
     width: 100%;
     display: flex;
     position: relative;
-    background: #8f048f;
+    background: #000000;
 }
 
 .picture-logo{

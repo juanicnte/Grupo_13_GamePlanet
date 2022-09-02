@@ -12,24 +12,56 @@
 .edit-image{
     max-height: 62%;
     position: relative;
-    left: -35%;
+    left: -23%;
     top: 11%;
-    border: 1px solid black;
     padding: 1%;
-    background-color: black;
+    background-color: #9e339e;
 }
 .title-name{
     font-size: 160%;
     position: relative;
-    right: 35%;
-    top: 7%;
+    right: 24%;
+    top: 5%;
 }
 .form-edit{
     position: relative;
     bottom: 49%;
-    left: 35%;
+    left: 46%;
+    width: 50%;
+    background-color:#7e097e;
+    border: 6px solid #c871c8;
+}
+.e-productname{
+    border: 1px solid black;
+}
+.return-home{
+    background-color:#7e097e;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1%;
+    position: relative;
+    color:  #dcb0dc;
+    bottom: 7%;
+    border: 3px solid #dcb0dc;
+    margin: 1px 1px 1px 1px;
 }
 main form fieldset{
-    background-color: #dcb0dc;
-    width: 50%;
+    background-color: #7e097e;
+    width: 100%;
 }
+main form legend{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:#7e097e;
+    color:  #dcb0dc;
+}
+main button{
+    background-color:#7e097e;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1%;
+    color: #dcb0dc;
+    bottom: 7%;
+    border: 3px solid #dcb0dc;
+    margin: 1px 1px 1px 1px;
+}    
