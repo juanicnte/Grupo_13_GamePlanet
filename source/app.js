@@ -31,10 +31,6 @@ app.use(require('./routes/products.routes'));
 app.use(require('./routes/users.routes'));
 
 
-app.get("/register", function (req, res) {
-    return res.render("register");
-});
-
 app.get("/login", function(req,res){
     return res.render("login");
 });
