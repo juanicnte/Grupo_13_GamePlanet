@@ -187,10 +187,16 @@ h3{
 
     .contenedorImg {
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
         align-items: center;
+        flex-direction: row;
+        width: 80%;
+        flex-wrap: nowrap;
+            
+        /*display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-around;*/
     }
     
     .contenedorImg img{
