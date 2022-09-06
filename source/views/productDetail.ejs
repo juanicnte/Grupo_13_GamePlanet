@@ -19,23 +19,23 @@
                         <%= product.description %>
                     </p>
                 </article>
-                <nav>
+                <nav class="buttonStyle">
                     <button  class="crear">
                         
                         <a class="crear"><h2>Comprar<i class="fa-solid fa-cart-shopping"></i></h2></a>
                     </button>
                     <a href="/products/create" class="crear"><h2>CREAR</h2></a>
                     <a href="/products/edit/<%= product.sku %>" class="crear"><h2>EDITAR</h2></a>
-                    
+                    <form action="/products/delete/<%= product.sku %>?m=DELETE" method="POST">
+                        <input type="hidden" name="sku" value="<%= product.sku %>">
+    
+                        <button type="submit" class="crear">
+                            <a class="crear"><h2>ELMINAR<i class="fa-solid fa-cart-shopping"></i></h2></a>
+                            
+                        </button>
+                    </form>
                 </nav>
-                <form action="/products/delete/<%= product.sku %>?m=DELETE" method="POST">
-                    <input type="hidden" name="sku" value="<%= product.sku %>">
-
-                    <button type="submit" class="crear">
-                        <a class="crear"><h2>ELMINAR<i class="fa-solid fa-cart-shopping"></i></h2></a>
-                        
-                    </button>
-                </form>
+               
             </section>
         </main>
         <footer>

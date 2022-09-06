@@ -1,6 +1,6 @@
 
 footer{
-    margin-top: 0%;
+    margin-top: 3%;
     background-color: black;
 }
 .main-footer{
@@ -29,7 +29,7 @@ footer{
     text-decoration: revert;
 }
 .lista-footer a:hover{
-    color: #dcb0dc;
+    color: rgb(233, 233, 201);
     transition: color 0.5s;
 }
 

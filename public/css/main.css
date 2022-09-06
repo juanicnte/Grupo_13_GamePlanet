@@ -142,7 +142,7 @@ body {
     
     .btn i {
         font-size: 25px;
-        color: white;
+        color: rgb(233, 233, 201);
         line-height: 80px;
         transition: all .7s ease;
     }
@@ -373,7 +373,7 @@ body {
         border: solid 1px;
         padding: 4px;
         border-radius: 8px;
-        background-color: #dcb0dc;
+        background-color: rgb(233, 233, 201);
     }
     .main-content{
         display: flex;

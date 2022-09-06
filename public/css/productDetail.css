@@ -26,7 +26,8 @@ main{
     text-align: center;
     box-sizing: border-box;
     align-items: center;
-    margin: 30px
+    margin: 30px;
+    height: 57vh;
 }
 /*.main-content h3{
     display: flex;
@@ -69,6 +70,8 @@ main{
     flex-direction: row;
     text-align: justify;
     padding: 2rem;
+    position: relative;
+    left: 18%;
 }
 
 .crear h2 {
@@ -154,29 +157,37 @@ button{
     .contenedorImg { /*lo cambie para que quede mejor en la parte visual */
         display: flex;
         flex-wrap: wrap;
-        background-color: #dcb0dc;
+        background-color: #ffffff;
         flex-direction: column;
         align-items: stretch;
     }
 
     .contenedorImg img{
         width: 25%;
-        padding: .4rem;
-        margin: auto;
+        color: rgb(33, 33, 33);
+        background-color: rgb(33, 33, 33);
+        position: absolute;
+        left: 1%;
+        padding: 0.9% 0.9%;
+        margin: 3% 3% 3% 1%;
+        top: 34%;
     }
     
     .crear h2{
-        background: #7e097e;
-        color: #dcb0dc;
+        background: #000000;
+        color: rgb(233, 233, 201);
         margin: 10px;
         padding: 10px;
     }
 
     
     button{
-        background-color: #dcb0dc;
+        background-color: #000000;
     }
-    
+    .buttonStyle{
+        position: relative;
+        left: 21%;
+    }
 }
 
 @media screen and (min-width:1024px) {
