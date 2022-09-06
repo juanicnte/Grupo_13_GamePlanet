@@ -234,6 +234,6 @@
     border: solid 1px;
     padding: 2px;
     border-radius: 8px;
-    background-color: #dcb0dc;
+    background-color: rgb(233, 233, 201);
     box-sizing: border-box;
 }

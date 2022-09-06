@@ -53,13 +53,13 @@ footer{
     border: solid 1px;
     padding: 2px;
     border-radius: 8px;
-    background-color: #dcb0dc;
+    background-color: rgb(233, 233, 201);
     box-sizing: border-box;
 }
 
 .copyright p{
-    color: #ffdfff;
-    border-top: solid 1px #ffdfff;
+    color: rgb(233, 233, 201);
+    border-top: solid 1px rgb(233, 233, 201);
     padding-top: 0.325rem;
     display: flex;
     justify-content: center;
