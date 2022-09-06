@@ -49,7 +49,7 @@ form {
 }
 
 .container-p4{
-    background-color: #dcb0dc;
+    background-color: #ffffff;
     width: 50vw;
     display: flex;
     flex-wrap: wrap;
@@ -352,6 +352,16 @@ label {
         margin: auto;
     }
 
+    body > main > div > form > fieldset:nth-child(5) > div.tituloclasificacion{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
     .categoriasGenerales {
         display: flex;
         flex-direction: column;
@@ -377,19 +387,51 @@ label {
         flex-direction: row;
         align-content: stretch;
         margin: auto;
-        left: auto;
-        right: auto;
+        /* left: auto; */
+        /* right: auto; */
+        margin-left: -20%;
+        margin-right: 15%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .calsificacionesProduc input{
+        display: flex;
+        background-color: aqua;
+        margin-left: 100%;
+        width: 100%;
     }
 
     legend{
         width: 100%;
         margin: auto;
-        padding: 1rem;
+        /* padding: 1rem; */
         display: flex;
         justify-content: center;
-        align-items: center;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .moverlegends{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
         align-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .moverlegends legend{
+        margin: auto;
+        /* background-color: red; */
+        /* padding: 1rem; */
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-bottom: -2%;
+        margin-left: -2%;
     }
     
     label {
@@ -401,4 +443,53 @@ label {
         /*gap: .4rem;*/
         justify-content: space-between;
     }
+
+    .oferta{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-content: stretch;
+    }
+
+    .oferta legend{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: auto;
+        align-items: center;
+        margin: auto;
+    }
+
+    .aceptar {
+        width: 60%;
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* align-content: center; */
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .archivo {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .archivo legend{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
