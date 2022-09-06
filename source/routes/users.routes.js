@@ -2,7 +2,12 @@ const express = require('express');
 const usersController = require('../controllers/users.controller');
 const route = express.Router();
 
-route.get('/register/nuevo', usersController.create)
+route.get('/register', usersController.create)
+/*
+
+app.get("/register", function (req, res) {
+    return res.render("register");
+});*/
 /*Permita el flujo de registro, login y logout de usuarios.
 ● Permita recordar al usuario para que pueda ingresar sin volverse a loguear.
 ● Tenga rutas accesibles solo por huéspedes (visitantes sin login).
