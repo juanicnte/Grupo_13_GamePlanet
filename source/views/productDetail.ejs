@@ -20,8 +20,9 @@
                     </p>
                 </article>
                 <nav>
-                    <button  class="buyProduct">
-                        Comprar<i class="fa-solid fa-cart-shopping"></i>
+                    <button  class="crear">
+                        
+                        <a class="crear"><h2>Comprar<i class="fa-solid fa-cart-shopping"></i></h2></a>
                     </button>
                     <a href="/products/create" class="crear"><h2>CREAR</h2></a>
                     <a href="/products/edit/<%= product.sku %>" class="crear"><h2>EDITAR</h2></a>
@@ -30,8 +31,9 @@
                 <form action="/products/delete/<%= product.sku %>?m=DELETE" method="POST">
                     <input type="hidden" name="sku" value="<%= product.sku %>">
 
-                    <button type="submit" class="buyProduct">
-                        ELMINAR<i class="fa-solid fa-cart-shopping"></i>
+                    <button type="submit" class="crear">
+                        <a class="crear"><h2>ELMINAR<i class="fa-solid fa-cart-shopping"></i></h2></a>
+                        
                     </button>
                 </form>
             </section>
