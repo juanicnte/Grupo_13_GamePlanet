@@ -15,3 +15,8 @@ En este sprint nos fue muy bien
 Nos reunimos a última hora y nos dimos cuenta del potencial al que podemos llegar si mejoramos nuestro trabajo en equipo y estamos en ello.
 Quedaron cosas pendientes por realizar
 
+## SPRINT 3
+Aún no organizamos los estilos, mejoramos un poco ya que no nos reunimos a última hora y mejoramos por momentos la comunicación
+
+## SPRINT 4
+Ya empezamos el sprint 5 y no se había terminado el sprint 4 y aún tenemos temas pendientes de diseño, la comunicación se da por más cuándo nos reunimos con algún profesor y luego de eso merma, no cumplimos con los daily, ni con la reunón de estrella de mar, hay niveles de compromiso ante el proyecto diferentes. A pesar de lo anterior digamos que hemos progresado, seríamos un gran equipo de trabajo si mejoramos la comunicación y el compromiso con los tiempos de entrega 
