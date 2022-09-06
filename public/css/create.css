@@ -186,6 +186,21 @@ label {
     margin-top: 10%;
 }
 
+.calsificacionesProduc {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-content: stretch;
+    margin: auto;
+    /* left: auto; */
+    /* right: auto; */
+    margin-left: -12%;
+    margin-right: 15%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 @media screen and (min-width:425px) {
 
     .main-header {
