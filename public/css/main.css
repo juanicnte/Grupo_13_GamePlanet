@@ -169,8 +169,8 @@ body {
         margin: 0.3rem;
     }
 
-    .icons-footer {
-        margin: 1rem;
+    .logo-footer-container{
+        width: 20%;
     }
 
     .icons-footer a {
@@ -362,6 +362,10 @@ body {
 
     .icons-footer {
         margin: 1rem;
+    }
+
+    .content{
+        padding: 0 8vw;
     }
 
     .icons-footer a {

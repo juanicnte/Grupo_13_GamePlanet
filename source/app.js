@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const config = require('./modules/server')
+const {port, start} = require('./modules/server')
+const static = require('./modules/static')
 const { join } = require('path');
 
 //method-override agregamos los verbos put delete y patch
@@ -9,15 +10,13 @@ const app = express();
 //const logger = require('morgan');
 //const cookieParser = require('cookie-parser');
 const publicPath = path.resolve(__dirname, '../public');
-app.use(express.static(publicPath)) 
+app.use(static(publicPath)) 
 
 //Configuración para que funcione los ejs
 app.set('views', join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
-app.listen(process.env.PORT || 3030, () => {
-    console.log('servidor corriendo...');
-});
+app.listen(port, start());
 
 //Configuración del entorno de la aplicación para que pueda capturar la información
 //express.urlencoded y express.json
@@ -29,11 +28,8 @@ app.use(express.json());
 //Debe estar antes del routes y será la forma de poder usar los métodos put path y delete
 app.use(method('m'))
 app.use(require('./routes/products.routes'));
+app.use(require('./routes/users.routes'));
 
-
-app.get("/register", function (req, res) {
-    return res.render("register");
-});
 
 app.get("/login", function(req,res){
     return res.render("login");

@@ -6,7 +6,8 @@
       "email": "pedroperez@hotmail.com",
       "password": "asdasd",
       "perfil": "admin",
-      "birthDay": "2010-07-07"
+      "birthDay": "2010-07-07",
+      "image": "flightSimulator.jpg"
     },
     {
       "id": 2,
@@ -15,6 +16,7 @@
       "email": "franco@gmail.com",
       "password": "123456",
       "perfil": "user",
-      "birthDay": "2010-10-17"
+      "birthDay": "2010-10-17",
+      "image": "flightSimulator.jpg"
     }
 ]

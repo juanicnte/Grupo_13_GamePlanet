@@ -1,5 +1,9 @@
 @import url('header.css');
 @import url('footer.css');
+
+main{
+    height: 100vh;
+}
 body{
     color: #7e097e;
 }
