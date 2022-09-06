@@ -16,7 +16,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #100E0F;
+    background-color: #ffffff;
 }
 .mainLogin form{
     margin-top: 50px;
@@ -35,7 +35,7 @@ header{
     flex-direction: column;
     text-decoration: none;
     margin: 0 0 0.8rem 0;
-    color: #7e097e;
+    color: #000000;
 }
 section .nav-bar{
     display: none;
@@ -52,14 +52,15 @@ section .fa-cart-shopping{
     text-align: center;
     width: 96%;
     padding: 0.5rem;
+    border: 1px solid black;
 }
 .mainLogin button{
     border-radius: 0.5rem;
     text-align: center;
     width: 96%;
     padding: 0.5rem;
-    color: white;
-    background-color: #7e097e;
+    color: rgb(233, 233, 201);
+    background-color: #000000;
     cursor: pointer;
 }
 .header-search-bar{
@@ -76,7 +77,7 @@ a{
     color: #100E0F;
 }
 footer{
-    background-color: #7e097e;
+    background-color: #000000;
 }
 main .olvide-contraseña{
     margin: 0.8rem 0 0.8rem 0;
@@ -146,7 +147,7 @@ main .olvide-contraseña{
         margin: 0px;
         justify-content: space-around;
         align-items: center;
-        background-color: #9e339e;
+        background-color: #000000;
         border-radius: 5px;
         margin-top: 10px;
     }
@@ -161,6 +162,7 @@ main .olvide-contraseña{
     .mainLogin label{
         width: 100%;
         display: flex;
+        color: #000000;;
     }
 
     .mainLogin input {

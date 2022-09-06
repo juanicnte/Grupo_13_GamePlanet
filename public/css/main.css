@@ -4,7 +4,7 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 li {
@@ -12,7 +12,7 @@ li {
 }
 
 body {
-    background-color: #7e097e;
+    background-color: #ffffff;
 
 }
 
@@ -29,7 +29,7 @@ body {
 .eslogan-oferta {
     text-align: center;
     font-weight: 300;
-    color: #7e097e;
+    color: #000000;
     font-family: 'Montserrat Subrayada', sans-serif;
 }
 
@@ -132,7 +132,7 @@ body {
         top: 0px;
         width: 80px;
         height: 80px;
-        background: #7e097e;
+        background: #777177;
         line-height: 80px;
         border-radius: 50%;
         text-align: center;
@@ -178,7 +178,7 @@ body {
         border: solid 1px;
         padding: 4px;
         border-radius: 8px;
-        background-color: #dcb0dc;
+        background-color: rgb(233, 233, 201);
     }
 
     .hamburger-button {
@@ -233,7 +233,7 @@ body {
         margin: 0px;
         justify-content: space-around;
         align-items: center;
-        background-color: #9e339e;
+        background-color: #000000;
         border-radius: 5px;
         margin-top: 10px;
     }
@@ -254,8 +254,8 @@ body {
             border: solid 1px;
             padding: 4px;
             border-radius: 8px;
-            background-color: #9e339e;
-            color: #dcb0dc;
+            background-color: rgb(233, 233, 201);
+            color: rgb(0, 0, 0);
     }
 
     .header-bottom-bar a{
@@ -287,7 +287,7 @@ body {
         padding: 10px;
     }
     .nav-bar a {
-        color: #200920;
+        color: #000000;
     }
 
     .main-content {
@@ -312,7 +312,7 @@ body {
     .offers-container {
         max-width: 100vw;
         justify-content: center;
-        background-color: #dcb0dc;
+        background-color: #ffffff;
         /*background: linear-gradient(176deg, black, #0000006b)*/
     }
 
