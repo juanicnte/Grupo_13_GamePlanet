@@ -1,32 +1,33 @@
 const {resolve} = require('path');
 const fs = require('fs');
+const file = 'users.json';
 
 let model = {
     all: function(){
-        let file = resolve(__dirname, '../data', 'products.json');
+        let file = resolve(__dirname, '../data', file);
         let data = fs.readFileSync(file);
         return JSON.parse(data);
     },
-    one: function(sku){
+    one: function(id){
         let all = model.all();
-        return all.find(e => e.sku == sku);
+        return all.find(e => e.id == id);
     },
     generate: function(data){
         let all = model.all();
         let last = all.pop();
-        let product = {}
-        product.name = data.name;
-        product.description = data.description;
-        product.price = parseInt(data.price);
-        product.category = data.category;
-        product.classification = data.classification;
-        product.inOffer = data.inOffer;
-        product.sku = !(last == undefined) ? last.sku + 1 : 1;
-        product.image = data.image;
-        return product;
+        let user = {}
+        user.id = !(last == undefined) ? last.id + 1 : 1;
+        user.fullName = data.fullName;
+        user.user = data.user;
+        user.email = data.email;
+        user.password = data.password;
+        user.perfil = data.perfil;
+        user.birthDay = data.birthDay;
+        user.image = data.image;
+        return user;        
     },
     write: function(data){
-        let file = resolve(__dirname, '../data', 'products.json');
+        let file = resolve(__dirname, '../data', file);
         let json = JSON.stringify(data, null, 2);
         return fs.writeFileSync(file, json);
     }

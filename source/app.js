@@ -28,6 +28,7 @@ app.use(express.json());
 //Debe estar antes del routes y será la forma de poder usar los métodos put path y delete
 app.use(method('m'))
 app.use(require('./routes/products.routes'));
+app.use(require('./routes/userts.routes'));
 
 
 app.get("/register", function (req, res) {
