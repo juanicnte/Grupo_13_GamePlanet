@@ -2,10 +2,10 @@ const { unlinkSync} = require('fs');
 const { resolve } = require('path');
 const path = require('path');
 const {all, one, generate, write} = require('../models/users.model')
+const { validationResult } = require("express-validator")
 
 const controlador = {
     create: (req, res) => {
-        let nuevo = generate(req.body);
         return res.render('register')
     },
     show: function(req, res){
@@ -19,13 +19,25 @@ const controlador = {
         return res.send('Debe mostrar el usuario')
     },
     save: (req, res) => {
-        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
         
+        const result = validationResult(req);
+        if(!result.isEmpty()){
+            let errores = result.mapped();
+            return res.render('register',{
+                errores: errores,
+                data: req.body
+            })
+
+        }
+        
+        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
         let nuevo = generate(req.body);
         let todos = all();
-        todos.push(nuevo);
+        todos.push(nuevo);  
         write(todos);
         return res.redirect('/')
+        
+    
     },
     edit: (req, res) => {
 
@@ -60,7 +72,6 @@ const controlador = {
         return res.redirect('/')
     }
 };
-
 
 
 

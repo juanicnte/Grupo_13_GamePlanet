@@ -1,6 +1,6 @@
 const {resolve} = require('path');
 const fs = require('fs');
-
+const bcryptjs = require('bcryptjs')
 let model = {
     all: function(){
         let file = resolve(__dirname, '../data', 'users.json');
@@ -19,11 +19,12 @@ let model = {
         user.fullName = data.fullName;
         user.user = data.user;
         user.email = data.email;
-        user.password = data.password;
+        user.password = bcryptjs.hashSync(data.password, 10);
         user.perfil = data.perfil;
         user.birthDay = data.birthDay;
         user.image = data.image;
-        return user;        
+        return user;
+              
     },
     write: function(data){
         let file = resolve(__dirname, '../data', 'users.json');
