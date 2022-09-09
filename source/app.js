@@ -6,6 +6,10 @@ const { join } = require('path');
 
 //method-override agregamos los verbos put delete y patch
 const method = require('method-override');
+//Para instalar manejo de sessiones npm i express-session
+//Lo usamos
+const session = require('express-session');
+
 const app = express();
 //const logger = require('morgan');
 //const cookieParser = require('cookie-parser');
@@ -17,6 +21,9 @@ app.set('views', join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
 app.listen(port, start());
+
+//Uso las sessiones
+//app.use(session{})
 
 //Configuración del entorno de la aplicación para que pueda capturar la información
 //express.urlencoded y express.json
