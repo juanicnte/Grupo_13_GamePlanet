@@ -2,7 +2,39 @@ const express = require('express');
 const usersController = require('../controllers/users.controller');
 const route = express.Router();
 
+const {resolve, extname} = require('path');
+
+const { existsSync, mkdirSync } = require('fs');
+
+const destination = function(req, file, cb){
+    let folder = resolve(__dirname, '..', '..', 'public', 'images');
+   
+    if(!existsSync(folder))
+    {
+        mkdirSync(folder)
+    }
+    return cb(null, folder);
+}
+
+const filename = function(req, file, cb){
+    let unique =  Date.now();
+    //console.log(file.fieldname)
+    //let name = file.fieldname + '-' + unique + extname(file.originalname);
+    let name = file.originalname;
+   
+    return cb(null, name);
+}
+
+
+
+const multer = require('multer');
+const upload = multer({storage:multer.diskStorage({destination, filename})});
+
+const registerValidator = require('../validations/register')
+
+
 route.get('/register', usersController.create)
+route.post('/register/save',registerValidator, usersController.save)
 /*
 
 app.get("/register", function (req, res) {

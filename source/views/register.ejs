@@ -11,49 +11,74 @@
 
     <main class="mainRegister">
      
-      <form action="/" method="POST" class="formRegistro">
+      <form action="/register/save" method="POST" class="formRegistro">
         <h2>Regístrate</h2>
         <section>
           <div>
             <label for="nombreCompleto">Nombre y apellido</label>
             <input
               type="text"
-              name="nombreYApellido"
+              name="fullName"
               id="nombreCompleto"
               placeholder="Nombre y apellido"
+              value=" <%= locals.errores && !locals.errores.name && locals.data ? data.name : null %> "
               required
-            />
+            />   <% if (locals.errores && locals.errores.name) { %>
+              <p class="registerError">
+                <%= locals.errores.name.msg %>
+              </p>
+          <% } %>
           </div>
           <div>
             <label for="nombreUsuari@">Nombre de usuari@</label>
             <input
               type="text"
-              name="usuario"
+              name="user"
               placeholder="Nombre de usuari@"
               id="nombreUsuari@"
+              value=" <%= locals.errores && !locals.errores.name && locals.data ? data.name : null %> "
               required
-            />
+            />   <% if (locals.errores && locals.errores.name) { %>
+              <p class="registerError">
+                <%= locals.errores.name.msg %>
+              </p>
+          <% } %>
           </div>
         </section>
+        
         <label for="correo">Correo electrónico</label>
         <input
           type="email"
-          name="correo"
+          name="email"
           placeholder="Correo electronico"
           id="correo"
+          value=" <%= locals.errores && !locals.errores.email && locals.data ? data.email : null %> "
           required
-        />
+        />   <% if (locals.errores && locals.errores.email) { %>
+          <p class="registerError">
+            <%= locals.errores.email.msg %>
+          </p>
+      <% } %>
+
+
         <label for="contraseña">Contraseña</label>
         <input
           type="password"
-          name="contraseña"
+          name="password"
           placeholder="contraseña"
           id="contraseña"
+          value=" <%= locals.errores && !locals.errores.password && locals.data ? data.password : null %> "
           required
-        />
+        />   <% if (locals.errores && locals.errores.password) { %>
+          <p class="registerError">
+            <%= locals.errores.paassword.msg %>
+          </p>
+      <% } %>
+
+
         <label for="nacio">Fecha de nacimiento</label>
-        <input type="date" name="Fecha-de-nacimiento" id="nacio" required />
-        <button class="enviar" type="submit">Enviar</button>
+        <input type="date" name="birthDay" id="nacio" required />
+      <button class="enviar" type="submit">Enviar</button>
       </form>
     </main>
     <footer class="main-footer">

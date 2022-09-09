@@ -5,6 +5,9 @@ main{
     height: 100vh;
     background-color: white;
 }
+main input p{
+    background-color: red;
+}
 
 body{
     color: #000000;

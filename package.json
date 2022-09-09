@@ -11,9 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+<<<<<<< HEAD
     "express-session": "^1.17.3",
+=======
+    "express-validator": "^6.14.2",
+>>>>>>> 446ab32eebed38b798d0f743d39080ef7ce40b97
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
     "node": "^18.7.0"

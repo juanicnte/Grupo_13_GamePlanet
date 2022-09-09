@@ -1,22 +1,20 @@
 [
-    {
-      "id": 1,
-      "fullName": "Juan",
-      "user": "juan",
-      "email": "pedroperez@hotmail.com",
-      "password": "asdasd",
-      "perfil": "admin",
-      "birthDay": "2010-07-07",
-      "image": "flightSimulator.jpg"
-    },
-    {
-      "id": 2,
-      "fullName": "Franco",
-      "user": "franco",
-      "email": "franco@gmail.com",
-      "password": "123456",
-      "perfil": "user",
-      "birthDay": "2010-10-17",
-      "image": "flightSimulator.jpg"
-    }
+  {
+    "id": 1,
+    "fullName": "1221",
+    "user": "1221",
+    "email": "121212121212121221@pasid.com",
+    "password": "$2a$10$xe0fCNTn0hnO1dvbHNkOiuBL9UnX/ntC4JQfXjsCF4Jls6tBqDF.2",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 2,
+    "fullName": "1221",
+    "user": "11",
+    "email": "1212121212121221121212@gmail.com",
+    "password": "$2a$10$3tfozbdiqVrGfdKInkf2gOmW7a1xMmJMdx7JqweWPVq/E01gwZRCC",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  }
 ]
