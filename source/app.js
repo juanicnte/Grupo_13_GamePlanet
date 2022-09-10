@@ -9,6 +9,8 @@ const method = require('method-override');
 //Para instalar manejo de sessiones npm i express-session
 //Lo usamos
 const session = require('express-session');
+const cookie = require('cookie-parser');
+//const { cookie } = require('express-validator');
 
 const app = express();
 //const logger = require('morgan');
@@ -25,6 +27,8 @@ app.listen(port, start());
 //Uso las sessiones
 //app.use(session{})
 
+
+//Middleware de aplicación
 //Configuración del entorno de la aplicación para que pueda capturar la información
 //express.urlencoded y express.json
 app.use(express.urlencoded({extended:true}));
@@ -32,8 +36,21 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 //app.use(cookieParser());
 
+app.use(session({secret:'clave',
+resave:true,
+saveUninitialized: true}))
+
+app.use(cookie()) //req.cookies obj literal las cookies 
+
 //Debe estar antes del routes y será la forma de poder usar los métodos put path y delete
 app.use(method('m'))
+
+//----------------------
+//Custom Middlewware
+app.use(require('./middlewares/user'))
+
+//----------------------
+
 app.use(require('./routes/products.routes'));
 app.use(require('./routes/users.routes'));
 

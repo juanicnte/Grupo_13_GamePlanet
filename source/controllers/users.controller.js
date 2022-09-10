@@ -70,6 +70,24 @@ const controlador = {
         let noEliminar = todos.filter(elemento => elemento.id != req.body.id);
         write(noEliminar);
         return res.redirect('/')
+    },
+    access: (req, res) => {
+        const dato = usuarios.find(usuario => usuario.email == req.body.email)
+        if(dato){
+            req.session.user = dato
+            if(req.body.remember){
+                res.cookies('email', req.body.email, {maxAge: 1000*60})
+            }
+            return res.redirect('/')
+        }
+        else{
+            return res.render('home', {errores:{email:'No estás registrado'}})
+        }
+    },
+    logout:(req, res) => {
+        delete req.session.user
+        res.cookie('email', req.body.email,{maxAge:1})
+        return res.back()
     }
 };
 

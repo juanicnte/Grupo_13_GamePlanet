@@ -1,5 +1,8 @@
 const express = require('express');
 const usersController = require('../controllers/users.controller');
+const isLogged = require('../middlewares/isLogged')
+const isAdmin = require('../middlewares/isAdmin')
+
 const route = express.Router();
 
 const {resolve, extname} = require('path');
@@ -32,9 +35,11 @@ const upload = multer({storage:multer.diskStorage({destination, filename})});
 
 const registerValidator = require('../validations/register')
 
-
 route.get('/register', usersController.create)
 route.post('/register/save',registerValidator, usersController.save)
+
+route.post('/access', usersController.access)
+route.get('/logOut', usersController.logout)
 /*
 
 app.get("/register", function (req, res) {

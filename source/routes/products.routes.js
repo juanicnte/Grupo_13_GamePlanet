@@ -32,8 +32,13 @@ const filename = function(req, file, cb){
 const multer = require('multer');
 const upload = multer({storage:multer.diskStorage({destination, filename})});
 
+const isLogged = require('../middlewares/isLogged')
+const isAdmin = require('../middlewares/isAdmin')
+
+
 //Un sólo archivo (single('image)) o req.file 
 //Cualquer cantidad de archivos any() req.files
+//route.get('/products/create',  isLogged, isAdmin, productsController.create)
 route.get('/products/create', productsController.create)
 
 //route.post('/products',  productsController.save)
