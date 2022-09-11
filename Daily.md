@@ -32,3 +32,7 @@ Juan: Navegación y redes sociales
 Lucas: Poner el ícono en el explorador
 Marcia: Modificar el Daily.md con la información y tenerlo actualizado, organizar el Trello, crear el CRUD
 Tomás: Archivos .json, definir categorías y los campos de usuarios y productos
+
+11 de septiembre 
+
+A menos de 48 horas de finalizar este 5to sprint, aún no hemos terminado y estamos teniendo serios problemas de comunicación.

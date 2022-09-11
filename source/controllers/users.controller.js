@@ -19,8 +19,9 @@ const controlador = {
         return res.send('Debe mostrar el usuario')
     },
     save: (req, res) => {
-        
+
         req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
+     
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);  

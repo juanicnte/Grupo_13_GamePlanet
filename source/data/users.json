@@ -34,5 +34,50 @@
     "password": "$2a$10$3J8Q14gcAfDlNBzGcVWZh.6QwXurYiVOnZ6SEAhDvRg5D3tSNKO8i",
     "birthDay": "1111-11-11",
     "image": "default.png"
+  },
+  {
+    "id": 5,
+    "fullName": "asdas",
+    "user": "asdasd",
+    "email": "perro12@gmail.com",
+    "password": "$2a$10$lj/./3e7pZ9O0EO1nbbJbemfiG0YPizm1I5rK1iCYBqgD0bYJR4.i",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 6,
+    "fullName": "1212",
+    "user": "1221",
+    "email": "pe1rro@gmail.com",
+    "password": "$2a$10$XMWJMeWPideD7WbZ1JKxiefggYyZEbWmFVO74by38Z1.fvxF.1bc2",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 7,
+    "fullName": "2112121221",
+    "user": "12121221",
+    "email": "1perro@gmail.com",
+    "password": "$2a$10$c6CcHExXfAPH6joaYOKH9Oua2sR9D/AaADcHpvw/ZrubWcNL3ow9C",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 8,
+    "fullName": "1212",
+    "user": "211221",
+    "email": "1212121212121221121212@gmail.com",
+    "password": "$2a$10$rw0xfaMGye0Vxo.EPGdve.EnDA4sEd85xumIce2bmIczi3C2FQ092",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 9,
+    "fullName": "111",
+    "user": "111",
+    "email": "perro@gmail.com",
+    "password": "$2a$10$AhxfWVkxEz0HvRTSyH9bWOlidhDf/75J.nj2Re4y2VBBzahSeqHBi",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
   }
 ]
