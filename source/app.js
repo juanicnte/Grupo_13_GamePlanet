@@ -42,6 +42,7 @@ saveUninitialized: true}))
 
 app.use(cookie()) //req.cookies obj literal las cookies 
 
+
 //Debe estar antes del routes y será la forma de poder usar los métodos put path y delete
 app.use(method('m'))
 

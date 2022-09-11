@@ -1,6 +1,6 @@
 const { body } = require('express-validator')
 
-const all = require('../models/users.model')
+const { all } = require('../models/users.model')
 
 const { compareSync } = require('bcryptjs')
 

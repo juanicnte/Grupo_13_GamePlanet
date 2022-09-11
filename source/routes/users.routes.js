@@ -36,10 +36,13 @@ const upload = multer({storage:multer.diskStorage({destination, filename})});
 
 const registerValidator = require('../validations/register')
 
-route.get('/register', usersController.create)
-route.post('/register/save', upload.any(), usersController.save)
+const loginValidator = require('../validations/login')
 
-route.post('/access', usersController.access)
+route.get('/register', usersController.create)
+route.post('/register/save', upload.any(),registerValidator, usersController.save)
+
+route.post('/login/access',loginValidator, usersController.access)
+
 route.get('/logOut', usersController.logout)
 /*
 

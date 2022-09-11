@@ -10,92 +10,56 @@
   },
   {
     "id": 2,
-    "fullName": "1221",
-    "user": "11",
-    "email": "1212121212121221121212@gmail.com",
-    "password": "$2a$10$3tfozbdiqVrGfdKInkf2gOmW7a1xMmJMdx7JqweWPVq/E01gwZRCC",
+    "fullName": "1212",
+    "user": "34",
+    "email": "perro@gmail.com",
+    "password": "$2a$10$TsQSdbxg7tY01cVQiTVq0Oe5I4SjP2k5zMxyLLXbEKHAC1k6p9Ofy",
     "birthDay": "1111-11-11",
-    "image": "default.png"
+    "image": "Untitled.png"
   },
   {
     "id": 3,
-    "fullName": " 123123 ",
-    "user": "12312312  ",
+    "fullName": "11",
+    "user": "111",
     "email": "perro@gmail.com",
-    "password": "$2a$10$kj9W278Tk6Y2jg3ygQYGyuR8yy8IbBZdGjks7XLcAxkTMWPrFptS6",
+    "password": "$2a$10$52VB2yszJmEuTydg5kUbleiC8BfQWstI5bECP2XM/NB3y34Et0r6C",
     "birthDay": "1111-11-11",
-    "image": "default.png"
+    "image": "asadsas.png"
   },
   {
     "id": 4,
-    "fullName": "1212",
+    "fullName": "3212",
     "user": "1212",
-    "email": "perro@gmail.commm",
-    "password": "$2a$10$3J8Q14gcAfDlNBzGcVWZh.6QwXurYiVOnZ6SEAhDvRg5D3tSNKO8i",
+    "email": "perro@gmail.co",
+    "password": "$2a$10$.8ejp61fEKsxvWhUldq7cOz9j31TFIULLYWa2OSqiBvlDsOuvomoq",
     "birthDay": "1111-11-11",
     "image": "default.png"
   },
   {
     "id": 5,
-    "fullName": "asdas",
-    "user": "asdasd",
-    "email": "perro12@gmail.com",
-    "password": "$2a$10$lj/./3e7pZ9O0EO1nbbJbemfiG0YPizm1I5rK1iCYBqgD0bYJR4.i",
+    "fullName": "121212121212121221@pasid.com",
+    "user": "121212121212121221@pasid.com",
+    "email": "121212121212121221@pasid.com",
+    "password": "$2a$10$8VdMNiuPe.54P.La8UJkxOpVCAySAbpudxRELqQ6lWhCulK0Ce7la",
     "birthDay": "1111-11-11",
     "image": "default.png"
   },
   {
     "id": 6,
-    "fullName": "1212",
-    "user": "1221",
-    "email": "pe1rro@gmail.com",
-    "password": "$2a$10$XMWJMeWPideD7WbZ1JKxiefggYyZEbWmFVO74by38Z1.fvxF.1bc2",
+    "fullName": "121212121212121221@pasid.com",
+    "user": "121212121212121221@pasid.com",
+    "email": "121212121212121221@pasid.com",
+    "password": "$2a$10$MszmQZ4b6kza0YsdDXCNYeUhHibL8.90DgJu8KHIOg1TAhJyaxwmy",
     "birthDay": "1111-11-11",
     "image": "default.png"
   },
   {
     "id": 7,
-    "fullName": "2112121221",
-    "user": "12121221",
-    "email": "1perro@gmail.com",
-    "password": "$2a$10$c6CcHExXfAPH6joaYOKH9Oua2sR9D/AaADcHpvw/ZrubWcNL3ow9C",
+    "fullName": "121212121212121221@pasid.com",
+    "user": "121212121212121221@pasid.com",
+    "email": "121212121212121221@pasid.comm",
+    "password": "$2a$10$.nDW7//Ap3k6O5RuHy9WSOGf832vP90Utj9kvBbddIQVsxDRVDrR.",
     "birthDay": "1111-11-11",
     "image": "default.png"
-  },
-  {
-    "id": 8,
-    "fullName": "1212",
-    "user": "211221",
-    "email": "1212121212121221121212@gmail.com",
-    "password": "$2a$10$rw0xfaMGye0Vxo.EPGdve.EnDA4sEd85xumIce2bmIczi3C2FQ092",
-    "birthDay": "1111-11-11",
-    "image": "default.png"
-  },
-  {
-    "id": 9,
-    "fullName": "111",
-    "user": "111",
-    "email": "perro@gmail.com",
-    "password": "$2a$10$AhxfWVkxEz0HvRTSyH9bWOlidhDf/75J.nj2Re4y2VBBzahSeqHBi",
-    "birthDay": "1111-11-11",
-    "image": "default.png"
-  },
-  {
-    "id": 10,
-    "fullName": "aaaa",
-    "user": "jajajaja",
-    "email": "tegolpeo@ya.com",
-    "password": "$2a$10$QhYkeXue82kuDh.iS067FuLjh/EFex/.CdUtcy1YOEhGKNIoyqabG",
-    "birthDay": "2022-09-21",
-    "image": "default.png"
-  },
-  {
-    "id": 11,
-    "fullName": "soy un",
-    "user": "perdedor",
-    "email": "perdedores@aqui.com",
-    "password": "$2a$10$Uu0WJIhcIKsTAfvHwinnPO/fv3umh.wD1ITscxkE89D8Cha3k5Fvm",
-    "birthDay": "2022-09-10",
-    "image": "icons8-mÃ¡quina-de-tatuaje-48.png"
   }
 ]
