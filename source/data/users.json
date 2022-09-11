@@ -16,5 +16,23 @@
     "password": "$2a$10$3tfozbdiqVrGfdKInkf2gOmW7a1xMmJMdx7JqweWPVq/E01gwZRCC",
     "birthDay": "1111-11-11",
     "image": "default.png"
+  },
+  {
+    "id": 3,
+    "fullName": " 123123 ",
+    "user": "12312312  ",
+    "email": "perro@gmail.com",
+    "password": "$2a$10$kj9W278Tk6Y2jg3ygQYGyuR8yy8IbBZdGjks7XLcAxkTMWPrFptS6",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 4,
+    "fullName": "1212",
+    "user": "1212",
+    "email": "perro@gmail.commm",
+    "password": "$2a$10$3J8Q14gcAfDlNBzGcVWZh.6QwXurYiVOnZ6SEAhDvRg5D3tSNKO8i",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
   }
 ]

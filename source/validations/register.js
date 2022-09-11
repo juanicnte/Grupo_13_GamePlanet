@@ -1,7 +1,9 @@
 const { body } = require('express-validator')
 
-let email = body('email').notEmpty().withMessage('Este campo es obligatorio').bail().isEmail().withMessage('Ingrese un mail válido')
-let password = body('password').notEmpty().withMessage('Este campo es obligatorio').bail().isLength({min:4,max:30}).withMessage('Min 4 caracteres')
+let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacío').bail().isEmail().withMessage('Email no valido')
+let password = body('password').notEmpty().withMessage('Contraseña no valida').bail().isLength({min: 4}).withMessage('4 caracteres como minimo')
 
-let validaciones = [email, password]
+let validaciones = [email,password]
+
 module.exports = validaciones;
+

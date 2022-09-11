@@ -20,16 +20,6 @@ const controlador = {
     },
     save: (req, res) => {
         
-        const result = validationResult(req);
-        if(!result.isEmpty()){
-            let errores = result.mapped();
-            return res.render('register',{
-                errores: errores,
-                data: req.body
-            })
-
-        }
-        
         req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
         let nuevo = generate(req.body);
         let todos = all();

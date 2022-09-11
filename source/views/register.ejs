@@ -21,13 +21,7 @@
               name="fullName"
               id="nombreCompleto"
               placeholder="Nombre y apellido"
-              value=" <%= locals.errores && !locals.errores.name && locals.data ? data.name : null %> "
-              required
-            />   <% if (locals.errores && locals.errores.name) { %>
-              <p class="registerError">
-                <%= locals.errores.name.msg %>
-              </p>
-          <% } %>
+              required>
           </div>
           <div>
             <label for="nombreUsuari@">Nombre de usuari@</label>
@@ -36,13 +30,7 @@
               name="user"
               placeholder="Nombre de usuari@"
               id="nombreUsuari@"
-              value=" <%= locals.errores && !locals.errores.name && locals.data ? data.name : null %> "
-              required
-            />   <% if (locals.errores && locals.errores.name) { %>
-              <p class="registerError">
-                <%= locals.errores.name.msg %>
-              </p>
-          <% } %>
+              required>
           </div>
         </section>
         
@@ -52,13 +40,7 @@
           name="email"
           placeholder="Correo electronico"
           id="correo"
-          value=" <%= locals.errores && !locals.errores.email && locals.data ? data.email : null %> "
-          required
-        />   <% if (locals.errores && locals.errores.email) { %>
-          <p class="registerError">
-            <%= locals.errores.email.msg %>
-          </p>
-      <% } %>
+          required>
 
 
         <label for="contraseña">Contraseña</label>
@@ -67,13 +49,8 @@
           name="password"
           placeholder="contraseña"
           id="contraseña"
-          value=" <%= locals.errores && !locals.errores.password && locals.data ? data.password : null %> "
-          required
-        />   <% if (locals.errores && locals.errores.password) { %>
-          <p class="registerError">
-            <%= locals.errores.paassword.msg %>
-          </p>
-      <% } %>
+          required>
+  
 
 
         <label for="nacio">Fecha de nacimiento</label>
