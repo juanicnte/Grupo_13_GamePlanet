@@ -19,7 +19,7 @@
           placeholder="Correo Electronico"
           id="usuari@"
           required
-          value="<%= locals.errores && !locals.errores.email && locals.data ? locals.data.email : " " %> "
+          value="<%= locals.errores && !locals.errores.email && locals.data ? locals.data.email : "" %>"
         
           />
 
@@ -40,7 +40,7 @@
           name="password"
           placeholder="Contraseña"
           id="password"
-          value="<%= locals.errores && !locals.errores.password && locals.data ? locals.data.password : " " %> "
+          value="<%= locals.errores && !locals.errores.password && locals.data ? locals.data.password : "" %>"
         />
 
         <% if(locals.errores && locals.errores.password) {%>
