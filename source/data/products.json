@@ -1,35 +1,5 @@
 [
   {
-    "sku": 1,
-    "name": "The Last of us II",
-    "description": "The Last of Us Part II es un videojuego de terror y de acción y aventuras de 2020 desarrollado por Naughty Dog y publicado por Sony Interactive Entertainment para PlayStation 4.1​ Ambientado cinco años después de The Last of Us (2013), el juego se centra en dos personajes jugables en un Estados Unidos post-apocalíptico cuyas vidas se entrelazan: Ellie, que busca venganza después de sufrir una tragedia, y Abby, una soldado que se ve envuelta en un conflicto entre su milicia y un culto religioso. El juego se juega desde la perspectiva de la tercera persona y le permite al jugador luchar contra enemigos humanos y criaturas caníbales parecidas a zombis con armas de fuego, armas improvisadas y sigilo.",
-    "price": "1500",
-    "category": "Playstation",
-    "classification": "Juegos del momento",
-    "inOffer": "1",
-    "image": "tlou2-dh.png"
-  },
-  {
-    "sku": 2,
-    "name": "FIFIA 22",
-    "description": "FIFA 22 es un videojuego desarrollado por EA Vancouver y EA Romania, siendo publicado por EA Sports. Está disponible para PlayStation 4, PlayStation 5, Xbox Series X/S, Xbox One, Microsoft Windows, Google Stadia y Nintendo Switch. Es la vigésimo novena entrega en la serie FIFA y fue lanzado el 1 de octubre de manera global. El primer tráiler del juego fue presentado el 11 de julio de 2021 y muestra la nueva tecnología Hypermotion, que según palabras de EA brindará nueva experiencia más realista. Estas innovaciones están disponibles únicamente para PlayStation 5, Xbox Series y Stadia. Kylian Mbappé será el rostro de la portada por segunda vez consecutiva . A diferencia de juegos anteriores que poseían diferentes ediciones con más contenido, FIFA 22 sólo contará con dos ediciones: Ultimate y estándar. La edición Ultimate otorga al usuario de acceso anticipado al juego, junto con beneficios extras que no están disponibles en la edición estándar, con un respectivo valor de 60 o 70 dólares (edición estándar) y 100 dólares (edición Ultimate).",
-    "price": "1100",
-    "category": "Nintendo",
-    "classification": "Más vendidos",
-    "inOffer": "0",
-    "image": "fifa-dh.png"
-  },
-  {
-    "sku": 3,
-    "name": "Red dead II",
-    "description": "Red Dead Redemption 2, estilizado Red Dead Redemption II, es un videojuego de acción-aventura western basado en el drama, en un mundo abierto y en perspectiva de primera y tercera persona, ​ con componentes para un jugador y multijugador.​ Fue desarrollado por Rockstar Games.",
-    "price": "1700",
-    "category": "Xbox",
-    "classification": "Soporte 24/7",
-    "inOffer": "1",
-    "image": "red2-dh.png"
-  },
-  {
     "sku": 4,
     "name": "Grand Theft Auto",
     "description": "Grand Theft Auto",
@@ -52,41 +22,21 @@
   {
     "sku": 6,
     "name": "The Last of us II",
-    "description": "The Last of us Part II",
+    "description": "The Last of Us Part II es un videojuego de terror y de acción y aventuras de 2020 desarrollado por Naughty Dog y publicado por Sony Interactive Entertainment para PlayStation 4.1​ Ambientado cinco años después de The Last of Us (2013), el juego se centra en dos personajes jugables en un Estados Unidos post-apocalíptico cuyas vidas se entrelazan: Ellie, que busca venganza después de sufrir una tragedia, y Abby, una soldado que se ve envuelta en un conflicto entre su milicia y un culto religioso. El juego se juega desde la perspectiva de la tercera persona y le permite al jugador luchar contra enemigos humanos y criaturas caníbales parecidas a zombis con armas de fuego, armas improvisadas y sigilo.",
     "price": "1500",
-    "category": "PlayStation",
+    "category": "PS5",
     "classification": "Juegos del momento",
     "inOffer": 1,
     "image": "tlou2-dh.png"
   },
   {
-    "sku": 7,
-    "name": "FIFA 22",
-    "description": "Description FIFIA 22",
-    "price": "1100",
-    "category": "Nintendo",
-    "classification": "Más vendidos",
-    "inOffer": 0,
-    "image": "fifa-dh.png"
-  },
-  {
-    "name": "Back",
-    "description": "ndsgh",
-    "price": 1111,
+    "name": "Red Dead redemption 2",
+    "description": "asdas",
+    "price": 1520,
     "category": "Playstation",
     "classification": "Más vendidos",
     "inOffer": "0",
-    "sku": 8,
-    "image": "every-character-in-god-of-war-ragnarok_bzf9.jpg"
-  },
-  {
-    "name": "Design",
-    "description": "KJBU",
-    "price": 1000,
-    "category": "Xbox",
-    "classification": "Más vendidos",
-    "inOffer": "1",
-    "sku": 9,
-    "image": "maincontroller.PNG"
+    "sku": 7,
+    "image": "pc-dead.png"
   }
 ]

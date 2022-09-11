@@ -33,7 +33,7 @@ main{
     
     /*animation*/
     animation-name: rebotar;
-    animation-duration: 0.4s;
+    animation-duration: 2ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -74,7 +74,7 @@ main{
    0%{transform: translateX(0); 
 }
     100%{
-        transform: translateX(10%);
+        transform: translateX(2%);
     }
 }
 

@@ -3,41 +3,79 @@
 
 <head>
     <%- include('./partials/head.ejs') %>
-        <link rel="stylesheet" href="/css/productDetail.css" />
+        <link rel="stylesheet" href="/css/productDetail.css"/>
+        </style>
 </head>
 
 <body>
     <%- include('./partials/header.ejs') %>
-        <main class="main-content">
-            <section class="contenedorImg">
-                <h3>
+    <div id="main-content">
+        <main>
+            <p id="name-product"><%= product.name %><p>
+            <section class="section-description">
+            <div class="container-image">
+                    <img src="../../images/<%= product.image %>" alt="juego fifa 22" class="img-juego" />
+                
+                    <div class="contenedorJuego">
+                <p id="name-game">
                     <%= product.name %>
-                </h3>
-                <img src="../../images/<%= product.image %>" alt="juego fifa 22" />
-                <article id="descripcionJuego">
-                    <p class="texto">
-                        <%= product.description %>
+                </p>
+                <div class="category">
+                    <p id="category-item">
+                        <%= product.category %>
                     </p>
-                </article>
-                <nav class="buttonStyle">
-                    <button  class="crear">
-                        
-                        <a class="crear"><h2>Comprar<i class="fa-solid fa-cart-shopping"></i></h2></a>
-                    </button>
-                    <a href="/products/create" class="crear"><h2>CREAR</h2></a>
-                    <a href="/products/edit/<%= product.sku %>" class="crear"><h2>EDITAR</h2></a>
+                     <p>
+                        <%= product.classification %>
+                    </p>
+                </div>
+            </div>
+        </div>
+                <div class="description">
+                   <h2 id="title-item">Descripción del producto</h2>
+                    <p><%=product.description%> </p>
+                </div>
+                </section>
+
+                <section class="list-products">
+                <ul class="lista-description">
+                    <li>Textos en español</li>
+                    <li>Sólo cooperativo</li>
+                    <li>Juego Original y Completo</li>
+                    <li>>Descarga desde tu consola</li>
+                    <li>>Incluye guía paso a paso</li>
+                    <li style="color: rgb(125, 0, 136); font-weight: 600;">>Entrega inmediata</li>
+                </ul>
+
+                <div class="price-content">
+                <div class="precios">
+                    <p><%=product.price%></p>
+                    <p id="ars">ARS</p>
+                </div>
+                <form class="cantidadProductos">
+                    <input type = "number" min = "1"  value = "1" max = "20"/> 
+                    <a href="/carrito"class="crear">Comprar<i class="fa-solid fa-cart-shopping"></i></a>
+                </form>
+            </div>
+            </section>
+
+                <ul class="scc">
+                    <li>SKU: <p><%= product.sku %> </p></li>
+                    <li>Categoría: <p><%= product.category %> </p></li>
+                    <li>clasificacíon: <p><%= product.classification %> </p></li>
+                </ul>
+            </div>
+                <ul class="botones">
+                    <a href="/products/create" class="crear-editar">CREAR</a>
+                    <a href="/products/edit/<%= product.sku %>" class="crear-editar">EDITAR</a>
                     <form action="/products/delete/<%= product.sku %>?m=DELETE" method="POST">
-                        <input type="hidden" name="sku" value="<%= product.sku %>">
-    
-                        <button type="submit" class="crear">
-                            <a class="crear"><h2>ELMINAR<i class="fa-solid fa-cart-shopping"></i></h2></a>
-                            
+                        <button type="submit" name= "sku" value= "<%= product.sku %>">
+                            <a class="eliminar">ELIMINAR<i class="fa-solid fa-cart-shopping"></i></a>                           
                         </button>
                     </form>
-                </nav>
-               
-            </section>
-        </main>
+                </ul>
+
+                
+            </main>
         <footer>
             <%- include('./partials/footer.ejs') %>
         </footer>

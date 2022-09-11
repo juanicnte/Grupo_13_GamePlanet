@@ -29,7 +29,7 @@ footer{
     text-decoration: revert;
 }
 .lista-footer a:hover{
-    color: rgb(233, 233, 201);
+    color: #dcb0dc;
     transition: color 0.5s;
 }
 

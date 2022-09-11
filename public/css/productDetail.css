@@ -1,252 +1,223 @@
+body{
+    background-color: black;
+}
 main{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    background-color: white;
+    padding-top: 3vh;
 }
 
-.header-search-bar{
-    display: none;
-}
-
-.contenedorImg{
+/*imagen*/
+.container-image{
     display: flex;
-    width: 80%;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
+}
+.img-juego{
+    width: 15rem;
 }
 
-.main-content {
+/*categorias*/
+.contenedorJuego{
+    width: 21rem;
+    height: 2rem;
     display: flex;
-    flex-direction: column;
-    max-width: 90%;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
-    align-items: center;
-    margin: 30px;
-    height: 57vh;
-}
-/*.main-content h3{
-    display: flex;
-    justify-content: center;
-    width: 20%;
     flex-direction: row;
-    top: -47%;
-    left: 13%;
+    justify-content: flex-end;
+    margin-top: 1rem;
+
+    background-color: gainsboro;
+    color: black;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.category{
+    display: flex;
+    margin-right: 1rem;
+    font-weight: 600;
+}
+#category-item{
+    padding-right: 0.5rem;
+    border-right: solid 1px grey;
+}
+#name-game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    left: -13px;
+    align-items: center;
+    width: 8rem;
+    height: 2.5rem;
     position: relative;
-    font-size: 19px;
-}*/
+    background-color: gray;
+    color: #fff;
+    border-radius: 5px;
+}
 
-.main-content h3 {
+#title-item{
+    border-bottom: 1px solid gainsboro;
+}
+.description{
+    padding: 5%;
+}
+.lista-description{
+    padding: 5%;
+}
+.lista-description li{
+    padding-bottom: 0.3rem;
+}
+
+
+.precios{
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 1rem 5% 0.2rem;
     display: flex;
-    width: 20%;
-    flex-direction: row;
-    top: -47%;
-    left: 13%;
-    /* position: relative; */
-    margin: auto;
-    font-size: 19px;
-    align-items: center;
-    justify-content: center;
+    
 }
-
-.contenedorImg img{
-    width: 40%;
-    padding-bottom: .4rem;
-    margin: 20px;
-}
-
-.picture-logo{
-    height: 80px;;
-}
-
-#descripcionJuego{
+#ars{
+    font-weight: 800;
+    font-size: 1rem;
     display: flex;
-    font-weight: bolder;
-    font-size: .9rem;
-    flex-direction: row;
-    text-align: justify;
-    padding: 2rem;
-    position: relative;
-    left: 18%;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.crear h2 {
-    background: #000000;
-    color: rgb(233, 233, 201);
-    margin: 10px;
-    padding: 10px;
-}
-
-h3{
+.cantidadProductos{
+    width: 60%;
     display: flex;
     justify-content: flex-start;
-    padding-top: .4rem;
-    margin: auto;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 2px black;
-    text-shadow: 2px 2px 2px white;
+    align-items: center;
+    margin: 0.2rem 5% 2rem
+}
+.cantidadProductos input{
+    outline: #fff;
+    border: 1px solid rgb(219, 219, 219) ;
+    margin-right: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.5rem 3.5rem 0.5rem 0;
+}
+.cantidadProductos input:focus{
+    border: 2px solid rgb(125, 0, 136);
+}
+.cantidadProductos a:active{
+    color: white;
+    background-color: rgb(255, 0, 179);
+}
+.cantidadProductos a{
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    width: 7rem;
+    background-color: blueviolet;
+    padding: 0.5rem;
 }
 
-button{
-    background-color: white;
+
+/*SKU / CLASIFICATION / CATEGORY */
+.scc{
+    padding: 5%;
+}
+.scc li{
+    padding: 0.3rem;
+    display: flex;
+    font-weight: 600;
+}
+.scc p{
+    margin-left: 5px;
+    font-weight: 500;
+    color: blueviolet;
 }
 
-@media screen and (min-width:768px) {
 
-    .main-header{
-        width: 100%;
-        /* flex-wrap: wrap; */
-        justify-content: center;
-    }
+/*BOTONES CRUD*/
 
-    .picture-logo .img-logo {
-        width: 34%;
-    }
-/*
-    ul.nav-bar{
-        display: flex;
-        width: 100%;
-        /* margin: auto; */
-       /* justify-content: space-evenly;
-    }*/
-
-    .header-top-bar {
-        flex-wrap: wrap;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        align-items: center;
-    }
-
-    .menu {
-        display: flex;
-        /* align-items: center; */
-        /* margin-top: 10px; */
-        flex-direction: row;
-        /* text-align: center; */
-        width: 50%;
-        margin: auto;
-        /* gap: 12rem; */
-        padding: 1rem;
-        justify-content: flex-end;
-    }
-
-    
-    .hamburger-button{
-        display: none;
-    }
-
-  
-
-    .main-content {
-        flex-direction: row;
+.botones{
+    border-bottom:solid 1px grey ;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid gainsboro;
+    background-color: black
+}
+.botones a{
+    text-align: center;
+    width: 30%;
+    color: white;
+    background-color: black;
+}
+.botones form{
+    text-align: center;
+    width: 30%;
+    padding: 1rem;
+}
+.botones button{
+    font-size: 1rem;
+    cursor: pointer;
+}
+.botones a:hover{
+    color: blueviolet;
+    transition: color 0.5s ;
+}
+.crear-editar{
+    border-right: solid 1px whitesmoke;
+    padding: 1rem;
+}
+@media screen and (min-width: 0px) and (max-width: 767px) {
+        #name-product{
+            display: none;
         }
-
-    /*.contenedorImg{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        background-color: #dcb0dc;
-    }*/
-
-    .contenedorImg { /*lo cambie para que quede mejor en la parte visual */
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #ffffff;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .contenedorImg img{
-        width: 25%;
-        color: rgb(33, 33, 33);
-        background-color: rgb(33, 33, 33);
-        position: absolute;
-        left: 1%;
-        padding: 0.9% 0.9%;
-        margin: 3% 3% 3% 1%;
-        top: 34%;
-    }
-    
-    .crear h2{
-        background: #000000;
-        color: rgb(233, 233, 201);
-        margin: 10px;
-        padding: 10px;
-    }
-
-    
-    button{
-        background-color: #000000;
-    }
-    .buttonStyle{
-        position: relative;
-        left: 21%;
+}
+@media screen and (min-width:574px) and (max-width:767px){
+    main{
+        padding: 10% ;
     }
 }
 
-@media screen and (min-width:1024px) {
-
-    .main-content h3 {
+@media screen and (min-width:768px){
+    .section-description{
         display: flex;
-        width: 20%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .list-products{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+    }
+    .scc {
+        padding: 0;
+        display: flex;
         flex-direction: column;
-        /* top: -47%; */
-        left: 13%;
-        position: relative;
-        margin-bottom: 40%;
-        font-size: 19px;
-        align-items: center;
-        justify-content: center;
+        margin-left: 2rem;
     }
-
-    .contenedorImg {
+    .price-content{
         display: flex;
-        align-items: center;
+        width: 21rem;
         flex-direction: row;
-        width: 80%;
-        flex-wrap: nowrap;
-            
-        /*display: flex;
-        align-items: center;
-        flex-direction: row;
-        width: 80%;
-        justify-content: space-around;*/
-    }
-    
-    .contenedorImg img{
-        width: 24%;
-        padding: 0.9% 0.9%;
-        margin: 3% 3% 3% 1%;
-        background-color: #7e097e;
-        border-radius: 2%;
+        margin-top: 0.3rem;
     }
 
-    #descripcionJuego{
-        display: flex;
-        gap:1rem;
+    #name-product{
+        margin-left: 15%;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 800;
     }
-    
+    .description{
+        width: 18rem;
+        padding: 0;
+    }
+    .lista-description{
+        padding: 1rem 0 0 ;
+    }
+    .contenedorJuego{
+        display:none;
+    }
+    .main-content{
+        padding: 10% ;
+    }
 
-    .header-search-bar {
-        position: absolute;
-        left: 91%;
-        top: 21%;
-        transform: translate(-95%,-50%);
-        padding: 10px;
-    }
-
-    .buyProduct{
-        background-color: #dcb0dc;
-    }
-
-    
-    button{
-        background-color: #dcb0dc;  
-    }
 }
