@@ -79,5 +79,23 @@
     "password": "$2a$10$AhxfWVkxEz0HvRTSyH9bWOlidhDf/75J.nj2Re4y2VBBzahSeqHBi",
     "birthDay": "1111-11-11",
     "image": "default.png"
+  },
+  {
+    "id": 10,
+    "fullName": "aaaa",
+    "user": "jajajaja",
+    "email": "tegolpeo@ya.com",
+    "password": "$2a$10$QhYkeXue82kuDh.iS067FuLjh/EFex/.CdUtcy1YOEhGKNIoyqabG",
+    "birthDay": "2022-09-21",
+    "image": "default.png"
+  },
+  {
+    "id": 11,
+    "fullName": "soy un",
+    "user": "perdedor",
+    "email": "perdedores@aqui.com",
+    "password": "$2a$10$Uu0WJIhcIKsTAfvHwinnPO/fv3umh.wD1ITscxkE89D8Cha3k5Fvm",
+    "birthDay": "2022-09-10",
+    "image": "icons8-mÃ¡quina-de-tatuaje-48.png"
   }
 ]

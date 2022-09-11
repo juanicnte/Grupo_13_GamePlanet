@@ -11,7 +11,7 @@ const {resolve, extname} = require('path');
 const { existsSync, mkdirSync } = require('fs');
 
 const destination = function(req, file, cb){
-    let folder = resolve(__dirname, '..', '..', 'public', 'avatars');
+    let folder = resolve(__dirname, '..', '..', 'public', 'images');
    
     if(!existsSync(folder))
     {
@@ -19,7 +19,7 @@ const destination = function(req, file, cb){
     }
     return cb(null, folder);
 }
-
+//nombre único a cada archivo que se suba
 const filename = function(req, file, cb){
     let unique =  Date.now();
     //console.log(file.fieldname)
@@ -28,7 +28,7 @@ const filename = function(req, file, cb){
    
     return cb(null, name);
 }
-
+//SI QUISIERA VALIDAR SI UNA IMAGEN TIENE EL MISMO NOMBRE CÓMO HAGO ESA VALIDACIÓN CON EL MULTER
 
 
 const multer = require('multer');
