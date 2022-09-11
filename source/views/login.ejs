@@ -20,9 +20,10 @@
           id="usuari@"
           required
           value="<%= locals.errores && !locals.errores.email && locals.data ? locals.data.email : " " %> "
-        />
+        
+          />
 
-        <% if(locals.errores && locals.errores.email) {
+        <% if(locals.errores && locals.errores.email) {%>
           
           <p class="feedback">
             
@@ -42,7 +43,7 @@
           value="<%= locals.errores && !locals.errores.password && locals.data ? locals.data.password : " " %> "
         />
 
-        <% if(locals.errores && locals.errores.password) {
+        <% if(locals.errores && locals.errores.password) {%>
           
           <p class="feedback">
             
