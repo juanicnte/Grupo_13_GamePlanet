@@ -1,8 +1,49 @@
 const express = require('express');
 const usersController = require('../controllers/users.controller');
+const isLogged = require('../middlewares/isLogged')
+const isAdmin = require('../middlewares/isAdmin')
+
+
 const route = express.Router();
 
+const {resolve, extname} = require('path');
+
+const { existsSync, mkdirSync } = require('fs');
+
+const destination = function(req, file, cb){
+    let folder = resolve(__dirname, '..', '..', 'public', 'images');
+   
+    if(!existsSync(folder))
+    {
+        mkdirSync(folder)
+    }
+    return cb(null, folder);
+}
+//nombre único a cada archivo que se suba
+const filename = function(req, file, cb){
+    let unique =  Date.now();
+    //console.log(file.fieldname)
+    //let name = file.fieldname + '-' + unique + extname(file.originalname);
+    let name = file.originalname;
+   
+    return cb(null, name);
+}
+//SI QUISIERA VALIDAR SI UNA IMAGEN TIENE EL MISMO NOMBRE CÓMO HAGO ESA VALIDACIÓN CON EL MULTER
+
+
+const multer = require('multer');
+const upload = multer({storage:multer.diskStorage({destination, filename})});
+
+const registerValidator = require('../validations/register')
+
+const loginValidator = require('../validations/login')
+
 route.get('/register', usersController.create)
+route.post('/register/save', upload.any(),registerValidator, usersController.save)
+
+route.post('/login/access',loginValidator, usersController.access)
+
+route.get('/logOut', usersController.logout)
 /*
 
 app.get("/register", function (req, res) {

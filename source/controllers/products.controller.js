@@ -2,7 +2,8 @@ const fs = require('fs');
 const { unlinkSync} = require('fs');
 const { resolve } = require('path');
 const path = require('path');
-const {all, one, generate, write} = require('../models/products.model')
+const {all, one, generate, write} = require('../models/products.model');
+
 //const model = require('../models/products.model')
 
 /*//obtengo la ruta del archivo json 

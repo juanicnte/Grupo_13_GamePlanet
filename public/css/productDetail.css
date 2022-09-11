@@ -6,6 +6,7 @@ main{
     padding-top: 3vh;
 }
 
+<<<<<<< HEAD
 /*imagen*/
 .container-image{
     display: flex;
@@ -53,6 +54,42 @@ main{
     background-color: gray;
     color: #fff;
     border-radius: 5px;
+=======
+.header-search-bar{
+    display: none;
+}
+
+.contenedorImg {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    justify-content: center;
+    align-content: center;
+}
+
+.main-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+   /* max-width: 80%;*/
+    /* justify-content: space-around; */
+    text-align: center;
+    box-sizing: border-box;
+    align-items: flex-end;
+    /* margin: 30px; */
+    /* height: 57vh; */
+    flex-wrap: wrap;
+}
+
+p.texto{
+    width: auto;
+    margin: auto;
+    display: flex;
+
+    flex-direction: row;
+>>>>>>> 0cd26d680c0cd022442ecb9f961507db036c3dcc
 }
 
 #title-item{
@@ -74,6 +111,7 @@ main{
     font-size: 2rem;
     padding: 1rem 5% 0.2rem;
     display: flex;
+<<<<<<< HEAD
     
 }
 #ars{
@@ -86,6 +124,63 @@ main{
 
 .cantidadProductos{
     width: 60%;
+=======
+    /* width: 20%; */
+    flex-direction: row;
+    /* top: -47%; */
+    /* left: 13%; */
+    /* position: relative; */
+    margin: auto;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorImg img {
+    width: 40%;
+    /*padding:9rem*/
+    margin: 20px;
+    display: flex;
+    /* justify-content: space-between;*/
+    /* align-items: stretch;*/
+}
+
+.buttonStyle {
+    /* position: relative; */
+    /* left: 21%; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.picture-logo{
+    height: 80px;
+}
+
+#descripcionJuego {
+    display: flex;
+    font-weight: bolder;
+    font-size: .9rem;
+    flex-direction: row;
+    text-align: justify;
+    padding: .4rem;
+    position: relative;
+
+}
+
+.crear h2 {
+    background: #000000;
+    color: rgb(233, 233, 201);
+    margin: 5px;
+    /* margin: auto; */
+    padding: 5px;
+}
+
+h3{
+>>>>>>> 0cd26d680c0cd022442ecb9f961507db036c3dcc
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -134,6 +229,7 @@ main{
 
 /*BOTONES CRUD*/
 
+<<<<<<< HEAD
 .botones{
     border-bottom:solid 1px grey ;
     display: flex;
@@ -172,9 +268,141 @@ main{
 @media screen and (min-width:574px) and (max-width:767px){
     main{
         padding: 10% ;
+=======
+    .main-content h3 {
+        display: flex;
+        width: 100%;
+        /* top: -47%; */
+        /* left: 13%; */
+        /* position: relative; */
+        margin: auto;
+        font-size: 19px;
+        align-items: center;
+        justify-content: center;
     }
+
+    .picture-logo .img-logo {
+        width: 34%;
+    }
+/*
+    ul.nav-bar{
+        display: flex;
+        width: 100%;
+        /* margin: auto; */
+       /* justify-content: space-evenly;
+    }*/
+
+    .header-top-bar {
+        flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        /* align-items: center; */
+        /* margin-top: 10px; */
+        flex-direction: row;
+        /* text-align: center; */
+        width: 50%;
+        margin: auto;
+        /* gap: 12rem; */
+        padding: 1rem;
+        justify-content: flex-end;
+    }
+
+    
+    .hamburger-button{
+        display: none;
+    }
+
+
+
+    .main-content {
+        flex-direction: row;
+        }
+
+    /*.contenedorImg{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background-color: #dcb0dc;
+    }*/
+
+    .contenedorImg { /*lo cambie para que quede mejor en la parte visual 
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-right: -14%;
+            margin-left: 12%;
+            align-items: stretch;*/
+
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                margin: auto;
+                /* margin-right: -14%; */
+                /* margin-left: 12%; */
+                align-items: stretch;
+    }
+
+    .contenedorImg img {
+        width: 20%;
+        color: rgb(33, 33, 33);
+        background-color: rgb(33, 33, 33);
+        position: absolute;
+        left: 1%;
+        padding: 0.9% 0.9%;
+        margin: 3% 3% 3% 1%;
+        margin-top: 6%;
+    }
+
+
+    #descripcionJuego {
+        display: flex;
+        font-weight: bolder;
+        font-size: .9rem;
+        flex-direction: row;
+        text-align: justify;
+        padding: 1rem;
+        margin: auto;
+        /* position: relative; */
+        align-items: center;
+    }
+    
+    .crear h2 {
+        background: #000000;
+        color: rgb(233, 233, 201);
+        /* padding: 8px; */
+        margin: 14px;
+    }
+
+    
+    button{
+        background-color: #000000;
+    }
+    .buttonStyle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: auto;
+        /* margin-left: -17%;*/
+>>>>>>> 0cd26d680c0cd022442ecb9f961507db036c3dcc
+    }
+
 }
 
+<<<<<<< HEAD
 @media screen and (min-width:768px){
     .section-description{
         display: flex;
@@ -192,9 +420,36 @@ main{
         display: flex;
         flex-direction: column;
         margin-left: 2rem;
+=======
+@media screen and (min-width:1024px) {
+
+    .main-content{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .main-content h3 {
+            display: flex;
+            width: 20%;
+            flex-direction: row;
+            /* top: -47%; */
+            /* left: 13%; */
+            position: relative;
+            /* margin-bottom: 40%; */
+            font-size: 19px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            align-content: center;
+>>>>>>> 0cd26d680c0cd022442ecb9f961507db036c3dcc
     }
     .price-content{
         display: flex;
+<<<<<<< HEAD
         width: 21rem;
         flex-direction: row;
         margin-top: 0.3rem;
@@ -205,6 +460,37 @@ main{
         margin-bottom: 1rem;
         font-size: 1.5rem;
         font-weight: 800;
+=======
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+            
+        /*display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-around;*/
+    }
+    
+    .contenedorImg img {
+        width: 9%;
+        padding: 0.9% 0.9%;
+        margin: auto;
+        background-color: #7e097e;
+        border-radius: 2%;
+    }
+
+
+    #descripcionJuego{
+            display: flex;
+            /* gap: 1rem; */
+            width: 72%;
+            margin: auto;
+            flex-direction: row;
+            align-items: stretch;
+>>>>>>> 0cd26d680c0cd022442ecb9f961507db036c3dcc
     }
     .description{
         width: 18rem;

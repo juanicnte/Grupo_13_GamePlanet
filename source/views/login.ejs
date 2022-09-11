@@ -11,7 +11,7 @@
 
     <main class="mainLogin">
 
-      <form action="/" method="POST">
+      <form action="/login/access" method="POST">
         <label class="none" for="usuari@">Correo Electrónico</label>
         <input
           type="text"
@@ -19,14 +19,40 @@
           placeholder="Correo Electronico"
           id="usuari@"
           required
-        />
+          value="<%= locals.errores && !locals.errores.email && locals.data ? locals.data.email : "" %>"
+        
+          />
+
+        <% if(locals.errores && locals.errores.email) {%>
+          
+          <p class="feedback">
+            
+            <%= locals.errores.email.msg  %>
+            
+          </p>
+          
+        <% } %> 
+
+
         <label class="none" for="password">Contraseña</label>
         <input
           type="password"
           name="password"
           placeholder="Contraseña"
           id="password"
+          value="<%= locals.errores && !locals.errores.password && locals.data ? locals.data.password : "" %>"
         />
+
+        <% if(locals.errores && locals.errores.password) {%>
+          
+          <p class="feedback">
+            
+            <%= locals.errores.password.msg  %>
+            
+          </p>
+          
+        <% } %> 
+
         <button class="iniciar-sesion" type="submit">Iniciar Sesion</button>
       </form>
       <a class="olvide-contraseña" href="#">Olvide mi contraseña</a>

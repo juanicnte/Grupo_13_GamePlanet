@@ -1,22 +1,65 @@
 [
-    {
-      "id": 1,
-      "fullName": "Juan",
-      "user": "juan",
-      "email": "pedroperez@hotmail.com",
-      "password": "asdasd",
-      "perfil": "admin",
-      "birthDay": "2010-07-07",
-      "image": "flightSimulator.jpg"
-    },
-    {
-      "id": 2,
-      "fullName": "Franco",
-      "user": "franco",
-      "email": "franco@gmail.com",
-      "password": "123456",
-      "perfil": "user",
-      "birthDay": "2010-10-17",
-      "image": "flightSimulator.jpg"
-    }
+  {
+    "id": 1,
+    "fullName": "1221",
+    "user": "1221",
+    "email": "121212121212121221@pasid.com",
+    "password": "$2a$10$xe0fCNTn0hnO1dvbHNkOiuBL9UnX/ntC4JQfXjsCF4Jls6tBqDF.2",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 2,
+    "fullName": "1212",
+    "user": "34",
+    "email": "perro@gmail.com",
+    "password": "$2a$10$TsQSdbxg7tY01cVQiTVq0Oe5I4SjP2k5zMxyLLXbEKHAC1k6p9Ofy",
+    "birthDay": "1111-11-11",
+    "image": "Untitled.png"
+  },
+  {
+    "id": 3,
+    "fullName": "11",
+    "user": "111",
+    "email": "perro@gmail.com",
+    "password": "$2a$10$52VB2yszJmEuTydg5kUbleiC8BfQWstI5bECP2XM/NB3y34Et0r6C",
+    "birthDay": "1111-11-11",
+    "image": "asadsas.png"
+  },
+  {
+    "id": 4,
+    "fullName": "3212",
+    "user": "1212",
+    "email": "perro@gmail.co",
+    "password": "$2a$10$.8ejp61fEKsxvWhUldq7cOz9j31TFIULLYWa2OSqiBvlDsOuvomoq",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 5,
+    "fullName": "121212121212121221@pasid.com",
+    "user": "121212121212121221@pasid.com",
+    "email": "121212121212121221@pasid.com",
+    "password": "$2a$10$8VdMNiuPe.54P.La8UJkxOpVCAySAbpudxRELqQ6lWhCulK0Ce7la",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 6,
+    "fullName": "121212121212121221@pasid.com",
+    "user": "121212121212121221@pasid.com",
+    "email": "121212121212121221@pasid.com",
+    "password": "$2a$10$MszmQZ4b6kza0YsdDXCNYeUhHibL8.90DgJu8KHIOg1TAhJyaxwmy",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  },
+  {
+    "id": 7,
+    "fullName": "121212121212121221@pasid.com",
+    "user": "121212121212121221@pasid.com",
+    "email": "121212121212121221@pasid.comm",
+    "password": "$2a$10$.nDW7//Ap3k6O5RuHy9WSOGf832vP90Utj9kvBbddIQVsxDRVDrR.",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
+  }
 ]
