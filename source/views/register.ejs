@@ -4,6 +4,7 @@
     <%- include('./partials/head.ejs') %>
     
     <link rel="stylesheet" href="/css/register.css" />
+    <link rel="import" href="">
   </head>
   <body>
     
@@ -21,6 +22,7 @@
               name="fullName"
               id="nombreCompleto"
               placeholder="Nombre y apellido"
+              value="<%= oldData && oldData.fullName ? oldData.fullName : ''%>"
               required>
           </div>
           <div>
@@ -30,6 +32,7 @@
               name="user"
               placeholder="Nombre de usuari@"
               id="nombreUsuari@"
+              value="<%= oldData && oldData.user ? oldData.user : ''%>"
               required>
           </div>
           
@@ -41,17 +44,24 @@
           name="email"
           placeholder="Correo electronico"
           id="correo"
-          value=" "
+          value="<%= oldData && oldData.email ? oldData.email : ''%>"
           required>
 
 
         <label for="contraseña">Contraseña</label>
-     
+         
+        <% if(errors) { %>
+              <p class="feedback">
+                <%= errors.email.msg %> 
+              </p>
+        <% } %>
+
         <input
           type="password"
           name="password"
           placeholder="contraseña"
           id="contraseña"
+          value="<%= oldData && oldData.password ? oldData.password : ''%>"
           required>
   
           <fieldset class="imageSec">

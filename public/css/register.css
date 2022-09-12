@@ -6,7 +6,9 @@ main{
     background-color: white;
 }
 
-
+.feedback{
+    color: red;
+}
 body{
     color: #000000;
 }

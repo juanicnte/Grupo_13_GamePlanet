@@ -7,7 +7,7 @@ const { text } = require('stream/consumers');
 
 const controlador = {
     create: (req, res) => {
-        return res.render('register')
+        return res.render('register',{oldData: {}})
     },
     show: function(req, res){
 /*
@@ -25,7 +25,7 @@ const controlador = {
          
         req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
         coincide = todoss.find(user => user.email === req.body.email)
-        if(coincide.length != 0){
+        if(coincide){
             return res.render('register',{
                 errors:{
                     email:{
@@ -34,14 +34,14 @@ const controlador = {
                 },
                 oldData: req.body
             })
-        }
+        }else{
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);  
         write(todos);
         
         return res.redirect('/')
-        
+        }
     
     },
     edit: (req, res) => {

@@ -10,55 +10,37 @@
   },
   {
     "id": 2,
-    "fullName": "1212",
-    "user": "34",
-    "email": "perro@gmail.com",
-    "password": "$2a$10$TsQSdbxg7tY01cVQiTVq0Oe5I4SjP2k5zMxyLLXbEKHAC1k6p9Ofy",
-    "birthDay": "1111-11-11",
-    "image": "Untitled.png"
+    "fullName": "Robert",
+    "user": "Zane",
+    "email": "hola65@gmail.com",
+    "password": "$2a$10$N27H9zgNU6UIXC7Ngh1xmuS/CW6ACaxlJXW1t.LOBNdJr4dtYfa0m",
+    "birthDay": "9099-09-11",
+    "image": "asadsas.png"
   },
   {
     "id": 3,
-    "fullName": "11",
-    "user": "111",
-    "email": "perro@gmail.com",
-    "password": "$2a$10$52VB2yszJmEuTydg5kUbleiC8BfQWstI5bECP2XM/NB3y34Et0r6C",
-    "birthDay": "1111-11-11",
+    "fullName": "Robert",
+    "user": "Zane",
+    "email": "perro222@gmail.com",
+    "password": "$2a$10$NG4.dBykcU9sfdz11J0aQenE8n/RtS9fKp3PiDwVq.785I5so8iJO",
+    "birthDay": "2333-12-11",
     "image": "asadsas.png"
   },
   {
     "id": 4,
-    "fullName": "3212",
-    "user": "1212",
-    "email": "perro@gmail.co",
-    "password": "$2a$10$.8ejp61fEKsxvWhUldq7cOz9j31TFIULLYWa2OSqiBvlDsOuvomoq",
-    "birthDay": "1111-11-11",
-    "image": "default.png"
+    "fullName": "Robert",
+    "user": "Zane22",
+    "email": "perro22233433@gmail.com",
+    "password": "$2a$10$sSs9HfdRFeEGJQihLUeq7u6QGH6iKOa/jxLERLuIolIJiBUXXdbA6",
+    "birthDay": "2333-12-11",
+    "image": "asadsas.png"
   },
   {
     "id": 5,
     "fullName": "121212121212121221@pasid.com",
-    "user": "121212121212121221@pasid.com",
-    "email": "121212121212121221@pasid.com",
-    "password": "$2a$10$8VdMNiuPe.54P.La8UJkxOpVCAySAbpudxRELqQ6lWhCulK0Ce7la",
-    "birthDay": "1111-11-11",
-    "image": "default.png"
-  },
-  {
-    "id": 6,
-    "fullName": "121212121212121221@pasid.com",
-    "user": "121212121212121221@pasid.com",
-    "email": "121212121212121221@pasid.com",
-    "password": "$2a$10$MszmQZ4b6kza0YsdDXCNYeUhHibL8.90DgJu8KHIOg1TAhJyaxwmy",
-    "birthDay": "1111-11-11",
-    "image": "default.png"
-  },
-  {
-    "id": 7,
-    "fullName": "121212121212121221@pasid.com",
-    "user": "121212121212121221@pasid.com",
-    "email": "121212121212121221@pasid.comm",
-    "password": "$2a$10$.nDW7//Ap3k6O5RuHy9WSOGf832vP90Utj9kvBbddIQVsxDRVDrR.",
+    "user": "1212",
+    "email": "hola@hotmail.com",
+    "password": "$2a$10$N4c/mn5hyG81OTxR7WLAc.FYlT8Gk/HXopUEwkTxF1eNYuNYrhqZy",
     "birthDay": "1111-11-11",
     "image": "default.png"
   }
