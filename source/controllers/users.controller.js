@@ -30,7 +30,7 @@ const controlador = {
                 errors:{
                     email:{
                         msg:'Email en uso, dickhead'
-                    }
+                    },
                 },
                 oldData: req.body
             })
