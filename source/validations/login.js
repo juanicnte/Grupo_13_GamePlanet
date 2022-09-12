@@ -8,7 +8,7 @@ let email = body('email').isEmail().withMessage('Email no valido').custom((value
 
     let users = all()
 
-    let listEmails = users.map(user => user.users.mail)
+    let listEmails = users.map(user => user.users.email)
 
     if(!listEmails.indexOf(value) == -1){
 
