@@ -10,37 +10,37 @@
   },
   {
     "id": 2,
-    "fullName": "Robert",
-    "user": "Zane",
-    "email": "hola65@gmail.com",
-    "password": "$2a$10$N27H9zgNU6UIXC7Ngh1xmuS/CW6ACaxlJXW1t.LOBNdJr4dtYfa0m",
-    "birthDay": "9099-09-11",
-    "image": "asadsas.png"
+    "fullName": "Lego",
+    "user": "Legita",
+    "email": "121212121212121221@pasid.comMMMMM",
+    "password": "$2a$10$nt.WgxyDQKiM/FPyab.sGOJXBxF.yvJ1mVc84Ee5HDkWE7GbGerbO",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
   },
   {
     "id": 3,
-    "fullName": "Robert",
-    "user": "Zane",
-    "email": "perro222@gmail.com",
-    "password": "$2a$10$NG4.dBykcU9sfdz11J0aQenE8n/RtS9fKp3PiDwVq.785I5so8iJO",
-    "birthDay": "2333-12-11",
-    "image": "asadsas.png"
+    "fullName": "TONOEML",
+    "user": "12",
+    "email": "121212121212121221pasid.co",
+    "password": "$2a$10$LMO4vLKxyT7rD1yB/g1KgOXbzjFglQV4zBUsKObcRERdtOwGB5cN6",
+    "birthDay": "1111-11-11",
+    "image": "default.png"
   },
   {
     "id": 4,
-    "fullName": "Robert",
-    "user": "Zane22",
-    "email": "perro22233433@gmail.com",
-    "password": "$2a$10$sSs9HfdRFeEGJQihLUeq7u6QGH6iKOa/jxLERLuIolIJiBUXXdbA6",
-    "birthDay": "2333-12-11",
-    "image": "asadsas.png"
+    "fullName": "PUNGA",
+    "user": "111",
+    "email": "tomas@gmail.com",
+    "password": "$2a$10$3cEsDMPoztANequcle6gTe1zqTWYHG5FmveCKTxy7dgnmx6E/v3aO",
+    "birthDay": "0023-11-11",
+    "image": "default.png"
   },
   {
     "id": 5,
-    "fullName": "121212121212121221@pasid.com",
-    "user": "1212",
-    "email": "hola@hotmail.com",
-    "password": "$2a$10$N4c/mn5hyG81OTxR7WLAc.FYlT8Gk/HXopUEwkTxF1eNYuNYrhqZy",
+    "fullName": "PIPO PEREZ",
+    "user": "PEDRIO",
+    "email": "121212121212121225451@pasid.com",
+    "password": "$2a$10$TVo0Rs7ippG4uJzd0rHDY.RCeFUkW2.rDKbISX/qRkfxNvf4E8M8C",
     "birthDay": "1111-11-11",
     "image": "default.png"
   }

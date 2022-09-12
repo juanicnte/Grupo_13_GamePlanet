@@ -15,23 +15,23 @@
         <label class="none" for="usuari@">Correo Electrónico</label>
         <input
           type="text"
-          name="user"
+          name="email"
           placeholder="Correo Electronico"
           id="usuari@"
           required
-          value="<%= locals.errores && !locals.errores.email && locals.data ? locals.data.email : "" %>"
+          value="<%= oldDataLogin && oldDataLogin.email ? oldDataLogin.email : ''%>"
         
           />
 
-        <% if(locals.errores && locals.errores.email) {%>
+          <% if(locals.errores && locals.errores.email) {%>
           
-          <p class="feedback">
+            <p class="feedback">
+              
+              <%= locals.errores.email.msg  %>
+              
+            </p>
             
-            <%= locals.errores.email.msg  %>
-            
-          </p>
-          
-        <% } %> 
+          <% } %> 
 
 
         <label class="none" for="password">Contraseña</label>
@@ -40,7 +40,7 @@
           name="password"
           placeholder="Contraseña"
           id="password"
-          value="<%= locals.errores && !locals.errores.password && locals.data ? locals.data.password : "" %>"
+          value="<%= oldDataLogin && oldDataLogin.password ? oldDataLogin.password : ''%>"
         />
 
         <% if(locals.errores && locals.errores.password) {%>

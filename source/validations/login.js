@@ -4,7 +4,7 @@ const { all } = require('../models/users.model')
 
 const { compareSync } = require('bcryptjs')
 
-let email = body('email').notEmpty().withMessage('Email no puede quedar vacio').bail().isEmail().withMessage('Email no es valido').custom((value,{req})=>{
+let email = body('email').isEmail().withMessage('Email no valido').custom((value,{req})=>{
 
     let users = all()
 

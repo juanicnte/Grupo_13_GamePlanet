@@ -4,6 +4,7 @@ const path = require('path');
 const {all, one, generate, write} = require('../models/users.model')
 const { validationResult } = require("express-validator");
 const { text } = require('stream/consumers');
+const bcryptjs = require('bcryptjs')
 
 const controlador = {
     create: (req, res) => {
@@ -20,28 +21,43 @@ const controlador = {
         return res.send('Debe mostrar el usuario')
     },
     save: (req, res) => {
-      
+    
         let todoss = all()
-         
-        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
+        
         coincide = todoss.find(user => user.email === req.body.email)
-        if(coincide){
+        // if(coincide){
+        //     return res.render('register',{
+               
+        //         oldData:req.body,
+        //         errors:{msg:'Email en uso'}
+        //     })
+        
+        // }
+        
+    
+        const result = validationResult(req);
+        if((!result.isEmpty()) || coincide){
+            errores = result.mapped();
             return res.render('register',{
-                errors:{
-                    email:{
-                        msg:'Email en uso, dickhead'
-                    },
-                },
-                oldData: req.body
+                
+                oldData: req.body,
+                errors: errores,
+                errorEmail:{email:{msg:'Already in use'}}
             })
-        }else{
+        }
+
+        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
+        
+        
+    
+        
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);  
         write(todos);
         
         return res.redirect('/')
-        }
+        
     
     },
     edit: (req, res) => {
@@ -77,7 +93,6 @@ const controlador = {
         return res.redirect('/')
     },
     access: (req, res) => {
-      
            let usuarios = all()
         const dato = usuarios.find(usuario => usuario.email == req.body.email)
         if(dato){
@@ -85,11 +100,19 @@ const controlador = {
             if(req.body.remember){
                 res.cookies('email', req.body.email, {maxAge: 1000*60})
             }
-            return ('home', {errores:{email:'No estás registrado'}})
+            return res.render('/')
         }
         else{
-            return  res.render('login', {errores:{email:'No estás registrado'}});
+            const result = validationResult(req);
+            if(!result.isEmpty()){
+                errores = result.mapped()
+            // return  res.render('login', {errores:{email:'No estás registrado'}});
+         return res.render('login',{
+            oldDataLogin: req.body,
+            error:{email:{msg:'Not found'}},errores
+         })
         }
+    }
     },
     logout:(req, res) => {
         delete req.session.user
