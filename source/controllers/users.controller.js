@@ -8,7 +8,8 @@ const bcryptjs = require('bcryptjs')
 
 const controlador = {
     create: (req, res) => {
-        return res.render('register',{oldData: {}})
+        errorEmail = ''
+        return res.render('register',{oldData: {}},errorEmail)
     },
     show: function(req, res){
 /*
@@ -21,9 +22,10 @@ const controlador = {
         return res.send('Debe mostrar el usuario')
     },
     save: (req, res) => {
-    
-        let todoss = all()
         
+        let todoss = all()
+        const result = validationResult(req);
+        errores = result.mapped();
         coincide = todoss.find(user => user.email === req.body.email)
         // if(coincide){
         //     return res.render('register',{
@@ -33,16 +35,28 @@ const controlador = {
         //     })
         
         // }
-        
-    
-        const result = validationResult(req);
-        if((!result.isEmpty()) || coincide){
-            errores = result.mapped();
+        if(coincide){
             return res.render('register',{
-                
+                errorEmail:{email:{msg:'EMAIL ALREADY USED'}},
                 oldData: req.body,
-                errors: errores,
-                errorEmail:{email:{msg:'Already in use'}}
+                errors:errores
+            })
+        }
+        if(!result.isEmpty()){
+            return res.render('register',{
+                errorEmail:{email:{msg:''}},
+                oldData: req.body,
+                errors: errores
+            })
+        }
+        
+        
+        if((!result.isEmpty()) && coincide){
+
+            return res.render('register',{
+                errorEmail:{email:{msg:'Email ya registrado'}},
+                oldData: req.body,
+                errors: errores
             })
         }
 
@@ -92,8 +106,14 @@ const controlador = {
         write(noEliminar);
         return res.redirect('/')
     },
+    login:(req, res) => {
+        oldDataLogin = ''
+        errorEmail = ''
+        return res.render('login',{oldDataLogin:{}},{errorEmail:{}})
+    },
     access: (req, res) => {
-           let usuarios = all()
+        oldDataLogin = req.body   
+        let usuarios = all()
         const dato = usuarios.find(usuario => usuario.email == req.body.email)
         if(dato){
             req.session.user = dato
@@ -109,7 +129,7 @@ const controlador = {
             // return  res.render('login', {errores:{email:'No estás registrado'}});
          return res.render('login',{
             oldDataLogin: req.body,
-            error:{email:{msg:'Not found'}},errores
+            errorEmail:{email:{msg:'Not found'}},errors:errores
          })
         }
     }

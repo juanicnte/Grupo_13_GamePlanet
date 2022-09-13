@@ -10,37 +10,10 @@
   },
   {
     "id": 2,
-    "fullName": "Lego",
-    "user": "Legita",
-    "email": "121212121212121221@pasid.comMMMMM",
-    "password": "$2a$10$nt.WgxyDQKiM/FPyab.sGOJXBxF.yvJ1mVc84Ee5HDkWE7GbGerbO",
-    "birthDay": "1111-11-11",
-    "image": "default.png"
-  },
-  {
-    "id": 3,
-    "fullName": "TONOEML",
-    "user": "12",
-    "email": "121212121212121221pasid.co",
-    "password": "$2a$10$LMO4vLKxyT7rD1yB/g1KgOXbzjFglQV4zBUsKObcRERdtOwGB5cN6",
-    "birthDay": "1111-11-11",
-    "image": "default.png"
-  },
-  {
-    "id": 4,
-    "fullName": "PUNGA",
-    "user": "111",
-    "email": "tomas@gmail.com",
-    "password": "$2a$10$3cEsDMPoztANequcle6gTe1zqTWYHG5FmveCKTxy7dgnmx6E/v3aO",
-    "birthDay": "0023-11-11",
-    "image": "default.png"
-  },
-  {
-    "id": 5,
-    "fullName": "PIPO PEREZ",
-    "user": "PEDRIO",
-    "email": "121212121212121225451@pasid.com",
-    "password": "$2a$10$TVo0Rs7ippG4uJzd0rHDY.RCeFUkW2.rDKbISX/qRkfxNvf4E8M8C",
+    "fullName": "Mootje",
+    "user": "DogFood",
+    "email": "mootje@pasid.com",
+    "password": "$2a$10$HTY3STgzRCD0wbiyydVUw.KeqItbkmPX8zGRblkOh2l/RGS.hD9J6",
     "birthDay": "1111-11-11",
     "image": "default.png"
   }

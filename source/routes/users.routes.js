@@ -41,6 +41,7 @@ const loginValidator = require('../validations/login')
 route.get('/register', usersController.create)
 route.post('/register/save', upload.any(),registerValidator, usersController.save)
 
+route.get('/login',usersController.login)
 route.post('/login/access',loginValidator, usersController.access)
 
 route.get('/logOut', usersController.logout)

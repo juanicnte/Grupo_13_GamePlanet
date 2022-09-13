@@ -44,19 +44,20 @@
         
         
         <% if (locals && locals.errors && errors.email) { %>
-           <p class="feedback">
-            <%= errors.email.msg %> 
-           </p>
-           <% } else if ({errorEmail}) { %>
-            <p class="feedback">
-              <%= errorEmail.email.msg %> 
-            </p>
+             <p class="feedback">
+              <%= errors.email.msg %> 
+             </p>
         <% } %>
-        
+
+       
    
-          
-         
-        
+        <% if (errorEmail) { %>
+          <p class="feedback">
+            <%= errorEmail.email.msg %> 
+           </p>
+          <% } %>
+
+
        
 
         <input
@@ -70,8 +71,14 @@
         
         <label for="contraseña">Contraseña</label>
         
-        <% if (locals && locals.errors && errors.password) { %>
+        <% if (locals && locals.errors && errors.password && !errorEmail) { %>
          <p class="feedback"> 
+          <%= errors.password.msg %> 
+         </p>
+        <% } %>
+
+        <% if (locals && locals.errors && errors.password && errorEmail) { %>
+         <p class="feedback">
           <%= errors.password.msg %> 
          </p>
         <% } %>

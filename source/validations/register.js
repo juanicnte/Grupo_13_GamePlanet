@@ -9,10 +9,10 @@ let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacío'
     //     let todoss = all()
     //     todoss.find(user => user.email === req.body.email)
     // })
-    .withMessage('Email en uso, porfavor intente otro')
     
     
-let password = body('password').notEmpty().withMessage('Contraseña no valida').bail().isLength({min: 4}).withMessage('4 caracteres como minimo')
+    
+let password = body('password').notEmpty().withMessage('Contraseña no valida').bail().isLength({min: 4}).withMessage('AT LEAST FOUR CHARACTERS')
 
 let validaciones = [email,password]
 
