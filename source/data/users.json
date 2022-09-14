@@ -6,7 +6,8 @@
     "email": "121212121212121221@pasid.com",
     "password": "$2a$10$xe0fCNTn0hnO1dvbHNkOiuBL9UnX/ntC4JQfXjsCF4Jls6tBqDF.2",
     "birthDay": "1111-11-11",
-    "image": "default.png"
+    "image": "default.png",
+    "perfil": "user"
   },
   {
     "id": 2,
@@ -15,6 +16,17 @@
     "email": "mootje@pasid.com",
     "password": "$2a$10$HTY3STgzRCD0wbiyydVUw.KeqItbkmPX8zGRblkOh2l/RGS.hD9J6",
     "birthDay": "1111-11-11",
-    "image": "default.png"
+    "image": "default.png",
+    "perfil": "user"
+  },
+  {
+    "id": 3,
+    "fullName": "Marcia",
+    "user": "Montoya",
+    "email": "7a.mares7@gmail.com",
+    "password": "$2a$10$CAz7n.g8Q1FOYd1V6iW35uN02C1/aBfqM.2ZZPhE8H3hNuYtsEzxK",
+    "birthDay": "1983-12-10",
+    "image": "tlou2-dh.png",
+    "perfil": "admin"
   }
 ]
