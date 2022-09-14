@@ -107,9 +107,8 @@ const controlador = {
         return res.redirect('/')
     },
     login:(req, res) => {
-        oldDataLogin = ''
         errorEmail = ''
-        return res.render('login',{oldDataLogin:{}},{errorEmail:{}})
+        return res.render('login',{oldDataLogin:{}},errorEmail)
     },
     access: (req, res) => {
         oldDataLogin = req.body   
