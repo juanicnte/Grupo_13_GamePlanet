@@ -116,7 +116,6 @@ const controlador = {
         const dato = usuarios.find(usuario => usuario.email == req.body.email)
         
         if(dato){
-            console.log(dato)
             req.session.user = dato
             if(req.body.remember){
                 res.cookies('email', req.body.email, {maxAge: 1000*60})
