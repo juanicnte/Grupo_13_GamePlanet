@@ -21,7 +21,7 @@ form{
     align-items: center;
 }
 .imageSec{
-    color: rgb(255, 255, 255);
+    color: black;
 }
 form section{
     display: flex;
@@ -77,7 +77,16 @@ footer{
     background-color: #7e097e;
 }
 .mainRegister{
-    background-color: #100E0F;
+    background-color: white;
+}
+
+.mainRegister input{
+    margin: 0 0 0.8rem 0;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 96%;
+    padding: 0.5rem;
+    border: 1px solid black;
 }
 /*
 @media screen and (min-width: 420px){
