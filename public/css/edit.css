@@ -1,67 +1,57 @@
-.container-p4{
-    background-color: #dcb0dc;
-    width: 80vw;
-    height: 80vh;
+/* IMAGEN */
 
+
+/* ESTILOS FORMULARIO */
+
+.container-all{
+    margin-top: 1rem;
 }
-.form-control{
-    font-size: 24px;
-    color: black;
-    padding: 1%;
+
+form {
+    display: flex;
+    flex-direction: column
 }
-.edit-image{
-    max-height: 62%;
-    position: relative;
-    left: -23%;
-    top: 11%;
-    padding: 1%;
-    background-color: #9e339e;
-}
-.title-name{
-    font-size: 160%;
-    position: relative;
-    right: 24%;
-    top: 5%;
-}
-.form-edit{
-    position: relative;
-    bottom: 49%;
-    left: 46%;
-    width: 50%;
-    background-color:#7e097e;
-    border: 6px solid #c871c8;
-}
-.e-productname{
-    border: 1px solid black;
-}
-.return-home{
-    background-color:#7e097e;
-    font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 1%;
-    position: relative;
-    color:  #dcb0dc;
-    bottom: 7%;
-    border: 3px solid #dcb0dc;
-    margin: 1px 1px 1px 1px;
-}
-main form fieldset{
-    background-color: #7e097e;
+
+.title-area{
+    font-weight: 600;
+    font-size: 1.5rem;
     width: 100%;
 }
-main form legend{
-    font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color:#7e097e;
-    color:  #dcb0dc;
+.text-area {
+    display: flex;
+    flex-direction: column;
 }
-main button{
-    background-color:#7e097e;
-    font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 1%;
-    color: #dcb0dc;
-    bottom: 7%;
-    border: 3px solid #dcb0dc;
-    margin: 1px 1px 1px 1px;
-}    
+
+
+.input-text{
+    font-size: 1rem; 
+    width: 100%;
+    height: 100%;
+}
+
+picture{
+    width: 100vw;
+    border-bottom: 10px solid #ebebeb;
+}
+picture img {
+    padding-left: 1rem;
+    width: 50%;
+}
+
+fieldset{
+    padding: 1rem;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 0.3rem;
+}
+
+.radio-options{
+    margin-bottom: 0.5rem;
+}
+
+button{
+    font-size: 1.3rem;
+    color: rgb(233, 233, 201);
+    background-color: black;
+    padding: 1.3rem;
+    border-bottom: 1px solid rgb(50 50 50);
+}

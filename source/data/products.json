@@ -2,11 +2,11 @@
   {
     "sku": 4,
     "name": "Grand Theft Auto",
-    "description": "Grand Theft Auto",
+    "description": "Grand Theft Auto a ola",
     "price": "1500",
     "category": "PC",
-    "classification": "Juegos del momento",
-    "inOffer": 1,
+    "classification": "Más vendidos",
+    "inOffer": "0",
     "image": "gtav-dh.png"
   },
   {
@@ -14,9 +14,18 @@
     "name": "The Last of us II",
     "description": "The Last of Us Part II es un videojuego de terror y de acción y aventuras de 2020 desarrollado por Naughty Dog y publicado por Sony Interactive Entertainment para PlayStation 4.1​ Ambientado cinco años después de The Last of Us (2013), el juego se centra en dos personajes jugables en un Estados Unidos post-apocalíptico cuyas vidas se entrelazan: Ellie, que busca venganza después de sufrir una tragedia, y Abby, una soldado que se ve envuelta en un conflicto entre su milicia y un culto religioso. El juego se juega desde la perspectiva de la tercera persona y le permite al jugador luchar contra enemigos humanos y criaturas caníbales parecidas a zombis con armas de fuego, armas improvisadas y sigilo.",
     "price": "1500",
-    "category": "PS5",
     "classification": "Juegos del momento",
-    "inOffer": 1,
+    "inOffer": "0",
     "image": "tlou2-dh.png"
+  },
+  {
+    "name": "Red Dead redemption 2",
+    "description": "sdadsdasdasd",
+    "price": 1520,
+    "category": "Playstation",
+    "classification": "Juegos del momento",
+    "inOffer": "1",
+    "sku": 7,
+    "image": "pc-dead.png"
   }
 ]

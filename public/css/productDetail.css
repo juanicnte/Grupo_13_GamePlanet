@@ -18,7 +18,6 @@ main{
 
 /*categorias*/
 .contenedorJuego{
-    width: 21rem;
     height: 2rem;
     display: flex;
     flex-direction: row;

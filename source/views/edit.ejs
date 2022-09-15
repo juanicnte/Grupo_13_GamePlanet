@@ -9,82 +9,84 @@
 <body>
     <%- include('./partials/header.ejs') %>
 
-        <main class="main-content">
+        <main>
 
             
-            <div class="container-p4">
-               <h2 class="title-name"><%= product.name %> </h2>
-                <picture>
-                    <img src="/images/<%= product.image %>" alt="<%=product.description%> " class="edit-image">
-                </picture>
+            <div class="container-all">
+                
                
                
                 <form action="/products/actualizar/<%=product.sku%>?m=PUT" method="POST" class="form-edit">
+                   <input type="hidden" name="sku" value="<%=product.sku%>">
                    
-                    <input type="hidden" name="sku" value="<%=product.sku%>">
-                    <fieldset>
-                        <legend>Nombre del producto</legend>
-                        <input type="text" name="name" id="name" placeholder="Name" required value="<%=product.name%>" class="e-productname">
+                   <fieldset class="text-area">
+                        <legend class="title-area">Título</legend>
+                        <input type="text" name="name" id="name" placeholder="Name" class="input-text"  value="<%=product.name%>" class="e-productname">
                     </fieldset>
-                    <fieldset>
-                        <legend>Descripción del producto</legend>
-                        <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"
-                            required ><%=product.description%></textarea>
+
+                    <fieldset class="text-area">
+                        <legend class="title-area">Precio</legend>
+                        <input type="text" name="price" id="price" class="input-text"  value="<%=product.price%>">
                     </fieldset>
-                    <fieldset>
-                        <legend>Precio de producto</legend>
-                        <input type="text" name="price" id="price" required value="<%=product.price%>">
+
+                    
+                <picture>
+                    <img src="/images/<%= product.image %>" alt="<%=product.description%> ">
+                </picture> 
+                <fieldset class="text-area">
+                    <label for="image">Subir imagen</label>
+                    <input type="file" name="image" id="image">
+                </fieldset>
+
+                    
+
+                    <fieldset class="text-area">
+                        <legend class="title-area">Descripción</legend>
+                        <input type="text" name="description" id="description" class="input-text" value="<%=product.description%>">
                     </fieldset>
+
                     <div class="form-group">
-                        <fieldset>
-                            <legend>Categoría del producto</legend>
-                            <label for="category-Playstation">
+                        <fieldset class="text-area">
+                            <legend class="title-area">Categoría</legend>
+                            <label for="category-Playstation" class="radio-options">
                                 <input type="radio" name="category" id="category-Playstation"
                                     value="Playstation" <% if(product.category == "PlayStation") { %> checked <% } %>>Playstation</label>
-                            <label for="category-Xbox">
+                            <label for="category-Xbox" class="radio-options">
                                 <input type="radio" name="category" id="category-Xbox" value="Xbox"
                                 <% if(product.category == "Xbox") { %> checked <% } %>>Xbox</label>
-                            <label for="category-Nintendo">
+                            <label for="category-Nintendo" class="radio-options">
                                 <input type="radio" name="category" id="category-Nintendo"
                                     value="Nintendo" <% if(product.category == "Nintendo") { %> checked <% } %>>Nintendo</label>
-                            <label for="category-PC">
+                            <label for="category-PC" class="radio-options">
                                 <input type="radio" name="category" id="category-PC" value="PC"
                                 <% if(product.category == "PC") { %> checked <% } %>>PC</label>
                         </fieldset>
                     </div>
-                    <fieldset>
-                        <legend>Clasificación del producto</legend>
-                        <label for="classification-Actuales">
+
+                    <fieldset class="text-area">
+                        <legend class="title-area">Clasificación del producto</legend>
+                        <label for="classification-Actuales" class="radio-options">
                             <input type="radio" name="classification" id="classification-Actuales"
                                 value="Juegos del momento" <% if(product.classification == "Juegos del momento") { %> checked <% } %>>Juegos del momento</label>
-                        <label for="classification-MasVendidos">
+                        <label for="classification-MasVendidos" class="radio-options">
                             <input type="radio" name="classification" id="classification-MasVendidos"
                                 value="Más vendidos" <% if(product.classification == "Más vendidos") { %> checked <% } %> >Más vendidos</label>
-                        <label for="classification-Soporte">
+                        <label for="classification-Soporte" class="radio-options">
                             <input type="radio" name="classification" id="classification-Soporte"
                                 value="Soporte 24/7" <% if(product.classification == "Soporte 24/7") { %> checked <% } %> >Soporte 24/7</label>
 
                     </fieldset>
-                    <fieldset>
-                        <legend>¿En oferta?</legend>
-                        <label for="offer-si">
+                    <fieldset class="text-area">
+                        <legend class="title-area">¿En oferta?</legend>
+                        <label for="offer-si" class="radio-options">
                             <input type="radio" name="inOffer" id="offer-si" value="1"
                             <% if(product.inOffer == "1") { %> checked <% } %>>Si</label>
-                        <label for="offer-no">
+                        <label for="offer-no" class="radio-options">
                             <input type="radio" name="inOffer" id="offer-no" value="0"
                             <% if(product.inOffer == "0") { %> checked <% } %>>No</label>
                     </fieldset>
-                    <fieldset>
-                        <legend>Archivos</legend>
-                        <input type="file" name="image" id="image">
-                        <label for="image">Subir imagen</label>
-
-                    </fieldset>
+                    
                     <button type="submit">Guardar</button>
-                    <a href="/" class="return-home">Volver</a>
-
-
-
                 </form>
             </div>
         </main>
