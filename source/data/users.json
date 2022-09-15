@@ -37,5 +37,25 @@
     "password": "$2a$10$Pv9L6kW0hZgo8ukNZfgDoeVLQZsTE18pP0.ANWgnMTFDOEk.1s9b2",
     "birthDay": "2004-03-09",
     "image": "default.png"
+  },
+  {
+    "id": 5,
+    "fullName": "Franco",
+    "user": "francoseccaspina",
+    "email": "francosec2002@hotmail.com",
+    "password": "$2a$10$P7jigIpx5ldnufq/huiH1OrXtBJE3RiMlAfGVi/LZxEnmT/O5634K",
+    "birthDay": "2022-09-14",
+    "image": "default.png",
+    "perfil": "user"
+  },
+  {
+    "id": 6,
+    "fullName": "franco",
+    "user": "fran",
+    "email": "francosec2002@gameplanet.com",
+    "password": "$2a$10$XpRheb7d3MCAdylllSSkvero/4n9rtrq8ERe6voKCmgVfl5UIXv.O",
+    "perfil": "admin",
+    "birthDay": "2022-09-02",
+    "image": "default.png"
   }
 ]
