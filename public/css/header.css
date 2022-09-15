@@ -181,6 +181,10 @@
     border-radius: 8px;
     background-color: rgb(233, 233, 201);
 }
+
+.user-name{
+    color: rgb(233, 233, 201);
+}
 /*
 .menu li {
     margin: 0 10px;
