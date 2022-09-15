@@ -27,5 +27,15 @@
     "inOffer": "1",
     "sku": 7,
     "image": "pc-dead.png"
+  },
+  {
+    "name": "Death streanding",
+    "description": "Death Stranding es un título de acción, aventura y exploración en mundo abierto de ambientación postapocalíptica. Se trata del nuevo videojuego de Hideo Kojima, padre de Metal Gear y Snatcher, una enigmática obra que se define como el primer juego de su género, ya que incluye una serie de mecánicas, detalles y aspectos que lo alejan de otros videojuegos similares.",
+    "price": "1520",
+    "classification": "Juegos del momento",
+    "inOffer": "0",
+    "sku": 8,
+    "image": "fondo3-404.jpg",
+    "category": "Playstation"
   }
 ]

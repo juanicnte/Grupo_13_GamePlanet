@@ -7,106 +7,84 @@
 
 <body>
     <%- include('./partials/header.ejs') %>
-        <main class="main-content">
-            <div class="container-p4">
-                <form action="/products/guardar" method="post"  enctype="multipart/form-data" >
+
+        <main>
+
+
+            <div class="container-all">
+
+
+                <form action="/products/guardar" method="post"  enctype="multipart/form-data" id="form-create">
+                
+                    <fieldset class="text-area">
+                            <legend class="title-area">Título</legend>
+                        <input type="text" name="name" id="name" placeholder="Título del Juego" class="input-text">
+                    </fieldset>
+
+                    <fieldset class="text-area">
+                        <legend class="title-area">Precio de producto</legend>
+                        <input type="text" name="price" id="price" placeholder="$$$$$" class="input-text" >
+                    </fieldset>
+
+                    <fieldset class="text-area">
+                            <label for="image">Subir imagen</label>
+                            <input type="file" name="image" id="image" class="input-text">
+                    </fieldset>
+
+                    <fieldset class="text-area">
+                        <legend class="title-area">Descripción del producto</legend>
+                        <textarea name="description" id="description" cols="30" rows="3" placeholder="Escribe la descripción del producto aqui..."
+                        class="input-text" ></textarea>
+                    </fieldset>
+
                     
-                    <div class="moverlegends">
-                    <fieldset>
-                            <legend>Nombre del producto</legend>
-                        <input type="text" name="name" id="name" placeholder="Name" required >
-                    </fieldset>
-                    <fieldset>
-                        <legend>Descripción del producto</legend>
-                        <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"
-                            required ></textarea>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Precio de producto</legend>
-                        <input type="text" name="price" id="price" required >
-                    </fieldset>
-                </div>
-                    <div class="form-group">
-                        <fieldset>
-                            <legend>Categoría del producto</legend>
+                        <fieldset class="text-area">
+                            <legend class="title-area">Categoría del producto</legend>
                             
-                            <div class="categoriasGenerales">
-                                
-                                <label for="category-Playstation">
+                                <label for="category-Playstation" class="radio-options">
                                     <input type="radio" name="category" id="category-Playstation"
                                     value="Playstation">Playstation</label>
-                                    <label for="category-Xbox">
-                                        <input type="radio" name="category" id="category-Xbox" value="Xbox">Xbox</label>
-                                        <label for="category-Nintendo">
-                                            <input type="radio" name="category" id="category-Nintendo"
+
+                                 <label for="category-Xbox" class="radio-options">
+                                     <input type="radio" name="category" id="category-Xbox" value="Xbox">Xbox</label>
+
+                                 <label for="category-Nintendo" class="radio-options">
+                                    <input type="radio" name="category" id="category-Nintendo"
                                             value="Nintendo">Nintendo</label>
-                                            <label for="category-PC">
-                                                <input type="radio" name="category" id="category-PC" value="PC">PC</label>
-                            </div>
+
+                                 <label for="category-PC" class="radio-options">
+                                    <input type="radio" name="category" id="category-PC" value="PC">PC</label>
+
                         </fieldset>
-                    </div>
-                    <fieldset>
-                        
-                        <div class="tituloclasificacion">
-                            
-                            <legend>Clasificación del producto</legend>
-                            
-                        </div>
-                        
-                        <div class="calsificacionesProduc">
-                            <label for="classification-Actuales">
-                                <input type="radio" name="classification" id="classification-Actuales"
-                                value="Juegos del momento">Juegos del momento</label>
-                                <label for="classification-MasVendidos">
+
+                        <fieldset class="text-area">    
+                            <legend class="title-area">Clasificación del producto</legend>
+                
+                                <label for="classification-Actuales" class="radio-options">
+                                    <input type="radio" name="classification" id="classification-Actuales"
+                                        value="Juegos del momento">Juegos del momento</label>
+                                <label for="classification-MasVendidos" class="radio-options">
                                     <input type="radio" name="classification" id="classification-MasVendidos"
-                                    value="Más vendidos">Más vendidos</label>
-                                    <label for="classification-Soporte">
-                                        <input type="radio" name="classification" id="classification-Soporte"
+                                        value="Más vendidos">Más vendidos</label>
+                                <label for="classification-Soporte" class="radio-options">
+                                    <input type="radio" name="classification" id="classification-Soporte"
                                         value="Soporte 24/7">Soporte 24/7</label>
                                         
-                        </div>
+
                     </fieldset>
-                    <fieldset>
-
-                        <div class="oferta">
-
-                            <legend>¿En oferta?</legend>
-                            
-                        </div>
-                        <div class="aceptar">
-                            <label for="offer-si">
+                    <fieldset class="text-area">
+                            <legend class="title-area">¿En oferta?</legend>
+        
+                            <label for="offer-si" class="radio-options">
                                 <input type="radio" name="inOffer" id="offer-si" value="1">Si</label>
-                                <label for="offer-no">
-                                    <input type="radio" name="inOffer" id="offer-no" value="0">No</label>
-                        </div>
+                            <label for="offer-no" class="radio-options">
+                                <input type="radio" name="inOffer" id="offer-no" value="0">No</label>
                     </fieldset>
-                    <fieldset>
-                        <div class="archivo">
-                            
-                            <legend>Archivos</legend>
-
-                        </div>
-                        <div id="subirimg">
-
-                            <input type="file" name="image" id="image">
-                            <label for="image">Subir imagen</label>
-                            
-                        </div>
-                    </fieldset>
-                    <button type="submit">Guardar</button>
-                    <a href="/">Volver</a>
-
-                    <div class="botones">
-                    
-                    <button type="submit">
-                        <i class="fa-solid fa-plane"></i>
-                    </button>
-                    <button type="reset">
-                        <i class="fa-solid fa-sync"></i>
-                    </button>
-                    
-                    </div>
-
+             <section id="buttons">
+                    <button type="submit" class="button-c">Guardar</button>
+                    <button type="reset" class="button-c">Resetear</button>
+                    <a href="/" class="button-c">Volver</a>
+            </section>
                 </form>
             </div>
         </main>
