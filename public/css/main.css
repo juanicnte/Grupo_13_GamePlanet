@@ -96,6 +96,38 @@ body {
     flex-direction: column;
 }
 
+.botones{
+    border-bottom:solid 1px grey ;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid gainsboro;
+    background-color: black
+}
+
+.botones a{
+    text-align: center;
+    width: 30%;
+    color: white;
+    background-color: black;
+}
+.botones form{
+    text-align: center;
+    width: 30%;
+    padding: 1rem;
+}
+.botones button{
+    font-size: 1rem;
+    cursor: pointer;
+}
+.botones a:hover{
+    color: blueviolet;
+    transition: color 0.5s ;
+}
+.crear-editar{
+    border-right: solid 1px whitesmoke;
+    padding: 1rem;
+}
+
 
 @media (min-width: 768px) {
     .main-header{

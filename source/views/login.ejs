@@ -1,65 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./partials/head.ejs') %>
-    
+
+<head>
+  <%- include('./partials/head.ejs') %>
+
     <link rel="stylesheet" href="/css/login.css" />
-  </head>
-  <body>
-    
-    <%- include('./partials/header.ejs') %>
+</head>
+
+<body>
+
+  <%- include('./partials/header.ejs') %>
 
     <main class="mainLogin">
 
       <form action="/login/access" method="POST">
         <label class="none" for="usuari@">Correo Electrónico</label>
-        <input
-          type="text"
-          name="email"
-          placeholder="Correo Electronico"
-          id="usuari@"
-          required
-          value="<%= oldDataLogin && oldDataLogin.email ? oldDataLogin.email : ''%>"
-        
-          />
-
-        
-
-          
-          
-
+        <input type="text" name="email" placeholder="Correo Electronico" id="usuari@" required
+          value="<%= oldDataLogin && oldDataLogin.email ? oldDataLogin.email : ''%>" />
 
         <label class="none" for="password">Contraseña</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Contraseña"
-          id="password"
-          value="<%= oldDataLogin && oldDataLogin.password ? oldDataLogin.password : ''%>"
-        />
+        <input type="password" name="password" placeholder="Contraseña" id="password"
+          value="<%= oldDataLogin && oldDataLogin.password ? oldDataLogin.password : ''%>" />
 
         <% if(locals.errores && locals.errores.password) {%>
-          
+
           <p class="feedback">
-            
-            <%= locals.errores.password.msg  %>
-            
+
+            <%= locals.errores.password.msg %>
+
           </p>
           <% } %>
-          
-      
 
-        <button class="iniciar-sesion" type="submit">Iniciar Sesion</button>
-      </form>
+          <button class="iniciar-sesion" type="submit">Iniciar Sesion</button>
+        </form>
+        <p>
+          <input type="checkbox" name="recordame" id="recordame" class="radio-options" value="recordame">Recordame</label>
+        </p>
+        
+
       <a class="olvide-contraseña" href="#">Olvide mi contraseña</a>
       <div class="button-register">
-        <a href="/register"
-          ><button class="registrate" type="submit">Regístrate</button></a
-        >
+        <a href="/register"><button class="registrate" type="submit">Regístrate</button></a>
       </div>
     </main>
     <footer class="main-footer">
       <%- include('./partials/footer.ejs') %>
     </footer>
-  </body>
+</body>
+
 </html>
