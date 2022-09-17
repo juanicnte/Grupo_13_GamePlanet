@@ -36,10 +36,13 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 //app.use(cookieParser());
 
+//Falta configurar los estilos
+
 app.use(session({secret:'clave',
 resave:true,
 saveUninitialized: true}))
 
+//Añade al request la propiedad cookies y al response el método cookie()
 app.use(cookie()) //req.cookies obj literal las cookies 
 
 
