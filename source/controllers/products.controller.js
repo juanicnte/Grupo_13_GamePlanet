@@ -36,7 +36,7 @@ const controlador = {
         let product = one(req.params.sku)
         /*let product = products.filter(product => product.sku == req.params.id);*/
         if(product){
-            return res.render('productDetail',{ product, user });
+            return res.render('productDetail',{ product });
         }
         res.render('productDetail' + { product:null });
 
