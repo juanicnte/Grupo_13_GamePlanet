@@ -57,5 +57,15 @@
     "perfil": "admin",
     "birthDay": "2022-09-02",
     "image": "default.png"
+  },
+  {
+    "id": 7,
+    "fullName": "Tomas ",
+    "user": "Fernandez",
+    "email": "tomasfernandez@hotmail.com",
+    "password": "$2a$10$o9Vj5.2G.jha1w5KnD7a3u4CZoydzTPQHSbmD2kXBJMfn1ASyBvN.",
+    "perfil": "user",
+    "birthDay": "2002-07-07",
+    "image": "Capture001.png"
   }
 ]

@@ -18,15 +18,24 @@
         <input type="text" name="email" placeholder="Correo Electronico" id="usuari@" required
           value="<%= oldDataLogin && oldDataLogin.email ? oldDataLogin.email : ''%>" />
 
+          <% if(locals && locals.errors && errors.email ) {%>
+
+            <p class="feedback">
+  
+              <%= errors.email.msg %>
+  
+            </p>
+            <% } %>
+
         <label class="none" for="password">Contraseña</label>
         <input type="password" name="password" placeholder="Contraseña" id="password"
           value="<%= oldDataLogin && oldDataLogin.password ? oldDataLogin.password : ''%>" />
 
-        <% if(locals.errores && locals.errores.password) {%>
+        <% if(locals && locals.errors && errors.password ) {%>
 
           <p class="feedback">
 
-            <%= locals.errores.password.msg %>
+            <%= errors.password.msg %>
 
           </p>
           <% } %>

@@ -106,6 +106,7 @@ const controlador = {
     access: (req, res) => {
 
         const result = validationResult(req);
+
         if(!result.isEmpty()){
             errores = result.mapped();
             return res.render('login',{
