@@ -21,8 +21,8 @@
   {
     "name": "Red Dead redemption 2",
     "description": "sdadsdasdasd",
-    "price": 1520,
-    "category": "Playstation",
+    "price": "1520",
+    "category": "Xbox",
     "classification": "Juegos del momento",
     "inOffer": "1",
     "sku": 7,

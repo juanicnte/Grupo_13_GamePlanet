@@ -18,10 +18,10 @@ const controlador = {
         return res.render('users/adminUsers',{users})
     },
     show: function(req, res){
-        let user = one(req.user.id)
+        let user = one(req.params.id)
         /*let product = products.filter(product => product.sku == req.params.id);*/
         if(user){
-            return res.render('/users/detail',{ user });
+            return res.render('users/userDetail',{ user });
         }
         res.render('/users/detail' + { user:null });
 
