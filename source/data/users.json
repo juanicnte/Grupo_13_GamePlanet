@@ -67,5 +67,35 @@
     "perfil": "user",
     "birthDay": "2002-07-07",
     "image": "Capture001.png"
+  },
+  {
+    "id": 8,
+    "fullName": "Marcia",
+    "user": "Montoyo",
+    "email": "marcia@hotmail.com",
+    "password": "$2a$10$KtWqB72gs7O3DhYTEFk.N.ICUNCrt9E1P92Q5BCWQgnmfNNt.rYbm",
+    "perfil": "user",
+    "birthDay": "1983-07-19",
+    "image": "Capture001.png"
+  },
+  {
+    "id": 9,
+    "fullName": "1212",
+    "user": "12",
+    "email": "PITITOGRANDE@GMAIL.COM",
+    "password": "$2a$10$G3pbyxoS/GTmPQyr28qca.dLSZVJd3a1dzRg0BCRw7WwfSA6AtvLa",
+    "perfil": "user",
+    "birthDay": "1111-11-11",
+    "image": "defaultUser.png"
+  },
+  {
+    "id": 10,
+    "fullName": "Marcia Montoya 2",
+    "user": "Marcita",
+    "email": "marciap@gmail.com",
+    "password": "$2a$10$e8KZz9MLvV4ARzNnD4uoHuC1DqrAvAcz7e1Q2lT1m7aVNRkywa4WG",
+    "perfil": "user",
+    "birthDay": "1111-11-11",
+    "image": "asadsas.png"
   }
 ]

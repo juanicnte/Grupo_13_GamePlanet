@@ -11,7 +11,7 @@ const {resolve, extname} = require('path');
 const { existsSync, mkdirSync } = require('fs');
 
 const destination = function(req, file, cb){
-    let folder = resolve(__dirname, '..', '..', 'public', 'images');
+    let folder = resolve(__dirname, '..', '..', 'public', 'images', 'avatars');
    
     if(!existsSync(folder))
     {

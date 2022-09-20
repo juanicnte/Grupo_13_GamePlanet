@@ -63,7 +63,7 @@ const controlador = {
             })
         }
 
-        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
+        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'defaultUser.png'
         
         let nuevo = generate(req.body);
         let todos = all();
