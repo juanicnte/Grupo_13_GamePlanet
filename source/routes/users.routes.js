@@ -46,6 +46,24 @@ route.get('/login',usersController.login)
 route.post('/login/access',loginValidator, usersController.access)
 
 route.get('/logOut', usersController.logout)
+
+
+route.get('/users/detail/:id', usersController.show)
+
+route.put('/users/:id', usersController.show)
+
+route.get('/users/edit/:id', usersController.edit);
+
+route.put('/users/update/:id', upload.any(), usersController.update);
+
+route.get('/users/update', usersController.update)
+
+route.get('/users', usersController.index)
+
+
+
+
+
 /*
 
 app.get("/register", function (req, res) {

@@ -11,15 +11,20 @@ const controlador = {
         errorEmail = ''
         return res.render('register',{oldData: {}},errorEmail)
     },
+    index: function(req, res){
+
+        let users = all()
+
+        return res.render('users/adminUsers',{users})
+    },
     show: function(req, res){
-/*
-        let user = one(req.params.id)
+        let user = one(req.user.id)
+        /*let product = products.filter(product => product.sku == req.params.id);*/
         if(user){
-            return res.render('productDetail',{ user });
+            return res.render('/users/detail',{ user });
         }
-        res.render('productDetail' + { user:null });
-*/
-        return res.send('Debe mostrar el usuario')
+        res.render('/users/detail' + { user:null });
+
     },
     save: (req, res) => {
         
@@ -106,7 +111,6 @@ const controlador = {
     access: (req, res) => {
 
         const result = validationResult(req);
-
         if(!result.isEmpty()){
             errores = result.mapped();
             return res.render('login',{
@@ -116,7 +120,7 @@ const controlador = {
             })
         }
         
-        res.cookie('user',req.body.email,{maxAge: 3000})
+        res.cookie('user',req.body.email,{maxAge: 1000*60*3})
 
         oldDataLogin = req.body   
         let usuarios = all()

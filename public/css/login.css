@@ -37,6 +37,10 @@ header{
     margin: 0 0 0.8rem 0;
     color: #000000;
 }
+.feedback{
+    color: red;
+    font-weight: bold;
+}
 section .nav-bar{
     display: none;
 }

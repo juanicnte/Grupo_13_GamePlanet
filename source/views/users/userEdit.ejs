@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %> 
+    <link rel="stylesheet" href="/css/edit.css" />
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+
+        <main>
+            <div class="container-all">
+                
+                <form action="/users/update/<%=product.id%>?m=PUT" method="POST" class="form-edit">
+                   <input type="hidden" name="id" value="<%=product.id%>">
+                   
+                   <fieldset class="text-area">
+                        <legend class="title-area">Nombre completo</legend>
+                        <input type="text" name="name" id="name" placeholder="Name" class="input-text"  value="<%=user.fullName%>" class="e-productname">
+                    </fieldset>
+
+                    <fieldset class="text-area">
+                        <legend class="title-area">Perfil</legend>
+                        <input type="text" name="price" id="price" class="input-text"  value="<%=user.perfil%>">
+                    </fieldset>
+
+                    
+                <picture>
+                    <img src="/images/<%= user.image %>" alt="<%=user.fullName%> ">
+                </picture> 
+                <fieldset class="text-area">
+                    <label for="image">Subir imagen</label>
+                    <input type="file" name="image" id="image">
+                </fieldset>
+
+                    
+
+                    <fieldset class="text-area">
+                        <legend class="title-area">Correo</legend>
+                        <input type="text" name="description" id="description" class="input-text" value="<%=user.email%>">
+                    </fieldset>
+
+                    <div class="form-group">
+                        <fieldset class="text-area">
+                            <legend class="title-area">Perfil</legend>
+                            <label for="admin" class="radio-options">
+                                <input type="radio" name="perfil" id="admin"
+                                    value="admin" <% if(user.perfil == "admin") { %> checked <% } %>>Admin</label>
+                            <label for="user" class="radio-options">
+                                <input type="radio" name="perfil" id="user" value="user"
+                                <% if(user.perfil == "user") { %> checked <% } %>>Usuario</label>
+                            
+                        </fieldset>
+                    </div>
+                    
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <%- include('../partials/footer.ejs') %>
+        </footer>
+</body>
+
+</html>
