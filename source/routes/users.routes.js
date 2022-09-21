@@ -11,7 +11,7 @@ const {resolve, extname} = require('path');
 const { existsSync, mkdirSync } = require('fs');
 
 const destination = function(req, file, cb){
-    let folder = resolve(__dirname, '..', '..', 'public', 'images');
+    let folder = resolve(__dirname, '..', '..', 'public', 'images', 'avatars');
    
     if(!existsSync(folder))
     {
@@ -42,9 +42,28 @@ route.get('/register', usersController.create)
 route.post('/register/save', upload.any(),registerValidator, usersController.save)
 
 route.get('/login',usersController.login)
+//route.get('/profile',usersController.profile)
 route.post('/login/access',loginValidator, usersController.access)
 
 route.get('/logOut', usersController.logout)
+
+
+route.get('/users/detail/:id', usersController.show)
+
+route.put('/users/:id', usersController.show)
+
+route.get('/users/edit/:id', usersController.edit);
+
+route.put('/users/update/:id', upload.any(), usersController.update);
+
+route.get('/users/update', usersController.update)
+
+route.get('/users', usersController.index)
+
+
+
+
+
 /*
 
 app.get("/register", function (req, res) {

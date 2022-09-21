@@ -34,8 +34,14 @@
         
         </ul>
       </nav>
+              
     </main>
-
+    <% if(user && user.perfil=='admin') { %>
+      <ul class="botones">
+          <a href="/users" class="crear-editar">USUARIOS</a>
+          <a href="/register" class="crear-editar">CREAR USUARIO</a>
+      </ul>
+      <% } %>
     <footer class="main-footer">
       <%- include('./partials/footer.ejs') %>
     </footer>

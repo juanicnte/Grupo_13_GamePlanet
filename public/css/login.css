@@ -24,6 +24,11 @@ body{
     transition-delay: 0s;
 }
 
+.feedback{
+    color: red;
+    font-weight: bold;
+}
+
 #logo-login i{
     color: #7e097e;
     font-size: 1.3rem;
@@ -83,6 +88,7 @@ form{
     width: 80%;
     padding: 0.5rem;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 #olvide-contraseña{
@@ -100,4 +106,14 @@ form{
 #registrate a{
     color: #fff;
     text-decoration: none;
+}
+
+#remember-me{
+    display: flex;
+    width: 80%;
+}#remember-me p{
+    margin-left: 8px;
+    color: #fff;
+}#remember-me input{
+    cursor: pointer;
 }

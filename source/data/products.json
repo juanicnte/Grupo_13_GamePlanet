@@ -2,9 +2,9 @@
   {
     "sku": 4,
     "name": "Grand Theft Auto",
-    "description": "Grand Theft Auto a ola",
+    "description": "Grand Theft Auto V videojuego de acción-aventura de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games. Lanzado el 17 de septiembre de 2013 para PlayStation 3 y Xbox 360. Es un juego en primera persona, el cual consiste con un modo historia de 3 personajes llamados: Michael, Franklin y Trevor; y un modo multijugador (Online) que se desarrollaría sobre tu propio personaje. El juego es para mayores de 18 años, debido a que se muestran escenas con armas, sangrientas, carreras callejeras y escenas inapropiadas.",
     "price": "1500",
-    "category": "PC",
+    "category": "Nintendo",
     "classification": "Más vendidos",
     "inOffer": "0",
     "image": "gtav-dh.png"
@@ -21,8 +21,8 @@
   {
     "name": "Red Dead redemption 2",
     "description": "sdadsdasdasd",
-    "price": 1520,
-    "category": "Playstation",
+    "price": "1520",
+    "category": "Xbox",
     "classification": "Juegos del momento",
     "inOffer": "1",
     "sku": 7,

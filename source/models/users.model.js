@@ -20,7 +20,7 @@ let model = {
         user.user = data.user;
         user.email = data.email;
         user.password = bcryptjs.hashSync(data.password, 10);
-        user.perfil = data.perfil;
+        user.perfil = data.email.includes('@gameplanet') ? 'admin' : 'user';
         user.birthDay = data.birthDay;
         user.image = data.image;
         return user;

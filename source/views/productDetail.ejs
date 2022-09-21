@@ -14,7 +14,7 @@
             <p id="name-product"><%= product.name %><p>
             <section class="section-description">
             <div class="container-image">
-                    <img src="../../images/<%= product.image %>" alt="juego fifa 22" class="img-juego" />
+                    <img src="../../images/<%= product.image %>" alt="<%= product.name %>" class="img-juego" />
                 
                     <div class="contenedorJuego">
                 <p id="name-game">
@@ -63,6 +63,7 @@
                     <li>clasificacíon: <p><%= product.classification %> </p></li>
                 </ul>
             </div>
+                <% if(user && user.perfil=='admin') { %>
                 <ul class="botones">
                     <a href="/products/create" class="crear-editar">CREAR</a>
                     <a href="/products/edit/<%= product.sku %>" class="crear-editar">EDITAR</a>
@@ -72,7 +73,7 @@
                         </button>
                     </form>
                 </ul>
-
+                <% } %>
                 
             </main>
         <footer>

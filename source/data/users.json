@@ -6,7 +6,7 @@
     "email": "121212121212121221@pasid.com",
     "password": "$2a$10$xe0fCNTn0hnO1dvbHNkOiuBL9UnX/ntC4JQfXjsCF4Jls6tBqDF.2",
     "birthDay": "1111-11-11",
-    "image": "default.png",
+    "image": "defaultUser.png",
     "perfil": "user"
   },
   {
@@ -16,7 +16,7 @@
     "email": "mootje@pasid.com",
     "password": "$2a$10$HTY3STgzRCD0wbiyydVUw.KeqItbkmPX8zGRblkOh2l/RGS.hD9J6",
     "birthDay": "1111-11-11",
-    "image": "default.png",
+    "image": "defaultUser.png",
     "perfil": "user"
   },
   {
@@ -36,6 +36,66 @@
     "email": "juani@mail.com",
     "password": "$2a$10$Pv9L6kW0hZgo8ukNZfgDoeVLQZsTE18pP0.ANWgnMTFDOEk.1s9b2",
     "birthDay": "2004-03-09",
-    "image": "default.png"
+    "image": "defaultUser.png"
+  },
+  {
+    "id": 5,
+    "fullName": "Franco",
+    "user": "francoseccaspina",
+    "email": "francosec2002@hotmail.com",
+    "password": "$2a$10$P7jigIpx5ldnufq/huiH1OrXtBJE3RiMlAfGVi/LZxEnmT/O5634K",
+    "birthDay": "2022-09-14",
+    "image": "defaultUser.png",
+    "perfil": "user"
+  },
+  {
+    "id": 6,
+    "fullName": "franco",
+    "user": "fran",
+    "email": "francosec2002@gameplanet.com",
+    "password": "$2a$10$XpRheb7d3MCAdylllSSkvero/4n9rtrq8ERe6voKCmgVfl5UIXv.O",
+    "perfil": "admin",
+    "birthDay": "2022-09-02",
+    "image": "defaultUser.png"
+  },
+  {
+    "id": 7,
+    "fullName": "Tomas ",
+    "user": "Fernandez",
+    "email": "tomasfernandez@hotmail.com",
+    "password": "$2a$10$o9Vj5.2G.jha1w5KnD7a3u4CZoydzTPQHSbmD2kXBJMfn1ASyBvN.",
+    "perfil": "user",
+    "birthDay": "2002-07-07",
+    "image": "Capture001.png"
+  },
+  {
+    "id": 8,
+    "fullName": "Marcia",
+    "user": "Montoyo",
+    "email": "marcia@hotmail.com",
+    "password": "$2a$10$KtWqB72gs7O3DhYTEFk.N.ICUNCrt9E1P92Q5BCWQgnmfNNt.rYbm",
+    "perfil": "user",
+    "birthDay": "1983-07-19",
+    "image": "Capture001.png"
+  },
+  {
+    "id": 9,
+    "fullName": "1212",
+    "user": "12",
+    "email": "PITITOGRANDE@GMAIL.COM",
+    "password": "$2a$10$G3pbyxoS/GTmPQyr28qca.dLSZVJd3a1dzRg0BCRw7WwfSA6AtvLa",
+    "perfil": "user",
+    "birthDay": "1111-11-11",
+    "image": "defaultUser.png"
+  },
+  {
+    "id": 10,
+    "fullName": "Marcia Montoya 2",
+    "user": "Marcita",
+    "email": "marciap@gmail.com",
+    "password": "$2a$10$e8KZz9MLvV4ARzNnD4uoHuC1DqrAvAcz7e1Q2lT1m7aVNRkywa4WG",
+    "perfil": "user",
+    "birthDay": "1111-11-11",
+    "image": "asadsas.png"
   }
 ]

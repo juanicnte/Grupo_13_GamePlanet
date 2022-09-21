@@ -11,15 +11,20 @@ const controlador = {
         errorEmail = ''
         return res.render('register',{oldData: {}},errorEmail)
     },
+    index: function(req, res){
+
+        let users = all()
+
+        return res.render('users/adminUsers',{users})
+    },
     show: function(req, res){
-/*
         let user = one(req.params.id)
+        /*let product = products.filter(product => product.sku == req.params.id);*/
         if(user){
-            return res.render('productDetail',{ user });
+            return res.render('users/userDetail',{ user });
         }
-        res.render('productDetail' + { user:null });
-*/
-        return res.send('Debe mostrar el usuario')
+        res.render('/users/detail' + { user:null });
+
     },
     save: (req, res) => {
         
@@ -49,8 +54,6 @@ const controlador = {
                 errors: errores
             })
         }
-        
-        
         if((!result.isEmpty()) && coincide){
 
             return res.render('register',{
@@ -60,19 +63,14 @@ const controlador = {
             })
         }
 
-        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
-        
-        
-    
+        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'defaultUser.png'
         
         let nuevo = generate(req.body);
         let todos = all();
         todos.push(nuevo);  
         write(todos);
         
-        return res.redirect('/')
-        
-    
+        return res.redirect('/login')
     },
     edit: (req, res) => {
 
@@ -111,6 +109,19 @@ const controlador = {
         return res.render('login',{oldDataLogin:{}},errorEmail)
     },
     access: (req, res) => {
+
+        const result = validationResult(req);
+        if(!result.isEmpty()){
+            errores = result.mapped();
+            return res.render('login',{
+                errorEmail:{email:{msg:''}},
+                oldDataLogin: req.body,
+                errors: errores
+            })
+        }
+        
+        res.cookie('user',req.body.email,{maxAge: 1000*60*3})
+
         oldDataLogin = req.body   
         let usuarios = all()
         const dato = usuarios.find(usuario => usuario.email == req.body.email)
@@ -123,19 +134,19 @@ const controlador = {
              return res.redirect('/')
         }
         else{
+            console.log('else')
             const result = validationResult(req);
             if(!result.isEmpty()){
                 errores = result.mapped()
             // return  res.render('login', {errores:{email:'No estás registrado'}});
-         return res.render('login',{
-            errorEmail:{email:{msg:'Not found'}},
-            oldDataLogin: req.body,
-            errors:errores
-         })
-
+                return res.render('login',{
+                    errorEmail:{email:{msg:'Not found'}},
+                    oldDataLogin: req.body,
+                    errors:errores
+                })
+            }
         }
-    }
-},
+    },
     logout:(req, res) => {
         delete req.session.user
         res.cookie('email', req.body.email,{maxAge:1})
@@ -144,7 +155,4 @@ const controlador = {
     }
 };
 
-
-
-    
 module.exports = controlador;
