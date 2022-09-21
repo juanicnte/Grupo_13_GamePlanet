@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 10rem;
 
 }
 #logo-login img{
@@ -116,4 +117,11 @@ form{
     color: #fff;
 }#remember-me input{
     cursor: pointer;
+}
+
+
+#login-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
