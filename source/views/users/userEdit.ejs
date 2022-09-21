@@ -12,17 +12,18 @@
         <main>
             <div class="container-all">
                 
-                <form action="/users/update/<%=product.id%>?m=PUT" method="POST" class="form-edit">
-                   <input type="hidden" name="id" value="<%=product.id%>">
+                <form action="/users/update/<%=user.id%>?m=PUT" method="POST" class="form-edit">
+                   <input type="hidden" name="id" value="<%=user.id%>">
                    
                    <fieldset class="text-area">
                         <legend class="title-area">Nombre completo</legend>
-                        <input type="text" name="name" id="name" placeholder="Name" class="input-text"  value="<%=user.fullName%>" class="e-productname">
+                        <input type="text" name="fullName" id="fullName" placeholder="Nombre" class="input-text"  value="<%=user.fullName%>" class="e-productname">
                     </fieldset>
 
                     <fieldset class="text-area">
-                        <legend class="title-area">Perfil</legend>
-                        <input type="text" name="price" id="price" class="input-text"  value="<%=user.perfil%>">
+                        <legend class="title-area">Nombre de usuari@</legend>
+            <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@"
+              value="<%= user.user%>" required>
                     </fieldset>
 
                     
@@ -38,7 +39,7 @@
 
                     <fieldset class="text-area">
                         <legend class="title-area">Correo</legend>
-                        <input type="text" name="description" id="description" class="input-text" value="<%=user.email%>">
+                        <input type="text" name="email" id="email" class="input-text" value="<%=user.email%>">
                     </fieldset>
 
                     <div class="form-group">
@@ -53,6 +54,11 @@
                             
                         </fieldset>
                     </div>
+                    <fieldset class="text-area">
+                        <label for="nacio">Fecha de nacimiento</label>
+                        <input type="date" name="birthDay" id="nacio"
+                      value="<%= user.birthDay%>" required />
+                    </fieldset>
                     
                     <button type="submit">Guardar</button>
                 </form>

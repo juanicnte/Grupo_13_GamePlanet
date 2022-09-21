@@ -1,8 +1,5 @@
 const express = require('express');
 const usersController = require('../controllers/users.controller');
-const isLogged = require('../middlewares/isLogged')
-const isAdmin = require('../middlewares/isAdmin')
-
 
 const route = express.Router();
 
@@ -37,6 +34,9 @@ const upload = multer({storage:multer.diskStorage({destination, filename})});
 const registerValidator = require('../validations/register')
 
 const loginValidator = require('../validations/login')
+
+const isLogged = require('../middlewares/isLogged')
+const isAdmin = require('../middlewares/isAdmin')
 
 route.get('/register', usersController.create)
 route.post('/register/save', upload.any(),registerValidator, usersController.save)

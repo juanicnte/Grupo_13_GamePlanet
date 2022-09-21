@@ -20,6 +20,7 @@ const controlador = {
     show: function(req, res){
         let user = one(req.params.id)
         /*let product = products.filter(product => product.sku == req.params.id);*/
+        console.log(user)
         if(user){
             return res.render('users/userDetail',{ user });
         }
@@ -76,7 +77,7 @@ const controlador = {
 
         let user = one(req.params.id);
         
-        return res.render('edit', {
+        return res.render('users/userEdit', {
             user})
     },
     update: (req, res) => {
@@ -87,7 +88,8 @@ const controlador = {
                 elemento.user = req.body.user;
                 //elemento.price = paseInt(req.body.price);
                 elemento.email = req.body.email;
-                elemento.password = req.body.password;
+                //NO SE MODIFICARÁ EL PASSWORD
+                elemento.password = elemento.password;
                 elemento.perfil = req.body.perfil;
                 elemento.birthDay = req.body.birthDay;
                 elemento.image = req.files && req.files.length > 0 ? req.files[0].filename : elemento.image;
@@ -149,7 +151,7 @@ const controlador = {
     },
     logout:(req, res) => {
         delete req.session.user
-        res.cookie('email', req.body.email,{maxAge:1})
+        res.cookie('email', req.body.email,{maxAge:-1})
         return res.redirect('/')
         //return res.back()
     }
