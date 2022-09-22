@@ -1,19 +1,44 @@
-@import url('header.css');
-@import url('footer.css');
-
-main{
-    height: 100vh;
-    background-color: white;
-}
-
-.feedback{
-    color: red;
-}
 body{
-    color: #000000;
+    background-color: #343434;
 }
+main{
+    margin: 8rem 0;
+}
+
+#logo-register{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}#logo-register img{
+    width: 5rem;
+    margin-left: 30%;
+}#logo-register i{
+    color: #7e097e;
+    font-size: 1.3rem;
+}#logo-register img:hover{
+    cursor: pointer;
+    width: 7rem;
+    transition: 0.5s;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}#logo-register i:active{
+    color: blueviolet;
+}#logo-register i:hover{
+    color: #d35bd3;
+    transition: 0.5s;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
 h2{
-    padding: 0.8rem 0 0.8rem 0;
+    margin: 0px 3rem 0rem;
+    border-bottom: 1px solid grey;
+    font-size: 15px;
+    color: #fff;
 }
 
 form{
@@ -21,253 +46,35 @@ form{
     flex-direction: column;
     align-items: center;
 }
-.imageSec{
-    color: black;
-}
-form section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-}
-section div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-label{
-    padding: 0 0 0.8rem 0;
-}
-input{
-    margin: 0 0 0.8rem 0;
-    border-radius: 0.5rem;
-    text-align: center;
-    width: 92%;
-    max-width: 382px;
-    padding: 0.5rem;
-    min-width: max-content;
-}
-.enviar{
-    width: 92%;
-    max-width: 382px;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    color: white;
-    background-color: #7e097e;
-    margin: 0 0 1rem 0;
-}
-.header-search-bar{
-    display: none;
-}
-a{
-    text-decoration: none;
-    color: #100E0F;
-}
-section .nav-bar{
-    display: none;
-}
-section .header-bottom-bar{
-    display: none;
-}
-section .fa-cart-shopping{
-    display: none;
-}
 
-footer{
-    background-color: #7e097e;
-}
-.mainRegister{
-    background-color: white;
-}
-
-.mainRegister input{
-    margin: 0 0 0.8rem 0;
-    border-radius: 0.5rem;
-    text-align: center;
-    width: 96%;
-    padding: 0.5rem;
-    border: 1px solid black;
-}
-/*
-@media screen and (min-width: 420px){
-    section div{
-        display: flex;
-        flex-direction: row;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 0.4rem;
-    }
-    section div input{
-        width: 80%;
-        padding: 0.5rem;
-    }
-    form section{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-    }
-    input{
-        width: 92%;
-        max-width: 382px;
-        padding: 0.5rem;
-    }
-}*/
-
-
-@media (min-width: 768px)  {
-
-
-    /*LUCAS RESOLUCIÓN 
-*/
-section div{
-    display: flex;
-    flex-direction: row;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0.4rem;
-}
-section div input{
+.inputs-register{
+    color: #fff;
+    background-color: rgba(16,16,16,.4);
     width: 80%;
     padding: 0.5rem;
+    margin: 1rem;
+    box-shadow: inset 0 0 0 2px #3d3d3d;
+    border-radius: 8px;
+    outline: none;
 }
-form section{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-input{
-    width: 92%;
-    max-width: 382px;
+
+#button-register{
+    margin: 1rem;
+    color: #fff;
+    font-size: 13px;
+    background-color: #7e097e;
+    width: 80%;
     padding: 0.5rem;
-}
-/*MEDIA QUERY TODOS*/
-    .lista-footer li {
-        margin-right: 3rem;
-    }
-    .icons-footer a{
-        margin: 0.3rem;
-    }
-    .icons-footer{
-        margin: 1rem;
-    }
-    .icons-footer a{
-        margin: 15px;
-    border: solid 1px;
-    padding: 4px;
     border-radius: 8px;
-    background-color: #dcb0dc;
-    }
-    .hamburger-button{
-        display:none;
-    }
-
-    .img-logo {
-        width: 10%;
-    }
-
-    .menu{
-        display: flex;
-        align-items: center;
-        /* width: 100%; */
-        /* margin-top: 10px; */
-        justify-content: flex-end;
-    }
-
-    .menu li{
-        display: flex;
-        align-items: center;
-        margin-left: 15px;
-        margin-right: 15px;
-        
-    }
-
-    /*.main-header{
-        flex-wrap: wrap;
-    }*/
-    .header-search-bar {
-        width: 70%;
-        border-radius: 5px;
-        margin: 10px 0px 0px 0px;
-    }
-    .barraDeBusqueda{
-        width: 100%;
-    }
-    .barraDeBusqueda input{
-        width: 90%;
-        border-radius: 10px;
-    }
-    .header-bottom-bar {
-        display: flex;
-        position: relative;
-        width: 100%;
-        margin: 0px;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #9e339e;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-    
-    .header-bottom-bar li {
-        display: flex;
-        position: relative;
-
-       
-    }
-
-    .header-top-bar {
-        flex-wrap: wrap;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        align-items: center;
-    }
-    .nav-bar  {
-        display: flex;
-        position: relative;
-        flex-wrap: wrap;
-        
-    }
-    
-    .nav-bar li {
-        display: flex;
-        position: relative;
-       
-    }
-    
+    cursor: pointer;
 }
 
-@media (min-width: 1024px){
+.feedback{
+    color: red;
+} 
 
-    .header-top-bar {
-        flex-wrap: wrap;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        align-items: center;
-    }
-    .lista-footer{
-        flex-direction: row;
-    }
-    .lista-footer li {
-        margin-right: 3rem;
-    }
-    .icons-footer a{
-        margin: 0.3rem;
-    }
-    .icons-footer{
-        margin: 1rem;
-    }
-    .icons-footer a{
-        margin: 15px;
-    border: solid 1px;
-    padding: 4px;
-    border-radius: 8px;
-    background-color: #dcb0dc;
-    }
+#register-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

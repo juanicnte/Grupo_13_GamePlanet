@@ -9,74 +9,53 @@
 </head>
 
 <body>
-  <%- include('./partials/header.ejs') %>
+  <main class="mainRegister">
 
-    <main class="mainRegister">
+    <picture id="logo-register">
+      <img src="../images/logoOriginal.png" alt="">
+      <a href="/">
+        <i class="fa-sharp fa-solid fa-xmark"></i>
+      </a>
+    </picture>
 
-      <form action="/register/save" method="POST" class="formRegistro" enctype="multipart/form-data">
-        <h2>Regístrate</h2>
-        <section>
-          <div>
-            <label for="nombreCompleto">Nombre y apellido</label>
-            <input type="text" name="fullName" id="nombreCompleto" placeholder="Nombre y apellido"
+    <h2>Regístrate</h2>
+      <form action="/register/save" method="POST" id="form-register" enctype="multipart/form-data">
+              
+              <input type="text" name="fullName" id="nombreCompleto" class="inputs-register" placeholder="Nombre y apellido"
               value="<%= oldData && oldData.fullName ? oldData.fullName : ''%>" required>
-          </div>
-          <div>
-            <label for="nombreUsuari@">Nombre de usuari@</label>
-            <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@"
+                  
+            <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@" class="inputs-register"
               value="<%= oldData && oldData.user ? oldData.user : ''%>" required>
-          </div>
+            
 
-        </section>
+            <% if (locals && locals.errors && errors.email) { %>
+              <p class="feedback"><%= errors.email.msg %></p><% } %>
 
-        <label for="correo">Correo electrónico</label>
+              <% if (errorEmail) { %>
+                <p class="feedback"><%= errorEmail.email.msg %></p><% } %>
 
-        <% if (locals && locals.errors && errors.email) { %>
-          <p class="feedback">
-            <%= errors.email.msg %>
-          </p>
-        <% } %>
+        
+          <input type="email" name="email" placeholder="Correo electronico" id="correo" class="inputs-register" value="<%= oldData && oldData.email ? oldData.email : ''%>" required>
+        
 
-        <% if (errorEmail) { %>
-          <p class="feedback">
-            <%= errorEmail.email.msg %>
-              </p>
-            <% } %>
+          <% if (locals && locals.errors && errors.password && !errorEmail) { %><p class="feedback"><%= errors.password.msg %></p><% } %>
 
-          <input type="text" name="email" placeholder="Correo electronico" id="correo"
-              value="<%= oldData && oldData.email ? oldData.email : ''%>" required>
+          <% if (locals && locals.errors && errors.password && errorEmail) { %><p class="feedback"><%= errors.password.msg %></p><% } %>
 
-          <label for="contraseña">Contraseña</label>
-
-          <% if (locals && locals.errors && errors.password && !errorEmail) { %>
-            <p class="feedback">
-              <%= errors.password.msg %>
-            </p>
-          <% } %>
-
-          <% if (locals && locals.errors && errors.password && errorEmail) { %>
-            <p class="feedback">
-              <%= errors.password.msg %>
-            </p>
-          <% } %>
-
-          <input type="password" name="password" placeholder="contraseña" id="contraseña"
+          
+          <input type="password" name="password" placeholder="contraseña" id="contraseña" class="inputs-register"
             value="<%= oldData && oldData.password ? oldData.password : ''%>" required>
+        
 
-          <fieldset class="imageSec">
-            <input type="file" name="image" id="image">
-            <label for="image">Subir imagen</label>
-          </fieldset>
+          <input type="file" name="image" id="image" class="inputs-register">
 
-          <label for="nacio">Fecha de nacimiento</label>
-          <input type="date" name="birthDay" id="nacio"
-            value="<%= oldData && oldData.birthDay ? oldData.birthDay : ''%>" required />
-          <button class="enviar" type="submit">Enviar</button>
+          <input type="date" name="birthDay" id="nacio" class="inputs-register" value="<%= oldData && oldData.birthDay ? oldData.birthDay : ''%>" required /> 
 
+          <button id="button-register" type="submit">Enviar</button>
       </form>
-
     </main>
-    <footer class="main-footer">
+
+    <footer id="register-footer">
       <%- include('./partials/footer.ejs') %>
     </footer>
 </body>
