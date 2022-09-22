@@ -74,7 +74,7 @@ const controlador = {
                 elemento.category = req.body.category;
                 elemento.classification = req.body.classification;
                 elemento.inOffer = req.body.inOffer;
-                elemento.image = req.files && req.files.length > 0 ? req.files[0].filename : elemento.image;
+                elemento.image = elemento.image = req.body.image ? req.body.image : elemento.image;
             }
             return elemento;
         })

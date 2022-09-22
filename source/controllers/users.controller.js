@@ -24,7 +24,7 @@ const controlador = {
         if(user){
             return res.render('users/userDetail',{ user });
         }
-        res.render('/users/detail' + { user:null });
+        res.render('/users/detail' + { user:null }, req.session);
 
     },
     save: (req, res) => {
@@ -92,7 +92,7 @@ const controlador = {
                 elemento.password = elemento.password;
                 elemento.perfil = req.body.perfil;
                 elemento.birthDay = req.body.birthDay;
-                elemento.image = req.files && req.files.length > 0 ? req.files[0].filename : elemento.image;
+                elemento.image = req.body.image ? req.body.image : elemento.image;
             }
             return elemento;
         })

@@ -4,7 +4,7 @@
     "name": "Grand Theft Auto",
     "description": "Grand Theft Auto V videojuego de acción-aventura de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games. Lanzado el 17 de septiembre de 2013 para PlayStation 3 y Xbox 360. Es un juego en primera persona, el cual consiste con un modo historia de 3 personajes llamados: Michael, Franklin y Trevor; y un modo multijugador (Online) que se desarrollaría sobre tu propio personaje. El juego es para mayores de 18 años, debido a que se muestran escenas con armas, sangrientas, carreras callejeras y escenas inapropiadas.",
     "price": "1500",
-    "category": "Nintendo",
+    "category": "Playstation",
     "classification": "Más vendidos",
     "inOffer": "0",
     "image": "gtav-dh.png"
@@ -14,15 +14,16 @@
     "name": "The Last of us II",
     "description": "The Last of Us Part II es un videojuego de terror y de acción y aventuras de 2020 desarrollado por Naughty Dog y publicado por Sony Interactive Entertainment para PlayStation 4.1​ Ambientado cinco años después de The Last of Us (2013), el juego se centra en dos personajes jugables en un Estados Unidos post-apocalíptico cuyas vidas se entrelazan: Ellie, que busca venganza después de sufrir una tragedia, y Abby, una soldado que se ve envuelta en un conflicto entre su milicia y un culto religioso. El juego se juega desde la perspectiva de la tercera persona y le permite al jugador luchar contra enemigos humanos y criaturas caníbales parecidas a zombis con armas de fuego, armas improvisadas y sigilo.",
     "price": "1500",
-    "classification": "Juegos del momento",
+    "classification": "Más vendidos",
     "inOffer": "0",
-    "image": "tlou2-dh.png"
+    "image": "tlou2-dh.png",
+    "category": "Nintendo"
   },
   {
     "name": "Red Dead redemption 2",
     "description": "sdadsdasdasd",
     "price": "1520",
-    "category": "Xbox",
+    "category": "Nintendo",
     "classification": "Juegos del momento",
     "inOffer": "1",
     "sku": 7,
@@ -36,6 +37,16 @@
     "inOffer": "0",
     "sku": 8,
     "image": "fondo3-404.jpg",
-    "category": "Playstation"
+    "category": "Nintendo"
+  },
+  {
+    "name": "Fito Paez",
+    "description": "Album de fito paez",
+    "price": "1000000",
+    "category": "PC",
+    "classification": "Más vendidos",
+    "inOffer": "1",
+    "sku": 9,
+    "image": "Capture001.png"
   }
 ]
