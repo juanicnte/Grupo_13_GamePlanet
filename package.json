@@ -5,7 +5,8 @@
   "main": "source/app.js",
   "scripts": {
     "start": "nodemon source/app.js -e js,mjs,json,ejs,css",
-    "test": "nodemon source/app.js -e js,mjs,json,ejs,css"
+    "test": "nodemon source/app.js -e js,mjs,json,ejs,css",
+    "sq": "sequelize init"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
     "sequelize": "^6.23.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "sequelize-cli": "^6.4.1"
   }
 }
