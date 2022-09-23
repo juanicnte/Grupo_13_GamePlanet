@@ -20,3 +20,6 @@ Aún no organizamos los estilos, mejoramos un poco ya que no nos reunimos a últ
 
 ## SPRINT 4
 Ya empezamos el sprint 5 y no se había terminado el sprint 4 y aún tenemos temas pendientes de diseño, la comunicación se da por más cuándo nos reunimos con algún profesor y luego de eso merma, no cumplimos con los daily, ni con la reunón de estrella de mar, hay niveles de compromiso ante el proyecto diferentes. A pesar de lo anterior digamos que hemos progresado, seríamos un gran equipo de trabajo si mejoramos la comunicación y el compromiso con los tiempos de entrega 
+
+## SPRINT 5
+Se mejoró muchísimo la comunicación, el compromiso y el trabajo en equipo y se notó bastante el progreso en el proyecto integrador
