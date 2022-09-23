@@ -10,6 +10,9 @@ con los perfiles de usuarios
 
 Tener en cuenta que el campo clasificación no es obligatorio es decir sin clasificación jaja corregir en el front
 Una compra supongo que no se puede modificar por eso no tiene el campo de actualizar
+
+
+El diagrama ENTIDAD RELACIÓN EN DÓNDE LO DEBO GUARDAR
 */ 
 CREATE TABLE "products" (
     sku INTEGER PRIMARY KEY AUTO_INCREMENT,
