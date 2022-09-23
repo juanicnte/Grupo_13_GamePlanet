@@ -41,8 +41,22 @@ const model = function(sequelize, DataTypes){
         tableName: 'products',
         timestamps: true
     }
-    const product = sequelize.define(alias, cols, config)
-    return product
+    const Product = sequelize.define(alias, cols, config)
+
+    Product.associate = function(models){
+        Product.hasMany(models.shoppingCart,{
+            as: 'shoppingCart',
+            foreingKey: 'sku'
+        }),
+        Product.hasMany(models.shoppingDetail,{
+            as: 'shoppingDetail',
+            foreingKey: 'sku'
+        })
+    }
+
+    return Product
 }
+
+
 
 module.exports = model

@@ -28,8 +28,18 @@ const model = function(sequelize, DataTypes){
         timestamps: true
 
     }
-    const shoppingCart = sequelize.define(alias, cols, config)
-    return shoppingCart
+    const ShoppingCart = sequelize.define(alias, cols, config)
+
+    ShoppingCart.associate = function(models){
+        ShoppingCart.belongTo(models.product,{
+            as: 'product',
+            foreingKey: 'sku'
+        })
+    }
+
+    return ShoppingCart
 }
+
+
 
 module.exports = model

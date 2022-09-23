@@ -23,8 +23,17 @@ const model = function(sequelize, DataTypes){
         updateAd: false
 
     }
-    const shoppingDetail = sequelize.define(alias, cols, config)
-    return shoppingDetail
+    const ShoppingDetail = sequelize.define(alias, cols, config)
+
+    ShoppingDetail.associate = function(models){
+        ShoppingDetail.belongTo(models.product,{
+            as: 'product',
+            foreingKey: 'sku'
+        })
+    }
+    
+    return ShoppingDetail
 }
+
 
 module.exports = model
