@@ -21,10 +21,10 @@ CREATE TABLE "products" (
     price INTEGER NOT NULL,
     category VARCHAR NOT NULL,
     classification VARCHAR  NULL,
-    inOffer INTEGER NOT NULL,
+    inOffer BOOLEAN NOT NULL,
     image VARCHAR NOT NULL,
-    createdAt DATE NOT NULL,
-    updatedAt DATE NULL
+    createdAt TIMESTAMP NOT NULL,
+    updatedAt TIMESTAMP NULL
 );
 
 CREATE TABLE "users" (
@@ -34,10 +34,10 @@ CREATE TABLE "users" (
     email VARCHAR NOT NULL,
     password VARCHAR  NULL,
     perfil VARCHAR NOT NULL,
-    birthDay DATE  NOT NULL,
+    birthDay TIMESTAMP  NOT NULL,
     image VARCHAR NOT NULL,
-    createdAt DATE NOT NULL,
-    updatedAt DATE NULL
+    createdAt TIMESTAMP NOT NULL,
+    updatedAt TIMESTAMP NULL
 );
 
 CREATE TABLE "shoppingCart" (
@@ -45,8 +45,8 @@ CREATE TABLE "shoppingCart" (
     sku INTEGER NOT NULL,
     userId INTEGER NOT NULL,
     units INTEGER NOT NULL,
-    createdAt DATE NOT NULL,
-    updatedAt DATE NULL,
+    createdAt TIMESTAMP NOT NULL,
+    updatedAt TIMESTAMP NULL,
     FOREIGN KEY (sku) REFERENCES products(sku),
     FOREIGN KEY (userId) REFERENCES users(id)
 );
@@ -57,7 +57,7 @@ CREATE TABLE "shopping" (
     bill VARCHAR NOT NULL,
     userId INTEGER NOT NULL,
     units INTEGER NOT NULL,
-    createdAt DATE NOT NULL,
+    createdAt TIMESTAMP NOT NULL,
     FOREIGN KEY (userId) REFERENCES users(id)
 );
 

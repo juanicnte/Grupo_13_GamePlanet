@@ -1,14 +1,14 @@
 
 const model = function(sequelize, DataTypes){
-    let alias = 'shoppingCart'
+    let alias = 'shopping'
     let cols = {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        sku: {
-            type: DataTypes.INTEGER
+        bill: {
+            type: DataTypes.VARCHAR
         },
         userId: {
             type: DataTypes.INTEGER
@@ -18,18 +18,16 @@ const model = function(sequelize, DataTypes){
         },
         createdAt: {
             type: DataTypes.DATE
-        },
-        updatedAt: {
-            type: DataTypes.DATE
         }
     }
     let config = {
-        tableName: 'shoppingCart',
-        timestamps: true
+        tableName: 'shopping',
+        timestamps: true,
+        updateAd: false
 
     }
-    const shoppingCart = sequelize.define(alias, cols, config)
-    return shoppingCart
+    const shopping = sequelize.define(alias, cols, config)
+    return shopping
 }
 
 module.exports = model
