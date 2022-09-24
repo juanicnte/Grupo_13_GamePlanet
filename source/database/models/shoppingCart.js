@@ -7,10 +7,10 @@ const model = function(sequelize, DataTypes){
             primaryKey: true,
             autoIncrement: true
         },
-        sku: {
+        userId: {
             type: DataTypes.INTEGER
         },
-        userId: {
+        productId: {
             type: DataTypes.INTEGER
         },
         units: {
@@ -33,7 +33,7 @@ const model = function(sequelize, DataTypes){
     ShoppingCart.associate = function(models){
         ShoppingCart.belongTo(models.product,{
             as: 'product',
-            foreingKey: 'sku'
+            foreingKey: 'productId'
         })
     }
 

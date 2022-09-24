@@ -10,7 +10,7 @@ const model = function(sequelize, DataTypes){
         shoppingId: {
             type: DataTypes.INTEGER
         },
-        sku: {
+        productId: {
             type: DataTypes.INTEGER
         },
         units: {
@@ -28,7 +28,11 @@ const model = function(sequelize, DataTypes){
     ShoppingDetail.associate = function(models){
         ShoppingDetail.belongTo(models.product,{
             as: 'product',
-            foreingKey: 'sku'
+            foreingKey: 'productId'
+        }),
+        ShoppingDetail.belongTo(models.shopping,{
+            as: 'shopping',
+            foreingKey: 'shoppingId'
         })
     }
     

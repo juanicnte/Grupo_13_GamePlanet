@@ -1,7 +1,7 @@
 const model = function(sequelize, DataTypes){
     let alias = 'product'
     let cols = {
-        sku: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -15,13 +15,9 @@ const model = function(sequelize, DataTypes){
         price: {
             type: DataTypes.INTEGER
         },
-        category: {
-            type: DataTypes.VARCHAR
-        },
-        classification: {
-            type: DataTypes.VARCHAR,
-            defaultValue: 'Sin Clasificacion'
-        },
+        categoryId: {
+            type: DataTypes.INTEGER
+        },        
         inOffer: {
             type: DataTypes.BOOLEAN,
             defaultValue: 0
@@ -46,11 +42,11 @@ const model = function(sequelize, DataTypes){
     Product.associate = function(models){
         Product.hasMany(models.shoppingCart,{
             as: 'shoppingCart',
-            foreingKey: 'sku'
+            foreingKey: 'productId'
         }),
         Product.hasMany(models.shoppingDetail,{
             as: 'shoppingDetail',
-            foreingKey: 'sku'
+            foreingKey: 'productId'
         })
     }
 

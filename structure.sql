@@ -14,17 +14,23 @@ Una compra supongo que no se puede modificar por eso no tiene el campo de actual
 En users guardar el usuario que lo creó, es decir un admin o el mismo usuario
 El diagrama ENTIDAD RELACIÓN EN DÓNDE LO DEBO GUARDAR????????????
 */ 
+CREATE TABLE "categories" (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR NOT NULL,
+    description VARCHAR NULL    
+);
+
 CREATE TABLE "products" (
-    sku INTEGER PRIMARY KEY AUTO_INCREMENT,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR NOT NULL,
     description VARCHAR NOT NULL,
     price INTEGER NOT NULL,
-    category VARCHAR NOT NULL,
-    classification VARCHAR  NULL,
+    categoryId INT NOT NULL,
     inOffer BOOLEAN NOT NULL,
     image VARCHAR NOT NULL,
     createdAt TIMESTAMP NOT NULL,
-    updatedAt TIMESTAMP NULL
+    updatedAt TIMESTAMP NULL,
+    FOREIGN KEY (categoryId) REFERENCES categories(id)
 );
 
 CREATE TABLE "users" (
@@ -42,12 +48,12 @@ CREATE TABLE "users" (
 
 CREATE TABLE "shoppingCart" (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    sku INTEGER NOT NULL,
+    productId INTEGER NOT NULL,
     userId INTEGER NOT NULL,
     units INTEGER NOT NULL,
     createdAt TIMESTAMP NOT NULL,
     updatedAt TIMESTAMP NULL,
-    FOREIGN KEY (sku) REFERENCES products(sku),
+    FOREIGN KEY (productId) REFERENCES products(id),
     FOREIGN KEY (userId) REFERENCES users(id)
 );
 
@@ -65,7 +71,7 @@ CREATE TABLE "shopping" (
 CREATE TABLE "shoppingDetail" (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     shoppingId INTEGER NOT NULL,
-    sku INTEGER NOT NULL,
+    productId INTEGER NOT NULL,
     units INTEGER NOT NULL,
-    FOREIGN KEY (sku) REFERENCES products(sku)
+    FOREIGN KEY (productId) REFERENCES products(id)
 );
