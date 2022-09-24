@@ -55,8 +55,7 @@
         </section>
 
         </div>
-        <% if(user && user.perfil=='admin' ) { 
-            console.log(user)%>
+        <% if(userLogged && userLogged.perfil=='admin' ) { %>
             <ul class="botones">
                 <a href="/register" class="crear-editar">CREAR</a>
                 <a href="/users/edit/<%= user.id %>" class="crear-editar">EDITAR</a>

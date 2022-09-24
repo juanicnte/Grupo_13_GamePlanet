@@ -5,7 +5,7 @@
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--blackDark);
 }
 
 li {
@@ -30,7 +30,7 @@ body {
 .eslogan-oferta {
     text-align: center;
     font-weight: 300;
-    color: #000000;
+    color: var(--blackDark);
     font-family: 'Montserrat Subrayada', sans-serif;
 }
 
@@ -78,6 +78,8 @@ body {
     border: solid rgb(33, 33, 33) 0.5rem;
     border-radius: 5%;
     margin-top: 3rem;
+    box-shadow: 2px 2px 10px var(--shadow);
+
 }
 
 .juegos h2 {
@@ -86,10 +88,6 @@ body {
     margin-bottom: 0.3rem;
 }
 
-.juegos:hover {
-    box-shadow: 0px 0px 20px #7e097e;
-     
- }
 
 
 .main-content {

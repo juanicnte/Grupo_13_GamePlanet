@@ -17,7 +17,7 @@
     width: 100%;
     display: flex;
     position: relative;
-    background: #000000;
+    background: var(--blackDark);
 }
 
 .picture-logo{
@@ -36,7 +36,7 @@
     display: flex;
     /* margin-left: 2rem; */
     margin-right: 2rem;
-    width: 80%;
+    width: 100%;
 
 /*CAMBIO EL HEADER PAQRA QUE EN TODAS LAS PAGINAS QUEDE CENTRADO Y BIEN DISTRIBUIDO*/
 
