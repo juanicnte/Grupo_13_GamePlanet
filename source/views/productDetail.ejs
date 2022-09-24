@@ -63,7 +63,7 @@
                     <li>clasificacíon: <p><%= product.classification %> </p></li>
                 </ul>
             </div>
-                <% if(userLogged && userLogged.perfil=='admin') { %>
+                <% if(userLogged && userLogged.perfil=='Admin') { %>
                 <ul class="botones">
                     <a href="/products/create" class="crear-editar">CREAR</a>
                     <a href="/products/edit/<%= product.sku %>" class="crear-editar">EDITAR</a>

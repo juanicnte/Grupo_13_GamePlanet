@@ -7,7 +7,7 @@
     "password": "$2a$10$xe0fCNTn0hnO1dvbHNkOiuBL9UnX/ntC4JQfXjsCF4Jls6tBqDF.2",
     "birthDay": "1111-11-11",
     "image": "defaultUser.png",
-    "perfil": "user"
+    "perfil" : "User"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "password": "$2a$10$HTY3STgzRCD0wbiyydVUw.KeqItbkmPX8zGRblkOh2l/RGS.hD9J6",
     "birthDay": "1111-11-11",
     "image": "defaultUser.png",
-    "perfil": "user"
+    "perfil" : "User"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "password": "$2a$10$CAz7n.g8Q1FOYd1V6iW35uN02C1/aBfqM.2ZZPhE8H3hNuYtsEzxK",
     "birthDay": "1983-12-10",
     "image": "tlou2-dh.png",
-    "perfil": "admin"
+    "perfil": "Admin"
   },
   {
     "id": 4,
@@ -46,7 +46,7 @@
     "password": "$2a$10$P7jigIpx5ldnufq/huiH1OrXtBJE3RiMlAfGVi/LZxEnmT/O5634K",
     "birthDay": "2022-09-14",
     "image": "defaultUser.png",
-    "perfil": "user"
+    "perfil" : "User"
   },
   {
     "id": 6,
@@ -54,7 +54,7 @@
     "user": "fran",
     "email": "francosec2002@gameplanet.com",
     "password": "$2a$10$XpRheb7d3MCAdylllSSkvero/4n9rtrq8ERe6voKCmgVfl5UIXv.O",
-    "perfil": "admin",
+    "perfil": "Admin",
     "birthDay": "2022-09-02",
     "image": "defaultUser.png"
   },
@@ -64,7 +64,7 @@
     "user": "Fernandez",
     "email": "tomasfernandez@hotmail.com",
     "password": "$2a$10$o9Vj5.2G.jha1w5KnD7a3u4CZoydzTPQHSbmD2kXBJMfn1ASyBvN.",
-    "perfil": "admin",
+    "perfil": "Admin",
     "birthDay": "2002-07-07",
     "image": "asadsas.png"
   },
@@ -74,7 +74,7 @@
     "user": "Montoyo",
     "email": "marcia@hotmail.com",
     "password": "$2a$10$KtWqB72gs7O3DhYTEFk.N.ICUNCrt9E1P92Q5BCWQgnmfNNt.rYbm",
-    "perfil": "user",
+    "perfil" : "User",
     "birthDay": "1983-07-19",
     "image": "Capture001.png"
   },
@@ -84,7 +84,7 @@
     "user": "12",
     "email": "PITITOGRANDE@GMAIL.COM",
     "password": "$2a$10$G3pbyxoS/GTmPQyr28qca.dLSZVJd3a1dzRg0BCRw7WwfSA6AtvLa",
-    "perfil": "user",
+    "perfil" : "User",
     "birthDay": "1111-11-11",
     "image": "defaultUser.png"
   },
@@ -94,7 +94,7 @@
     "user": "Marcita",
     "email": "marciap@gmail.com",
     "password": "$2a$10$e8KZz9MLvV4ARzNnD4uoHuC1DqrAvAcz7e1Q2lT1m7aVNRkywa4WG",
-    "perfil": "user",
+    "perfil": "User",
     "birthDay": "1111-11-11",
     "image": "asadsas.png"
   }

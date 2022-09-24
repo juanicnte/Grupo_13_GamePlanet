@@ -5,7 +5,7 @@ let middleware = (req, res, next) =>{
     // Alternativa 1 existe una cookie de usuario
 
 
-    if(req.cookies && req.cookies.email){
+    if(req.cookies && req.cookies.user){
         let users = all()
         let result = users.find(user => user.email == req.cookies.user)
         req.session.user = result 

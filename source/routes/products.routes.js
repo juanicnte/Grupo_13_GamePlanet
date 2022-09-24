@@ -39,25 +39,25 @@ const isAdmin = require('../middlewares/isAdmin')
 //Un sólo archivo (single('image)) o req.file 
 //Cualquer cantidad de archivos any() req.files
 //route.get('/products/create',  isLogged, isAdmin, productsController.create)
-route.get('/products/create', productsController.create)
+route.get('/products/create', isLogged, isAdmin, productsController.create)
 
 //route.post('/products',  productsController.save)
-route.post('/products/guardar', upload.any(), productsController.save)
+route.post('/products/guardar', isLogged, isAdmin, upload.any(), productsController.save)
 
 route.get('/products/:categoria?', productsController.index)
 
 route.get('/products/detail/:sku', productsController.show)
 
-route.put('/products/:sku', productsController.show)
+route.put('/products/:sku', isLogged, isAdmin, productsController.show)
 
-route.get('/products/edit/:sku', productsController.edit);
+route.get('/products/edit/:sku', isLogged, isAdmin, productsController.edit);
 
-route.put('/products/actualizar/:sku', upload.any(), productsController.update);
+route.put('/products/actualizar/:sku', isLogged, isAdmin, upload.any(), productsController.update);
 
-route.get('/products/update', productsController.update)
+route.get('/products/update', isLogged, isAdmin, productsController.update)
 //route.put('/products/:id',  productsController.update)
 
-route.delete('/products/delete/:sku',  productsController.remove)
+route.delete('/products/delete/:sku', isLogged, isAdmin, productsController.remove)
 
 
 route.get('/', productsController.index)
