@@ -16,7 +16,7 @@ let middleware = (req, res, next) =>{
         user = req.session.user
     }
 
-    res.locals.user = user
+    res.locals.userLogged = user
 
     return next()
 }

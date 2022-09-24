@@ -9,9 +9,9 @@
 
 
     <ul class="menu">
-      <% if(user){%>
-        <li class="user-name"><%= user.fullName %> </li>
-        <img src="/images/avatars/<%= user.image %> " class="userImage">
+      <% if(userLogged){%>
+        <li class="user-name"><%= userLogged.fullName %> </li>
+        <img src="/images/avatars/<%= userLogged.image %> " class="userImage">
         <li><a href="/logOut"><i class="fa-solid fa-right-from-bracket"></i> </a></li><!--<i class="fa-solid fa-user"></i>-->
         <% } else {%>
           <li><a href="/register"><i class="fa-regular fa-id-card"></i></a></li>

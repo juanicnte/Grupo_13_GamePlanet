@@ -36,7 +36,7 @@
       </nav>
               
     </main>
-    <% if(user && user.perfil=='admin') { %>
+    <% if(userLogged && userLogged.perfil=='admin') { %>
       <ul class="botones">
           <a href="/users" class="crear-editar">USUARIOS</a>
           <a href="/register" class="crear-editar">CREAR USUARIO</a>

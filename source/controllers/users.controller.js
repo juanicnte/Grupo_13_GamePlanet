@@ -122,7 +122,6 @@ const controlador = {
             })
         }
         
-        res.cookie('user',req.body.email,{maxAge: 1000*60*3})
 
         oldDataLogin = req.body   
         let usuarios = all()
@@ -130,8 +129,8 @@ const controlador = {
         
         if(dato){
             req.session.user = dato
-            if(req.body.remember){
-                res.cookies('email', req.body.email, {maxAge: 1000*60})
+            if(req.body.recordame){
+                res.cookie('user',req.body.email,{maxAge: 1000*60*3})
             }
              return res.redirect('/')
         }
