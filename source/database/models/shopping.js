@@ -27,6 +27,16 @@ const model = function(sequelize, DataTypes){
 
     }
     const shopping = sequelize.define(alias, cols, config)
+    shopping.associate = function(models){
+        shopping.belongTo(models.user,{
+            as: 'user',
+            foreingKey: 'userId'
+        }),
+        shopping.hasMany(models.shoppingDetail,{
+            as: 'shoppingDetail',
+            foreingKey: 'shoppingId'
+        })
+    }
     return shopping
 }
 

@@ -40,6 +40,10 @@ const model = function(sequelize, DataTypes){
     const Product = sequelize.define(alias, cols, config)
 
     Product.associate = function(models){
+        Product.belongTo(models.category,{
+            as: 'category',
+            foreingKey: 'categoryId'
+        }),
         Product.hasMany(models.shoppingCart,{
             as: 'shoppingCart',
             foreingKey: 'productId'
