@@ -74,7 +74,7 @@ footer{
     bottom: 30px;
     right: 30px;
     background-color: #0df053;
-    color: #fff;
+    color: var(--whiteLetter);
     border-radius: 50px;
     text-align: center;
     font-size: 40px;

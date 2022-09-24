@@ -60,12 +60,12 @@ main{
     box-shadow: 0px 0px 10px var(red), 0 0 80px rgb(236 159 255);
     transition-delay: 0s;
     text-decoration: none;
-    color: var(--white);
+    color: var(--whiteLetter);
     font-size: 1.5rem;
     font-weight: 600;
 }
 .button:hover{
-    color: var(--blackDark);
+    color: var(--blackLetter);
     background: rgb(255, 0, 149);
 }
 

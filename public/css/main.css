@@ -5,7 +5,7 @@
 
 a {
     text-decoration: none;
-    color: var(--blackDark);
+    color: var(--blackLetter);
 }
 
 li {
@@ -106,7 +106,7 @@ body {
 .botones a{
     text-align: center;
     width: 30%;
-    color: var(--white);
+    color: var(--whiteLetter);
     background-color: var(--blackDark);
 }
 .botones form{

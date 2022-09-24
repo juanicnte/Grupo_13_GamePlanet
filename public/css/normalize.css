@@ -1,8 +1,10 @@
 :root {
     --black: #181818;
+    --blackLetter: #000000;
     --blackDark: #000000;
     --shadow: #560664;
     --white: #ffffff;
+    --whiteLetter: #ffffff;
     --red: red;
     --whiteNo: #ebebeb;
 }

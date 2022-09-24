@@ -38,7 +38,7 @@ h2{
     margin: 0px 3rem 0rem;
     border-bottom: 1px solid grey;
     font-size: 15px;
-    color: #fff;
+    color: var(--whiteLetter);
 }
 
 form{
@@ -48,7 +48,7 @@ form{
 }
 
 .inputs-register{
-    color: #fff;
+    color: var(--whiteLetter);
     background-color: rgba(16,16,16,.4);
     width: 80%;
     padding: 0.5rem;
@@ -60,7 +60,7 @@ form{
 
 #button-register{
     margin: 1rem;
-    color: #fff;
+    color: var(--whiteLetter);
     font-size: 13px;
     background-color: #7e097e;
     width: 80%;

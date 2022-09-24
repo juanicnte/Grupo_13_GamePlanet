@@ -25,7 +25,7 @@ main{
     margin-top: 1rem;
 
     background-color: gainsboro;
-    color: black;
+    color: var(--blackLetter);
     border-radius: 5px;
     align-items: center;
 }
@@ -50,7 +50,7 @@ main{
     height: 2.5rem;
     position: relative;
     background-color: gray;
-    color: #fff;
+    color: var(--whiteLetter);
     border-radius: 5px;
 }
 
@@ -91,7 +91,7 @@ main{
     margin: 0.2rem 5% 2rem
 }
 .cantidadProductos input{
-    outline: #fff;
+    outline: var(--whiteLetter);
     border: 1px solid rgb(219, 219, 219) ;
     margin-right: 1rem;
     text-align: center;
@@ -102,11 +102,11 @@ main{
     border: 2px solid rgb(125, 0, 136);
 }
 .cantidadProductos a:active{
-    color: var(--white);
+    color: var(--whiteLetter);
     background-color: rgb(255, 0, 179);
 }
 .cantidadProductos a{
-    color: black;
+    color: var(--blackLetter);
     text-align: center;
     border-radius: 5px;
     width: 7rem;
@@ -143,7 +143,7 @@ main{
 .botones a{
     text-align: center;
     width: 30%;
-    color: white;
+    color: var(--whiteLetter);
     background-color: var(--black);
 }
 .botones form{

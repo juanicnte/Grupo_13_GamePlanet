@@ -106,7 +106,7 @@
 	height: 40px;
 	width: 200px;
 	padding: 0 20px;
-	color: #000;
+	color: var(--blackLetter);
 	border-radius: 50px;
 	font-size: 20px;
 	border: 1px solid #200920;
@@ -206,7 +206,7 @@
 }
 
 .fa-bars{
-    color: #fff;
+    color: var(--whiteLetter);
 
 }
 .barraDeBusqueda {
