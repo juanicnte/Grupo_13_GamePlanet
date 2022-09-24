@@ -20,7 +20,6 @@ const controlador = {
     show: function(req, res){
         let user = one(req.params.id)
         /*let product = products.filter(product => product.sku == req.params.id);*/
-        console.log(user)
         if(user){
             return res.render('users/userDetail',{ user });
         }
@@ -100,7 +99,7 @@ const controlador = {
         return res.redirect('/')
     },
     remove: (req, res) => {
-        let user = one(req.body.id);
+        //let user = one(req.body.id);
         let todos = all();
         let noEliminar = todos.filter(elemento => elemento.id != req.body.id);
         write(noEliminar);
@@ -150,7 +149,7 @@ const controlador = {
     },
     logout:(req, res) => {
         delete req.session.user
-        res.cookie('email', req.body.email,{maxAge:-1})
+        res.cookie('user', req.body.email,{maxAge:-1})
         return res.redirect('/')
         //return res.back()
     }
