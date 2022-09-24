@@ -43,7 +43,7 @@ const model = function(sequelize, DataTypes){
         Product.belongTo(models.category,{
             as: 'category',
             foreingKey: 'categoryId'
-        }),
+        })/* versión 2,
         Product.hasMany(models.shoppingCart,{
             as: 'shoppingCart',
             foreingKey: 'productId'
@@ -51,7 +51,7 @@ const model = function(sequelize, DataTypes){
         Product.hasMany(models.shoppingDetail,{
             as: 'shoppingDetail',
             foreingKey: 'productId'
-        })
+        })*/
     }
 
     return Product

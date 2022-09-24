@@ -38,6 +38,7 @@ const model = function(sequelize, DataTypes){
 
     }
     const user = sequelize.define(alias, cols, config)
+    /* versión 2
     user.associate = function(models){
         user.hasMany(models.shoppingCart,{
             as: 'shoppingCart',
@@ -47,7 +48,7 @@ const model = function(sequelize, DataTypes){
             as: 'shopping',
             foreingKey: 'userId'
         })
-    }
+    }*/
     return user
 }
 
