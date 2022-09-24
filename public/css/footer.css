@@ -1,6 +1,6 @@
 
 footer{
-    background-color: black;
+    background-color: var(--blackDark);
 }
 .main-footer{
     width: 100%;
@@ -62,7 +62,7 @@ footer{
     width: 100%;
 }
 .content{
-    background: #000000;
+    background: var(--blackDark);
 }
 
 

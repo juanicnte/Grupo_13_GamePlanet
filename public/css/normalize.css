@@ -1,5 +1,6 @@
 :root {
-    --black: #181818
+    --black: #181818;
+    --blackDark: #000000;
 }
 
 * {

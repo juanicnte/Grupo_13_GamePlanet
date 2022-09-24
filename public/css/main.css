@@ -102,14 +102,14 @@ body {
     display: flex;
     justify-content: space-evenly;
     border-top: 1px solid gainsboro;
-    background-color: black
+    background-color: var(--blackDark)
 }
 
 .botones a{
     text-align: center;
     width: 30%;
     color: white;
-    background-color: black;
+    background-color: var(--blackDark);
 }
 .botones form{
     text-align: center;
@@ -266,7 +266,7 @@ body {
         margin: 0px;
         justify-content: space-around;
         align-items: center;
-        background-color: #000000;
+        background-color: var(--blackDark);
         border-radius: 5px;
         margin-top: 10px;
     }
@@ -288,7 +288,7 @@ body {
             padding: 4px;
             border-radius: 8px;
             background-color: rgb(233, 233, 201);
-            color: rgb(0, 0, 0);
+            color: var(--blackDark);
     }
 
     .header-bottom-bar a{
@@ -320,7 +320,7 @@ body {
         padding: 10px;
     }
     .nav-bar a {
-        color: #000000;
+        color: var(--blackDark);
     }
 
     .main-content {
