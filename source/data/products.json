@@ -48,5 +48,12 @@
     "inOffer": "1",
     "sku": 9,
     "image": "Capture001.png"
+  },
+  {
+    "name": "",
+    "description": "",
+    "price": null,
+    "sku": 10,
+    "image": "default.png"
   }
 ]

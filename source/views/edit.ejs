@@ -80,6 +80,9 @@
                         <label for="classification-Soporte" class="radio-options">
                             <input type="radio" name="classification" id="classification-Soporte"
                                 value="Soporte 24/7" <% if(product.classification == "Soporte 24/7") { %> checked <% } %> >Soporte 24/7</label>
+                        <label for="classification-sin-clasificacion" class="radio-options">
+                            <input type="checkbox" name="classification" id="classification-sin-clasificarcion" 
+                            value="Sin Clasificar" <% if(product.classification == "Sin Clasificar") {%> checked <% } %> >Sin Clasificar</label>
 
                     </fieldset>
                     <fieldset class="text-area">
@@ -91,8 +94,10 @@
                             <input type="radio" name="inOffer" id="offer-no" value="0"
                             <% if(product.inOffer == "0") { %> checked <% } %>>No</label>
                     </fieldset>
-                    
-                    <button type="submit">Guardar</button>
+                    <section id="buttons">
+                        <button type="submit" class="button-c">Guardar</button>
+                        <a href="/" class="button-c">Volver</a>
+                    </section>
                 </form>
             </div>
         </main>

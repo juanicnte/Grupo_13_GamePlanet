@@ -145,6 +145,10 @@ main{
     width: 30%;
     color: var(--whiteLetter);
     background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 .botones form{
     text-align: center;
