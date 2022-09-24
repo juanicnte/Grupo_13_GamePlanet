@@ -84,7 +84,7 @@ footer{
 .btn-wsp:hover{
     text-decoration: none;
     color:  #0df053;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 @media screen and (min-width:0px) and (max-width:1023px) {

@@ -31,7 +31,7 @@ form {
 
 picture{
     width: 100vw;
-    border-bottom: 10px solid #ebebeb;
+    border-bottom: 10px solid var(--whiteNo);
 }
 picture img {
     padding-left: 1rem;
@@ -40,7 +40,7 @@ picture img {
 
 fieldset{
     padding: 1rem;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid var(--whiteNo);
     margin-bottom: 0.3rem;
 }
 

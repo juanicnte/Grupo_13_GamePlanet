@@ -26,7 +26,7 @@ body{
 }
 
 .feedback{
-    color: red;
+    color: var(--red);
     font-weight: bold;
 }
 

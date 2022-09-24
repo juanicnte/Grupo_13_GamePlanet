@@ -70,7 +70,7 @@ form{
 }
 
 .feedback{
-    color: red;
+    color: var(--red);
 } 
 
 #register-footer{

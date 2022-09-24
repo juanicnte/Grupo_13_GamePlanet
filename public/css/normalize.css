@@ -2,6 +2,9 @@
     --black: #181818;
     --blackDark: #000000;
     --shadow: #560664;
+    --white: #ffffff;
+    --red: red;
+    --whiteNo: #ebebeb;
 }
 
 * {

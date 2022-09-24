@@ -1,8 +1,8 @@
 body{
-    background-color: black;
+    background-color: var(--black);
 }
 main{
-    background-color: white;
+    background-color: var(--white);
     padding-top: 3vh;
 }
 
@@ -102,7 +102,7 @@ main{
     border: 2px solid rgb(125, 0, 136);
 }
 .cantidadProductos a:active{
-    color: white;
+    color: var(--white);
     background-color: rgb(255, 0, 179);
 }
 .cantidadProductos a{
@@ -138,13 +138,13 @@ main{
     display: flex;
     justify-content: space-evenly;
     border-top: 1px solid gainsboro;
-    background-color: black
+    background-color: var(--black)
 }
 .botones a{
     text-align: center;
     width: 30%;
     color: white;
-    background-color: black;
+    background-color: var(--black);
 }
 .botones form{
     text-align: center;

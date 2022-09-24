@@ -73,7 +73,7 @@ button{
 }
 
 .detalle #comprar{
-    background-color: white;
+    background-color: var(--white);
     border: 1px solid var(--blackDark);
     border-radius: 7%;
     display: flex;
@@ -90,7 +90,7 @@ button{
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    background: white;
+    background: var(--white);
     justify-content: space-around;
     border: 1px solid var(--blackDark);
 }
@@ -150,7 +150,7 @@ button i{
         justify-content: center;
         margin: auto;
         font-size: 1.5rem;
-        text-shadow: 2px 2px 2px white;
+        text-shadow: 2px 2px 2px var(--white);
     }
 
     .detalle #comprar {
@@ -192,7 +192,7 @@ button i{
     }
 */
     .detalle #comprar {
-        background-color: white;
+        background-color: var(--white);
         border: 1px solid var(--blackDark);
         border-radius: 7%;
         display: flex;
