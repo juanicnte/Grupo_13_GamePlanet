@@ -45,7 +45,7 @@ CREATE TABLE "users" (
     createdAt TIMESTAMP NOT NULL,
     updatedAt TIMESTAMP NULL
 );
-
+/*VERSIÓN 2
 CREATE TABLE "shoppingCart" (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     productId INTEGER NOT NULL,
@@ -75,3 +75,4 @@ CREATE TABLE "shoppingDetail" (
     units INTEGER NOT NULL,
     FOREIGN KEY (productId) REFERENCES products(id)
 );
+*/
