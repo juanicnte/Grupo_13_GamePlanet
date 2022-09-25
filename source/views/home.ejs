@@ -11,30 +11,34 @@
   <%- include('./partials/header.ejs') %>
 
     <main class="main-content">
-      <nav class="offers-container">
-        <div class="h2-container">
-          <h2 class="eslogan-oferta">Las mejores ofertas</h2>
+      <div class="title-top">
+      <h2>
+        Tendencias
+      </h2>
+      <a href="#">
+        <h3>Ver todo</h3>
+      </a>
+    </div>
+<div class="container-allMain">
+        <% products.forEach(element => {%>
+          <a href="/products/detail/<%= element.sku %>">
+      <div class="productos">
+        <picture>
+            <img src="images/<%= element.image %>" alt="<%= element.description %>" />
+        </picture>
+            <div class="informacion">
+            <span class="tipo-envio">En stock</span>
+            <div class="container-prices">
+            <span class="precio-ahora">$<%=(element.price - (element.price * 0.1)) %></span>
+            <span class="precio-anterior">$<%= element.price %></span>
+          </div>
+          <span class="tipo-entrega">Entrega inmediata</span>
+            <span class="name-product"><%= element.name %></span>
         </div>
-        <ul class="offers-list">
-          <% products.forEach(element => {%>
-            <li class="juegos">
-            <article class="game-list">
-              <h2><%= element.name %></h2>
-              <a href="/products/detail/<%= element.sku %>">
-
-                <img src="images/<%= element.image %>" alt="<%= element.description %>" />
-                <div class="precios-container">
-                  <p class="precio-ahora">$<%= (element.price - (element.price * 0.1)) %></p>
-                  <p class="precio-anterior">$<%= element.price %></p>
-                </div>
-              </a>
-            </article>
-          </li>
-          <% }); %>
-        
-        </ul>
-      </nav>
-              
+      </div>
+      </a>
+        <% }); %>
+      </div>           
     </main>
     <% if(userLogged && userLogged.perfil=='Admin') { %>
       <ul class="botones">
