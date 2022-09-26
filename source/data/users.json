@@ -36,7 +36,8 @@
     "email": "juani@mail.com",
     "password": "$2a$10$Pv9L6kW0hZgo8ukNZfgDoeVLQZsTE18pP0.ANWgnMTFDOEk.1s9b2",
     "birthDay": "2004-03-09",
-    "image": "defaultUser.png"
+    "image": "defaultUser.png",
+    "perfil": "Admin"
   },
   {
     "id": 5,

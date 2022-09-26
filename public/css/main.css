@@ -27,7 +27,7 @@ main{
     color: #fff;
 }.title-top h3{
     display: flex;
-    color: #5928b1;
+    color: #dddddd;
     width: 6rem;
     height: 2rem;
     border-radius: 20px;
@@ -35,9 +35,11 @@ main{
     justify-content: center;
     align-items: center;
 }.title-top h3:hover{
-    color: #b995f9;
-    text-shadow: 0 0 1rem #b995f9 ;
-    transition-property: text-shadow;
+    text-shadow: 0 0 1rem #5928b1;
+    background-color: #5928b199;
+    box-shadow: 0 0 5px #5928b1;
+    transition-property: box-shadow;
+    transition-duration: 0.1s;
 }
 
 
@@ -182,34 +184,19 @@ main{
     ::placeholder {
         color: grey;
     }
-
-    .lista-footer li {
-        margin-right: 3rem;
-    }
-
-    .icons-footer a {
-        margin: 0.3rem;
-    }
-
     .logo-footer-container{
         width: 20%;
     }
 
-    .icons-footer a {
-        margin: 15px;
-        border: solid 1px;
-        padding: 4px;
-        border-radius: 8px;
-        background-color: rgb(233, 233, 201);
+    .contact-location{
+        display: block;
     }
 
     .hamburger-button {
         display: none;
     }
-
-
-    .lista-footer {
-        flex-direction: row;
+    .links{
+        padding: 1rem 5rem
     }
 
 }
@@ -226,30 +213,15 @@ main{
     transition-duration: 0.3s;
     transition-property: font-size;
 }
-
-    .lista-footer li {
-        margin-right: 3rem;
-    }
-
-    .icons-footer a {
-        margin: 0.3rem;
-    }
-
-    .icons-footer {
-        margin: 1rem;
-    }
-
-    .content{
-        padding: 0 8vw;
-    }
-
-    .icons-footer a {
-        margin: 15px;
-        border: solid 1px;
-        padding: 4px;
-        border-radius: 8px;
-        background-color: rgb(233, 233, 201);
-    }
+.links{
+    padding: 1rem 15rem
 }
+}
+
+@media (min-width: 1440px) {
+    .links{
+        padding: 1rem 30rem;
+    }
+    } 
 
 
