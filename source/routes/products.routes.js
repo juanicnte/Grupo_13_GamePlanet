@@ -21,8 +21,8 @@ const destination = function(req, file, cb){
 const filename = function(req, file, cb){
     let unique =  Date.now();
     //console.log(file.fieldname)
-    //let name = file.fieldname + '-' + unique + extname(file.originalname);
-    let name = file.originalname;
+    let name = file.fieldname + '-' + unique + extname(file.originalname);
+    //let name = file.originalname;
    
     return cb(null, name);
 }

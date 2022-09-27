@@ -48,5 +48,15 @@
     "inOffer": "1",
     "sku": 9,
     "image": "Capture001.png"
+  },
+  {
+    "name": "Need for Speed",
+    "description": "",
+    "price": 2500,
+    "category": "Playstation",
+    "classification": "Juegos del momento",
+    "inOffer": "0",
+    "sku": 10,
+    "image": "image-1664309538628.png"
   }
 ]
