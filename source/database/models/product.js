@@ -35,7 +35,8 @@ const model = function(sequelize, DataTypes){
     }
     let config = {
         tableName: 'products',
-        timestamps: true
+        timestamps: true,
+        deleteAt: false
     }
     const Product = sequelize.define(alias, cols, config)
 

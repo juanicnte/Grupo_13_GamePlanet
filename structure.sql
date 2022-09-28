@@ -14,36 +14,36 @@ Una compra supongo que no se puede modificar por eso no tiene el campo de actual
 En users guardar el usuario que lo creó, es decir un admin o el mismo usuario
 El diagrama ENTIDAD RELACIÓN EN DÓNDE LO DEBO GUARDAR????????????
 */ 
-CREATE TABLE "categories" (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR NOT NULL,
-    description VARCHAR NULL    
+CREATE TABLE `categories` (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(20) NOT NULL,
+    `description` VARCHAR(200) NULL    
 );
 
-CREATE TABLE "products" (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR NOT NULL,
-    description VARCHAR NOT NULL,
-    price INTEGER NOT NULL,
-    categoryId INT NOT NULL,
-    inOffer BOOLEAN NOT NULL,
-    image VARCHAR NOT NULL,
-    createdAt TIMESTAMP NOT NULL,
-    updatedAt TIMESTAMP NULL,
+CREATE TABLE `products` (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL,
+    `description` VARCHAR(500) NULL,
+    `price` INTEGER NOT NULL,
+    `categoryId` INTEGER NOT NULL,
+    `inOffer` BOOLEAN NOT NULL,
+    `image` VARCHAR(50) NOT NULL,
+    `createdAt` TIMESTAMP NOT NULL,
+    `updatedAt` TIMESTAMP NULL,
     FOREIGN KEY (categoryId) REFERENCES categories(id)
 );
 
-CREATE TABLE "users" (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    fullName VARCHAR NOT NULL,
-    user VARCHAR NOT NULL,
-    email VARCHAR NOT NULL,
-    password VARCHAR  NULL,
-    perfil VARCHAR NOT NULL,
-    birthDay TIMESTAMP  NOT NULL,
-    image VARCHAR NOT NULL,
-    createdAt TIMESTAMP NOT NULL,
-    updatedAt TIMESTAMP NULL
+CREATE TABLE `users` (
+    `id` INTEGER PRIMARY KEY AUTO_INCREMENT,
+    `fullName` VARCHAR(50) NOT NULL,
+    `user` VARCHAR(20) NOT NULL,
+    `email` VARCHAR(50) NOT NULL,
+    `password` VARCHAR(200)  NULL,
+    `perfil` VARCHAR(10) NOT NULL,
+    `birthDay` TIMESTAMP  NOT NULL,
+    `image` VARCHAR(50) NOT NULL,
+    `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    `updatedAt` TIMESTAMP NULL
 );
 /*VERSIÓN 2
 CREATE TABLE "shoppingCart" (
