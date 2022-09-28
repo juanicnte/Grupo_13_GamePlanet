@@ -60,6 +60,11 @@ const controlador = {
         const error = error => res.render(error)
         return remove.then(success).catch(error)
         return res.redirect('/')
+    },
+    find: (req, res) => {
+
+        //Tener en cuenta el paginado
+        return
     }
 }
 

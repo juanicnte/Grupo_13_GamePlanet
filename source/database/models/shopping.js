@@ -23,7 +23,8 @@ const model = function(sequelize, DataTypes){
     let config = {
         tableName: 'shopping',
         timestamps: true,
-        updateAd: false
+        updateAt: false,
+        deleteAt: false
 
     }
     const shopping = sequelize.define(alias, cols, config)
