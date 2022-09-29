@@ -2,79 +2,80 @@ body{
     background-color: #343434;
 }
 main{
-    margin: 8rem 0;
+    padding: 4rem 0;
 }
 
-#logo-register{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}#logo-register img{
-    width: 5rem;
-    margin-left: 30%;
-}#logo-register i{
-    color: #7e097e;
-    font-size: 1.3rem;
-}#logo-register img:hover{
-    cursor: pointer;
-    width: 7rem;
-    transition: 0.5s;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}#logo-register i:active{
-    color: blueviolet;
-}#logo-register i:hover{
-    color: #d35bd3;
-    transition: 0.5s;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-h2{
-    margin: 0px 3rem 0rem;
-    border-bottom: 1px solid grey;
-    font-size: 15px;
-    color: var(--whiteLetter);
+#h2-register{
+    margin: 0px 10% ;
+    border-bottom: 1px solid #5928b1;
+    font-size: 18px;
+    color: #dddddd;
 }
 
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .inputs-register{
-    color: var(--whiteLetter);
+    color: #dddddd;
     background-color: rgba(16,16,16,.4);
     width: 80%;
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 1rem;
     box-shadow: inset 0 0 0 2px #3d3d3d;
     border-radius: 8px;
     outline: none;
+}.inputs-register:focus{
+    box-shadow: 0 0 1rem #5928b1;
 }
 
 #button-register{
     margin: 1rem;
     color: var(--whiteLetter);
-    font-size: 13px;
-    background-color: #7e097e;
+    font-size: 14px;
+    background-color: #5928b1;
     width: 80%;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0 0 10px #5928b1;
+    letter-spacing: 1px;
+}#button-register:hover{
+    background-color: #6033b1;
 }
 
 .feedback{
     color: var(--red);
 } 
 
-#register-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+@media screen and (min-width: 0px) and (max-width: 767px) {
+     #search-categories{
+        display: none;
+    }
 }
+
+@media screen and (min-width: 1023px){
+    form{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .inputs-register{
+        width: 39%;
+    }
+   }
+
+   @media screen and (min-width: 1440px){
+        #h2-register{
+            font-size: 22px;
+        }
+        #button-register{
+            font-size: 18px;
+        }
+
+    .inputs-register placeholder{
+        font-size: 18px;
+    }
+   }
