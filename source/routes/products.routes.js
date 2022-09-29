@@ -1,5 +1,5 @@
 const express = require('express');
-const productsController = require('../controllers/products.controller');
+const productsController = require('../controllers/products.controllerDB');
 const route = express.Router();
 
 
@@ -46,18 +46,18 @@ route.post('/products/guardar', isLogged, isAdmin, upload.any(), productsControl
 
 route.get('/products/:categoria?', productsController.index)
 
-route.get('/products/detail/:sku', productsController.show)
+route.get('/products/detail/:id', productsController.show)
 
-route.put('/products/:sku', isLogged, isAdmin, productsController.show)
+route.put('/products/:id', isLogged, isAdmin, productsController.show)
 
-route.get('/products/edit/:sku', isLogged, isAdmin, productsController.edit);
+//route.get('/products/edit/:sku', isLogged, isAdmin, productsController.edit);
 
-route.put('/products/actualizar/:sku', isLogged, isAdmin, upload.any(), productsController.update);
+route.put('/products/actualizar/:id', isLogged, isAdmin, upload.any(), productsController.update);
 
 route.get('/products/update', isLogged, isAdmin, productsController.update)
 //route.put('/products/:id',  productsController.update)
 
-route.delete('/products/delete/:sku', isLogged, isAdmin, productsController.remove)
+route.delete('/products/delete/:id', isLogged, isAdmin, productsController.remove)
 
 
 route.get('/', productsController.index)

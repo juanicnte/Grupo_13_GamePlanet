@@ -31,11 +31,11 @@ const model = function(sequelize, DataTypes){
     const ShoppingCart = sequelize.define(alias, cols, config)
 
     ShoppingCart.associate = function(models){
-        ShoppingCart.belongTo(models.user,{
+        ShoppingCart.belongsTo(models.user,{
             as: 'user',
             foreingKey: 'userId'
         }),
-        ShoppingCart.belongTo(models.product,{
+        ShoppingCart.belongsTo(models.product,{
             as: 'product',
             foreingKey: 'productId'
         })
@@ -43,7 +43,5 @@ const model = function(sequelize, DataTypes){
 
     return ShoppingCart
 }
-
-
 
 module.exports = model

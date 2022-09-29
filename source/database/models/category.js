@@ -7,10 +7,10 @@ const model = function(sequelize, DataTypes){
             autoIncrement: true
         },
         name: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         description: {
-            type: DataTypes.VARCHAR,
+            type: DataTypes.STRING,
             allownNull: true
         }
     }

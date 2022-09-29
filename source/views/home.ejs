@@ -21,7 +21,7 @@
     </div>
 <div class="container-allMain">
         <% products.forEach(element => {%>
-          <a href="/products/detail/<%= element.sku %>">
+          <a href="/products/detail/<%= element.id %>">
       <div class="productos">
         <picture>
             <img src="images/<%= element.image %>" alt="<%= element.description %>" />

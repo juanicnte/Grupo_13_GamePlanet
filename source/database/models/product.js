@@ -7,10 +7,10 @@ const model = function(sequelize, DataTypes){
             autoIncrement: true
         },
         name: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         description: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         price: {
             type: DataTypes.INTEGER
@@ -23,14 +23,16 @@ const model = function(sequelize, DataTypes){
             defaultValue: 0
         },
         image: {
-            type: DataTypes.VARCHAR,
+            type: DataTypes.STRING,
             defaultValue: 'default.png'
         },
         createdAt: {
-            type: DataTypes.DATE
+            type: DataTypes.DATE,
+            defaultValue: Date.now()
         },
         updatedAt: {
-            type: DataTypes.DATE
+            type: DataTypes.DATE,
+            AllowNull: true
         }
     }
     let config = {
@@ -41,7 +43,7 @@ const model = function(sequelize, DataTypes){
     const Product = sequelize.define(alias, cols, config)
 
     Product.associate = function(models){
-        Product.belongTo(models.category,{
+        Product.belongsTo(models.category,{
             as: 'category',
             foreingKey: 'categoryId'
         })/* versión 2,

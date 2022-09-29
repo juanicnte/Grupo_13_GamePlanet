@@ -26,11 +26,11 @@ const model = function(sequelize, DataTypes){
     const ShoppingDetail = sequelize.define(alias, cols, config)
 
     ShoppingDetail.associate = function(models){
-        ShoppingDetail.belongTo(models.product,{
+        ShoppingDetail.belongsTo(models.product,{
             as: 'product',
             foreingKey: 'productId'
         }),
-        ShoppingDetail.belongTo(models.shopping,{
+        ShoppingDetail.belongsTo(models.shopping,{
             as: 'shopping',
             foreingKey: 'shoppingId'
         })

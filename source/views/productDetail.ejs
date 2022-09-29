@@ -66,9 +66,9 @@
                 <% if(userLogged && userLogged.perfil=='Admin') { %>
                 <ul class="botones">
                     <a href="/products/create" class="crear-editar">CREAR</a>
-                    <a href="/products/edit/<%= product.sku %>" class="crear-editar">EDITAR</a>
-                    <form action="/products/delete/<%= product.sku %>?m=DELETE" method="POST">
-                        <button type="submit" name= "sku" value= "<%= product.sku %>">
+                    <a href="/products/edit/<%= product.id %>" class="crear-editar">EDITAR</a>
+                    <form action="/products/delete/<%= product.id %>?m=DELETE" method="POST">
+                        <button type="submit" name= "sku" value= "<%= product.id %>">
                             <a class="eliminar">ELIMINAR<i class="fa-solid fa-cart-shopping"></i></a>                           
                         </button>
                     </form>

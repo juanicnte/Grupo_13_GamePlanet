@@ -8,7 +8,7 @@ const model = function(sequelize, DataTypes){
             autoIncrement: true
         },
         bill: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         userId: {
             type: DataTypes.INTEGER
@@ -29,7 +29,7 @@ const model = function(sequelize, DataTypes){
     }
     const shopping = sequelize.define(alias, cols, config)
     shopping.associate = function(models){
-        shopping.belongTo(models.user,{
+        shopping.belongsTo(models.user,{
             as: 'user',
             foreingKey: 'userId'
         }),

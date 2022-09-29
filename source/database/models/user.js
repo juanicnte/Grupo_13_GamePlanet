@@ -7,22 +7,22 @@ const model = function(sequelize, DataTypes){
             autoIncrement: true
         },
         fullName: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         user: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         password: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         perfil: {
-            type: DataTypes.VARCHAR
+            type: DataTypes.STRING
         },
         birthDay: {
             type: DataTypes.DATE
         },
         image: {
-            type: DataTypes.VARCHAR,
+            type: DataTypes.STRING,
             defaultValue: 'defaultUser.png'
         },
         createdAt: {
