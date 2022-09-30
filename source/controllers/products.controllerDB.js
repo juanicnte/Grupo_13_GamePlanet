@@ -15,11 +15,28 @@ const controlador = {
         products.then(success).catch(error)
     },
     create: (req, res) => {
-        //let nuevo = generate(req.body);
-        return res.render('create')
+        const categories = db.category.findAll()
+        const success = data => res.render('create', { categories: data })
+        const error = error => res.render(error)
+        categories.then(success).catch(error)
     },
     save: (req, res) => {
         req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
+
+        console.log('req.body.name')
+        console.log(req.body.name)
+        console.log('req.body.description')
+        console.log(req.body.description)
+        console.log('req.body.price')
+        console.log(req.body.price)
+        console.log('req.body.category')
+        console.log(req.body.category)
+        console.log('req.body.inOffer')
+        console.log(req.body.inOffer)
+        console.log('req.body.image')
+        console.log(req.body.image)
+        console.log(Date.now())
+
         const save = db.product.create({
             //sku: req.body.sku,
             name: req.body.name,
@@ -29,7 +46,7 @@ const controlador = {
             //classification: req.body.classification,
             inOffer: req.body.inOffer,
             image: req.body.image,
-            createdAt: Date.now() 
+            //createdAt: new Date()
         })
         const success = data => res.redirect('/')
         const error = error => res.render(error)
@@ -55,8 +72,8 @@ const controlador = {
             //classification: req.body.classification,
             inOffer: req.body.inOffer,
             image: image == req.body.image ? req.body.image : image,
-            createdAt: createdAt,  
-            updatedAt: Date.now()  
+            /*createdAt: createdAt,  
+            updatedAt: Date.now() */
         },{
             where:{
                 id: req.body.id

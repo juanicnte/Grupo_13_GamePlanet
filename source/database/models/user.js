@@ -24,12 +24,6 @@ const model = function(sequelize, DataTypes){
         image: {
             type: DataTypes.STRING,
             defaultValue: 'defaultUser.png'
-        },
-        createdAt: {
-            type: DataTypes.DATE
-        },
-        updatedAt: {
-            type: DataTypes.DATE
         }
     }
     let config = {

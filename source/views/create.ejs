@@ -10,9 +10,7 @@
 
         <main>
 
-
             <div class="container-all">
-
 
                 <form action="/products/guardar" method="post" enctype="multipart/form-data" id="form-create">
 
@@ -37,44 +35,18 @@
                             placeholder="Escribe la descripción del producto aqui..." class="input-text"></textarea>
                     </fieldset>
 
-
                     <fieldset class="text-area">
                         <legend class="title-area">Categoría del producto</legend>
 
-                        <label for="category-Playstation" class="radio-options">
-                            <input type="radio" name="category" id="category-Playstation"
-                                value="Playstation">Playstation</label>
-
-                        <label for="category-Xbox" class="radio-options">
-                            <input type="radio" name="category" id="category-Xbox" value="Xbox">Xbox</label>
-
-                        <label for="category-Nintendo" class="radio-options">
-                            <input type="radio" name="category" id="category-Nintendo" value="Nintendo">Nintendo</label>
-
-                        <label for="category-PC" class="radio-options">
-                            <input type="radio" name="category" id="category-PC" value="PC">PC</label>
+                        <% categories.forEach(category => {%>
+                            <label for="category-<%= category.name %>" class="radio-options">
+                                <input type="radio" name="category" id="category-<%= category.name %>"
+                                    value="<%= category.id %>"><%= category.name %>
+                            </label>
+                        <% }); %>
 
                     </fieldset>
 
-                    <!--
-                    <fieldset class="text-area">
-                        <legend class="title-area">Clasificación del producto</legend>
-
-                        <label for="classification-Actuales" class="radio-options">
-                            <input type="radio" name="classification" id="classification-Actuales"
-                                value="Juegos del momento">Juegos del momento</label>
-                        <label for="classification-MasVendidos" class="radio-options">
-                            <input type="radio" name="classification" id="classification-MasVendidos"
-                                value="Más vendidos">Más vendidos</label>
-                        <label for="classification-Soporte" class="radio-options">
-                            <input type="radio" name="classification" id="classification-Soporte"
-                                value="Soporte 24/7">Soporte 24/7</label>
-                        <label for="classification-sin-clasificacion" class="radio-options">
-                            <input type="checkbox" name="classification" id="classification-sin-clasificarcion"
-                                value="Sin Clasificar">Sin Clasificar</label>
-
-                    </fieldset>
-                    -->
                     <fieldset class="text-area">
                         <legend class="title-area">¿En oferta?</legend>
 

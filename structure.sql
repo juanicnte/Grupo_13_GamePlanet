@@ -27,9 +27,9 @@ CREATE TABLE `products` (
     `price` INTEGER NOT NULL,
     `categoryId` INTEGER NOT NULL,
     `inOffer` BOOLEAN NOT NULL,
-    `image` VARCHAR(50) NOT NULL,
+    `image` VARCHAR(50) NOT NULL,/*
     `createdAt` TIMESTAMP NOT NULL,
-    `updatedAt` TIMESTAMP NULL,
+    `updatedAt` TIMESTAMP NULL,*/
     FOREIGN KEY (categoryId) REFERENCES categories(id)
 );
 
@@ -41,9 +41,9 @@ CREATE TABLE `users` (
     `password` VARCHAR(200)  NULL,
     `perfil` VARCHAR(10) NOT NULL,
     `birthDay` TIMESTAMP  NOT NULL,
-    `image` VARCHAR(50) NOT NULL,
+    `image` VARCHAR(50) NOT NULL/*,
     `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    `updatedAt` TIMESTAMP NULL
+    `updatedAt` TIMESTAMP NULL*/
 );
 /*VERSIÓN 2
 CREATE TABLE "shoppingCart" (

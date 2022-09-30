@@ -25,20 +25,20 @@ const model = function(sequelize, DataTypes){
         image: {
             type: DataTypes.STRING,
             defaultValue: 'default.png'
-        },
+        },/*
         createdAt: {
             type: DataTypes.DATE,
-            defaultValue: Date.now()
+            defaultValue: new Date()
         },
         updatedAt: {
             type: DataTypes.DATE,
             AllowNull: true
-        }
+        }*/
     }
     let config = {
         tableName: 'products',
-        timestamps: true,
-        deleteAt: false
+        timestamps: false,
+        //deleteAt: false
     }
     const Product = sequelize.define(alias, cols, config)
 
