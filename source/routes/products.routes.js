@@ -50,11 +50,11 @@ route.get('/products/detail/:id', productsController.show)
 
 route.put('/products/:id', isLogged, isAdmin, productsController.show)
 
-//route.get('/products/edit/:sku', isLogged, isAdmin, productsController.edit);
+route.get('/products/edit/:id', isLogged, isAdmin, productsController.edit);
 
 route.put('/products/actualizar/:id', isLogged, isAdmin, upload.any(), productsController.update);
 
-route.get('/products/update', isLogged, isAdmin, productsController.update)
+//route.get('/products/update', isLogged, isAdmin, productsController.update)
 //route.put('/products/:id',  productsController.update)
 
 route.delete('/products/delete/:id', isLogged, isAdmin, productsController.remove)
