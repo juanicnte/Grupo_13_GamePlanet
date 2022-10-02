@@ -71,14 +71,14 @@ const controlador = {
         })).then(success).catch(error)
     },
     remove: (req, res) => {
-        const remove = db.product.delete({
+        const product = db.product.destroy({
             where:{
                 id: req.body.id
             }
         })
         const success = data => res.redirect('/')
         const error = error => res.render(error)
-        return remove.then(success).catch(error)
+        return product.then(success).catch(error)
         return res.redirect('/')
     }/*,
     find: (req, res) => {

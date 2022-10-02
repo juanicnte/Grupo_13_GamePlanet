@@ -164,6 +164,9 @@ header{
   .category-container{
     width: 10rem;
     border-radius: 5px;
+    /*    background: hsl(285deg 28% 18%);
+    padding-top: 30px;
+    padding-bottom: 30px;*/
   }
 
   .buscar:hover input {
