@@ -220,6 +220,9 @@ main{
     .links{
         padding: 1rem 25rem;
     }
-    } 
+    main{
+        padding: 0 19rem;
+    }
+} 
 
 
