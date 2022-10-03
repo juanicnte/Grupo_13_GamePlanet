@@ -1,28 +1,5 @@
-main{
-    margin-top: 7rem;
-}
 body{
     background-color: #343434;
-}
-
-#logo-login{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10rem;
-
-}
-#logo-login img{
-    width: 5rem;
-    margin-left: 30%;
-}#logo-login img:hover{
-    cursor: pointer;
-    width: 7rem;
-    transition: 0.5s;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
 }
 
 .feedback{
@@ -30,24 +7,10 @@ body{
     font-weight: bold;
 }
 
-#logo-login i{
-    color: #7e097e;
-    font-size: 1.3rem;
-}#logo-login i:active{
-    color: blueviolet;
-}#logo-login i:hover{
-    color: #d35bd3;
-    transition: 0.5s;
-    transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
 
-/*
 #left-login{
-    
-}*/
+    padding: 25vh 0;
+}
 
 #rigth-login {
     display: none;
@@ -59,10 +22,10 @@ body{
 }
 
 h2{
-    margin: 0px 3rem 0rem;
-    border-bottom: 1px solid grey;
-    font-size: 15px;
-    color: var(--whiteLetter);
+    margin: 0px 10%;
+    border-bottom: 1px solid #5928b1;
+    font-size: 18px;
+    color: #dddddd;
 }
 
 form{
@@ -72,24 +35,27 @@ form{
 }
 
 .inputs-login{
-    color: var(--whiteLetter);
+    color: #dddddd;
     background-color: rgba(16,16,16,.4);
     width: 80%;
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 1rem;
     box-shadow: inset 0 0 0 2px #3d3d3d;
     border-radius: 8px;
     outline: none;
 }
+
 #iniciar-sesion{
     margin: 1rem;
     color: var(--whiteLetter);
-    font-size: 13px;
-    background-color: #7e097e;
+    font-size: 14px;
+    background-color: #5928b1;
     width: 80%;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0 0 10px #5928b1;
+    letter-spacing: 1px;
 }
 
 #olvide-contraseña{
@@ -97,7 +63,7 @@ form{
     text-align: center;
 }
 #olvide-contraseña a{
-    color: var(--whiteLetter);
+    color: #dddddd;
     text-decoration: none;
 }
 #registrate{
@@ -119,9 +85,25 @@ form{
     cursor: pointer;
 }
 
+header #search-categories{
+    display: none;
+}
 
-#login-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+@media screen and (min-width: 768px) {
+    main{
+        padding: 0 10%;
+    }
+}
+
+@media screen and (min-width: 1024){
+    main{
+        padding: 0 20%;
+    }
+        
+}
+
+@media screen and (min-width: 1440px){
+    main{
+        padding: 0 25%;
+    }
 }
