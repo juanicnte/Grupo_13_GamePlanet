@@ -155,10 +155,8 @@ header{
     }.icons-userMenu a{
         color: #dddddd;
     }
-
-    .burger-user{
-        width: 20%;
-    }.burger-user li{
+  
+      .burger-user li{
       font-size: 23px
     }
 
