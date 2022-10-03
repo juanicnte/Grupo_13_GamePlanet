@@ -92,45 +92,6 @@ main{
     padding: 1rem 0;
 }
 
-
-
-/*BOTONES CRUD*/
-
-.botones{
-    border-bottom:solid 1px grey ;
-    display: flex;
-    justify-content: space-evenly;
-    border-top: 1px solid gainsboro;
-    background-color: var(--black)
-}
-.botones a{
-    text-align: center;
-    width: 30%;
-    color: var(--whiteLetter);
-    background-color: var(--black);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-.botones form{
-    text-align: center;
-    width: 30%;
-    padding: 1rem;
-}
-.botones button{
-    font-size: 1rem;
-    cursor: pointer;
-}
-.botones a:hover{
-    color: blueviolet;
-    transition: color 0.5s ;
-}
-.crear-editar{
-    border-right: solid 1px whitesmoke;
-    padding: 1rem;
-}
-
 /*banner header*/
 #banner-image{
     display: none;

@@ -147,18 +147,16 @@ main{
 }
 
 .botones{
-    border-bottom:solid 1px grey ;
+    border-bottom:solid 1px #5928b16e ;
     display: flex;
     justify-content: space-evenly;
-    border-top: 1px solid gainsboro;
-    background-color: var(--blackDark)
+    background-color: #0e0e0e;
 }
 
 .botones a{
     text-align: center;
-    width: 30%;
     color: var(--whiteLetter);
-    background-color: var(--blackDark);
+    background-color: #0e0e0e
 }
 .botones form{
     text-align: center;
@@ -174,7 +172,7 @@ main{
     transition: color 0.5s ;
 }
 .crear-editar{
-    border-right: solid 1px whitesmoke;
+    margin: auto;
     padding: 1rem;
 }
 
