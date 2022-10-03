@@ -196,6 +196,7 @@ main{
         .main-description{
             margin: 0;
             height: 100%;
+            width: 200rem;
             border-left: 1px solid #5928b1;
         }
 
