@@ -32,8 +32,9 @@ header{
     text-shadow: 0 0 1px #5928b1;
     color: #dddddd;
 }.burger-user a:hover {
-  text-shadow: 0 0 1rem #5928b1;
-  transition-property: text-shadow;
+  color: #5928b1;
+  transition-property: color;
+  transition-duration: 0.3s;
 }
 
 #category-menus{
@@ -45,10 +46,7 @@ header{
     padding: 1rem;
 }#category-menus a{
     text-decoration: none;
-    text-shadow: 0 0 1px #5928b1;
     color: #dddddd;
-}#category-menus a:hover{
-  text-shadow: 0 0 1rem #5928b1;
 }
 
 /*LUPA*/
@@ -134,9 +132,17 @@ header{
 }.category-container p{
     margin-left: 5px;
     color: #dddddd;
-}.category-container a{
+}
+.category-container a{
   display: flex;
 }
+
+.category-container li a:hover p, .category-container:hover a:hover i{
+  color: #5928b1;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
 
 #banner-image{
     display: none;
@@ -152,6 +158,8 @@ header{
 
     .burger-user{
         width: 20%;
+    }.burger-user li{
+      font-size: 23px
     }
 
     #pic-logo{
