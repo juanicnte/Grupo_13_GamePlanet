@@ -1,5 +1,5 @@
 const express = require('express');
-const usersController = require('../controllers/users.controller');
+const usersController = require('../controllers/users.controllerDB');
 
 const route = express.Router();
 
@@ -39,26 +39,26 @@ const isLogged = require('../middlewares/isLogged')
 const isAdmin = require('../middlewares/isAdmin')
 
 route.get('/register', usersController.create)
-route.post('/register/save', isLogged, upload.any(),registerValidator, usersController.save)
+route.post('/register/save', upload.any(), usersController.save)
 
 route.get('/login', usersController.login)
 //route.get('/profile',usersController.profile)
-route.post('/login/access',loginValidator, usersController.access)
+route.post('/login/access', usersController.access)
 
-route.get('/logOut', isLogged, usersController.logout)
+route.get('/logOut', isLogged, usersController.logout)//lleva isLogged
 
 
-route.get('/users/detail/:id',isLogged, usersController.show)
+route.get('/users/detail/:id', usersController.show)//lleva isLogged
 
-route.put('/users/:id', isLogged, usersController.show)
+route.put('/users/:id', usersController.show)//lleva isLogged
 
-route.get('/users/edit/:id', isLogged, usersController.edit);
+route.get('/users/edit/:id', usersController.edit);//lleva isLogged
 
-route.put('/users/update/:id', isLogged, upload.any(), usersController.update);
+route.put('/users/update/:id', upload.any(), usersController.update);//lleva isLogged
 
-route.get('/users/update', isLogged, usersController.update)
+route.get('/users/update', usersController.update)//lleva isLogged
 
-route.get('/users', isLogged, isAdmin, usersController.index)
+route.get('/users',usersController.index)
 
 
 

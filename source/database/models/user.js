@@ -12,6 +12,9 @@ const model = function(sequelize, DataTypes){
         user: {
             type: DataTypes.STRING
         },
+        email:{
+            type: DataTypes.STRING
+        },
         password: {
             type: DataTypes.STRING
         },
@@ -24,11 +27,12 @@ const model = function(sequelize, DataTypes){
         image: {
             type: DataTypes.STRING,
             defaultValue: 'defaultUser.png'
-        }
+        },
+       
     }
     let config = {
         tableName: 'users',
-        timestamps: true
+        timestamps: false
 
     }
     const user = sequelize.define(alias, cols, config)
