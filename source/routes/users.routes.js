@@ -45,7 +45,7 @@ route.get('/login', usersController.login)
 //route.get('/profile',usersController.profile)
 route.post('/login/access', usersController.access)
 
-route.get('/logOut', isLogged, usersController.logout)//lleva isLogged
+route.get('/logOut', usersController.logout)//lleva isLogged
 
 
 route.get('/users/detail/:id', usersController.show)//lleva isLogged

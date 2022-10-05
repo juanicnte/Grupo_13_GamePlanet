@@ -17,16 +17,18 @@ const controlador = {
         
     },
     show: function(req, res){
-        let user = db.user.findOne({
+        db.user.findOne({
             where:{
                 id:req.params.id
             }
-        }).then
+        }).then(function(user){
+            if(user){
+                return res.render('users/userDetail',{ user:user });
+            }
+            res.redirect('/')
+        })
         /*let product = products.filter(product => product.sku == req.params.id);*/
-        if(user){
-            return res.render('users/userDetail',{ user:user });
-        }
-        res.render('/users/detail' + { user:null }, req.session);
+        
 
     },
     save: (req, res) => {
@@ -85,23 +87,30 @@ const controlador = {
     },
     edit: (req, res) => {
 
-        let user = one(req.params.id);
-        
-        return res.render('users/userEdit', {
-            user})
+        db.user.findOne({
+            where:{
+                id:req.params.id
+            }
+        }).then(function(user){
+            
+            return res.render('users/userEdit', {
+                user: user})
+            
+        })
     },
     update: (req, res) => {
-        const user = db.product.findByPk(req.body.id)        
+        const user = db.user.findByPk(req.body.id)        
        
         const success = data => res.redirect('/')
         const error = error => res.render(error)
-        return product.then((data) => db.product.update({
+        return user.then((data) => db.user.update({
             fullName: req.body.fullName,
             user: req.body.user,
             password: req.body.password,
             perfil: req.body.perfil,
             birthDay: req.body.birthDay,
-            image: req.files && req.files.length>0 ? req.files[0].fileName : data.image
+            image: req.files && req.files.length>0 ? req.files[0].fileName : data.image,
+            email: req.body.email
          },{
              where:{
                  id: req.body.id
@@ -109,11 +118,14 @@ const controlador = {
         })).then(success).catch(error)
     },
     remove: (req, res) => {
-        //let user = one(req.body.id);
-        let todos = all();
-        let noEliminar = todos.filter(elemento => elemento.id != req.body.id);
-        write(noEliminar);
-        return res.redirect('/')
+        const user = db.user.destroy({
+            where:{
+                id: req.body.id
+            }
+        })
+        const success = data => res.redirect('/users')
+        const error = error => res.render(error)
+        return user.then(success).catch(error)
     },
     login:(req, res) => {
         errorEmail = ''
@@ -134,17 +146,18 @@ const controlador = {
 
         oldDataLogin = req.body   
        
-        const dato = db.user.findOne({
+        db.user.findOne({
                 where:{
                     email:req.body.email
                 }
             })
-        .then(function(){
+        .then(function(dato){
              
         if(dato){
             req.session.user = dato
             if(req.body.recordame){
                 res.cookie('user',req.body.email,{maxAge: 1000*60*3})
+        
             }
              return res.redirect('/')
         }
