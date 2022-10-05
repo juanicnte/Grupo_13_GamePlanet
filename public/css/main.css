@@ -79,7 +79,7 @@ main{
     margin: 1rem;
 
 }.productos:hover{
-    box-shadow: 0 0 1.5rem #5928b1;
+    box-shadow: 2px 0px 3px #5928b1;
     transition-property: box-shadow;
     transition-duration: 0.3s;
 }
@@ -147,18 +147,16 @@ main{
 }
 
 .botones{
-    border-bottom:solid 1px grey ;
+    border-bottom:solid 1px #5928b16e ;
     display: flex;
     justify-content: space-evenly;
-    border-top: 1px solid gainsboro;
-    background-color: var(--blackDark)
+    background-color: #0e0e0e;
 }
 
 .botones a{
     text-align: center;
-    width: 30%;
     color: var(--whiteLetter);
-    background-color: var(--blackDark);
+    background-color: #0e0e0e
 }
 .botones form{
     text-align: center;
@@ -174,7 +172,7 @@ main{
     transition: color 0.5s ;
 }
 .crear-editar{
-    border-right: solid 1px whitesmoke;
+    margin: auto;
     padding: 1rem;
 }
 
@@ -220,8 +218,11 @@ main{
 
 @media (min-width: 1440px) {
     .links{
-        padding: 1rem 30rem;
+        padding: 1rem 25rem;
     }
-    } 
+    main{
+        padding: 0 19rem;
+    }
+} 
 
 

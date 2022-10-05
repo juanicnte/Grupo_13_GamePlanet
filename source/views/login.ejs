@@ -7,14 +7,8 @@
     <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
+    <%- include('./partials/header.ejs') %>
     <main class="mainLogin">
-      <picture id="logo-login">
-        <img src="../images/logoOriginal.png" alt="" >
-        <a href="/">
-          <i class="fa-sharp fa-solid fa-xmark"></i>
-        </a>
-      </picture>
-
     <div id="left-login">
       <h2>Inicia Sesión</h2>
       <form action="/login/access" method="POST">
@@ -57,7 +51,7 @@
             <input type="checkbox" name="recordame" id="recordame" class="radio-options" value="recordame"></label>
             <p>Recordame</p>
           </div>
-        <button id="iniciar-sesion" type="submit">Iniciar Sesion</button>
+        <button id="iniciar-sesion" type="submit">Ingresar</button>
       </form>
       
 

@@ -29,15 +29,13 @@
                         <input type="text" name="price" id="price" class="input-text"  value="<%=product.price%>">
                     </fieldset>
 
-                    
-                <picture>
-                    <img src="/images/<%= product.image %>" alt="<%=product.description%> ">
-                </picture> 
+               <div id="container-image">     
+                    <img src="/images/<%= product.image %>" class="image-edit" alt=>
                 <fieldset class="text-area">
                     <label for="image">Subir imagen</label>
                     <input type="file" name="image" id="image">
                 </fieldset>
-
+            </div>
                     
 
                     <fieldset class="text-area">
