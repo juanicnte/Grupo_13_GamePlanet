@@ -1,4 +1,4 @@
-node_modules/
-package-lock.json
-preguntas
-Diagrama Entidad-Relacion with shopping.drawio
+backend/node_modules/
+backend/package-lock.json
+backend/preguntas
+backend/Diagrama Entidad-Relacion with shopping.drawio
