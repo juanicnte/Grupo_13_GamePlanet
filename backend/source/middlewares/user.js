@@ -1,6 +1,8 @@
         /* Para json funcionaba así:
 const { all } = require('../models/users.model')*/
-const {index} = require('../controllers/users.controllerDB');
+//const {index} = require('../controllers/users.controllerDB');
+const db = require('../database/models/index');
+
 //Es un middleware de aplicación
 let middleware = (req, res, next) =>{
     let user = null
@@ -8,12 +10,19 @@ let middleware = (req, res, next) =>{
 
 
     if(req.cookies && req.cookies.user){
-        /* Para json funcionaba así:*/
+        /* Para json funcionaba así:
         let users = all()
-        let result = users.find(user => user.email == req.cookies.user)/*
-        let user = index()
-        let result = users.email(user => user.email == req.cookies.user)*/
-        req.session.user = result 
+        let result = users.find(user => user.email == req.cookies.user)*/
+        const user = db.user.findOne({
+            where:{
+                email: req.cookies.user
+            }
+        })
+        console.log(user)
+        const success = data => req.session.user = data
+        const error = error => res.render(error)
+        user.then(success).catch(error)
+         
     }   
 
     // Alternativa 2 existe un usuario en sesssion
