@@ -38,6 +38,10 @@ const loginValidator = require('../validations/login')
 const isLogged = require('../middlewares/isLogged')
 const isAdmin = require('../middlewares/isAdmin')
 
+
+//PREGUNTA REGISTER SIEMPRE Y CUANDO NO ESTÉ LOGUEADO
+//PARA QUE SE PUEDA REGISTRAR
+
 route.get('/register', usersController.create)
 route.post('/register/save', upload.any(), usersController.save)
 
@@ -45,20 +49,21 @@ route.get('/login', usersController.login)
 //route.get('/profile',usersController.profile)
 route.post('/login/access', usersController.access)
 
-route.get('/logOut', usersController.logout)//lleva isLogged
+route.get('/logOut', isLogged, usersController.logout)
 
+route.get('/users/detail/:id', isLogged, usersController.show)
 
-route.get('/users/detail/:id', usersController.show)//lleva isLogged
+route.put('/users/:id', isLogged, usersController.show)
 
-route.put('/users/:id', usersController.show)//lleva isLogged
+route.get('/users/edit/:id', isLogged, usersController.edit);
 
-route.get('/users/edit/:id', usersController.edit);//lleva isLogged
+route.put('/users/update/:id', isLogged, upload.any(), usersController.update);
 
-route.put('/users/update/:id', upload.any(), usersController.update);//lleva isLogged
+route.get('/users/update', isLogged, usersController.update)
 
-route.get('/users/update', usersController.update)//lleva isLogged
+//Sólo el Admin puede ver todos los usuarios, en cambio el usuario puede actualizar y ver sus datos
 
-route.get('/users',usersController.index)
+route.get('/users', isLogged, isAdmin, usersController.index)
 
 
 
