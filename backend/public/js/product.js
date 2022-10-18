@@ -21,8 +21,11 @@ document.querySelector("form").addEventListener('submit', function(e){
 
     if(!e.target.files[0].type.includes("jpg", "jpeg", "png")){
         createSpan('#idImage', 'Debe seleccionar una imagen en el formato jpg, jpeg y png')
-    }}
-    //Si quiero preguntar cosas por pantalla puedo usar let variable = window.prompt('Pregunta')
+    }})
+   
+
+})
+ //Si quiero preguntar cosas por pantalla puedo usar let variable = window.prompt('Pregunta')
     //Expresiones regulares sólo se hacen para texto (regex) página https://regexr.com/
     //Usar también el express validator ( se debe instalar - https://express-validator.github.io/docs/)
     /*○ Nombre
@@ -35,6 +38,4 @@ document.querySelector("form").addEventListener('submit', function(e){
 ○ (Opcional) Tablas secundarias
 ■ Verificar que los valores existan en base. Es decir, que los valores
 de talles, colores, etc. que lleguen sean válidos en la base.*/
-
-})
 
