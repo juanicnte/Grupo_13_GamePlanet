@@ -11,18 +11,52 @@ const deleteSpan = function(idElemento){
     let mensaje = document.deleteElemente("span")
     
 }
-//Obtengo todo el formulario para ver si el botón de crear puede o no hacer el submit 
-document.querySelector("form").addEventListener('submit', function(e){
-    
-    //Valido la imagen
+//Voy a validar todo el formulario para ello tengo que cargar el formulario y agregar el evento
+//submit del formulario
+window.addEventListener('load', function(){
     document.querySelector("#image").addEventListener('change', e => {
-    //document.querySelector("#imageMsj").innerHTML = !e.target.files[0].type.includes("jpg", "jpeg", "png") 
-            //? "Debe seleccionar una imagen en el formato jpg, jpeg y png" : null)
+        //document.querySelector("#imageMsj").innerHTML = !e.target.files[0].type.includes("jpg", "jpeg", "png") 
+                //? "Debe seleccionar una imagen en el formato jpg, jpeg y png" : null)
+                alert('Evento change')
+    
+        if(!e.target.files[0].type.includes("jpg", "jpeg", "png")){
+            alert('Entro al if')
+            document.querySelector("#msjImage").innerHTML = 'Debe seleccionar una imagen en el formato jpg, jpeg y png'
+            //createSpan('#idImage', 'Debe seleccionar una imagen en el formato jpg, jpeg y png')
+        }})
+    //Obtengo el formulario
+    //Obtengo todo el formulario para ver si el botón de crear puede o no hacer el submit 
+document.querySelector("#form-create").addEventListener('submit', function(e){
+    //Que no haga nada y estar tranquila
 
-    if(!e.target.files[0].type.includes("jpg", "jpeg", "png")){
-        createSpan('#idImage', 'Debe seleccionar una imagen en el formato jpg, jpeg y png')
-    }})
-   
+    e.preventDefault()
+
+    alert("Entro a la validacion del producto")
+    let errores = 0
+
+    //Validaciones de campos obligatorios
+    let name = document.querySelector("#name")
+    if(name.value == ''){
+        alert('El nombre es requerido')
+        errores++
+    }
+    if(name.value.length < 5){
+        alert('El nombre debe tener mínimo 5 letras')
+        errores++
+    }
+    
+alert(errores)
+    //Valido la imagen
+    
+    if(errores == 0) {
+        alert('sin errores')
+        e.target.submit()
+    }
+    else{
+        alert('mayor a cero')  
+    } 
+
+})
 
 })
  //Si quiero preguntar cosas por pantalla puedo usar let variable = window.prompt('Pregunta')
