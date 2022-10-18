@@ -14,22 +14,22 @@
 
                 <form action="/products/guardar" method="post" enctype="multipart/form-data" id="form-create">
 
-                    <fieldset class="text-area">
+                    <fieldset id="fsName" class="text-area">
                         <legend class="title-area">Título</legend>
-                        <input type="text" name="name" id="name" placeholder="Título del Juego" class="input-text">
+                        <input type="text" name="name" id="name" placeholder="Título del Juego" class="input-text" minlength="5" maxlength="50">
                     </fieldset>
 
-                    <fieldset class="text-area">
+                    <fieldset id="fsPrice" class="text-area">
                         <legend class="title-area">Precio de producto</legend>
                         <input type="text" name="price" id="price" placeholder="$$$$$" class="input-text">
                     </fieldset>
 
-                    <fieldset class="text-area">
+                    <fieldset id="fsImage" class="text-area">
                         <label for="image">Subir imagen</label>
                         <input type="file" name="image" id="image" class="input-text">
                     </fieldset>
 
-                    <fieldset class="text-area">
+                    <fieldset id="fsDescription" class="text-area">
                         <legend class="title-area">Descripción del producto</legend>
                         <textarea name="description" id="description" cols="30" rows="3"
                             placeholder="Escribe la descripción del producto aqui..." class="input-text"></textarea>
@@ -66,6 +66,9 @@
         <footer class="main-footer">
             <%- include('./partials/footer.ejs') %>
         </footer>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <!-- Falta el script de nuestro proyecto-->
+        <!--Que pasa si no tengo internet con la ruta script de validator-->
 </body>
 
 </html>

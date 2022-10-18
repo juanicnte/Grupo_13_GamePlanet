@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const {port, start} = require('./modules/server')
+const {port, start} = require('./backend/modules/server')
 const static = require('./modules/static')
 const { join } = require('path');
 
