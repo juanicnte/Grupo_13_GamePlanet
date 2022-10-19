@@ -5,7 +5,7 @@ const controlador = {
     index: (req, res) => {
         const products = db.product.findAll()
         const success = data => res.render('home',{ products: data})
-        const error = error => res.render(error)
+        const error = error => res.send(error)
         products.then(success).catch(error)
     },
     show: function(req, res){
