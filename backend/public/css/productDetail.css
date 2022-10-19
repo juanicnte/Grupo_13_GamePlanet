@@ -123,11 +123,6 @@ main{
         font-size: 1.5rem;
         font-weight: 800;
     }
-    .description{
-        margin: -9px 10%;
-        position: relative;
-        left: -40%;
-    }
     .lista-description{
         padding: 1rem 0 0 ;
     }
@@ -150,10 +145,6 @@ main{
             width: 100rem;
             height: 100%;
             margin-right: 1rem ;
-        }
-        .img-juego{
-            width: 45%;
-            height: 99%;
         }
 
         .main-description{

@@ -193,9 +193,6 @@ main{
     .hamburger-button {
         display: none;
     }
-    .links{
-        padding: 1rem 5rem
-    }
 
 }
 
@@ -211,15 +208,9 @@ main{
     transition-duration: 0.3s;
     transition-property: font-size;
 }
-.links{
-    padding: 1rem 15rem
-}
 }
 
 @media (min-width: 1440px) {
-    .links{
-        padding: 1rem 25rem;
-    }
     main{
         padding: 0 19rem;
     }
