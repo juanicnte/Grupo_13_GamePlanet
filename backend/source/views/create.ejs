@@ -27,6 +27,7 @@
                     <fieldset id="fsImage" class="text-area">
                         <label for="image">Subir imagen</label>
                         <input type="file" name="image" id="image" class="input-text">
+                        <p id="msjImage" class="input-text"></p>
                     </fieldset>
 
                     <fieldset id="fsDescription" class="text-area">
@@ -53,7 +54,7 @@
                         <label for="offer-si" class="radio-options">
                             <input type="radio" name="inOffer" id="offer-si" value="1">Si</label>
                         <label for="offer-no" class="radio-options">
-                            <input type="radio" name="inOffer" id="offer-no" value="0">No</label>
+                            <input type="radio" name="inOffer" id="offer-no" value="0" checked>No</label>
                     </fieldset>
                     <section id="buttons">
                         <button type="submit" class="button-c">Guardar</button>
@@ -67,6 +68,7 @@
             <%- include('./partials/footer.ejs') %>
         </footer>
         <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <script src="../js/product.js"></script>
         <!-- Falta el script de nuestro proyecto-->
         <!--Que pasa si no tengo internet con la ruta script de validator-->
 </body>
