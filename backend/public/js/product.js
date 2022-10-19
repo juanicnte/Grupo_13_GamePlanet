@@ -33,7 +33,6 @@ window.addEventListener('load', function(){
 
         let errores = 0
         //alert(document.querySelector("body"))
-
         //Validaciones de campos obligatorios
         let name = document.querySelector("#name")
         let description = document.querySelector("#description")
