@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs') %> 
-    <link rel="stylesheet" href="/css/edit.css" />
+    <%- include('./partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/edit.css" />
 </head>
 
 <body>
@@ -11,60 +11,58 @@
 
         <main>
 
-            
             <div class="container-all">
-                
-               
-               
+
                 <form action="/products/actualizar/<%=product.id%>?m=PUT" method="POST" class="form-edit">
-                   <input type="hidden" name="id" value="<%=product.id%>">
-                   
-                   <fieldset class="text-area">
+
+                    <input type="hidden" name="id" value="<%=product.id%>">
+
+                    <fieldset id="fsName" class="text-area">
                         <legend class="title-area">Título</legend>
-                        <input type="text" name="name" id="name" placeholder="Name" class="input-text"  value="<%=product.name%>" class="e-productname">
+                        <input type="text" name="name" id="name" placeholder="Name" class="input-text"
+                            value="<%=product.name%>" class="e-productname">
                     </fieldset>
 
-                    <fieldset class="text-area">
+                    <fieldset id="fsPrice" class="text-area">
                         <legend class="title-area">Precio</legend>
-                        <input type="text" name="price" id="price" class="input-text"  value="<%=product.price%>">
+                        <input type="text" name="price" id="price" class="input-text" value="<%=product.price%>">
                     </fieldset>
 
-               <div id="container-image">     
-                    <img src="/images/<%= product.image %>" class="image-edit" alt=>
-                <fieldset class="text-area">
-                    <label for="image">Subir imagen</label>
-                    <input type="file" name="image" id="image">
-                </fieldset>
-            </div>
-                    
-
-                    <fieldset class="text-area">
-                        <legend class="title-area">Descripción</legend>
-                        <input type="text" name="description" id="description" class="input-text" value="<%=product.description%>">
-                    </fieldset>
-
-                    <div class="form-group">
-                        <fieldset class="text-area">
-                            <legend class="title-area">Categoría</legend>
-                            <% categories.forEach(category => {%>
-                                <label for="category-<%= category.name %>" class="radio-options">
-                                    <input type="radio" name="category" id="category-<%= category.name %>"
-                                        value="<%= category.id %>"
-                                        <%= product.categoryId == category.id ? 'checked' : null %>><%= category.name %>
-                                </label>
-                            <% }); %>
+                    <div id="container-image">
+                        <img src="/images/<%= product.image %>" class="image-edit" alt=>
+                        <fieldset id="fsImage" class="text-area">
+                            <label for="image">Subir imagen</label>
+                            <input type="file" name="image" id="image">
                         </fieldset>
                     </div>
 
-                    
+                    <fieldset id="fsDescription" class="text-area">
+                        <legend class="title-area">Descripción</legend>
+                        <input type="text" name="description" id="description" class="input-text"
+                            value="<%=product.description%>">
+                    </fieldset>
+
+                    <div class="form-group">
+                        <fieldset id="fsCategory" class="text-area">
+                            <legend id="legCategory" class="title-area">Categoría</legend>
+                            <% categories.forEach(category=> {%>
+                                <label for="category-<%= category.name %>" class="radio-options">
+                                    <input type="radio" name="category" id="category-<%= category.name %>"
+                                        value="<%= category.id %>" <%=product.categoryId==category.id ? 'checked' : null
+                                        %>><%= category.name %>
+                                </label>
+                                <% }); %>
+                        </fieldset>
+                    </div>
+
                     <fieldset class="text-area">
                         <legend class="title-area">¿En oferta?</legend>
                         <label for="offer-si" class="radio-options">
-                            <input type="radio" name="inOffer" id="offer-si" value="1"
-                            <% if(product.inOffer == "1") { %> checked <% } %>>Si</label>
+                            <input type="radio" name="inOffer" id="offer-si" value="1" <% if(product.inOffer=="1" ) { %>
+                            checked <% } %>>Si</label>
                         <label for="offer-no" class="radio-options">
-                            <input type="radio" name="inOffer" id="offer-no" value="0"
-                            <% if(product.inOffer == "0") { %> checked <% } %>>No</label>
+                            <input type="radio" name="inOffer" id="offer-no" value="0" <% if(product.inOffer=="0" ) { %>
+                            checked <% } %>>No</label>
                     </fieldset>
                     <section id="buttons">
                         <button type="submit" class="button-c">Guardar</button>
@@ -76,6 +74,8 @@
         <footer class="main-footer">
             <%- include('./partials/footer.ejs') %>
         </footer>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <script src="../js/product.js"></script>
 </body>
 
 </html>
