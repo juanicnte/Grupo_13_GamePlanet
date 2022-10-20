@@ -53,7 +53,7 @@ window.addEventListener('load', function () {
     }
 
     const validarImagen = (image) => {
-        if (image !=null && image.files[0] != undefined && !image.files[0].type.includes("jpg") && !image.files[0].type.includes("jpeg") && !image.files[0].type.includes("png") && !image.files[0].type.includes("gif")) {
+        if (image !=null && image.files[0] != undefined && !image.files[0].type.includes("image")) {
             image.style.background = 'var(--msjError)';
             createSpan("spanImage", "#fsImage", 'Debe seleccionar una imagen en el formato jpg, jpeg y png')
             return false
