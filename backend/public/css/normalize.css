@@ -6,6 +6,8 @@
     --white: #ffffff;
     --whiteLetter: #ffffff;
     --red: red;
+    --msjError: #560664;
+    --sinError:rgba(16,16,16,.4);
     --whiteNo: #ebebeb;
 }
 

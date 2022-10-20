@@ -26,8 +26,7 @@
 
                     <fieldset id="fsImage" class="text-area">
                         <label for="image">Subir imagen</label>
-                        <input type="file" name="image" id="image" class="input-text">
-                        <p id="msjImage" class="input-text"></p>
+                        <input type="file" name="image" id="image" class="input-text">                        
                     </fieldset>
 
                     <fieldset id="fsDescription" class="text-area">
@@ -36,8 +35,8 @@
                             placeholder="Escribe la descripción del producto aqui..." class="input-text"></textarea>
                     </fieldset>
 
-                    <fieldset class="text-area">
-                        <legend class="title-area">Categoría del producto</legend>
+                    <fieldset id="fsCategory" class="text-area">
+                        <legend id="legCategory" class="title-area">Categoría del producto</legend>
 
                         <% categories.forEach(category => {%>
                             <label for="category-<%= category.name %>" class="radio-options">
