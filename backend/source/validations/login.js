@@ -1,9 +1,5 @@
 const { body } = require('express-validator')
-
-
-
 const { compareSync } = require('bcryptjs')
-
 
 const db = require('../database/models/index');
 const { nextTick } = require('process');
