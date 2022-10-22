@@ -135,7 +135,4 @@ window.addEventListener('load', function () {
  //Si quiero preguntar cosas por pantalla puedo usar let variable = window.prompt('Pregunta')
     //Expresiones regulares sólo se hacen para texto (regex) página https://regexr.com/
     //Usar también el express validator ( se debe instalar - https://express-validator.github.io/docs/)
-/*
-■ Verificar que los valores existan en base. Es decir, que los valores
-de talles, colores, etc. que lleguen sean válidos en la base.*/
 

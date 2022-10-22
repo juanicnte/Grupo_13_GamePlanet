@@ -48,7 +48,11 @@ route.post('/register/save',registerValidator, upload.any(), usersController.sav
 
 route.get('/login', usersController.login)
 //route.get('/profile',usersController.profile)
+<<<<<<< HEAD
 route.post('/login/access',loginValidator, usersController.access)
+=======
+route.post('/login/access', loginValidator, usersController.access)
+>>>>>>> 2b790ec07ea827df5b1f58d0a9337d4143886a3b
 
 route.get('/logOut', isLogged, usersController.logout)
 
