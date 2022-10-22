@@ -1,4 +1,5 @@
 const express = require('express');
+
 const usersController = require('../controllers/users.controllerDB');
 
 const route = express.Router();
@@ -43,11 +44,11 @@ const isAdmin = require('../middlewares/isAdmin')
 //PARA QUE SE PUEDA REGISTRAR
 
 route.get('/register', usersController.create)
-route.post('/register/save', upload.any(), usersController.save)
+route.post('/register/save',registerValidator, upload.any(), usersController.save)
 
 route.get('/login', usersController.login)
 //route.get('/profile',usersController.profile)
-route.post('/login/access', usersController.access)
+route.post('/login/access',loginValidator, usersController.access)
 
 route.get('/logOut', isLogged, usersController.logout)
 

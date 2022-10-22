@@ -34,6 +34,7 @@ const upload = multer({storage:multer.diskStorage({destination, filename})});
 
 const isLogged = require('../middlewares/isLogged')
 const isAdmin = require('../middlewares/isAdmin')
+const isProduct = require('../validations/product')
 
 
 //Un sólo archivo (single('image)) o req.file 

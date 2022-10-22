@@ -26,16 +26,15 @@
             <% if (locals && locals.errors && errors.email) { %>
               <p class="feedback"><%= errors.email.msg %></p><% } %>
 
-              <% if (errorEmail) { %>
-                <p class="feedback"><%= errorEmail.email.msg %></p><% } %>
+            
 
         
           <input type="email" name="email" placeholder="Correo electronico" id="correo" class="inputs-register" value="<%= oldData && oldData.email ? oldData.email : ''%>" required>
         
           <input type="date" name="birthDay" id="nacio" class="inputs-register" value="<%= oldData && oldData.birthDay ? oldData.birthDay : ''%>" required /> 
-          <% if (locals && locals.errors && errors.password && !errorEmail) { %><p class="feedback"><%= errors.password.msg %></p><% } %>
+        
 
-          <% if (locals && locals.errors && errors.password && errorEmail) { %><p class="feedback"><%= errors.password.msg %></p><% } %>
+          <% if (locals && locals.errors && errors.password) { %><p class="feedback"><%= errors.password.msg %></p><% } %>
 
           
           <input type="password" name="password" placeholder="contraseña" id="contraseña" class="inputs-register"
