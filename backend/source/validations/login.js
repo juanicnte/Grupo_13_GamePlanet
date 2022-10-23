@@ -1,4 +1,4 @@
-const { body } = require('express-validator')
+const { body, check } = require('express-validator')
 const { compareSync } = require('bcryptjs')
 
 const db = require('../database/models/index');
@@ -7,13 +7,77 @@ console.log("he ingresado al validador back")
 
 let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacío').bail().isEmail().withMessage('Email no valido').bail()
 let password = body('password').notEmpty().withMessage('Por favor, ingrese su contraseña').bail()
+let valor = check('email')
+console.log(valor.fields[0])
+/*
+    body('email').custom(value => {
+      return User.findUserByEmail(value).then(user => {
+        if (user) {
+          return Promise.reject('E-mail already in use');
+        }
+      });
+    })
+  /*
+let existeEmail = body('email').custom((async function(req,res) {
+    
+    const user = db.user.findOne({
+        where:{
+            email: req
+        }
+    })
+    console.log(user)
+    const success = data => req.session.user = data
+    const error = error => res.render(error)
+    user.then(success).catch(error) 
 
+
+                usuario = db.user.findOne({
+                    where:{
+                        email: req
+                    }
+                })
+                if(usuario) {
+                    res.status(400).json({
+                        message: 'This login is already taken. Try another.'
+                    })}
+                ((user) => {
+
+                    if(!compareSync(req.body.password, user.password)){
+                        console.log('CONTRASEÑA INCORRECTAAAAAAAAAAAAAA');
+                        return Promise.reject("Email o contraseña incorrectos")
+                    }
+                })
+
+            }))
+
+console.log(body('email').)
+const user = db.user.findOne({
+    where:{
+        email: req.body.email
+    }
+})
+        const success = data => data
+        const error = error => res.send(error)
+        user.then(success).catch(error)
+*/
 module.exports = [
     
-    email, password
+    email, password,
+    check('email').custom(value => {
+        return db.user.findOne({
+            where:{
+                email: value
+            }
+        }).then(user => {
+          if (!user) {
+            return Promise.reject('E-mail no existe');
+          }
+        });
+      })
     /*
     body('password')
         .custom((async function(req,res) {  
+            console.log(req)
             usuario = db.user.findOne({
                 where:{
                     email: req.body.email
