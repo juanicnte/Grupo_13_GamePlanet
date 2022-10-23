@@ -47,22 +47,3 @@ module.exports = [
         }))
 >>>>>>> 2b790ec07ea827df5b1f58d0a9337d4143886a3b*/
 ]  
-          
-
-            
-            
-         
-      
-   
-
-
-console.log(body('email').)
-const user = db.user.findOne({
-    where:{
-        email: req.body.email
-    }
-})
-        const success = data => data
-        const error = error => res.send(error)
-        user.then(success).catch(error)
-*/
