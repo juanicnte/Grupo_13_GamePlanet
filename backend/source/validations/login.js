@@ -1,5 +1,5 @@
 const { body, check } = require('express-validator')
-const { compareSync } = require('bcryptjs')
+const { bcryptjs } = require('bcryptjs')
 
 const db = require('../database/models/index');
 const { nextTick } = require('process');
@@ -19,31 +19,21 @@ module.exports = [
         }).then(user => {
           if (!user) {
             return Promise.reject('E-mail no existe');
-          }
+          }/*
+          if(!bcryptjs.compareSync(user.password, value)){
+            return Promise.reject('La clave no coincide');
+          }*/
         });
-      })
-
-    /*
-    body('password')
-        .custom((async function(req,res) {  
-            usuario = db.user.findOne({
-                where:{
-                    email: req.body.email
-                }
-            })
-            console.log(usuario)
-            if(usuario) {
-                res.status(400).json({
-                    message: 'This login is already taken. Try another.'
-                })}
-            ((user) => {
- 
-                if(!compareSync(req.body.password, user.password)){
-                     console.log('CONTRASEÑA INCORRECTAAAAAAAAAAAAAA');
-                    return Promise.reject("Email o contraseña incorrectos")
-                }
-            })
- 
-        }))
->>>>>>> 2b790ec07ea827df5b1f58d0a9337d4143886a3b*/
+      })/*,
+      check('password').custom(value => {
+          return db.user.findOne({
+              where:{
+                password: bcryptjs.hashSync(value,10)
+              }
+          }).then(user => {
+            if (!user) {
+              return Promise.reject('La clave no coincide');
+            }
+          });
+        })*/
 ]  

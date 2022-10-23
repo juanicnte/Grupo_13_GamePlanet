@@ -11,48 +11,39 @@
 <body>
   <%- include('./partials/header.ejs') %>
 
-    <main class="mainRegister">
+  <main class="mainRegister">
 
-      <h2 id="h2-register">Regístrate</h2>
+    <h2 id="h2-register">Regístrate</h2>
       <form action="/register/save" method="POST" id="form-register" enctype="multipart/form-data">
+              
+              <input type="text" name="fullName" id="nombreCompleto" class="inputs-register" placeholder="Nombre y apellido"
+              value="<%= oldData && oldData.fullName ? oldData.fullName : ''%>" required>
+                  
+            <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@" class="inputs-register"
+              value="<%= oldData && oldData.user ? oldData.user : ''%>" required>
+            
 
-        <input type="text" name="fullName" id="nombreCompleto" class="inputs-register" placeholder="Nombre y apellido"
-          value="<%= oldData && oldData.fullName ? oldData.fullName : ''%>" required>
+            <% if (locals && locals.errors && errors.email) { %>
+              <p class="feedback"><%= errors.email.msg %></p><% } %>
 
-        <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@" class="inputs-register"
-          value="<%= oldData && oldData.user ? oldData.user : ''%>" required>
+            
 
+        
+          <input type="email" name="email" placeholder="Correo electronico" id="correo" class="inputs-register" value="<%= oldData && oldData.email ? oldData.email : ''%>" required>
+        
+          <input type="date" name="birthDay" id="nacio" class="inputs-register" value="<%= oldData && oldData.birthDay ? oldData.birthDay : ''%>" required /> 
+        
 
-        <% if (locals && locals.errors && errors.email) { %>
-          <p class="feedback">
-            <%= errors.email.msg %>
-          </p>
-          <% } %>
+          <% if (locals && locals.errors && errors.password) { %><p class="feedback"><%= errors.password.msg %></p><% } %>
 
+          
+          <input type="password" name="password" placeholder="contraseña" id="contraseña" class="inputs-register"
+            value="<%= oldData && oldData.password ? oldData.password : ''%>" required>
+        
+          
+          <input type="file" name="image" id="image" class="inputs-register">
 
-
-
-            <input type="email" name="email" placeholder="Correo electronico" id="correo" class="inputs-register"
-              value="<%= oldData && oldData.email ? oldData.email : ''%>" required>
-
-            <input type="date" name="birthDay" id="nacio" class="inputs-register"
-              value="<%= oldData && oldData.birthDay ? oldData.birthDay : ''%>" required />
-
-
-            <% if (locals && locals.errors && errors.password) { %>
-              <p class="feedback">
-                <%= errors.password.msg %>
-              </p>
-              <% } %>
-
-
-                <input type="password" name="password" placeholder="contraseña" id="contraseña" class="inputs-register"
-                  value="<%= oldData && oldData.password ? oldData.password : ''%>" required>
-
-
-                <input type="file" name="image" id="image" class="inputs-register">
-
-                <button id="button-register" type="submit">Registrarse</button>
+          <button id="button-register" type="submit">Registrarse</button>
       </form>
     </main>
 

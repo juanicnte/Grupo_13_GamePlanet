@@ -3,17 +3,27 @@ window.addEventListener('load', function() {
     //Creo una función para generar los span
     const createError = function (idElemento, msj) {
         if (document.getElementById(idElemento) == null) {
+            console.log('hole hole')
             let listaErrores = document.querySelector('#erroresLogin')
             let mensaje = document.createElement("li")
             mensaje.id = idElemento
             mensaje.innerHTML = msj        
             listaErrores.appendChild(mensaje)
+            if(listaErrores.childElementCount == 1){
+                listaErrores.classList.remove("errorOculto")
+                listaErrores.classList.add("mensajeError")
+            }
         }
     }
 
     const deleteSpan = function (idElemento) {
         if (document.getElementById(idElemento) != null) {
             document.getElementById(idElemento).remove();
+            let listaErrores = document.querySelector('#erroresLogin')
+            if(listaErrores.childElementCount == 0){
+                listaErrores.classList.add("errorOculto")
+                listaErrores.classList.remove("mensajeError")
+            }
         }
     }
 
