@@ -36,7 +36,7 @@ const controlador = {
        const result = validationResult(req);
        
        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
-       
+  
        
        if(result.isEmpty()){
            console.log('funciona');
@@ -58,17 +58,7 @@ const controlador = {
             console.log('fallo');
             console.log('errores ;:    ',errores);
             return res.render('register',{errors:errores,oldData: req.body})
-        }
-       
-
-      
-       
-        
-      
-       
-
-      
-    },
+        } },
     edit: (req, res) => {
 
         db.user.findOne({

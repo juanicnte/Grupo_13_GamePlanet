@@ -206,21 +206,10 @@ window.addEventListener('load', function() {
             errores++
         }
         if (errores == 0) {
+            console.log('no pasa nada');
             e.target.submit()
         }
 
-
-
-        /*
-        if (password.value == " ") {
-    
-            //errores.push('El campo password es obligatorio y debe estar completo')
-            
-        }else if (email.value.length < 6){
-    
-            //errores.push('El campo password tiene que tener al menos 6 caracteres')
-            
-        }*/
-    
-    })  })
+    }) 
+})
     
