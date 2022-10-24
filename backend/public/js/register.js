@@ -1,6 +1,7 @@
 
 
 //Password usar isStrongPassword de express-validator
+
 window.addEventListener('load', function() {
 
     //Creo una función para generar los span
@@ -19,7 +20,6 @@ window.addEventListener('load', function() {
             document.getElementById(idElemento).remove();
         }
     }
-
 
     const validarPassword = (psw) => {
         let valor = validator.trim(psw.value)
@@ -222,8 +222,5 @@ window.addEventListener('load', function() {
             
         }*/
     
-    })
+    })  })
     
-
-
-})

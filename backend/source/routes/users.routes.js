@@ -52,6 +52,7 @@ route.post('/login/access',loginValidator, usersController.access)
 
 
 
+
 route.get('/logOut', isLogged, usersController.logout)
 
 route.get('/users/detail/:id', isLogged, usersController.show)
