@@ -15,41 +15,74 @@
 
     <h2 id="h2-register">Regístrate</h2>
       <form action="/register/save" method="POST" id="form-register" enctype="multipart/form-data">
-              
-              <input type="text" name="fullName" id="nombreCompleto" class="inputs-register" placeholder="Nombre y apellido"
-              value="<%= oldData && oldData.fullName ? oldData.fullName : ''%>" required>
-                  
-            <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@" class="inputs-register"
-              value="<%= oldData && oldData.user ? oldData.user : ''%>" required>
-            
+        <fieldset id="fsFullName" class="text-area">
+          
+          <input type="text" name="fullName" id="fullName" class="inputs-register" placeholder="Nombre y apellido"
+          value="<%= oldData && oldData.fullName ? oldData.fullName : ''%>" required>
+          
+        </fieldset>
+        
+        
+        <fieldset id="fsName" class="text-area">
 
+          <input type="text" name="user" id="user" placeholder="Nombre de usuari@" id="nombreUsuari@" class="inputs-register"
+            value="<%= oldData && oldData.user ? oldData.user : ''%>" required>
+          
+            <% if (locals && locals.errors && errors.user) { %>
+              <p class="feedback"><%= errors.user.msg %></p><% } %>  
+
+        </fieldset>
+        
+
+
+        <fieldset id="fsEmail" class="text-area">
+
+          <input type="email" name="email" placeholder="Correo electronico" id="email" class="inputs-register" value="<%= oldData && oldData.email ? oldData.email : ''%>" required>
+          
             <% if (locals && locals.errors && errors.email) { %>
               <p class="feedback"><%= errors.email.msg %></p><% } %>
 
-            
-
-        
-          <input type="email" name="email" placeholder="Correo electronico" id="correo" class="inputs-register" value="<%= oldData && oldData.email ? oldData.email : ''%>" required>
-        
-          <input type="date" name="birthDay" id="nacio" class="inputs-register" value="<%= oldData && oldData.birthDay ? oldData.birthDay : ''%>" required /> 
+        </fieldset> 
         
 
+         
+         
+        <fieldset id="fsBirthDay" class="text-area">
+
+          <input type="date" name="birthDay" id="birthDay" class="inputs-register" value="<%= oldData && oldData.birthDay ? oldData.birthDay : ''%>" required /> 
+
+        </fieldset> 
+        
+
+
+        <fieldset id="fsPassword" class="text-area">
+
+          <input type="password" name="password" placeholder="contraseña" id="password" class="inputs-register"
+          value="<%= oldData && oldData.password ? oldData.password : ''%>" required>
           <% if (locals && locals.errors && errors.password) { %><p class="feedback"><%= errors.password.msg %></p><% } %>
 
-          
-          <input type="password" name="password" placeholder="contraseña" id="contraseña" class="inputs-register"
-            value="<%= oldData && oldData.password ? oldData.password : ''%>" required>
+        </fieldset>             
         
+        
+        <fieldset id="fsImage" class="text-area">
           
           <input type="file" name="image" id="image" class="inputs-register">
 
-          <button id="button-register" type="submit">Registrarse</button>
+        </fieldset>  
+
+       
+       
+        <button id="button-register" type="submit">Registrarse</button>
+
+        <ul class="mensajeError" id="erroresRegister"></ul> 
       </form>
     </main>
 
     <footer id="register-footer">
       <%- include('./partials/footer.ejs') %>
     </footer>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="../js/register.js"></script>
 </body>
 
 </html>

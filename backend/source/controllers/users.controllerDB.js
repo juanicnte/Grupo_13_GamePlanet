@@ -32,58 +32,31 @@ const controlador = {
 
     },
     save: (req, res) => {
-        
+        console.log('Buenooo', req.body);
        const result = validationResult(req);
-       errores = result.mapped();
-       // db.user.findOne({where:{
-        //    email:req.body.email
-        //}}).then(function(user){
-        //if(user){
-           // return res.render('register',{
-                //errorEmail:{email:{msg:'EMAIL ALREADY USED'}},
-                //oldData: req.body,
-                //errors:errores
-   // })
-//}
-//})
-        
-        //if(!result.isEmpty()){
-            //return res.render('register',{
-                //errorEmail:{email:{msg:''}},
-                //oldData: req.body,
-                //errors: errores
-           // })
-       // }
-        //if((!result.isEmpty()) && coincide){
-
-            //return res.render('register',{
-                //errorEmail:{email:{msg:'Email ya registrado'}},
-                //oldData: req.body,
-                //errors: errores
-           // })
-       // }
-        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
-        if(result){
-            return res.render('register',{
-                oldData: req.body,
-                errors: errores
-            })
-        }else{
-            const save = db.user.create({
+       
+       req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
+       
+       
+       if(result.isEmpty()){
+           console.log('funciona');
+            db.user.create({
                 fullName: req.body.fullName,
                 user: req.body.user,
                 email: req.body.email,
                 password:bcryptjs.hashSync(req.body.password,10),
                 perfil: req.body.perfil,
                 birthDay: req.body.birthDay,
-                image: req.body.image
-                
-        }).then(function(){
-
-            const success = data => res.redirect('/login')
-            const error = error => res.render(error)
-            return save.then(success).catch(error)
-        })
+                image: req.body.image})
+                .then(function(user){
+                    console.log(user);
+                    return res.redirect('/login')
+                })
+            }else{
+            let errores = result.mapped();
+            console.log('fallo');
+            console.log('errores ;:    ',errores);
+            return res.render('register',{errors:errores,oldData: req.body})
         }
        
 

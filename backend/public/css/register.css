@@ -18,6 +18,16 @@ form{
     align-items: center;
     justify-content: center;
 }
+fieldset {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    width: 36%;
+    position: relative;
+    left: 14rem;
+}
 
 .inputs-register{
     color: #dddddd;

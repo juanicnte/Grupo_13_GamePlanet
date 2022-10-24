@@ -1,38 +1,43 @@
 const { body } = require('express-validator')
 let db = require('../database/models/index')
-
+console.log("he ingresado al validador REGISTER VALIDATION")
         
-let email = body('email')
-.isEmpty().withMessage('Email no puede quedar vacio')
-.isLength({ min: 13 }).withMessage('Email debe ser al menos mayor a 13 caracteres').bail()
-.isEmail().withMessage('Este campo debe ser del tipo email')
-.custom(function(email){
-    return db.user.findOne({
-        where:{
-            email:req.body.email
-        }
-    }).then(function(user){
-        if(user){
-            throw new Error ('Bad')
-         
-        }
-        else{
+let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacio').bail().custom(function(user,{req}){
+    return db.user.findOne({where:
+    {
+        email: req.body.email
+    }}).then(function(data){
+        if(data){
+            return Promise.reject('used eemail')
+        }else{
             return true
         }
-
     })
-}).withMessage('Este email is used')
+}).withMessage('Email ya registrado')
+let password = body('password').notEmpty().withMessage('Por favor, ingrese su contraseña').bail()
 
-let password = body('password')
-.isEmpty().withMessage('Este campo no puede quedar vacioooo').bail()
-.isLength({ min: 4 }).withMessage('La contraseña debe tener al menos 4 caracteres').bail()
+let user = body('user').
+custom(function(user){
+   return db.user.findOne({where:
+    {
+        user: user
+    }}).then(function(data){
+        if(data){
+            throw new Error('used user')
+        }else{
+            return true
+        }
+    })
+}).withMessage('Usuario ya registrado').bail()
+.isLength({min:2})
+
 
 
     
     
 
 
-let validaciones = [email,password]
+let validaciones = [email,password,user]
 
 module.exports = validaciones;
 
