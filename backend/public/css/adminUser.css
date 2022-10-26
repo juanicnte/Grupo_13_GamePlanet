@@ -1,159 +1,85 @@
 
-.offers-container {
+#h2-container{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    color: #dddddd;
+}
+
+#users-admin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 1rem;
-    padding-bottom: 3rem;
-    margin: auto;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
 }
 
-.offers-list {
-    width: 100%;
-    margin: auto;
+.users-list{
     display: flex;
+    width: 100%;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: flex-start;
+    /* padding-left: 2rem;*/
+}
+
+.user-li{
+    display: flex;
+    border-bottom: 1px solid #5928b1;
+}
+
+#userDetail-container{
+    margin-left: 1rem;
+    color: #dddddd;
+}
+
+#link-user{
+    display: flex;
+    height: 7rem;
     align-items: center;
 }
 
-.juegos {
-    display: flex;
-    width: 100%;
-    margin: auto;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
+#id-user{
+    color: #dddddd;
 }
 
-.juegos img {
-    width: 60%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#userDetail-container:hover {
+    color: #5928b1;
+    transition-property: color;
+    transition-duration: 0.3s;
 }
 
-.game-list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
+#img-user{
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #5928b1;
+    border-radius: 50%;
 }
 
-h2 {
-    width: 50%;
-    margin: auto;
-    display: flex;
-}
 
-.precio-ahora {
-    color: #000000db;
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 1rem;
-}
-
-@media screen and (min-width:768px) {
-    
-    .offers-container {
-        padding-top: 1rem;
-        padding-bottom: 3rem;
+@media screen and (min-width: 1024px) { 
+    #users-admin{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        flex-wrap: wrap;
         margin: auto;
+        border: 1px solid #5c5c5c;
+    }
+    .users-list{
         display: flex;
         width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    h2 {
-        width: 50%;
-        margin: auto;
-        display: flex;
-    }
-
-    .juegos img {
-        width: 30%;
-        margin: auto;
-        display: flex;
         justify-content: center;
-        align-items: center;
+    }
+    .user-li{
+        width: 50%;
+        padding-left: 5rem; 
+        display: flex;
+        border-bottom: 1px solid #5928b1;
+        margin: auto;
+    }
+    main{
+        padding: 0;
     }
 }
+    
 
-@media screen and (min-width:1024px) {
-
-    .offers-container {
-        padding-top: 1rem;
-        padding-bottom: 3rem;
-        margin: auto;
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    
-    /*Lista de ofertas*/
-    .offers-list {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    
-    /*Clase de juegos*/
-    .juegos {
-        display: flex;
-        width: 50%;
-        margin: auto;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: stretch;
-    }
-    
-    
-    .juegos img {
-        width: 50%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        }
-    
-    
-    .game-list{
-        display: flex;
-        width: 100%;
-        align-items: center;
-        margin: auto;
-        flex-wrap: wrap;
-    }
-    
-    .precio-ahora {
-        color: #000000db;
-        font-size: 1.5rem;
-        width: 100%;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        align-content: center;
-        padding-bottom: 1rem;
-    }
-    
-}
