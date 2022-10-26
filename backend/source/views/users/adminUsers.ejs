@@ -10,34 +10,34 @@
 <body>
   <%- include('../partials/header.ejs') %>
 
-    <main class="main-content">
-      <nav class="offers-container">
-        <div class="h2-container">
-          <h2 class="eslogan-oferta">Administración de Usuarios</h2>
+    <main class="main-users">
+      <section id="users-admin">
+        
+        <div id="h2-container">
+          <h2 id="h2-userTitle">Administración de Usuarios</h2>
         </div>
-        <ul class="offers-list">
-          <% users.forEach(user => {%>
-            <li class="juegos">
-            <article class="game-list">
-              <h2><%= user.id %></h2>
-              <a href="/users/detail/<%= user.id %>">
 
-                <img src="/images/avatars/<%= user.image %>" alt="<%= user.fullName %>" />
-                <div class="precios-container">
-                  <p class="precio-ahora"><%= user.email %></p>
+        <ul class="users-list">
+          <% users.forEach(user => {%>
+            <li class="user-li">
+              <h2 id="id-user"><%= user.id %></h2>
+
+              <a id="link-user" href="/users/detail/<%= user.id %>">
+                <img src="/images/avatars/<%= user.image %>" id="img-user" alt="<%= user.fullName %>" />
+                <div id="userDetail-container">
+                  <p id="userDetail"><%= user.email %></p>
                 </div>
               </a>
-            </article>
+
           </li>
-          <% }); %>
-        
+          <% }); %> 
         </ul>
-      </nav>
+      </section>
               
     </main>
-    <footer class="main-footer">
+    <footer>
       <%- include('../partials/footer.ejs') %>
     </footer>
-</body>
+  </body>
 
 </html>

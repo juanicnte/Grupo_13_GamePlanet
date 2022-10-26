@@ -1,48 +1,48 @@
-
-const { body } = require('express-validator')
-
+const { body, check } = require('express-validator')
 const { compareSync } = require('bcryptjs')
-
 
 const db = require('../database/models/index');
 const { nextTick } = require('process');
 console.log("he ingresado al validador back")
 
-
-
-let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacíoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa').bail().
-custom(function(user){
-    db.user.findOne({where:
-    {
-        email: req.body.email
-    }}).then(function(user){
-        if(!user){
-            throw new Error('used email')
-        }else{
-            true
-        }
-    })
-}).withMessage('Email no registrado')
+let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacío').bail().isEmail().withMessage('Email no valido').bail()
 let password = body('password').notEmpty().withMessage('Por favor, ingrese su contraseña').bail()
 
-
-   
-
-
+module.exports = [
     
-    
+    email, password,
+    check('email').custom(value => {
+        return db.user.findOne({
+            where:{
+                email: value
+            }
+        }).then(user => {
+          if (!user) {
+            return Promise.reject('E-mail no existe');
+          }
+        });
+      })
 
-
-let validaciones = [email,password]
-
-module.exports = validaciones;
-          
-
-            
-            
-         
-      
-   
-
-
-
+    /*
+    body('password')
+        .custom((async function(req,res) {  
+            usuario = db.user.findOne({
+                where:{
+                    email: req.body.email
+                }
+            })
+            console.log(usuario)
+            if(usuario) {
+                res.status(400).json({
+                    message: 'This login is already taken. Try another.'
+                })}
+            ((user) => {
+ 
+                if(!compareSync(req.body.password, user.password)){
+                     console.log('CONTRASEÑA INCORRECTAAAAAAAAAAAAAA');
+                    return Promise.reject("Email o contraseña incorrectos")
+                }
+            })
+ 
+        }))*/
+]  
