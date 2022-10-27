@@ -3,14 +3,13 @@
 
 <head>
     <%- include('../partials/head.ejs') %> 
-    <link rel="stylesheet" href="/css/edit.css" />
+    <link rel="stylesheet" href="/css/userEdit.css" />
 </head>
 
 <body>
     <%- include('../partials/header.ejs') %>
 
         <main>
-            <div class="container-all">
                 
                 <form action="/users/update/<%=user.id%>?m=PUT" method="POST" class="form-edit">
                    <input type="hidden" name="id" value="<%=user.id%>">
@@ -22,29 +21,26 @@
 
                     <fieldset class="text-area">
                         <legend class="title-area">Nombre de usuari@</legend>
-            <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@"
+            <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@" class="input-text"
               value="<%= user.user%>" required>
                     </fieldset>
 
-                    
-                <picture>
-                    <img src="/images/avatars/<%= user.image %>" alt="<%=user.fullName%> ">
-                </picture> 
-                <fieldset class="text-area">
+                    <fieldset class="text-area text-area-image">
+                    <img src="/images/avatars/<%= user.image %>" id="img-user" alt="<%=user.fullName%> ">
+                <div id="image-upload">
                     <label for="image">Subir imagen</label>
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image" class="input-text">
+                </div>   
                 </fieldset>
-
                     
 
                     <fieldset class="text-area">
-                        <legend class="title-area">Correo</legend>
+                        <p class="title-area email-area">Correo</p>
                         <input type="text" name="email" id="email" class="input-text" value="<%=user.email%>">
                     </fieldset>
 
-                    <div class="form-group">
                         <fieldset class="text-area">
-                            <legend class="title-area">Perfil</legend>
+                            <p class="title-area">Perfil</p>
                             <label for="admin" class="radio-options">
                                 <input type="radio" name="perfil" id="admin"
                                     value="admin" <% if(user.perfil == "Admin") { %> checked <% } %>>Admin</label>
@@ -52,16 +48,15 @@
                                 <input type="radio" name="perfil" id="user" value="user"
                                 <% if(user.perfil == "User") { %> checked <% } %>>Usuario</label>                            
                         </fieldset>
-                    </div>
+
                     <fieldset class="text-area">
                         <label for="nacio">Fecha de nacimiento</label>
-                        <input type="date" name="birthDay" id="nacio"
+                        <input type="date" name="birthDay" id="nacio" class="input-text"
                       value="<%= user.birthDay%>" required />
                     </fieldset>
                     
-                    <button type="submit">Guardar</button>
+                    <button type="submit" class="input-text input-button">Guardar</button>
                 </form>
-            </div>
         </main>
         <footer class="main-footer">
             <%- include('../partials/footer.ejs') %>
