@@ -1,0 +1,46 @@
+.section-userDetail{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0px;
+}
+
+#id-user{
+    color: #fff;
+    padding: 1rem;
+}
+
+.img-user{
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.container-user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.description-user{
+    padding: 1rem 0;
+    color: #dddddd;
+    padding-left: 1rem;
+}
+
+#birthDay-user{
+    color: #dddddd;
+    margin: 3rem auto 2rem;
+    width: 80%;
+}
+
+@media screen and (min-width: 1024px){
+    .section-userDetail{
+        flex-direction: row;
+    }
+    #birthDay-user {
+        width: 50%;
+    }
+
+}

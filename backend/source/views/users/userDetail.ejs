@@ -3,71 +3,40 @@
 
 <head>
     <%- include('../partials/head.ejs') %>
-        <link rel="stylesheet" href="/css/productDetail.css" />
-        </style>
+        <link rel="stylesheet" href="/css/userDetail.css" />
 </head>
 
 <body>
     <%- include('../partials/header.ejs') %>
-        <div id="main-content">
-            <main>
-                <p id="name-product">
-                    <%= user.id %>
-                        <p>
-                        <section class="section-description">
-                            <div class="container-image">
-                                <img src="../../images/avatars/<%= user.image %>" alt="<%= user.fullName %>"
-                                    class="img-juego" />
+    <main id="main-userDetail">
 
-                                <div class="contenedorJuego">
-                                    <p id="name-game">
-                                        <%= user.fullName %>
-                                    </p>
-                                    <div class="category">
-                                        <p id="category-item">
-                                            <%= user.perfil %>
-                                        </p>
-                                        <p>
-                                            <%= user.email %>
-                                        </p>
-                                    </div>
-                                </div>
+                <section class="section-userDetail">
+                    <p id="id-user"> id: <%= user.id %> <p></p>
+                    <div class="container-user">
+                        <img src="../../images/avatars/<%= user.image %>" alt="<%= user.fullName %>" class="img-user"/>
+
+                            <div class="userDetail-container">
+                                <p class="description-user" id="user-name">Nombre completo: <%= user.fullName %> </p>
+                                <p class="description-user" id="user-name">Nombre de usuario: <%= user.user %> </p>
+                                <p class="description-user" id="range">Perfil: <%= user.perfil %> </p>
+                                <p class="description-user">Email: <%= user.email %> </p>
                             </div>
-                            <div class="description">
-                                <h2 id="title-item">Año de nacimiento</h2>
-                                <p>
-                                    <%=user.birthDay%>
-                                </p>
-                            </div>
-
-                            <div class="category">
-                                <p id="category-item">
-                                    Perfil:
-                                </p>
-                                <p>
-                                    <%= user.perfil %>
-                                </p>
-                            </div>
-
-                        </section>
-
                     </div>
-        </section>
+                        <div id="birthDay-user">
+                            <h2 id="birthDay-container">Año de nacimiento</h2>
+                                <p id="birthDay"> <%=user.birthDay%> </p>
+                        </div>
+                </section>
 
-        </div>
-        <% if(userLogged && userLogged.perfil=='Admin' ) { %>
-            <ul class="botones">
-                <a href="/register" class="crear-editar">CREAR</a>
-                <a href="/users/edit/<%= user.id %>" class="crear-editar">EDITAR</a>
-                <a href="/" class="button-c" class="crear-editar">VOLVER</a>
-                </form>
-            </ul>
-            <% } %>
+                        <% if(userLogged && userLogged.perfil=='Admin' ) { %>
+                            <ul class="botones">
+                                <a href="/register" class="crear-editar">CREAR</a>
+                                <a href="/users/edit/<%= user.id %>" class="crear-editar">EDITAR</a>
+                                <a href="/" class="crear-editar">VOLVER</a>
+                            </ul> <% } %>
 
-                </main>
-                <footer>
+    </main>
                     <%- include('../partials/footer.ejs') %>
-                </footer>
 </body>
 
 </html>
