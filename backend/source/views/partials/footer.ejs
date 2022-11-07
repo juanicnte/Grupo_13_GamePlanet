@@ -49,6 +49,22 @@
   <a href="https://api.whatsapp.com/send?phone=543764746323" class="btn-wsp" target="_blank">
   <i class="fa-brands fa-whatsapp" id="wpp"></i>
 </a>
+<div id="user-menu">
+  <ul class="burger-user">
+<% if(userLogged){%>
+  <li class="user-name"> <p id="name-user"><%=  userLogged.fullName %></p> 
+  <img src="/images/avatars/<%= userLogged.image %> " class="userImage">
+  <li class="icons-userMenu-burger"><i class="hamburger-button fa-solid fa-bars"></i></li>
+</li>
+  <li class="icons-userMenu"><a href="/logOut"><i class="fa-solid fa-right-from-bracket"></i> </a></li>
+  <% } else {%>
+    <li class="icons-userMenu-burger"><i class="hamburger-button fa-solid fa-bars"></i></li>
+    <li class="icons-userMenu"><a href="/register"><i class="fa-regular fa-id-card"></i></a></li>
+    <li class="icons-userMenu"><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+    <%}%>
+      <li class="icons-userMenu"><a href="/carrito"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+</ul>
+</div>
   <div class="copyright">
     <p>Copyright © 2022 Game Planet - All rights reserved</p>
   </div>
