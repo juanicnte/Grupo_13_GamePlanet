@@ -68,6 +68,12 @@ main{
     color: var(--blackLetter);
     background: rgb(255, 0, 149);
 }
+header{
+    display: none;
+}
+footer{
+    display: none;
+}
 
 
 /*KEYFRAMES*/

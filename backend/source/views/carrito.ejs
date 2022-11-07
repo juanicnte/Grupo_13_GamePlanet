@@ -10,103 +10,74 @@
 </head>
 
 <body>
-
     <%- include('./partials/header.ejs') %>
 
-        <main class="contenedor-general">
-
-            <article class="contenedor-uno">
-
-                <h2>Bienvenido a su carrito</h2>
-
-                <p>Descripción de su compra</p>
-
-            </article>
-
-            <h3>Fifa22</h3>
-
-            <section class="contiene-dos">
-
-                <!--<article id="titulotres">
-
-                <h3>Fifa22</h3>
-
-            </article>-->
-
-                <img src="images/fifa-dh.png" alt="Fifa">
-
-
-                <form action="#" method="get">
-
-                    <select name="cantidadProductos">
-
-                        <option value="producto1">1 Producto</option>
-
-                        <option value="producto2">2 Productos</option>
-
-                        <option value="producto3">3 Productos</option>
-
-                        <option value="producto4">4 Productos</option>
-
-                        <option value="producto5">5 Productos</option>
-
-                        <option value="producto6">6 Productos</option>
-
-                        <option value="masproductos">Mas de 6 Productos</option>
-
-                    </select>
-
-                </form>
-
-                <p>Precio<br>
-
-                    $1.500</p>
-
-                <button type="reset"><i class="fa-solid fa-trash"></i></button>
-
+        <main class="container-allMain-cart">
+            <section id="header-cart">
+                <h1>Tu carrito</h1><p class="details-p">(x productos)</p>
+                <div id="warning-sentence">
+                    <img src="/images/exclamation.png" alt="">
+                    <p>Completa el pedido: añadir productos al carrito no significa reservar.</p>
+                </div>
             </section>
+            <section id="cards-products">
+            <section id="products-description-cart">
+                <div id="terms-products">
+                    <p>Estas comprando en<B> Game Planet</B></p>
+                    <p>Al hacer compras en nuestra pagina aceptas los <a href="#" class="details-p"><b>Términos y Condiciones</b></a></p>
+                </div>
 
-            <article class="detalle">
-
-
-                <section id="mediosdepago">
-
-                    <img src="./images/Mastercard.jpg" alt="paga con mastercard">
-
-                    <img src="./images/mercado-pago.png" alt="paga con mercado pago">
-
-                    <img src="./images/rapipago.jpg" alt="Paga con rapipago">
-
-                    <img src="./images/visa.jpg" alt="Paga con visa">
-
-                </section>
-
-                <h2 id="comprar" class="crear"><a href="#" class="buyText">Comprar<i class="fa-solid fa-cart-shopping"></i></a></h2>
-                
-
-
-            </article>
-
+                <div id="description-product-cart">
+                    <div class="product-name-img">
+                        <img src="/images/tlou2-dh.png" class="img-product-cart" alt="">
+                        <div class="name-ul-product">
+                        <h2>The Last of us (Playstation) - Original - Entrega inmediata</h2>
+                        <div class="quantity-box">
+                        <form>
+                        <select name="quantity-items" id="quantity-items">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                        </select>
+                        <button type="reset" class="trash-button"><i class="fa-sharp fa-solid fa-trash "></i></button>
+                    </form>
+                        <p class="product-price"> $10 </p>
+                        </div>    
+                        </div>
+                    </div>
+                </div>
             </section>
-
-            <!--<section class="medioPago">
-
-            <img src="" alt=""><p>consultar que poner</p>
-            
-            <img src="" alt=""><p>consultar que poner</p>
-            
-            <img src="" alt=""><p>consultar que poner</p>
-
-
-        </section>-->
-
+        </section>
+        
+        <section id="payments">
+            <div class="pay-sentence">
+            <img src="/images/candado.png" alt="">
+            <h2>PAGOS FACILES Y SEGUROS</h2>
+            </div>
+            <div class="methods-img">
+                <img src="/images/visa.png" alt="">
+                <img src="/images/paypal.png" alt="">
+                <img src="/images/bitcoin.png" alt="">
+                <p>and 10+ more</p>
+            </div>
+        </section>
+        <section id="buy-product">
+            <div id="price">
+                <p>Precio total</p>
+                <p>$10000</p>
+            </div>
+            <a href="/carrito"class="crear">Continuar con el pago<i class="fa-solid fa-cart-shopping"></i></a>
+        </section>
         </main>
 
-        <footer>
-
-            <%- include('./partials/footer.ejs') %>
-
-        </footer>
+    <%- include('./partials/footer.ejs') %>
 </body>
 
 

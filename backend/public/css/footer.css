@@ -100,6 +100,8 @@ footer{
     text-decoration: none;
     color:  #0df053;
     background-color: var(--white);
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
 }
 
 .contact-location{
