@@ -26,3 +26,6 @@ Se mejoró muchísimo la comunicación, el compromiso y el trabajo en equipo y s
 
 ## SPRINT 6
 Se logró encontrar el estilo para el sitio, una de las tareas que nos bloqueaba y tenía más atrasados, aprendimos a usar mejor el git y cada vez nos entendemos mejor como equipo de trabajo.
+
+## SPRINT 7
+Se estabilizó el trabajo en equipo, falta mejorar un poco en la revisión de las tareas del trello especialmente ver el detalle de las tareas y encontrar autonomía en el testing del sitio y en el avance de las tareas, sin embargo ya lo más difícil se logró y fue ser un equipo de trabajo con buena comunicación.
