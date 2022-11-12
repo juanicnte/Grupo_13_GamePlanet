@@ -29,15 +29,14 @@ module.exports = [
             email: req.body.email
         }}).then(function(data){     
             if(data){
-                console.log(password);
-                if(compareSync(password) == data.password){            
+                if(compareSync(req.body.password, data.password)){            
                     return true
                 }else{
-                    return Promise.reject('la contra no cinicde XD')
+                    return Promise.reject('Las contraseñas no coinciden')
                 }
             }
         })
-    }).withMessage('la contra no cinice wtachin')
+    }).withMessage('La contraseña no coincide')
 
     
 ]  
