@@ -47,12 +47,27 @@ custom(function(user){
 }).withMessage('Usuario ya registrado').bail()
 .isLength({min:2})
 
+const whitelist = [
+    'image/png',
+    'image/jpeg',
+    'image/jpg',
+    'image/webp'
+  ]
+  
+let imagen = body('image').custom(function(value,{req}){
+         if(req.files && req.files.length > 0 && !whitelist.includes(req.files[0].mimetype)){
+            return Promise.reject('Por favor que el archivo sea de tipo png, jpeg, jpg o webp')
+         }else{
+            return true
+         }
+})
 
 
 
 
 
 
-let validaciones = [email,password,user,fullName]
+
+let validaciones = [email,password,user,fullName,imagen]
 
 module.exports = validaciones;

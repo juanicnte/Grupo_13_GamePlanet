@@ -35,7 +35,7 @@ const upload = multer({storage:multer.diskStorage({destination, filename})});
 const registerValidator = require('../validations/register')
 
 const loginValidator = require('../validations/login')
-const fileValidator = require('../validations/file')
+
 
 const isLogged = require('../middlewares/isLogged')
 const isAdmin = require('../middlewares/isAdmin')
@@ -45,7 +45,7 @@ const isAdmin = require('../middlewares/isAdmin')
 //PARA QUE SE PUEDA REGISTRAR
 
 route.get('/register', usersController.create)
-route.post('/register/save',upload.any(),registerValidator,fileValidator,usersController.save)
+route.post('/register/save',upload.any(),registerValidator,usersController.save)
 
 route.get('/login', usersController.login)
 //route.get('/profile',usersController.profile)
