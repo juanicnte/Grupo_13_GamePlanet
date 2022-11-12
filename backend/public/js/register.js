@@ -51,9 +51,9 @@ window.addEventListener('load', function() {
 
     const validarName = (psw) => {
         let valor = validator.trim(psw.value)
-        if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 3, max: 1000 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
+        if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 3, max: 20 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
             psw.style.background = 'var(--msjError)'  
-            createError("errorName", 'El nombre de usuario es obligatorio, debe contener entre 5 y 50 carácteres y debe ser alfa númerico')
+            createError("errorName", 'El nombre de usuario es obligatorio, debe contener entre 5 y 20 carácteres y debe ser alfa númerico')
             return false
         }
         else {

@@ -18,7 +18,7 @@ module.exports = [
             }
         }).then(user => {
           if (!user) {
-            return Promise.reject('E-mail no existe');
+            return Promise.reject('Este email no está registrado');
           }
         });
       }),
