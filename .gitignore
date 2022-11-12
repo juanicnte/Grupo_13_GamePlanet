@@ -4,3 +4,7 @@ frontend/node_modules/
 frontend/package-lock.json
 backend/preguntas
 backend/Diagrama Entidad-Relacion with shopping.drawio
+
+#To run vite-project:
+#npm run dev 
+#The port is http://localhost:5173/
