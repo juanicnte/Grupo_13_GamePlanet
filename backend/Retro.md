@@ -23,3 +23,6 @@ Ya empezamos el sprint 5 y no se había terminado el sprint 4 y aún tenemos tem
 
 ## SPRINT 5
 Se mejoró muchísimo la comunicación, el compromiso y el trabajo en equipo y se notó bastante el progreso en el proyecto integrador
+
+## SPRINT 6
+Se logró encontrar el estilo para el sitio, una de las tareas que nos bloqueaba y tenía más atrasados, aprendimos a usar mejor el git y cada vez nos entendemos mejor como equipo de trabajo.
