@@ -29,7 +29,6 @@ route.get('/api/users/:id', usersController.detail);
 
 // route.put('/users/:id', usersController.show)
 
-// route.get('/api/products/:id', productsController.detail);
 
 route.get('/api/users', usersController.list)
 
