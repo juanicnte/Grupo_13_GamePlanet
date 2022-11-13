@@ -9,15 +9,15 @@ const {resolve, extname} = require('path');
 const { existsSync, mkdirSync } = require('fs');
 
 
-const multer = require('multer');
-const upload = multer({storage:multer.diskStorage({destination, filename})});
+//const multer = require('multer');
+//const upload = multer({storage:multer.diskStorage({destination, filename})});
 
-const registerValidator = require('../validations/register')
+//const registerValidator = require('../validations/register')
 
-const loginValidator = require('../validations/login')
+//const loginValidator = require('../validations/login')
 
-const isLogged = require('../middlewares/isLogged')
-const isAdmin = require('../middlewares/isAdmin')
+//const isLogged = require('../middlewares/isLogged')
+//const isAdmin = require('../middlewares/isAdmin')
 
 
 
@@ -25,10 +25,10 @@ route.get('/register', usersController.create)
 
 route.get('/login', usersController.login)
 
-route.get('/users/detail/:id', isLogged, usersController.show)
+route.get('/users/detail/:id', usersController.show)
 
-route.put('/users/:id', isLogged, usersController.show)
+route.put('/users/:id', usersController.show)
 
-route.get('/users', isLogged, isAdmin, usersController.index)
+route.get('/users', usersController.index)
 
 module.exports = route;

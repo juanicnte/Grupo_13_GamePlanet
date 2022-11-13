@@ -16,12 +16,14 @@ const destination = function(req, file, cb){
 }
 
 
-const multer = require('multer');
-const upload = multer({storage:multer.diskStorage({destination, filename})});
+//const multer = require('multer');
 
-const isLogged = require('../middlewares/isLogged')
-const isAdmin = require('../middlewares/isAdmin')
-const isProduct = require('../validations/product')
+//const upload = multer({storage:multer.diskStorage({destination, filename})});
+
+
+//const isLogged = require('../middlewares/isLogged')
+//const isAdmin = require('../middlewares/isAdmin')
+//const isProduct = require('../validations/product')
 
 
 
@@ -30,7 +32,8 @@ route.get('/products/:categoria?', productsController.index)
 
 route.get('/products/detail/:id', productsController.show)
 
-route.put('/products/:id', isLogged, isAdmin, productsController.show)
+//route.put('/products/:id', isLogged, isAdmin, productsController.show)
+route.put('/products/:id', productsController.show)
 
 route.get('/', productsController.index)
 
