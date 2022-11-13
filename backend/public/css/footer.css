@@ -29,6 +29,7 @@ footer{
     color: #dddddd;
     font-size: 14px;
     text-decoration: revert;
+    transition: 0.3s;
 }
 .lista-footer a:hover{
     color: #5928b1;
@@ -56,12 +57,16 @@ footer{
     padding: 3px;
     display: flex;
     margin-top: 1rem;
+    max-width: min-content;
+    transition: 0.3s;
 }
 .icons-footer a p{
     color: #dddddd;
     font-size: 14px;
     padding-left: 3px;
-}.icons-footer a:hover, .icons-footer a:hover p{
+    transition: 0.3s;
+}
+.icons-footer a:hover, .icons-footer a:hover p{
     color: #5928b1;
     transition-property: color;
     transition-duration: 0.3s;
@@ -95,6 +100,7 @@ footer{
     font-size: 40px;
     box-shadow: 0 1px 10px rgba(0,0,0,0.3);
     z-index: 100;
+    transition: 0.3s;
 }
 .btn-wsp:hover{
     text-decoration: none;

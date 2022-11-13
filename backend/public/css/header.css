@@ -132,6 +132,7 @@ header{
 }.category-container p{
     margin-left: 5px;
     color: #dddddd;
+    transition: 0.3s;
 }
 .category-container a{
   display: flex;
@@ -150,21 +151,30 @@ header{
 
   @media screen and (min-width:768px){
     .icons-userMenu{
-        display: block;
-        padding: 10px;
-    }.icons-userMenu a{
-        color: #dddddd;
+      display: block;
+      padding: 10px;
     }
-  
-      .burger-user li{
+    .icons-userMenu a{
+      color: #dddddd;
+      transition: 0.3s;
+    }
+    .burger-user li{
       font-size: 23px
     }
-
+    i.fa-brands.fa-playstation, i.fa-brands.fa-xbox {
+    transition: 0.3s;
+    }
+    i.fa-solid.fa-gamepad{
+    transition: 0.3s;
+    }
+    i.fa-solid.fa-desktop{
+    transition: 0.3s;
+    }
     #pic-logo{
-        width: 10%;
+      width: 10%;
     }
     .name-category{
-        display: block;
+      display: block;
   }
 
   .category-container{
