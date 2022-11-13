@@ -35,7 +35,9 @@ route.get('/products/detail/:id', productsController.show)
 //route.put('/products/:id', isLogged, isAdmin, productsController.show)
 route.put('/products/:id', productsController.show)
 */
-route.get('/api/products', productsController.list)
+route.get('/api/products', productsController.list);
+
+route.get('/api/products/:id', productsController.detail);
 
 
 module.exports = route;

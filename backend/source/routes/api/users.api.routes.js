@@ -25,11 +25,11 @@ const { existsSync, mkdirSync } = require('fs');
 
 // route.get('/login', usersController.login)
 
-route.get('/users/detail/:id', usersController.detail);
+route.get('/api/users/:id', usersController.detail);
 
 // route.put('/users/:id', usersController.show)
 
-route.get('/products/:id', productsController.detail);
+// route.get('/api/products/:id', productsController.detail);
 
 route.get('/api/users', usersController.list)
 
