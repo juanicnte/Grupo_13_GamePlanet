@@ -27,15 +27,15 @@ const destination = function(req, file, cb){
 
 
 
-
+/*
 route.get('/products/:categoria?', productsController.index)
 
 route.get('/products/detail/:id', productsController.show)
 
 //route.put('/products/:id', isLogged, isAdmin, productsController.show)
 route.put('/products/:id', productsController.show)
-
-route.get('/', productsController.index)
+*/
+route.get('/api/products', productsController.list)
 
 
 module.exports = route;
