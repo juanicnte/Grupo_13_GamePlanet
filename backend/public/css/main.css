@@ -203,6 +203,7 @@ main{
 @media (min-width: 1024px) {
    .name-product, .tipo-entrega{
     font-size: 0px;
+    transition: 0.3s;
    } 
 .productos:hover .name-product,
 .productos:hover .tipo-entrega{
