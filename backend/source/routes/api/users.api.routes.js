@@ -25,7 +25,7 @@ const { existsSync, mkdirSync } = require('fs');
 
 // route.get('/login', usersController.login)
 
-// route.get('/users/detail/:id', usersController.show)
+route.get('/users/detail/:id', usersController.detail);
 
 // route.put('/users/:id', usersController.show)
 

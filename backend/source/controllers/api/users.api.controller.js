@@ -15,7 +15,20 @@ const usersAPIController =  {
                 };
                 res.json(respuesta);
             });
+    },    
+    'detail': (req, res) => {
+        User.findByPk(req.params.id)
+            .then(user => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        total: user.length,
+                        url: '/api/users/:id'
+                    },
+                    data: user
+                };
+                res.json(respuesta);
+            });
     },
-
 };
 module.exports = usersAPIController;
