@@ -14,6 +14,9 @@
         </picture>
 
         <ul class="burger-user">
+          <% if(userLogged && userLogged.perfil=='Admin') { %>
+            <li class="dashboard-style"><a href="http://localhost:5173/" class="fa-solid fa-chart-line"><p>Dashboard</p></a></li>
+            <% } %>
       <% if(userLogged){%>
         <li class="user-name"> <p id="name-user"><%=  userLogged.fullName %></p> 
         <img src="/images/avatars/<%= userLogged.image %> " class="userImage">

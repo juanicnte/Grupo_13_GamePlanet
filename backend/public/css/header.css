@@ -25,6 +25,28 @@ header{
     margin: 1rem 1rem 0;
 }
 
+.dashboard-style{
+  margin-right: 2rem;
+  cursor: pointer;
+}.dashboard-style a{
+  display: flex;
+  align-items: center;
+  color: #dddddd;
+  margin-right: 5px;
+}.dashboard-style p{
+  margin-left: 5px;
+  color: #dddddd;
+  font-weight: 600;
+}.dashboard-style:hover  p{
+  color: #5928b1;
+  transition-property: color;
+  transition-duration: 0.5s;
+}.dashboard-style:hover  a{
+  color: #5928b1;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
 .icons-userMenu{
     display: none;
 }.icons-userMenu a{
@@ -147,6 +169,15 @@ header{
 
 #banner-image{
     display: none;
+}
+
+  @media screen and (min-width:0) and (max-width: 767px){
+  .dashboard-style p{
+    display: none;
+  }
+  .dashboard-style a{
+    font-size: 18px;
+  }
 }
 
   @media screen and (min-width:768px){
