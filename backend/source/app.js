@@ -3,6 +3,7 @@ const path = require('path');
 const {port, start} = require('./modules/server')
 const static = require('./modules/static')
 const { join } = require('path');
+const cors = require('cors')
 
 //method-override agregamos los verbos put delete y patch
 const method = require('method-override');
@@ -57,6 +58,8 @@ app.use(require('./middlewares/user'))
 
 app.use(require('./routes/products.routes'));
 app.use(require('./routes/users.routes'));
+
+app.use(cors());
 
 app.use(require('./routes/api/products.api.routes'));
 app.use(require('./routes/api/users.api.routes'));
