@@ -22,7 +22,7 @@ const categoriesAPIController = {
     },
     'categoryProducts': (req, res) => {
         Category.findByPk(req.params.id,{
-            include: ['products']
+            include: ['product']
         })
             .then(category => {
                 let respuesta = {
