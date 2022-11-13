@@ -4,7 +4,7 @@ const { compareSync } = require('bcryptjs')
 const db = require('../database/models/index');
 const { nextTick } = require('process');
 const { cp } = require('fs');
-console.log("he ingresado al validador back")
+
 
 let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacío').bail().isEmail().withMessage('Email no valido').bail()
 let password = body('password').notEmpty().withMessage('Por favor, ingrese su contraseña').bail()
@@ -19,6 +19,8 @@ module.exports = [
         }).then(user => {
           if (!user) {
             return Promise.reject('Este email no está registrado');
+          }else{
+            return true
           }
         });
       }),

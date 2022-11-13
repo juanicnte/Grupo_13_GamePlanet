@@ -3,7 +3,9 @@
     flex-direction: column
 }
 
-
+.feedback{
+    color: red;
+}
 .title-area{
     color: #dddddd;
     font-weight: 600;

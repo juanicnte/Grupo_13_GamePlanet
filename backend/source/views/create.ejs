@@ -12,27 +12,43 @@
 
             <div class="container-all">
 
-                <form action="/products/guardar" method="post" enctype="multipart/form-data" id="form-create">
+                <form action="/products/guardar" method="POST" enctype="multipart/form-data" id="form-create">
 
                     <fieldset id="fsName" class="text-area">
+                        
+                        <% if (locals && locals.errors && errors.name) { %>
+                            <p class="feedback"><%= errors.name.msg %></p><% } %>  
+                        
                         <legend class="title-area">Título</legend>
-                        <input type="text" name="name" id="name" placeholder="Título del Juego" class="input-text" minlength="5" maxlength="50">
+                        <input type="text" name="name" id="name" placeholder="Título del Juego" class="input-text" minlength="5" maxlength="50" value="<%= oldData && oldData.name ? oldData.name : ''%>" >
                     </fieldset>
 
                     <fieldset id="fsPrice" class="text-area">
+                        
+                        <% if (locals && locals.errors && errors.price) { %>
+                            <p class="feedback"><%= errors.price.msg %></p><% } %>  
+                        
                         <legend class="title-area">Precio de producto</legend>
-                        <input type="text" name="price" id="price" placeholder="$$$$$" class="input-text">
+                        <input type="text" name="price" id="price" placeholder="$$$$$" class="input-text" value="<%= oldData && oldData.price ? oldData.price : ''%>">
                     </fieldset>
 
                     <fieldset id="fsImage" class="text-area">
+                        
+                        <% if (locals && locals.errors && errors.image) { %>
+                            <p class="feedback"><%= errors.image.msg %></p><% } %>  
+
                         <label for="image">Subir imagen</label>
                         <input type="file" name="image" id="image" class="input-text">                        
                     </fieldset>
 
                     <fieldset id="fsDescription" class="text-area">
+                       
+                        <% if (locals && locals.errors && errors.description) { %>
+                            <p class="feedback"><%= errors.description.msg %></p><% } %>  
+
                         <legend class="title-area">Descripción del producto</legend>
-                        <textarea name="description" id="description" cols="30" rows="3"
-                            placeholder="Escribe la descripción del producto aqui..." class="input-text"></textarea>
+                        <input type="text" name="description" id="description" cols="30" rows="3"
+                            placeholder="Escribe la descripción del producto aqui..." class="input-text" value="<%= oldData && oldData.description ? oldData.description : ''%>"></input>
                     </fieldset>
 
                     <fieldset id="fsCategory" class="text-area">
@@ -60,15 +76,13 @@
                         <a href="/" class="button-c">Volver</a>
                     </section>
                 </form>
-            </div>
-        </main>
         <footer class="main-footer">
             <%- include('./partials/footer.ejs') %>
         </footer>
-        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
-        <script src="../js/dom.js"></script>
+     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="../js/dom.js"></script>
         <script src="../js/product.js"></script>
-        <!--Que pasa si no tengo internet con la ruta script de validator-->
+  
 </body>
 
 </html>

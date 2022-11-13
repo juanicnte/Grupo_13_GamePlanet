@@ -1,3 +1,4 @@
+const { body, validationResult } = require('express-validator')
 
 const db = require('../database/models/index');
 
@@ -15,29 +16,39 @@ const controlador = {
         products.then(success).catch(error)
     },
     create: (req, res) => {
+        
         const categories = db.category.findAll()
-        const success = data => res.render('create', { categories: data })
+        const success = data => res.render('create', { categories: data ,oldData:{}})
         const error = error => res.render(error)
         categories.then(success).catch(error)
     },
     save: (req, res) => {
         req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
       
+        const result = validationResult(req);
 
-        const save = db.product.create({
-            //sku: req.body.sku,
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            categoryId: req.body.category,
-            //classification: req.body.classification,
-            inOffer: req.body.inOffer,
-            image: req.body.image,
-            //createdAt: new Date()
-        })
-        const success = data => res.redirect('/')
-        const error = error => res.render(error)
-        return save.then(success).catch(error)
+        if(!result.isEmpty()){
+            let errores = result.mapped();
+            console.log('fallo');
+            console.log('errores ;:    ',errores);
+            const categories = db.category.findAll()
+            const success = data => res.render('create',{errors:errores,oldData: req.body,categories: data})
+            categories.then(success)
+        }else{
+
+            db.product.create({
+                //sku: req.body.sku,
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                categoryId: req.body.category,
+                //classification: req.body.classification,
+                inOffer: req.body.inOffer,
+                image: req.body.image,
+                //createdAt: new Date()
+            })
+            return res.redirect('/')
+        }
     },
     edit: (req, res) => {
 

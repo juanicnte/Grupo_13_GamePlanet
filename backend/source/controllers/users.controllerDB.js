@@ -73,11 +73,10 @@ const controlador = {
         })
     },
     update: (req, res) => {
-        const user = db.user.findByPk(req.body.id)        
-       
+        
         const success = data => res.redirect('/')
         const error = error => res.render(error)
-        return user.then((data) => db.user.update({
+        db.user.findByPk(req.params.id).then((data) => db.user.update({
             fullName: req.body.fullName,
             user: req.body.user,
             password: req.body.password,
@@ -87,7 +86,7 @@ const controlador = {
             email: req.body.email
          },{
              where:{
-                 id: req.body.id
+                 id: req.params.id
              }
         })).then(success).catch(error)
     },

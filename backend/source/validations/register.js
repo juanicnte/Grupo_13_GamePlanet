@@ -1,6 +1,6 @@
 const { body } = require('express-validator')
 let db = require('../database/models/index')
-console.log("he ingresado al validador REGISTER VALIDATION")
+
 
         
 let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacio').bail().isEmail().custom(function(user,{req}){
