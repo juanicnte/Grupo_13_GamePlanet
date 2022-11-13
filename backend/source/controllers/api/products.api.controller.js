@@ -15,7 +15,20 @@ const productsAPIController =  {
                 };
                 res.json(respuesta);
             });
+    },    
+    'detail': (req, res) => {
+        Product.findByPk(req.params.id)
+            .then(product => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        total: product.length,
+                        url: '/api/products/:id'
+                    },
+                    data: product
+                };
+                res.json(respuesta);
+            });
     },
-
 };
 module.exports = productsAPIController;
