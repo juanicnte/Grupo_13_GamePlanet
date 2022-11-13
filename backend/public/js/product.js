@@ -3,8 +3,8 @@
 //document.querySelector("#imageMsj").innerHTML = !e.target.files[0].type.includes("jpg", "jpeg", "png") 
 //? "Debe seleccionar una imagen en el formato jpg, jpeg y png" : null)
 
+console.log('ENTRAMOS AL VALIDADOR DE CREATE USARIO');
 window.addEventListener('load', function () {
-
     const validarNombre = (name) => {
         let valor = validator.trim(name.value)
         if (validator.isEmpty(valor) || !validator.isLength(valor, { min: 5, max: 50 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {

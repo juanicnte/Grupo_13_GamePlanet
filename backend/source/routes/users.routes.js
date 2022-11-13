@@ -64,7 +64,7 @@ route.put('/users/:id', isLogged, usersController.show)
 
 route.get('/users/edit/:id', isLogged, usersController.edit);
 
-route.put('/users/update/:id', upload.any(),editValidator,usersController.update);
+route.put('/users/update/:id', isLogged, isAdmin, upload.any(),editValidator,usersController.update);
 
 route.get('/users/update', isLogged,usersController.update)
 

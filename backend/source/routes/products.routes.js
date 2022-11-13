@@ -35,6 +35,7 @@ const upload = multer({storage:multer.diskStorage({destination, filename})});
 const isLogged = require('../middlewares/isLogged')
 const isAdmin = require('../middlewares/isAdmin')
 const isProduct = require('../validations/productCreate')
+const isProductEdit = require('../validations/productEdit')
 
 
 //Un sólo archivo (single('image)) o req.file 
@@ -53,7 +54,7 @@ route.put('/products/:id', isLogged, isAdmin, productsController.show)
 
 route.get('/products/edit/:id', isLogged, isAdmin, productsController.edit);
 
-route.put('/products/actualizar/:id', isLogged, isAdmin, upload.any(), productsController.update);
+route.put('/products/actualizar/:id', isLogged, isAdmin, upload.any(),isProductEdit, productsController.update);
 
 //route.get('/products/update', isLogged, isAdmin, productsController.update)
 //route.put('/products/:id',  productsController.update)

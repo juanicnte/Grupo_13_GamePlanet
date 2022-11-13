@@ -68,27 +68,35 @@ const controlador = {
         }).then(function(user){
             
             return res.render('users/userEdit', {
-                user: user})
+                user: user, oldData:{}})
             
         })
     },
     update: (req, res) => {
-        
+        const result = validationResult(req);
         const success = data => res.redirect('/')
         const error = error => res.render(error)
-        db.user.findByPk(req.params.id).then((data) => db.user.update({
-            fullName: req.body.fullName,
-            user: req.body.user,
-            password: req.body.password,
-            perfil: req.body.perfil,
-            birthDay: req.body.birthDay,
-            image: req.files && req.files.length>0 ? req.files[0].fileName : data.image,
-            email: req.body.email
-         },{
-             where:{
-                 id: req.params.id
-             }
-        })).then(success).catch(error)
+        if(result.isEmpty()){
+
+            db.user.findByPk(req.params.id).then((data) => db.user.update({
+                fullName: req.body.fullName,
+                user: req.body.user,
+                password: req.body.password,
+                perfil: req.body.perfil,
+                birthDay: req.body.birthDay,
+                image: req.files && req.files.length>0 ? req.files[0].fileName : data.image,
+                email: req.body.email
+             },{
+                 where:{
+                     id: req.params.id
+                 }
+            })).then(success).catch(error)
+        }else{
+            let errores = result.mapped();
+            console.log('fallo');
+            console.log('errores ;:    ',errores);
+            return res.render('users/userEdit',{errors:errores,user: req.body})
+        }
     },
     remove: (req, res) => {
         const user = db.user.destroy({

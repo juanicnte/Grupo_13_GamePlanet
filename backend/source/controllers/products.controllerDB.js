@@ -32,7 +32,7 @@ const controlador = {
             console.log('fallo');
             console.log('errores ;:    ',errores);
             const categories = db.category.findAll()
-            const success = data => res.render('create',{errors:errores,oldData: req.body,categories: data})
+            const success = data => res.render('create',{errors:errores,oldData: req.body,categories: categories})
             categories.then(success)
         }else{
 
@@ -55,31 +55,47 @@ const controlador = {
         const product = db.product.findByPk(req.params.id)        
         const categories = db.category.findAll()
         const success = data => res.render('edit', {
-            product: data[0], categories: data[1] })
+            product: data[0], categories: data[1],oldData:{} })
         const error = error => res.render(error)
         return Promise.all([product, categories]).then(success).catch(error)
     },
     update: (req, res) => {
+        req.body.image = req.files && req.files.length > 0 ? req.files[0].originalname : 'default.png'
         const product = db.product.findByPk(req.body.id)        
-       
+        const result = validationResult(req);
         const success = data => res.redirect('/')
         const error = error => res.render(error)
-        return product.then((data) => db.product.update({
-             //sku: req.body.sku,
-             name: req.body.name,
-             description: req.body.description,
-             price: req.body.price,
-             categoryId: req.body.category,
-             //classification: req.body.classification,
-             inOffer: req.body.inOffer,
-             image: req.files && req.files.length>0 ? req.files[0].fileName : data.image
-             /*createdAt: createdAt,  
-             updatedAt: Date.now() */
-         },{
-             where:{
-                 id: req.body.id
-             }
-        })).then(success).catch(error)
+        
+        if(!result.isEmpty()){
+            let errores = result.mapped();
+            console.log('fallo');
+            console.log('errores ;:    ',errores);
+            const product = db.product.findByPk(req.params.id)        
+            const categories = db.category.findAll()
+            const success = data => res.render('edit', {
+                product: data[0], categories: data[1], errors:errores,oldData:req.body })
+            const error = error => res.render(error)
+            return Promise.all([product, categories]).then(success).catch(error)
+        }else{
+              product.then((data) => db.product.update({
+                 //sku: req.body.sku,
+                 name: req.body.name,
+                 description: req.body.description,
+                 price: req.body.price,
+                 categoryId: req.body.category,
+                 //classification: req.body.classification,
+                 inOffer: req.body.inOffer,
+                 image: req.files && req.files.length>0 ? req.files[0].fileName : data.image
+                 /*createdAt: createdAt,  
+                 updatedAt: Date.now() */
+             },{
+                 where:{
+                     id: req.body.id
+                 }
+            })).then(success).catch(error)
+            
+        }
+
     },
     remove: (req, res) => {
         const product = db.product.destroy({

@@ -13,7 +13,7 @@
 
             <div class="container-all">
 
-                <form action="/products/actualizar/<%=product.id%>?m=PUT" method="POST" class="form-edit">
+                <form action="/products/actualizar/<%=product.id%>?m=PUT" method="POST" class="form-edit" id="form-edit">
 
                     <input type="hidden" name="id" value="<%=product.id%>">
 
@@ -71,12 +71,12 @@
                 </form>
             </div>
         </main>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <script src="../js/dom.js"></script>
+        <script src="../js/productEdit.js"></script>
         <footer class="main-footer">
             <%- include('./partials/footer.ejs') %>
         </footer>
-        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
-        <script src="../js/dom.js"></script>
-        <script src="../js/product.js"></script>
 </body>
 
 </html>
