@@ -19,7 +19,23 @@ const categoriesAPIController = {
                 }
                 res.json(respuesta);
             })
-    }
+    },
+    'categoryProducts': (req, res) => {
+        Category.findByPk(req.params.id,{
+            include: ['products']
+        })
+            .then(category => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        total: category.length,
+                        url: '/api/categories/products/:id'
+                    },
+                    data: category
+                };
+                res.json(respuesta);
+            });
+    },
 
 }
 
