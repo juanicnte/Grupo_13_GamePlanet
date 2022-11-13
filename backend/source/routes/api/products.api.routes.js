@@ -1,5 +1,5 @@
 const express = require('express');
-const productsController = require('../controllers/api/products.api.controller');
+const productsController = require('../../controllers/api/products.api.controller');
 const route = express.Router();
 
 const {resolve, extname} = require('path');
