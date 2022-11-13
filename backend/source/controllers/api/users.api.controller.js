@@ -1,4 +1,4 @@
-const db = require('../database/models/index');
+const db = require('../../database/models/index');
 const { body, validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
 
