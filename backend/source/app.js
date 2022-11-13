@@ -59,10 +59,10 @@ app.use(require('./routes/products.routes'));
 app.use(require('./routes/users.routes'));
 
 app.use(require('./routes/api/products.api.routes'));
-app.use(require('./routes/api/users.api.routes'));
+//app.use(require('./routes/api/users.api.routes'));
 app.use(require('./routes/api/categories.api.routes'));
 
-
+//Devolver un cambio git stash -u
 app.get("/login", function(req,res){
     return res.render("login");
 });
