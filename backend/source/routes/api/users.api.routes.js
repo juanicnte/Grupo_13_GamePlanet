@@ -21,14 +21,14 @@ const { existsSync, mkdirSync } = require('fs');
 
 
 
-route.get('/register', usersController.create)
+// route.get('/register', usersController.create)
 
-route.get('/login', usersController.login)
+// route.get('/login', usersController.login)
 
-route.get('/users/detail/:id', usersController.show)
+// route.get('/users/detail/:id', usersController.show)
 
-route.put('/users/:id', usersController.show)
+// route.put('/users/:id', usersController.show)
 
-route.get('/users', usersController.index)
+route.get('/api/users', usersController.list)
 
 module.exports = route;
