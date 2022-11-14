@@ -17,41 +17,29 @@ let email = body('email').notEmpty().withMessage('E-Mail no puede quedar vacio')
 }).withMessage('Email ya registrado')
 let password = body('password').notEmpty().withMessage('Por favor, ingrese su contraseña').bail().isLength({min:10}).withMessage('Al menos 10 caracteres')
 
-let user = body('user').notEmpty().withMessage('El nombre de usuario no puede quedar vacío').
-custom(function(user){
-   return db.user.findOne({where:
-    {
-        user: user
-    }}).then(function(data){
-        if(data){
-            throw new Error('used user')
-        }else{
-            return true
-        }
-    })
-}).withMessage('Usuario ya registrado').bail()
+let user = body('user').notEmpty().withMessage('El nombre de usuario no puede quedar vacío')
 .isLength({min:2,max:20}).withMessage('minimo 2 caracteres, maximo 20')
 
-let fullName = body('fullName').notEmpty().withMessage('El nombre de usuario no puede quedar vacío').
-custom(function(user){
-   return db.user.findOne({where:
-    {
-        user: user
-    }}).then(function(data){
-        if(data){
-            throw new Error('used user')
-        }else{
-            return true
-        }
-    })
-}).withMessage('Usuario ya registrado').bail()
+let fullName = body('fullName').notEmpty().withMessage('El nombre de usuario no puede quedar vacío')
+//custom(function(user){
+//return db.user.findOne({where:
+//    {
+//        user: user
+//    }}).then(function(data){
+//        if(data){
+//            throw new Error('used user')
+//        }else{
+//            return true
+//        }
+//    })
+//}).withMessage('Usuario ya registrado').bail()
 .isLength({min:2}).withMessage('Al menos 2 caracteres')
 
 const whitelist = [
     'image/png',
     'image/jpeg',
     'image/jpg',
-    'image/webp'
+    'image/gif'
   ]
   
 let imagen = body('image').custom(function(value,{req}){

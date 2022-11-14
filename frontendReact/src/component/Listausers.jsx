@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState , useEffect } from 'react';
+import '../css/components.css';
 
 function Listausers() {
 
@@ -26,21 +27,22 @@ function Listausers() {
     
     return(
 
-        <div>
+        <div className='container-products'>
 
-            <h2>Lista de Usuarios: {users.length}</h2>
+            <h2 className='box-title'>Lista de Usuarios: {users.length}</h2>
 
-            <ul>
+            <ul className='list-container'>
 
                 {
                     users.map((user , i) => {
 
                         return(
 
-                            <li key={i} >
+                            <li className='list-products' key={i} >
 
-                                <h3>{user.fullName}</h3>
+                                <h3 className='title-products'>{user.fullName}</h3>
 
+                                <img src={`http://localhost:3031/images/avatars/${user.image}`} alt="" width='150' className='user-image' />
 
 
                             </li>

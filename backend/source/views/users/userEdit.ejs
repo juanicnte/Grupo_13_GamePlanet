@@ -11,7 +11,7 @@
 
         <main>
                 
-                <form action="/users/update/<%=user.id%>?m=PUT" method="POST" class="form-edit">
+                <form action="/users/update/<%=user.id%>?m=PUT" method="POST" class="form-edit" id="form">
                    <input type="hidden" name="id" value="<%=user.id%>">
                    
                    <fieldset class="text-area">
@@ -21,7 +21,7 @@
 
                     <fieldset class="text-area">
                         <legend class="title-area">Nombre de usuari@</legend>
-            <input type="text" name="user" placeholder="Nombre de usuari@" id="nombreUsuari@" class="input-text"
+            <input type="text" name="user" placeholder="Nombre de usuari@" id="user" class="input-text"
               value="<%= user.user%>" required>
                     </fieldset>
 
@@ -51,13 +51,16 @@
 
                     <fieldset class="text-area">
                         <label for="nacio">Fecha de nacimiento</label>
-                        <input type="date" name="birthDay" id="nacio" class="input-text"
+                        <input type="date" name="birthDay" id="birthDay" class="input-text"
                       value="<%= user.birthDay%>" required />
                     </fieldset>
                     
                     <button type="submit" class="input-text input-button">Guardar</button>
+                    <ul class="mensajeError" id="erroresEdit"></ul> 
                 </form>
         </main>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/js/userEdit.js"></script>
         <footer class="main-footer">
             <%- include('../partials/footer.ejs') %>
         </footer>
