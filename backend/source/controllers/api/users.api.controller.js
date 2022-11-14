@@ -30,5 +30,19 @@ const usersAPIController =  {
                 res.json(respuesta);
             });
     },
+
+    'last': (req, res) => {
+        User.findOne({order:[['id', 'DESC']]})
+            .then(User => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        url: 'api/users/last'
+                    },
+                    data: User
+                };
+                res.json(respuesta);
+            });
+    },     
 };
 module.exports = usersAPIController;

@@ -30,5 +30,19 @@ const productsAPIController =  {
                 res.json(respuesta);
             });
     },
+
+    'last': (req, res) => {
+        Product.findOne({order:[['id', 'DESC']]})
+            .then(products => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        url: 'api/products/last'
+                    },
+                    data: products
+                };
+                res.json(respuesta);
+            });
+    },    
 };
 module.exports = productsAPIController;

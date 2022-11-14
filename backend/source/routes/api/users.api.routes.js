@@ -25,11 +25,13 @@ const { existsSync, mkdirSync } = require('fs');
 
 // route.get('/login', usersController.login)
 
-route.get('/api/users/:id', usersController.detail);
+route.get('/api/users', usersController.list)
+
+route.get('/api/users/last', usersController.last);
 
 // route.put('/users/:id', usersController.show)
 
 
-route.get('/api/users', usersController.list)
+route.get('/api/users/:id', usersController.detail);
 
 module.exports = route;

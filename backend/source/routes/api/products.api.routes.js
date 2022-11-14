@@ -37,6 +37,8 @@ route.put('/products/:id', productsController.show)
 */
 route.get('/api/products', productsController.list);
 
+route.get('/api/products/last', productsController.last);
+
 route.get('/api/products/:id', productsController.detail);
 
 
