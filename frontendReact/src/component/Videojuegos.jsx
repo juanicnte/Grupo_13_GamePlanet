@@ -12,8 +12,8 @@ function Videojuegos() {
         .then(response => response.json())
 
         .then(({data})=>{
+        
 
-            console.log(data)
             setJuegos(data)
         })
 
@@ -29,7 +29,7 @@ function Videojuegos() {
 
         <div>
 
-            <h2>Lista de Videojuegos: {juegos.length}</h2>
+            <h2>Lista de Productos: {juegos.length}</h2>
 
             <ul>
 
@@ -49,6 +49,7 @@ function Videojuegos() {
                         )
                     })
                 }
+
             </ul>
 
         </div>

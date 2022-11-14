@@ -41,7 +41,7 @@ function Listausers() {
 
                                 <h3>{user.fullName}</h3>
 
-                                <img src={`http://localhost:3031/images/${user.image}`} alt="" width='150' />
+
 
                             </li>
 
@@ -53,5 +53,5 @@ function Listausers() {
         </div>
     )
 }
-
+//<img src={`http://localhost:3031/images/${user.image}`} alt="" width='150' />
 export default Listausers;
