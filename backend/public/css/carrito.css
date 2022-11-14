@@ -6,9 +6,8 @@ main{
     padding: 3rem 1rem 2rem;
     color: #dddddd;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
 }#header-cart p{
     font-size: 0.8rem;
     margin-left: 0.5rem;
@@ -49,11 +48,10 @@ main{
 
 .name-ul-product{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     color: #dddddddd;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: space-around;
 }.name-ul-product ul{
     margin-top: 1rem;
 }
@@ -131,8 +129,10 @@ main{
     align-self: center;
     margin: 1rem 0;
 }.crear:hover{
-    background-color: #5928b1;
-    color: #282828;
+    background-color: #dddddd;
+    color: #5928b1;
+    transition-property: background-color color;
+    transition-duration: 0.3s;
 }
 
 #buy-product{
@@ -153,3 +153,20 @@ main{
     font-weight: 600;
     color: #dddddd;
 }   
+
+@media screen and (min-width: 768px){
+    #cards-products{
+        margin: auto;
+        width: 45rem;
+    }
+    #payments{
+        padding: 1rem 5rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #cards-products{
+        margin: auto;
+        width: 55rem;
+    }
+}
