@@ -1,7 +1,3 @@
-
-
-//Password usar isStrongPassword de express-validator
-
 window.addEventListener('load', function() {
 
     //Creo una función para generar los span

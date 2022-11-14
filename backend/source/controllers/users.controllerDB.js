@@ -134,7 +134,7 @@ const controlador = {
         if(dato){
             req.session.user = dato
             if(req.body.recordame){
-                res.cookie('user',req.body.email,{maxAge: 1000*60*3})
+                res.cookie('user',req.body.email,{maxAge: 1000*60000*3})
         
             }
              return res.redirect('/')
