@@ -1,4 +1,4 @@
-console.log('holaaaaaaaaaaaaaaskdljaslñkdjlakñsjdlñkasjlkñdsa');
+
 window.addEventListener('load', function () {
     console.log('ESTAMOSSSSS EN LA VALIDACION DE FRONT EDIT');
     const validarNombre = (name) => {
