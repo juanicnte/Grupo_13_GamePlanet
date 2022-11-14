@@ -27,22 +27,22 @@ function Videojuegos() {
     
     return(
 
-        <div>
+        <div className='container-products'>
 
-            <h2>Lista de Videojuegos: {juegos.length}</h2>
+            <h2 className='box-title'>Lista de Videojuegos: {juegos.length}</h2>
 
-            <ul>
+            <ul clasName='list-container'>
 
                 {
                     juegos.map((juego , i) => {
 
                         return(
 
-                            <li key={i} >
+                            <li className='list-products' key={i} >
 
-                                <h3>{juego.name}</h3>
+                                <h3 className='title-products'>{juego.name}</h3>
 
-                                <img src={`http://localhost:3031/images/${juego.image}`} alt="" width='150' />
+                                <img src={`http://localhost:3031/images/${juego.image}`} alt="" width='150' className='game-image' />
 
                             </li>
 

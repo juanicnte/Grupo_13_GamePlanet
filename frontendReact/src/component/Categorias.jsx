@@ -26,20 +26,20 @@ function Categorias() {
     
     return(
 
-        <div>
+        <div className='container-products'>
 
-            <h2>Categorias: {categorias.length}</h2>
+            <h2 className='box-title'>Categorias: {categorias.length}</h2>
 
-            <ul>
+            <ul clasName='list-container'>
 
                 {
                     categorias.map((categoria , i) => {
 
                         return(
 
-                            <li key={i} >
+                            <li className='list-products' key={i} >
 
-                                <h3>{categoria.name}</h3>
+                                <h3 className='title-products'>{categoria.name}</h3>
 
                             </li>
 

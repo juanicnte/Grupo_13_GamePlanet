@@ -5,7 +5,7 @@ function Sidebar(){
     return(
         <React.Fragment>
             
-            <img className="w-100" src={images} alt="Digital House"/>
+            <img className="logo-image" src={images} alt="Digital House"/>
             
         </React.Fragment>
     )
