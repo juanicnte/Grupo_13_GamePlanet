@@ -30,9 +30,6 @@ function Videojuegos() {
 
         <div className='container-products'>
 
-
-            <h2>Lista de Productos: {juegos.length}</h2>
-
             <h2 className='box-title'>Lista de Videojuegos: {juegos.length}</h2>
 
 
