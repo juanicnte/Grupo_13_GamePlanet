@@ -22,10 +22,15 @@ const usersAPIController =  {
                 let respuesta = {
                     meta: {
                         status: 200,
-                        total: user.length,
-                        url: '/api/users/:id'
+                        deatil: req.url
                     },
-                    data: user
+                    data: {
+                        id: user.id,
+                        fullName: user.fullName,
+                        user: user.user,
+                        email: user.email,
+                        deatil: `/images/avatars/${user.image}`
+                    }
                 };
                 res.json(respuesta);
             });
