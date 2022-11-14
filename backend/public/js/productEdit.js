@@ -1,16 +1,32 @@
 
 window.addEventListener('load', function () {
     console.log('ESTAMOSSSSS EN LA VALIDACION DE FRONT EDIT');
+    const createError = function (idElemento, msj) {
+        if (document.getElementById(idElemento) == null) {
+            let listaErrores = document.querySelector('#erroresEdit')
+            let mensaje = document.createElement("li")
+            mensaje.id = idElemento
+            mensaje.innerHTML = msj        
+            listaErrores.appendChild(mensaje)
+        }
+    }
+
+    const deleteSpan = function (idElemento) {
+        if (document.getElementById(idElemento) != null) {
+            document.getElementById(idElemento).remove();
+        }
+    }
+    
     const validarNombre = (name) => {
         let valor = validator.trim(name.value)
         if (validator.isEmpty(valor) || !validator.isLength(valor, { min: 5, max: 50 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
             name.style.background = 'var(--msjError)'  
-            createSpan("spanName", "#fsName", 'El nombre es requerido, no debe contener letras y la longitud debe ser entre 5 letras y 50 caracteres')
+            createError("errorName", 'El titulo es requerido, no debe contener letras y la longitud debe ser entre 5 letras y 50 caracteres')
             return false
         }
         else {
             name.style.background = 'var(--sinError)'  
-            deleteSpan("spanName")
+            deleteSpan("errorName")
             return true
         }
     }
@@ -19,12 +35,12 @@ window.addEventListener('load', function () {
         let valor = validator.trim(price.value)      
         if (validator.isEmpty(valor) || isNaN(validator.toFloat(valor))) {
             price.style.background = 'var(--msjError)';
-            createSpan("spanPrice", "#fsPrice", 'El precio es requerido, numérico y debe ser mayor que cero')
+            createError("errorPrice",'El precio es requerido, numérico y debe ser mayor que cero')
             return false
         }
         else {
             price.style.background = 'var(--sinError)';
-            deleteSpan("spanPrice")
+            deleteSpan("errorPrice")
             return true
         }
     }
@@ -32,26 +48,26 @@ window.addEventListener('load', function () {
     const validarImagen = (image) => {
         if (image !=null && image.files[0] != undefined && !image.files[0].type.includes("image")) {
             image.style.background = 'var(--msjError)';
-            createSpan("spanImage", "#fsImage", 'Debe seleccionar una imagen en el formato jpg, jpeg y png')
+            createError("errorImage", 'Debe seleccionar una imagen en el formato jpg, jpeg y png')
             return false
         }
         else {
             image.style.background = 'var(--sinError)'; deleteSpan("spanImage")
-            deleteSpan("spanImage")
+            deleteSpan("errorImage")
             return true
         }
     }
 
     const validarDescripcion = (description) => {
         let valor = validator.trim(description.value)
-        if (validator.isEmpty(valor) || !validator.isLength(valor, { min: 400, max: 500 })) {
+        if (validator.isEmpty(valor) || !validator.isLength(valor, { min: 20, max: 500 })) {
             description.style.background = 'var(--msjError)';
-            createSpan("spanDescription", "#fsDescription", 'La descripción es requerida entre 20 y 500 caracteres')
+            createError("errorDescription",'La descripción es requerida entre 20 y 500 caracteres')
             return false
         }
         else {
             description.style.background = 'var(--sinError)';
-            deleteSpan("spanDescription")
+            deleteSpan("errorDescription")
             return true
         }
     }
