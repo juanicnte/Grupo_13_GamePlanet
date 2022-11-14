@@ -31,6 +31,15 @@ body{
     width: 7rem;
 }
 
+.title-products{
+    font-size: 14px;
+}
+
+.game-image{
+    width: 10rem;
+    height: 14rem;
+}
+
 .container-products{
     text-align: center;
     background-color: #212121;
@@ -73,6 +82,12 @@ body{
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
+}
+
+@media screen and (min-width: 1240px) {
+    .title-products{
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
