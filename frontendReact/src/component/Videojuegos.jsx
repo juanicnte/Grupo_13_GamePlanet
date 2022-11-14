@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/components.css';
 import { useState , useEffect } from 'react';
 
 function Videojuegos() {
@@ -31,7 +32,7 @@ function Videojuegos() {
 
             <h2 className='box-title'>Lista de Videojuegos: {juegos.length}</h2>
 
-            <ul clasName='list-container'>
+            <ul className='list-container'>
 
                 {
                     juegos.map((juego , i) => {

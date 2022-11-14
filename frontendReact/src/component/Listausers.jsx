@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState , useEffect } from 'react';
+import '../css/components.css';
 
 function Listausers() {
 
@@ -30,7 +31,7 @@ function Listausers() {
 
             <h2 className='box-title'>Lista de Usuarios: {users.length}</h2>
 
-            <ul clasName='list-container'>
+            <ul className='list-container'>
 
                 {
                     users.map((user , i) => {
