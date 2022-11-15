@@ -3,7 +3,11 @@ const User = db.user;
 
 const usersAPIController =  {
     'list': (req, res) => {
-        User.findAll()
+        User.findAll({
+            attributes : {
+                exclude : ['password', 'perfil', 'birthDay']
+            }
+        })
             .then(users => {
                 let respuesta = {
                     meta: {
@@ -35,7 +39,6 @@ const usersAPIController =  {
                 res.json(respuesta);
             });
     },
-
     'last': (req, res) => {
         User.findOne({order:[['id', 'DESC']]})
             .then(User => {
