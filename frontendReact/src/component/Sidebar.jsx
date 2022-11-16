@@ -8,13 +8,13 @@ function Sidebar(){
         <React.Fragment>
             <div id='header-dashboard'>
             <img className="logo-image" src={images} alt="Logo Game Planet"/>
-            <a href="http://localhost:3031/">Volver</a>
+            <Link to="/">Home</Link> 
  
-            <Link to="/Videojuegos">Videojuegos</Link> 
-
             <Link to="/ListaUsers">Usuarios</Link> 
 
-            <Link to="/">Home</Link> 
+            <Link to="/Videojuegos">Videojuegos</Link> 
+
+            <a href="http://localhost:3031/">Volver</a>
 
             </div>
         </React.Fragment>
