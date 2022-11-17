@@ -51,9 +51,9 @@ window.addEventListener('load', function() {
 
     const validarName = (psw) => {
         let valor = validator.trim(psw.value)
-        if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 3, max: 20 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
+        if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 5, max: 20 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
             psw.style.background = 'var(--msjError)'  
-            createError("errorName", 'El nombre de usuario es obligatorio, debe contener entre 5 y 20 carácteres y debe ser alfa númerico')
+            createError("errorName", 'El nombre de usuario es obligatorio, debe contener entre 5 y 20 carácteres')
             return false
         }
         else {
@@ -64,7 +64,7 @@ window.addEventListener('load', function() {
     }
     const validarfullName = (psw) => {
         let valor = validator.trim(psw.value)
-        if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 7, max: 1000 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
+        if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 4, max: 1000 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
             psw.style.background = 'var(--msjError)'  
             createError("errorfullName", 'Este campo debe ser completado con el nombre y apellido')
             return false
@@ -94,7 +94,7 @@ window.addEventListener('load', function() {
         
         if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 6, max: 800 })) {
             psw.style.background = 'var(--msjError)'  
-            createError("errorEmail", 'El email debe tener al menos 6 caracteres')
+            createError("errorEmail", 'El email debe tener al menos 6 caracteres y debe tener formato de Email')
             return false
         }
         else if(!validator.isEmpty(valor)){
@@ -212,4 +212,3 @@ window.addEventListener('load', function() {
 
     }) 
 })
-    

@@ -30,7 +30,7 @@ custom(function(user){
         }
     })
 }).withMessage('Usuario ya registrado').bail()
-.isLength({min:2,max:20}).withMessage('minimo 2 caracteres, maximo 20')
+.isLength({min:5,max:20}).withMessage('minimo 5 caracteres, maximo 20')
 
 let fullName = body('fullName').notEmpty().withMessage('El nombre de usuario no puede quedar vacío').
 custom(function(user){
@@ -45,7 +45,7 @@ custom(function(user){
         }
     })
 }).withMessage('Usuario ya registrado').bail()
-.isLength({min:2})
+.isLength({min:4})
 
 const whitelist = [
     'image/png',
