@@ -75,6 +75,10 @@ app.get('/carrito', function(req,res){
 
 });
 
+app.get('/paginaEnConstruccion', function(req,res){
+    return res.render("paginaEnConstruccion");//RENDERIZADO
+
+});
 
 
 //Configurar error 404 ruta no encontrada
