@@ -27,11 +27,11 @@ function UltimoUser() {
 
         <div className='container-products'>
 
-            <h2 className='box-title'>Ultimo Usuarios:</h2>
+            <h2 className='box-title'>Ultimo Usuario:</h2>
 
-            <h3 className='title-products'>{user.fullName}</h3>
+            <h3 className='title-products h3-user'>{user.fullName}</h3>
 
-            <img src={`http://localhost:3031/images/${user.image}`} alt="" width='150' className='user-image' />
+            <img src={`http://localhost:3031/images/avatars/${user.image}`} alt="" width='150' className='user-image' />
 
     
         </div>

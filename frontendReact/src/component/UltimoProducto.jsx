@@ -26,9 +26,9 @@ function UltimoProducto() {
 
         <div className='container-products'>
 
-            <h2 className='box-title'>Ultimo Producto:</h2>
+            <h2 className='box-title '>Ultimo Producto:</h2>
 
-            <h3 className='title-products'>{products.name}</h3>
+            <h3 className='title-products h3-user'>{products.name}</h3>
 
             <img src={`http://localhost:3031/images/${products.image}`} alt="" width='150' className='user-image' />
 

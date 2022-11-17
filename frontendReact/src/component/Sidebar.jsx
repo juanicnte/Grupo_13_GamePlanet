@@ -8,6 +8,7 @@ function Sidebar(){
         <React.Fragment>
             <div id='header-dashboard'>
             <img className="logo-image" src={images} alt="Logo Game Planet"/>
+            <div className='header-a'>
             <Link to="/">Home</Link> 
  
             <Link to="/ListaUsers">Usuarios</Link> 
@@ -15,7 +16,7 @@ function Sidebar(){
             <Link to="/Videojuegos">Videojuegos</Link> 
 
             <a href="http://localhost:3031/">Volver</a>
-
+            </div>
             </div>
         </React.Fragment>
     )
