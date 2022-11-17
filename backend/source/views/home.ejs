@@ -22,7 +22,7 @@
 <div class="container-allMain">
         <% products.forEach(element => {%>
           <a href="/products/detail/<%= element.id %>">
-      <div class="productos">
+            <div class="productos list-group-item p-3">
         <picture>
             <img src="images/<%= element.image %>" alt="<%= element.description %>" />
         </picture>
@@ -51,4 +51,5 @@
     </footer>
 </body>
 
+<script src="./js/search-filter.js"></script>
 </html>
