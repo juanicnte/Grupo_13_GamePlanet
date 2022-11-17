@@ -2,11 +2,11 @@
 
   <section id="top-menu">
       <ul id="top-menu-right">
-          <a href="#">Mas vendidos</a>
+          <a href="paginaEnConstruccion">Mas vendidos</a>
           |
-          <a href="#">Ofertas</a>
+          <a href="paginaEnConstruccion">Ofertas</a>
           |
-          <a href="#">Soporte 24/7</a>
+          <a href="paginaEnConstruccion">Soporte 24/7</a>
       </ul>
       <div id="user-menu">
         <picture id="pic-logo">
@@ -15,7 +15,7 @@
 
         <ul class="burger-user">
           <% if(userLogged && userLogged.perfil=='Admin') { %>
-            <li class="dashboard-style"><a href="http://localhost:5173/" class="fa-solid fa-chart-line"><p>Dashboard</p></a></li>
+            <li class="dashboard-style"><a href="http://localhost:5173/" class="fa-solid fa-chart-line" target="_blank"><p>Dashboard</p></a></li>
             <% } %>
       <% if(userLogged){%>
         <li class="user-name"> <p id="name-user"><%=  userLogged.fullName %></p> 
@@ -34,16 +34,16 @@
     <div id="search-categories">
       <ul id="category-menus">
         <div class="category-container">
-          <li><a href="#"><i class="fa-brands fa-playstation"></i> <p class="name-category">Playstation</p> </a></li> 
+          <li><a href="paginaEnConstruccion"><i class="fa-brands fa-playstation"></i> <p class="name-category">Playstation</p> </a></li> 
         </div>
         <div class="category-container">
-          <li><a href="#"><i class="fa-brands fa-xbox"></i> <p class="name-category">Xbox</p> </a></li> 
+          <li><a href="paginaEnConstruccion"><i class="fa-brands fa-xbox"></i> <p class="name-category">Xbox</p> </a></li> 
         </div>
         <div class="category-container">
-          <li><a href="#"><i class="fa-solid fa-gamepad"></i> <p class="name-category">Nintendo</p> </a></li> 
+          <li><a href="paginaEnConstruccion"><i class="fa-solid fa-gamepad"></i> <p class="name-category">Nintendo</p> </a></li> 
         </div>
         <div class="category-container">
-          <li><a href="#"><i class="fa-solid fa-desktop"></i> <p class="name-category">PC</p> </a></li> 
+          <li><a href="paginaEnConstruccion"><i class="fa-solid fa-desktop"></i> <p class="name-category">PC</p> </a></li> 
         </div>
           <div class="buscar">
               <input type="text" placeholder="Buscar" required />
