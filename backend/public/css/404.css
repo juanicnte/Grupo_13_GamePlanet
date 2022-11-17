@@ -22,7 +22,7 @@ main{
     font-size: 0.5rem;
     font-weight: 600;
     padding-bottom: 0.3rem;
-        
+    text-shadow: 2px -1px 0px #5928b1;
 }
 
 /*IMAGEN PC*/
@@ -44,15 +44,15 @@ main{
     font-size: 3rem;
     margin-top: 1rem;
     font-weight: 800;
-    color: rgb(203, 129, 247);
-    text-shadow: 0 0 10px var(--red);
+    color: #ddd;
+    text-shadow: 3px -2px 0px #5928b1;
 }
 
 /*BOTON VOLVER*/
 .button{
     width: 40%;
     text-align: center;
-    background-color: #9e339e;
+    background-color: #5928b1;
     margin-bottom: 1rem;
     margin-top: 2rem ;
     border-radius: 5px;
@@ -65,8 +65,9 @@ main{
     font-weight: 600;
 }
 .button:hover{
-    color: var(--blackLetter);
-    background: rgb(255, 0, 149);
+    color: #5928b1;
+    background-color: #ddd;
+    transition: 0.3s all ;
 }
 header{
     display: none;
