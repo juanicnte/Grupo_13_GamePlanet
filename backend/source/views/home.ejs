@@ -12,44 +12,50 @@
 
     <main class="main-content">
       <div class="title-top">
-      <h2>
-        Tendencias
-      </h2>
-      <a href="paginaEnConstruccion">
-        <h3>Ver todo</h3>
-      </a>
-    </div>
-<div class="container-allMain">
-        <% products.forEach(element => {%>
+        <h2>
+          Tendencias
+        </h2>
+        <a href="#" id="clearFilter">
+          <h3>Ver todo</h3>
+        </a>
+      </div>
+      <div class="container-allMain">
+        <% products.forEach(element=> {%>
           <a href="/products/detail/<%= element.id %>">
             <div class="productos list-group-item p-3">
-        <picture>
-            <img src="images/<%= element.image %>" alt="<%= element.description %>" />
-        </picture>
-            <div class="informacion">
-            <span class="tipo-envio">En stock</span>
-            <div class="container-prices">
-            <span class="precio-ahora">$<%=(element.price - (element.price * 0.1)) %></span>
-            <span class="precio-anterior">$<%= element.price %></span>
-          </div>
-          <span class="tipo-entrega">Entrega inmediata</span>
-            <span class="name-product"><%= element.name %></span>
-        </div>
+              <picture>
+                <img src="images/<%= element.image %>" alt="<%= element.description %>" />
+              </picture>
+              <div class="informacion">
+                <span class="tipo-envio">En stock</span>
+                <div class="container-prices">
+                  <span class="precio-ahora">$<%=(element.price - (element.price * 0.1)) %></span>
+                  <span class="precio-anterior">$<%= element.price %></span>
+                </div>
+                <span class="tipo-entrega">Entrega inmediata</span>
+                <span class="name-product">
+                  <%= element.name %>
+                </span>
+                <input type="text" name="categoryId" id="categoryId" hidden
+                            value="<%=element.categoryId%>">
+              </div>
+            </div>
+          </a>
+          <% }); %>
       </div>
-      </a>
-        <% }); %>
-      </div>           
     </main>
-    <% if(userLogged && userLogged.perfil=='Admin') { %>
+    <% if(userLogged && userLogged.perfil=='Admin' ) { %>
       <ul class="botones">
-          <a href="/users" class="crear-editar">USUARIOS</a>
-          <a href="/register" class="crear-editar">CREAR USUARIO</a>
+        <a href="/users" class="crear-editar">USUARIOS</a>
+        <a href="/register" class="crear-editar">CREAR USUARIO</a>
       </ul>
       <% } %>
-    <footer class="main-footer">
-      <%- include('./partials/footer.ejs') %>
-    </footer>
+        <footer class="main-footer">
+          <%- include('./partials/footer.ejs') %>
+        </footer>
 </body>
 
 <script src="./js/search-filter.js"></script>
+<script src="./js/category-filter.js"></script>
+
 </html>
