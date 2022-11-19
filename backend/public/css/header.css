@@ -25,6 +25,31 @@ header{
     margin: 1rem 1rem 0;
 }
 
+/* estilos menu hamburguesa */
+
+#mobile-nav{
+  position: fixed;
+    top: 23vh;
+    left: 0;
+    height: 23vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 4rem;
+    align-content: center;
+    background-color: #5928b1;
+    color: #fff;
+    z-index: 0;
+    padding: 1rem;
+    transition: all 0.3s ease-out;
+    transform: translateX(-200%);
+}#mobile-nav.active{
+  transform: translateX(0);
+  transition: all 0.5s ease-out;
+}
+/* fin estilos menu hamburguesa */
+
 .dashboard-style{
   margin-right: 2rem;
   cursor: pointer;
