@@ -27,26 +27,57 @@ header{
 
 /* estilos menu hamburguesa */
 
+#btn-h{
+  color: #fff;
+}
+.icons-userMenu-burger{
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.icons-userMenu-burger i{
+  color: #fff;
+  margin-right: 5px;
+}
+
 #mobile-nav{
   position: fixed;
-    top: 23vh;
-    left: 0;
-    height: 23vh;
-    width: 100vw;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    gap: 4rem;
-    align-content: center;
-    background-color: #5928b1;
-    color: #fff;
-    z-index: 0;
-    padding: 1rem;
-    transition: all 0.3s ease-out;
-    transform: translateX(-200%);
+  top: 25vh;
+  left: 0;
+  height: 23vh;
+  width: 100vw;
+  display: flex;
+  gap: 1.3rem;
+  align-content: center;
+  flex-direction: column;
+  background-color: #212121f5;
+  color: #fff;
+  border-bottom: solid 1px #5928b1;
+  z-index: 0;
+  padding: 1rem;
+  transition: all 0.3s ease-out;
+  transform: translateX(-200%);
 }#mobile-nav.active{
   transform: translateX(0);
   transition: all 0.5s ease-out;
+}
+
+#links-hb{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+}
+#links-hb a{
+  color: #5928b1;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* fin estilos menu hamburguesa */
 
@@ -127,8 +158,6 @@ header{
     font-size: 18px;
     border-radius: 50%;
     cursor: pointer;
-  }.btn:hover{
-    background-color: #422c6a;
   }
   
   .buscar:hover input {
@@ -158,7 +187,6 @@ header{
 
   .hamburger-button{
     font-size: 2rem;
-    color: #5928b1;
   }
 
   #name-user{
