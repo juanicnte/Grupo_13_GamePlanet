@@ -1,5 +1,3 @@
-
-
 //Password usar isStrongPassword de express-validator
 
 window.addEventListener('load', function() {
@@ -46,8 +44,6 @@ window.addEventListener('load', function() {
             return true
         }
     } 
-
-
 
     const validarName = (psw) => {
         let valor = validator.trim(psw.value)
@@ -99,16 +95,12 @@ window.addEventListener('load', function() {
         }
         else if(!validator.isEmpty(valor)){
          for (i = 0; i < valor.length; i++)
-    
          {      
-    
              if (iChars.indexOf(valor.charAt(i)) != -1)
-    
              {    
-             createError("errorEmail", 'no puede contener valores ilegales tales como / , ? , ! , }')
-             return false; 
+                createError("errorEmail", 'No puede contener caracteres especiales como / , ? , ! , }')
+                return false; 
              } 
-    
          }
         }
         else {
@@ -119,94 +111,65 @@ window.addEventListener('load', function() {
     }
     
     document.querySelector("#email").addEventListener('change', e => {
-        console.log('Estoy changes validando easdasdasdasl pws')
-        
         validarEmail(e.target) })
         
     document.querySelector("#password").addEventListener('change', e => {
-            console.log('VALIDATIN PASSWORD')
-            
         validarPassword(e.target) })
         
     document.querySelector("#birthDay").addEventListener('change', e => {
-            console.log('VALIDATIN BIRTHDATE')
-            
         validarbirthDay(e.target) })
     
     document.querySelector("#user").addEventListener('change', e => {
-        console.log('VALIDATIN USER')
-        
         validarName(e.target) })
+
     document.querySelector("#fullName").addEventListener('change', e => {
-        console.log('VALIDATING FULLNAME')
-        
         validarfullName(e.target) })
+
     document.querySelector("#image").addEventListener('change', e => {
-        console.log('VALIDATING IMAGE')
-        
         validarImagen(e.target) })
     
-
     let formulario = document.querySelector('form')
     
     formulario.addEventListener("submit", function(e){
-    
-        console.log('estoy en el evento submit')
         e.preventDefault();
         let errores = 0
-    
-    
-        console.log('empecé')
-        
         
         let password = document.querySelector("#password")
         
         if(!validarPassword(password)) {
-            console.log('passw')
             errores++
         }
       
-        
         let email = document.querySelector("#email")
         
         if(!validarPassword(email)) {
-            console.log('passw')
             errores++
         }
-      
 
         let name = document.querySelector("#user")
         
         if(!validarName(name)) {
-            console.log('passw')
             errores++
         }
-      
         
         let fullName = document.querySelector("#fullName")
         
         if(!validarfullName(fullName)) {
-            console.log('passw')
             errores++
         }
-      
         
         let image = document.querySelector("#image")
         
         if(!validarImagen(image)) {
-            console.log('passw')
             errores++
         }
-       
         
         let birthDay = document.querySelector("#birthDay")
         
         if(!validarbirthDay(birthDay)) {
-            console.log('passw')
             errores++
         }
         if (errores == 0) {
-            console.log('no pasa nada');
             e.target.submit()
         }
 

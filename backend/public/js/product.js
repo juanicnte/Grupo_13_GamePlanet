@@ -3,13 +3,12 @@
 //document.querySelector("#imageMsj").innerHTML = !e.target.files[0].type.includes("jpg", "jpeg", "png") 
 //? "Debe seleccionar una imagen en el formato jpg, jpeg y png" : null)
 
-console.log('ENTRAMOS AL VALIDADOR DE CREATE USARIO');
 window.addEventListener('load', function () {
     const validarNombre = (name) => {
         let valor = validator.trim(name.value)
         if (validator.isEmpty(valor) || !validator.isLength(valor, { min: 5, max: 50 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
             name.style.background = 'var(--msjError)'  
-            createSpan("spanName", "#fsName", 'El nombre es requerido, no debe contener letras y la longitud debe ser entre 5 letras y 50 caracteres')
+            createSpan("spanName", "#fsName", 'El nombre es requerido, no debe contener números y la longitud debe ser entre 5 letras y 50 caracteres')
             return false
         }
         else {

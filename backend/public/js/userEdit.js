@@ -43,11 +43,9 @@ window.addEventListener('load', function() {
         }
     } 
 
-
-
     const validarName = (psw) => {
         let valor = validator.trim(psw.value)
-        if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 3, max: 20 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
+        if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 5, max: 20 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
             psw.style.background = 'var(--msjError)'  
             createError("errorName", 'El nombre de usuario es obligatorio, debe contener entre 5 y 20 carácteres y debe ser alfa númerico')
             return false
@@ -62,7 +60,7 @@ window.addEventListener('load', function() {
         let valor = validator.trim(psw.value)
         if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 7, max: 1000 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
             psw.style.background = 'var(--msjError)'  
-            createError("errorfullName", 'Este campo debe ser completado con el nombre y apellido')
+            createError("errorfullName", 'Este campo debe ser completado con el nombre y apellido y debe tener al menos 7 caracteres')
             return false
         }
         else {
@@ -115,50 +113,33 @@ window.addEventListener('load', function() {
     }
     
     document.querySelector("#email").addEventListener('change', e => {
-        console.log('Estoy changes validando easdasdasdasl pws')
-        
         validarEmail(e.target) })
         
         
     document.querySelector("#birthDay").addEventListener('change', e => {
-            console.log('VALIDATIN BIRTHDATE')
-            
         validarbirthDay(e.target) })
     
     document.querySelector("#user").addEventListener('change', e => {
-        console.log('VALIDATIN USER')
-        
         validarName(e.target) })
+
     document.querySelector("#fullName").addEventListener('change', e => {
-        console.log('VALIDATING FULLNAME')
-        
         validarfullName(e.target) })
+
     document.querySelector("#image").addEventListener('change', e => {
-        console.log('VALIDATING IMAGE')
-        
         validarImagen(e.target) })
     
-
     let formulario = document.querySelector('form')
     
     formulario.addEventListener("submit", function(e){
-    
-        console.log('estoy en el evento submit')
         e.preventDefault();
         let errores = 0
     
-    
-        console.log('empecé')
-        
-      
-        
         let email = document.querySelector("#email")
         
         if(!validarPassword(email)) {
             console.log('passw')
             errores++
         }
-      
 
         let name = document.querySelector("#user")
         
@@ -174,7 +155,6 @@ window.addEventListener('load', function() {
             console.log('passw')
             errores++
         }
-      
         
         let image = document.querySelector("#image")
         
@@ -182,7 +162,6 @@ window.addEventListener('load', function() {
             console.log('passw')
             errores++
         }
-       
         
         let birthDay = document.querySelector("#birthDay")
         
@@ -194,6 +173,5 @@ window.addEventListener('load', function() {
             console.log('no pasa nada');
             e.target.submit()
         }
-
     }) 
 })
