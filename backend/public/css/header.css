@@ -236,6 +236,9 @@ header{
 }
 
   @media screen and (min-width:768px){
+    #mobile-nav{
+      display: none;
+    }
     .icons-userMenu{
       display: block;
       padding: 10px;
