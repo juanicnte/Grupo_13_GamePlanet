@@ -1,8 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
 
 body {
 	background: #272727;
@@ -11,7 +6,6 @@ body {
 
 
 
-/* ? ----- PORTADA ----- */
 .portada {
 	width: 100%;
 	background: #272727;
@@ -57,7 +51,6 @@ body {
 
 
 
-/* ? ----- MAIN ----- */
 main {
 	max-width: 1000px;
 	margin: auto;
@@ -70,7 +63,6 @@ main {
 
 
 
-/* ? ----- Cuenta Regresiva ----- */
 #cuenta {
 	display: flex;
 	justify-content: center;
@@ -101,11 +93,6 @@ main {
 }
 
 
-/* ? ---------------------------- */
-
-
-
-/* ? ----- REDES SOCIALES ----- */
 .redes-sociales{
 	display: flex;
 	flex-direction: row;
@@ -114,14 +101,14 @@ main {
 }
 .redes-sociales .btn-red-social {
 	padding: 15px 0;
-	display: inline-block;
-	min-width: 120px;
-	border-radius: 5px;
-	background: #5928b1;
-	color: #fff;
-	font-size: 30px;
-	margin: 1rem 20px;
-	transition: .3s ease all;
+    display: inline-block;
+    min-width: 120px;
+    border-radius: 3px;
+    background: #5928b1;
+    color: #fff;
+    font-size: 30px;
+    margin: 1rem 20px;
+    transition: .3s ease all;
 }
 
 .redes-sociales .btn-red-social:hover {
