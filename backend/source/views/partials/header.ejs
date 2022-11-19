@@ -19,7 +19,9 @@
             <% } %>
       <% if(userLogged){%>
         <li class="user-name"> <p id="name-user"><%=  userLogged.fullName %></p> 
-        <img src="/images/avatars/<%= userLogged.image %> " class="userImage">
+          <a href="/profile">
+            <img src="/images/avatars/<%= userLogged.image %> " class="userImage">
+          </a>
         
         <!-- menu hamburguesa empieza -->
         <li class="hamburger-button">
