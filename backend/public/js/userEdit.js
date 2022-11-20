@@ -60,7 +60,7 @@ window.addEventListener('load', function() {
         let valor = validator.trim(psw.value)
         if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 7, max: 1000 }) || !validator.isAlphanumeric(valor, 'es-ES', { ignore: ' ' })) {
             psw.style.background = 'var(--msjError)'  
-            createError("errorfullName", 'Este campo debe ser completado con el nombre y apellido y debe tener al menos 7 caracteres')
+            createError("errorfullName", 'Este campo es obligatorio, y debe ser completado con el nombre y apellido y debe tener al menos 7 caracteres')
             return false
         }
         else {
@@ -73,7 +73,7 @@ window.addEventListener('load', function() {
         let valor = validator.trim(psw.value)
         if  (validator.isEmpty(valor) || !validator.isLength(valor, { min: 4, max: 10 })) {
             psw.style.background = 'var(--msjError)'  
-            createError("errorBirthDay", 'La fecha de nacimiento no puede contener mas de 10 caracteres')
+            createError("errorBirthDay", 'La fecha de nacimiento no puede contener mas de 10 numeros')
             return false
         }
         else {

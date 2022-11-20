@@ -62,7 +62,7 @@ route.put('/products/actualizar/:id', isLogged, isAdmin, upload.any(),isProductE
 route.delete('/products/delete/:id', isLogged, isAdmin, productsController.remove)
 
 
-route.get('/', productsController.index)
+route.get('/',productsController.index)
 
 /*
 Recuerden que para cumplir ese objetivo necesitarán de siete rutas:
