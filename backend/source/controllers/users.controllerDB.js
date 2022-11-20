@@ -45,7 +45,7 @@ const controlador = {
                 user: req.body.user,
                 email: req.body.email,
                 password:bcryptjs.hashSync(req.body.password,10),
-                perfil: req.body.perfil,
+                perfil: 'User',
                 birthDay: req.body.birthDay,
 
                 image: req.body.image})
