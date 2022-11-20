@@ -7,7 +7,9 @@ const Category = db.category;
 
 const categoriesAPIController = {
     'list': (req, res) => {
-        Category.findAll()
+        Category.findAll({
+            include: ['product']
+        })
             .then(categories => {
                 let respuesta = {
                     meta: {

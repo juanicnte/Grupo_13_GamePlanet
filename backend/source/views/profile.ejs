@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main class="main-profile">
+      <h2>Mi perfil</h2>
+      <section class="section-userDetail">
+        <article class="container-user">
+            <picture>
+                <img src="/images/avatars/<%= userLogged.image %>" alt="fotoDePerfil" id="fotoDePerfil" class="img-user" />
+            </picture>
+          <article class="userDetail-container">
+            <p class="description-user" id="user-name">
+              Nombre y apellido: <%= userLogged.fullName %>
+            </p>
+            <p class="description-user" id="user-name">
+              Nombre de usuari@: <%= userLogged.user %>
+            </p>
+            <p class="description-user" id="range">
+              Perfil: <%= userLogged.perfil %>
+            </p>
+            <p class="description-user">Email: <%= userLogged.email %></p>
+          </article>
+        </article>
+      </section>
+      <ul class="botones">
+        <a href="/" class="crear-editar">VOLVER</a>
+      </ul>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

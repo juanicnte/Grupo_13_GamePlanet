@@ -1,6 +1,5 @@
 
 window.addEventListener('load', function () {
-    console.log('ESTAMOSSSSS EN LA VALIDACION DE FRONT EDIT');
     const createError = function (idElemento, msj) {
         if (document.getElementById(idElemento) == null) {
             let listaErrores = document.querySelector('#erroresEdit')

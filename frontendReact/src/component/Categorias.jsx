@@ -34,16 +34,22 @@ function Categorias() {
             <ul className='list-container'>
 
                 {
-                    categorias.map((categoria , i) => {
+                    categorias.map((categoria) => {
 
                         return(
 
-                            <li className='list-products' key={i} >
+                            <li className='list-products' key={categoria.id} >
 
                                 <h3 className='title-products'>{categoria.name}</h3>
-
+                                {
+                                    categoria.product.map((product) => {
+                                    return(
+                                        <li key={product.id} >
+                                            <h6>{product.name}</h6>
+                                        </li>
+                                    )})
+                                }
                             </li>
-
                         )
                     })
                 }

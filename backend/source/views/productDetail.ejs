@@ -63,8 +63,8 @@
                     <a href="/products/create" class="crear-editar">CREAR</a>
                     <a href="/products/edit/<%= product.id %>" class="crear-editar">EDITAR</a>
                     <form action="/products/delete/<%= product.id %>?m=DELETE" method="POST">
-                        <button type="submit" name= "id" value= "<%= product.id %>">
-                            <a class="eliminar">ELIMINAR<i class="fa-solid fa-cart-shopping"></i></a>                           
+                        <button type="submit" name= "id" value= "<%= product.id %>" class="borrarBorde">
+                            <a class="eliminar">ELIMINAR<i class="fa-solid fa-trash"></i></a>                           
                         </button>
                     </form>
                 </ul>

@@ -163,6 +163,9 @@ main{
     width: 30%;
     padding: 1rem;
 }
+.borrarBorde{
+    background-color: #0e0e0e;
+}
 .botones button{
     font-size: 1rem;
     cursor: pointer;
@@ -170,6 +173,10 @@ main{
 .botones a:hover{
     color: blueviolet;
     transition: color 0.5s ;
+}
+a.eliminar:hover {
+    color: red;
+    transition: color 0.5s;
 }
 .crear-editar{
     margin: auto;

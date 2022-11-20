@@ -34,6 +34,7 @@ body{
 
 .title-products{
     font-size: 14px;
+    padding-bottom: 0.5rem;
 }
 
 .game-image{
@@ -69,6 +70,8 @@ body{
     list-style: none;
     text-align: center;
     cursor: pointer;
+    background: #272727;
+    padding: 1rem;
 }.list-products:hover img{
     border-bottom: 7px solid #5928b1;
     border-left: 7px solid #5928b1;
@@ -91,6 +94,9 @@ body{
     color: #ddd;
 }
 
+h6{
+    text-align: left;
+}
 .header-a{
     display: flex;
     flex-direction: row;

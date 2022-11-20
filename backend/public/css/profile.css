@@ -1,0 +1,40 @@
+.main-profile {
+  text-align: -webkit-center;
+}
+h2 {
+  text-align: center;
+  color: #dddddd;
+}
+.section-userDetail {
+  width: fit-content;
+  border: 3px solid #5928b1;
+  margin: 2% 0;
+}
+.img-user {
+  width: 8rem;
+  height: 8rem;
+}
+.container-user {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+.description-user {
+  padding: 1rem 0;
+  color: #dddddd;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 782px) {
+  .container-user {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-userDetail {
+    flex-direction: row;
+  }
+  #birthDay-user {
+    width: 50%;
+  }
+}

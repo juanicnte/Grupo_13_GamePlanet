@@ -80,11 +80,14 @@ app.get('/paginaEnConstruccion', function(req,res){
 
 });
 
+app.get('/profile', function (req, res) {
+    return res.render("profile");//RENDERIZADO
+});
 
 //Configurar error 404 ruta no encontrada
 app.use((req, res, next)=>{
     res.status(404).render('404')
-})
+});
 
 /*Código viejo
 app.get ('/', (req, res) => {
