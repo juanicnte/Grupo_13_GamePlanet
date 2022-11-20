@@ -19,14 +19,15 @@ const model = function(sequelize, DataTypes){
             type: DataTypes.STRING
         },
         perfil: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            defaultValue: 'User'
         },
         birthDay: {
-            type: DataTypes.DATE
+            type: DataTypes.DATEONLY
         },
         image: {
             type: DataTypes.STRING,
-            defaultValue: 'defaultUser.png'
+            defaultValue: 'default.png'
         },
        
     }

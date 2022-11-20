@@ -43,16 +43,16 @@
                             <p class="title-area">Perfil</p>
                             <label for="admin" class="radio-options">
                                 <input type="radio" name="perfil" id="admin"
-                                    value="admin" <% if(user.perfil == "Admin") { %> checked <% } %>>Admin</label>
+                                    value="Admin" <% if(user.perfil == "Admin") { %> checked <% } %>>Admin</label>
                             <label for="user" class="radio-options">
-                                <input type="radio" name="perfil" id="user" value="user"
+                                <input type="radio" name="perfil" id="user" value="User"
                                 <% if(user.perfil == "User") { %> checked <% } %>>Usuario</label>                            
                         </fieldset>
 
                     <fieldset class="text-area">
                         <label for="nacio">Fecha de nacimiento</label>
                         <input type="date" name="birthDay" id="birthDay" class="input-text"
-                      value="<%= user.birthDay%>" required />
+                      value="1983-12-10" required  />
                     </fieldset>
                     
                     <button type="submit" class="input-text input-button">Guardar</button>

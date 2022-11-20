@@ -20,7 +20,7 @@
         <ul class="users-list">
           <% users.forEach(user => {%>
             <li class="user-li">
-              <h2 id="id-user"><%= user.id %></h2>
+              <h2 id="id-user" hidden><%= user.id %></h2>
 
               <a id="link-user" href="/users/detail/<%= user.id %>">
                 <img src="/images/avatars/<%= user.image %>" id="img-user" alt="<%= user.fullName %>" />
